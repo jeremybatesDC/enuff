@@ -12,6 +12,9 @@ body{font-size: 1em; font-family: 'Roboto-Regular';}
        only screen and (min-resolution: 144dpi) {
 }
 
+nav {width: 100%;height: 10em;}
+
+
 /* TABS & MODAL a la Pure CSS Components - http://www.felipefialho.com/css-components/
 Author: Luiz Felipe Tartarotti Fialho
 */
