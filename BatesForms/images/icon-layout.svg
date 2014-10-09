@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<rect x="7.6" y="7.5" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="48.5" height="48.5"/>
+<rect x="12.9" y="12.6" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="16" height="37.8"/>
+<rect x="34.3" y="12.8" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="16.2" height="16.2"/>
+<rect x="34.4" y="34.2" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="16.1" height="16.1"/>
+<rect x="88.7" y="18.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 11.5351 91.1815)" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="54.3" height="26"/>
+<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 11.45 91.1867)" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="115.8" cy="31.8" rx="7.1" ry="9.7"/>
+<rect x="114.7" y="22.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 12.6758 95.8521)" fill="none" width="14.7" height="21"/>
+<text transform="matrix(0.7071 -0.7071 0.7071 0.7071 115.9432 36.9428)" font-family="'MyriadPro-Bold'" font-size="13">$</text>
+<g>
+	<path id="key-3-icon" fill="#010101" d="M197.1,38.1h-5.2l0,5.1l-5.4,0v4.8h-12.1v-8.3l17.3-17.1c0.5,1.1,1.1,2.2,1.8,3.2
+		l-15.5,15.4v3.3h4.9v-4.8l5.4,0l0-5.1h7.3l3.4-3.4c1.1,0.7,2.2,1.2,3.5,1.6L197.1,38.1z M212.1,16.4c-1.3,1.3-3.4,1.3-4.7,0
+		c-1.3-1.3-1.3-3.4,0-4.7c1.3-1.3,3.4-1.3,4.7,0C213.4,13,213.4,15.1,212.1,16.4z M206.7,3.1c-7.7,0-14,6.3-14,14s6.3,14,14,14
+		c7.7,0,14-6.3,14-14S214.4,3.1,206.7,3.1z M206.7,27.7c-5.8,0-10.6-4.7-10.6-10.6s4.7-10.6,10.6-10.6s10.6,4.7,10.6,10.6
+		S212.5,27.7,206.7,27.7z M215.7,38.4l-3.4,3.9l3.9,3.4l-3.5,4.1l3.7,3.2l-7.8,9l-6.2-5.4l-1.7-24.1c1.2,0.4,2.3,0.6,3.5,0.8
+		l1.6,21.6l2.5,2.2l3.2-3.7l-3.7-3.2l3.5-4.1l-3.9-3.4l4.7-5.4l-0.4-4.8c1.2-0.4,2.4-0.9,3.5-1.5L215.7,38.4z"/>
+</g>
+<polyline fill="none" stroke="#010101" stroke-width="4" stroke-miterlimit="10" points="268.9,42.7 305.8,5.8 311.8,11.9 
+	274.9,48.8 "/>
+<polygon fill="none" stroke="#010101" stroke-width="4" stroke-miterlimit="10" points="266.8,50.5 268.5,44.9 272.6,49.1 "/>
+<line fill="none" stroke="#010101" stroke-width="4" stroke-miterlimit="10" x1="301.7" y1="10.4" x2="307.2" y2="15.9"/>
+<polyline fill="none" stroke="#010101" stroke-width="3" stroke-miterlimit="10" points="302.8,32.1 302.8,58.5 259.7,58.5 
+	259.7,6.7 291.7,6.7 "/>
+<g>
+	<path fill="none" stroke="#010101" stroke-width="3" stroke-miterlimit="10" d="M48.8,125.1c-1.2-4.7,1.6-9.6,6.4-10.8l-2.3-8.9
+		c-1.5,0.4-3,0.4-4.6,0c-4.7-1.3-7.5-6.2-6.2-11L33.3,92c-0.4,1.5-1.2,2.9-2.3,4c-3.5,3.4-9.1,3.4-12.6-0.1l-6.5,6.4
+		c1.1,1.1,1.9,2.4,2.3,4c1.2,4.7-1.6,9.6-6.4,10.8l2.3,8.9c1.5-0.4,3-0.4,4.6,0c4.7,1.3,7.5,6.2,6.2,10.9l8.8,2.4
+		c0.4-1.5,1.2-2.8,2.3-3.9c3.5-3.4,9.1-3.4,12.5,0.1L51,129C50,128,49.2,126.6,48.8,125.1z M28.9,124.7c-5-1.4-8-6.6-6.6-11.6
+		c1.4-5,6.6-8,11.6-6.6c5,1.4,8,6.6,6.6,11.6C39.2,123.2,34,126.1,28.9,124.7z"/>
+</g>
+<rect x="91.7" y="91.3" fill="#FFFFFF" stroke="#010101" stroke-width="3" stroke-miterlimit="10" width="27.8" height="27.8"/>
+<polygon fill="#010101" points="98.8,96.5 113.5,105.1 98.8,113.6 "/>
+<g>
+	<rect x="112.5" y="109.5" fill="#FFFFFF" stroke="#010101" stroke-width="3" stroke-miterlimit="10" width="27.8" height="27.8"/>
+	<path id="picture-icon_1_" fill="#010101" d="M116.4,118.3c0-1.5,1.2-2.8,2.8-2.8c1.5,0,2.8,1.2,2.8,2.8c0,1.5-1.2,2.8-2.8,2.8
+		C117.6,121.1,116.4,119.8,116.4,118.3z M129.6,118.4l-4.6,6.5l-2.5-2.6l-7,8h21.9L129.6,118.4z"/>
+</g>
+</svg>
