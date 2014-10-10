@@ -151,7 +151,7 @@ label.checkbox{font-weight: normal;}
 .text-area strong, .drag-drop-area strong, .char-counter strong{font-style: normal;color: #000;}
 .drag-drop-area{margin-bottom: 3em;}
 .horz-form-float:after {display: table;float: none; clear:both;}
-.helper-tip:after {content: url(../images/helper-tip.svg); display: inline-block;width: 10px; position: relative;left:.33em;}
+.helper-tip:after {content: url(../img/helper-tip.svg); display: inline-block;width: 10px; position: relative;left:.33em;}
 
 fieldset.full-width {width: 100%;}
 fieldset.vertical-checkboxes, fieldset.vertical-radios {margin-right: 2em;vertical-align: top;}
@@ -353,7 +353,7 @@ input.group-name-input {display: block; width: 100%;}
 .tooltip.left .tooltip-arrow {border-left-color: red;}
 .tooltip.bottom .tooltip-arrow, .tooltip.bottom-left .tooltip-arrow, .tooltip.bottom-right .tooltip-arrow {border-bottom-color: red;}
 .tooltip-inline-wrapper{display: inline;}
-.help-link {display: inline-block;border:1px solid #000;border-radius: 50%; margin-left: .75em; padding: .75em;font-size: .75em; font-weight: bold;background: #fff url(../images/questionMark.jpg) no-repeat;cursor:pointer;position: relative;top:.25em;}
+.help-link {display: inline-block;border:1px solid #000;border-radius: 50%; margin-left: .75em; padding: .75em;font-size: .75em; font-weight: bold;background: #fff url(../img/questionMark.jpg) no-repeat;cursor:pointer;position: relative;top:.25em;}
 .helper-tip + .tooltip, .helper-tip + .tooltip .tooltip-inner, .helper-tip + .tooltip .tooltip-arrow {background: #183055; border-top-color: #183055;border-right-color: #183055;border-bottom-color:#183055; border-left-color:#183055; }
 
 /* Asset Manager */
@@ -365,8 +365,8 @@ input.group-name-input {display: block; width: 100%;}
 .element-container img {max-width: 100%;}
 .image-controls a{padding: 2em;cursor: pointer;}
 .element-meta-wrapper{padding: .25em;}
-.control-edit {background: url(../images/presspass-icons/icon-pencil.svg) no-repeat left;}
-.control-preview {background: url(../images/presspass-icons/icon-eye.svg) no-repeat right;}
+.control-edit {background: url(../img/presspass-icons/icon-pencil.svg) no-repeat left;}
+.control-preview {background: url(../img/presspass-icons/icon-eye.svg) no-repeat right;}
 .date-modified{font-style: italic; font-size: .75em;}
 img.modal-preview{max-width: 100%;}
 .link-preview-image{padding: 1em;cursor: pointer;}
