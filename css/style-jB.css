@@ -7,40 +7,34 @@
 
 body{font-size: 1em; font-family: 'Roboto-Regular';}
 
-.kickstarter-logo{position: fixed; top: 0;right: 0;z-index: 50;}
 header {}
 
 nav {}
-nav.triMenu svg {fill: #000;}
-nav.triMenu svg polygon {transition: all .5s;-webkit-transition: all .5s;}
-nav.triMenu svg polygon:hover {fill: transparent;stroke-width: 2.5; stroke: #555;cursor: pointer;}
-#triTR:hover{fill: #000;stroke-width: 0;}
-svg.climate1000-logo{width: 50%;max-width: 30em;}
-article.logo-container {text-align: center; padding-top: 2em;}
-svg.triangleTopLeft {position: fixed; top: 0; left: 0;}
-svg.triangleTopRight {position: fixed; top: 0; right: 0;}
-svg.triangleBotLeft {position: fixed; bottom: 0; left: 0;}
-svg.triangleBotRight {position: fixed; bottom: 0; right: 0;}
 
-#kickstarterLogo{fill: #D9D9DE;}
-#kickstarterLogo:hover{cursor: pointer;}
-.on {fill: red;}
-aside {padding: 4em; font-family: sans-serif;}
-aside p{max-width: 40em;margin: 1.5em auto 0;}
-.info {width: 50%; max-width: 40em;transition: all .5s;-webkit-transition: all .5s;}
-.inFrame {position: fixed; height: 100%;width: 100%; background: rgba(0,0,0,.9);z-index: 99;color:#fff;}
+article {}
 
-#who {z-index: -99;position: relative;top:-2000px;left:-2000px;}
-#who.inFrame, #what.inFrame,#where.inFrame,#when.inFrame {position: fixed; top: 0; left: 0;z-index: 99;}
+section{}
 
-#what{z-index: -98;position: relative;top:-2000px;right:-2000px;}
-/*#what.inFrame {position: fixed; top:0;left:0;}*/
+aside {}
 
-#where{z-index: -97;position: relative;bottom:-2000px;left:-2000px;}
-/*#where.inFrame {position: fixed; width: 50%; top: 25%; left: 25%;background: red;z-index: 99;}*/
+footer{}
 
-#when{z-index: -96;position: relative;bottom:-2000px;right:-2000px;}
-/*#when.inFrame {position: fixed; width: 50%; top: 25%; left: 25%;background: red;z-index: 99;}*/
+
+a{text-decoration: none;}
+p{}
+
+h1, h2, h3, h4, h5, h6{}
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+figure {}
+img {}
+
+
 
 /* TABS & MODAL a la Pure CSS Components - http://www.felipefialho.com/css-components/
 Author: Luiz Felipe Tartarotti Fialho
