@@ -1,11 +1,15 @@
+html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+*, *:before, *:after {-moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit;}
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
 }
+/*I like to make default font-size explicit, and then to base ems off of it*/
+body{font-size: 14px; font-family: 'Roboto-Regular';text-rendering: optimizeLegibility;}
 
-body{font-size: 1em; font-family: 'Roboto-Regular';}
+main {font-size: 1em; line-height: 1.5em;}
 
 header {}
 
@@ -20,8 +24,28 @@ aside {}
 footer{}
 
 
+
+
+
+
+
+/*pseduo*/
+:link{}
+:hover{}
+:focus{}
+:active{}
+:visited{}
+:target{}
+::selection,::-moz-selection {}
+
+
+
 a{text-decoration: none;}
+
+button{}
 p{}
+
+span{}
 
 h1, h2, h3, h4, h5, h6{}
 h1 {}
@@ -31,8 +55,107 @@ h4 {}
 h5 {}
 h6 {}
 
+ol{}
+ul{}
+li{}
+menu{}
+menuitem{}
+dl{}
+dd{}
+
+
+/*formatting*/
+b{}
+i{}
+em{}
+strong{}
+small{}
+u{}
+s{}
+pre{}
+code{}
+
+
+/*media*/
 figure {}
 img {}
+figcaption{}
+video{}
+audio{}
+iframe{}
+track{}
+var{}
+
+
+/*  forms */
+form{}
+fieldset{}
+input {}
+label {}
+select {}
+:valid{}
+:invalid, :-moz-submit-invalid{}
+:required{}
+:optional{}
+:checked{}
+:enabled{}
+:default{}
+:disabled{}
+:out-of-range{}
+:in-range {}
+:-moz-read-write, read-write {}
+:indeterminate {}
+progress{}
+textarea{}
+input[type="radio"] {}
+input[type="checkbox"] {}
+optgroup{}
+
+
+
+q{}
+blockquote{}
+details{}
+dialog{}
+legend {}
+summary {}
+
+
+/* tables */
+table {}
+caption{}
+tbody{}
+th{}
+tr{}
+td{}
+tfoot{}
+:empty{}
+col{}
+colgroup{}
+
+
+svg{}
+
+
+br{}
+hr{}
+
+
+sup{}
+sub{}
+
+
+/*template{}
+content{}
+decorator{}
+element {}
+shadow {}*/
+
+address{}
+time{}
+
+data{}
+
 
 
 
