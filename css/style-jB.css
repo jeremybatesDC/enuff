@@ -5,7 +5,7 @@
   src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
 }
 
-body{font-size: 1em; font-family: 'Roboto-Regular';height: 500px;overflow: hidden;}
+body{font-size: 1em; font-family: 'Roboto-Regular';}
 
 .kickstarter-logo{position: fixed; top: 0;right: 0;z-index: 50;}
 header {}
