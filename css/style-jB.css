@@ -9,7 +9,7 @@ html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: b
 /*I like to make default font-size explicit, and then to base ems off of it*/
 body{font-size: 14px; font-family: 'Roboto-Regular';}
 
-main {font-size: 1em; line-height: 1.5em;}
+main {font-size: 1em; line-height: 1.5em;max-width: 940px;margin: 0 auto;padding: 0 2.5em;}
 
 header {}
 
@@ -47,16 +47,24 @@ p{}
 
 span{}
 
-h1, h2, h3, h4, h5, h6{}
-h1 {}
-h2 {}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
+h1,h2,h3,h4,h5, h6{font-weight: normal;}
+h1{font-size: 2em;}
+h2{font-size: 1.8em;}
+h3{font-size: 1.6em;}
+h4{font-size: 1.4em;}
+h5{font-size: 1.2em;}
+h6{font-size: 1em;}
+
+
+.breadcrumb {margin: 4em 0 2em 7.5%;background: transparent;text-transform: uppercase; font-size: .9em;}
+.breadcrumb h1{display: inline-block;font-size: 1em;margin:0;padding:0;color: #000;font-weight: bold; letter-spacing: .0125em;}
+
+h6.presspass-alert-danger {background: red;color:#fff;margin-bottom: 2em;}
+
+
 
 ol{}
-ul{}
+ul {list-style: none;}
 li{}
 menu{}
 menuitem{}
@@ -90,8 +98,8 @@ var{}
 /*  forms */
 form{}
 fieldset{}
-input {}
-label {}
+input {color: #000;}
+label {background: #fff;font-size: .8em;color: #a0a0a0;font-weight: normal;text-transform: uppercase;}
 select {}
 :valid{}
 :invalid, :-moz-submit-invalid{}
@@ -106,7 +114,7 @@ select {}
 :-moz-read-write, read-write {}
 :indeterminate {}
 progress{}
-textarea{}
+textarea{resize:none;}
 input[type="radio"] {}
 input[type="checkbox"] {}
 optgroup{}
@@ -155,6 +163,37 @@ address{}
 time{}
 
 data{}
+
+.btn {font-size: 1em;}
+
+/*action bar*/
+.save-cancel-bar {margin: 0 1em 1em 1em; padding: 1em 0; border-top: 1px solid #ccc;padding-top:1em;overflow: hidden;}
+.save-cancel-bar:after {float: none;clear:both;}
+.form-save {margin-left:1.5em; padding-left: 1.5em; padding-right: 1.5em;float:right;}
+.form-cancel {float: right;}
+
+
+
+
+/*VALIDATION*/
+/*overriding bootstrap*/
+.alert {padding: 1em;margin-bottom: 1.5em; border: 1px solid red;}
+.error{border-color: red;}
+.form-control.error:focus {border-color:red;}
+.login-error-box{max-width: 20em;margin: 0 auto;background: red;text-align: center;color: #fff;}
+.tooltip-inner{background: red;}
+.error + .tooltip .tooltip-arrow {border-top-color: red;}
+.tooltip.right .tooltip-arrow {border-right-color: red;}
+.tooltip.left .tooltip-arrow {border-left-color: red;}
+.tooltip.bottom .tooltip-arrow, .tooltip.bottom-left .tooltip-arrow, .tooltip.bottom-right .tooltip-arrow {border-bottom-color: red;}
+.tooltip-inline-wrapper{display: inline;}
+.help-link {display: inline-block;border:1px solid #000;border-radius: 50%; margin-left: .75em; padding: .75em;font-size: .75em; font-weight: bold;background: #fff url(../img/questionMark.jpg) no-repeat;cursor:pointer;position: relative;top:.25em;}
+.helper-tip + .tooltip, .helper-tip + .tooltip .tooltip-inner, .helper-tip + .tooltip .tooltip-arrow {background: #183055; border-top-color: #183055;border-right-color: #183055;border-bottom-color:#183055; border-left-color:#183055; }
+
+
+
+
+
 
 
 
@@ -220,6 +259,67 @@ Author: Luiz Felipe Tartarotti Fialho
 
 .modal-footer {border-top: #eeeeee solid 1px;text-align: right;}
 
+
+
+.radios label, .checkboxes label {color: #000; margin-bottom: .33em;text-transform: none;font-size: 1em;}
+.vertical-form label{display: block;}
+.horz-form-float {padding-top: 1em;overflow: hidden;}
+.horz-form-float .form-control, .search-row .form-control {float: left;margin:0 1% 2em 1%;}
+.horz-form-float:after {display: table;float: none; clear:both;}
+
+.third-field, .third-field {width: 31.33%;}
+.quarter-field {width: 23%;}
+.fifth-field {width: 18%;}
+.sixth-field {width: 14.666%;}
+.eighth-field {width: 10.5%;}
+.half-field, .half-field {width:48%;}
+.two-thirds-field {width:64.666%;}
+.three-quarters-field {width:73%;}
+.full-field {width:98%;}
+.horz-form-float .form-control + label, .tooltip + label, .text-area label, .drag-drop-area label {float: left;margin-top: -.8em;}
+.char-counter{float: left;margin-top: -.8em;background: #fff;font-size: .8em;color: #a0a0a0;text-transform: uppercase;}
+.horz-form-float .form-control.third-field + label, .form-control.third-field + .tooltip + label {margin-left: -32.33%;}
+.horz-form-float .form-control.quarter-field + label, .form-control.quarter-field + .tooltip + label {margin-left: -24%;}
+.horz-form-float .form-control.fifth-field + label, .form-control.fifth-field + .tooltip + label {margin-left: -19%;}
+.horz-form-float .form-control.sixth-field + label, .form-control.sixth-field + .tooltip + label {margin-left: -15.666%;}
+.horz-form-float .form-control.eighth-field + label, .form-control.eighth-field + .tooltip + label {margin-left: -11.5%;}
+.horz-form-float .form-control.half-field + label, .form-control.half-field + .tooltip + label {margin-left: -49%;}
+.horz-form-float .form-control.two-thirds-field + label, .form-control.two-thirds-field + .tooltip + label {margin-left: -65.666%;}
+.horz-form-float .form-control.full-field + label, .form-control.full-field + .tooltip + label {margin-left: -99%;}
+
+.drag-drop-area label {margin-top: 0; padding: .5em .5em .5em 0;float:none;}
+.drag-drop-area .drag-drop-directions {position: relative;top:2.125em;}
+.btn-browse {padding: .125em 1em; border-radius: 0;}
+.draggable-box-inner {min-height: 25em;padding: 1em;border-radius: .5em;background:#ddd;}
+.drag-drop-area .lower-directions {float: right;margin-top: -1em;background: #fff;font-size: .8em;text-transform: uppercase;font-weight: bold;}
+.drag-drop-area{margin-bottom: 3em;}
+
+.text-area label {margin-bottom: -.8em;}
+.text-area .char-counter, .has-char-counter .char-counter {float:right;}
+.text-area strong, .drag-drop-area strong, .char-counter strong{font-style: normal;color: #000;}
+
+.has-char-counter label {margin-bottom: -.8em;}
+.has-char-counter span {float:right;}
+.has-char-counter .char-counter {margin-top: -.25em;}
+
+.helper-tip:after {content: url(../img/helper-tip.svg); display: inline-block;width: 10px; position: relative;left:.33em;}
+
+fieldset.full-width {width: 100%;}
+fieldset.vertical-checkboxes, fieldset.vertical-radios {margin-right: 2em;vertical-align: top;}
+input.error + label.helper-tip:after {content:'';}
+fieldset.vertical-checkboxes legend.legend-presspass, fieldset.vertical-radios legend.legend-presspass {max-width: 15em;}
+legend.legend-presspass {border: none;font-size: .9em; color: #aaa; text-transform: uppercase;margin: 0 0 .5em 0;padding: 0;}
+fieldset {margin-bottom: 1em;display: inline-block;}
+fieldset.error legend {color: red; font-weight: bold;}
+fieldset.vertical-checkboxes, fieldset.vertical-radios {margin-right: 1em;padding-left: .1em;padding-right: 1em;}
+fieldset.vertical-checkboxes input, fieldset.vertical-radios input{float:left;clear: left;}
+fieldset.vertical-checkboxes label,fieldset.vertical-radios label {display: block; padding-left: 1.5em;}
+fieldset.vertical-checkboxes label:after, fieldset.vertical-radios label:after{float:none;clear:both;display: table;}
+fieldset.horizontal-checkboxes label, fieldset.horizontal-radios label {display: inline-block;}
+fieldset.horizontal-checkboxes, fieldset.horizontal-radios {margin-right: 3em;}
+fieldset.horizontal-radios .radio-inline, fieldset.horizontal-checkboxes .checkbox-inline {padding-left: .25em;margin-right: 1em;}
+fieldset.text-area{display: block;}
+fieldset.text-area.wysiwyg-area textarea{min-height:25em;}
 
 @media only screen and (min-width: 50em) {}
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
