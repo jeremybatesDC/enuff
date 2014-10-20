@@ -98,8 +98,8 @@ var{}
 /*  forms */
 form{}
 fieldset{}
-input {color: #000;}
-label {background: #fff;font-size: .8em;color: #a0a0a0;font-weight: normal;text-transform: uppercase;}
+input {height: 2em;color: #000;border-radius: 5px;box-shadow: none;}
+label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;}
 select {}
 :valid{}
 :invalid, :-moz-submit-invalid{}
