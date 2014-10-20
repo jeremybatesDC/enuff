@@ -1,13 +1,13 @@
-html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;font-family: sans-serif;}
 *, *:before, *:after {-moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit;}
-@font-face {
+/*@font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
-}
+}*/
 /*I like to make default font-size explicit, and then to base ems off of it*/
-body{font-size: 14px; font-family: 'Roboto-Regular';}
+body{font-size: 14px; font-family: Arial, sans-serif;}
 
 main {font-size: 1em; line-height: 1.5em;max-width: 940px;margin: 0 auto;padding: 0 2.5em;}
 
@@ -33,10 +33,13 @@ footer{}
 :link{}
 :hover{}
 :focus{}
+input:focus{box-shadow: 0 1px blue;}
 :active{}
 :visited{}
 :target{}
 ::selection,::-moz-selection {}
+
+
 
 
 
@@ -98,7 +101,7 @@ var{}
 /*  forms */
 form{}
 fieldset{}
-input {height: 2em;color: #000;border-radius: 5px;box-shadow: none;}
+input {height: 2em;color: #000;border-radius: 5px;border: 1px solid #999;box-shadow: none;padding: 0 .25em;}
 label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;}
 select {}
 :valid{}
@@ -276,7 +279,7 @@ Author: Luiz Felipe Tartarotti Fialho
 .two-thirds-field {width:64.666%;}
 .three-quarters-field {width:73%;}
 .full-field {width:98%;}
-.horz-form-float .form-control + label, .tooltip + label, .text-area label, .drag-drop-area label {float: left;margin-top: -.8em;}
+.horz-form-float .form-control + label, .tooltip + label, .text-area label, .drag-drop-area label {float: left;margin-top: -.75em;}
 .char-counter{float: left;margin-top: -.8em;background: #fff;font-size: .8em;color: #a0a0a0;text-transform: uppercase;}
 .horz-form-float .form-control.third-field + label, .form-control.third-field + .tooltip + label {margin-left: -32.33%;}
 .horz-form-float .form-control.quarter-field + label, .form-control.quarter-field + .tooltip + label {margin-left: -24%;}
