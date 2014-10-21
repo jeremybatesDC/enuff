@@ -9,26 +9,16 @@ html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: b
 /*I like to make default font-size explicit, and then to base ems off of it*/
 
 body{font-size: 14px; font-family: Arial, sans-serif;}
-
 main {font-size: 1em; line-height: 1.5em;max-width: 940px;margin: 0 auto;padding: 0 2.5em;}
-
 header {}
-
 nav {}
-
 article {}
-
 section{}
-
 aside {}
-
 footer{}
 
 /*100% height*/
 html, body, header, nav {height: 100%;}
-
-
-
 
 
 
@@ -41,9 +31,6 @@ input:focus{box-shadow: 0 1px blue;}
 :visited{}
 :target{}
 ::selection,::-moz-selection {}
-
-
-
 
 
 a{text-decoration: none;}
@@ -328,7 +315,7 @@ fieldset.text-area{display: block;}
 fieldset.text-area.wysiwyg-area textarea{min-height:25em;}
 
 
-/* circular nav */
+/* circular nav circular nav circular nav circular nav circular nav circular nav circular nav circular nav circular nav*/
 /* generic styles for button & circular menu */
 
 .ctrl {
