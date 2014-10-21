@@ -23,7 +23,7 @@ aside {}
 footer{}
 
 /*100% height*/
-html, body, header, nav {height: 100%;}
+html, body {height: 100%;}
 
 
 
