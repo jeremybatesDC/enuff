@@ -74,7 +74,7 @@ small{}
 u{}
 s{}
 pre{}
-code{}
+code{font-size: 10px; line-height: 1.5em; font-family: Arial, sans-serif;}
 
 
 /*media*/
