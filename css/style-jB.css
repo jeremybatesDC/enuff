@@ -8,6 +8,11 @@ html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: b
 }*/
 /*I like to make default font-size explicit, and then to base ems off of it*/
 
+
+
+
+
+
 body{font-size: 14px; font-family: Arial, sans-serif;}
 main {font-size: 1em; line-height: 1.5em;max-width: 940px;margin: 0 auto;padding: 0 2.5em;}
 header {}
@@ -314,14 +319,9 @@ fieldset.horizontal-radios .radio-inline, fieldset.horizontal-checkboxes .checkb
 fieldset.text-area{display: block;}
 fieldset.text-area.wysiwyg-area textarea{min-height:25em;}
 
-
-/* circular nav circular nav circular nav circular nav circular nav circular nav circular nav circular nav circular nav*/
-/* generic styles for button & circular menu */
-
 .ctrl {
     position: absolute;
     top: 50%; left: 50%;
-    font: 1.5em/1.13 Verdana, sans-serif;
     -moz-transition: .5s;
     transition: .5s;
 }
@@ -345,39 +345,8 @@ a.ctrl:focus, .ctrl a:focus { outline: none; }
     box-shadow: 0 0 3px 1px white;
 }
 /* circular menu */
-.tip {
-    z-index: 1;
-    /**outline: dotted 1px white;/**/
-    margin: -5em;
-    width: 10em; height: 10em;
-    -moz-transform: scale(.001);
-    transform: scale(.001);
-    list-style: none;
-    opacity: 0;
-}
-/* the ends of the menu */
-/*.tip:before, .tip:after {
-    position: absolute;
-    top: 34.3%;
-    width: .5em; height: 14%;
-    opacity: .56;
-    background: #c9c9c9;
-    content: '';
-}
-.tip:before {
-    left: 5.4%;
-    border-radius: .25em 0 0 .25em;
-    box-shadow: -1px 0 1px dimgrey, inset 1px 0 1px white, inset -1px 0 1px grey, 
-                inset 0 1px 1px white, inset 0 -1px 1px white;
-    transform: rotate(-75deg);
-}
-.tip:after {
-    right: 5.4%;
-    border-radius: 0 .25em .25em 0;
-    box-shadow: 1px 0 1px dimgrey, inset -1px 0 1px white, inset 1px 0 1px grey,
-                inset 0 1px 1px white, inset 0 -1px 1px white;
-    transform: rotate(75deg);
-}*/
+
+
 /* make the menu appear on click */
 .button:focus + .tip {
     -moz-transform: scale(1);
@@ -392,7 +361,6 @@ a.ctrl:focus, .ctrl a:focus { outline: none; }
     width: 50%; height: 50%;
     -moz-transform-origin: 100% 100%;
     transform-origin: 100% 100%;
-
 }
 /* 
  * rotate each slice at the right angle = (A/2)° + (k - (n+1)/2)*A°
@@ -404,18 +372,18 @@ a.ctrl:focus, .ctrl a:focus { outline: none; }
  * 
  * after rotating, skew on Y by 90°-A°; here A° = the angle for 1 slice = 30° 
  */
-.slice:first-child {-moz-transform: rotate(-45deg) skewY(60deg);transform: rotate(-45deg) skewY(60deg);}
-.slice:nth-child(2) { -moz-transform: rotate(-15deg) skewY(60deg); transform: rotate(-15deg) skewY(60deg); }
-.slice:nth-child(3) { -moz-transform: rotate(15deg) skewY(60deg);transform: rotate(15deg) skewY(60deg); }
-.slice:nth-child(4) { -moz-transform: rotate(45deg) skewY(60deg); transform: rotate(45deg) skewY(60deg);}
-.slice:nth-child(5) { -moz-transform: rotate(75deg) skewY(60deg); transform: rotate(75deg) skewY(60deg); }
-.slice:nth-child(6) { -moz-transform: rotate(135deg) skewY(60deg); transform: rotate(135deg) skewY(60deg);}
-.slice:nth-child(7) { -moz-transform: rotate(165deg) skewY(60deg); transform: rotate(165deg) skewY(60deg);}
-.slice:nth-child(8) { -moz-transform: rotate(195deg) skewY(60deg);transform: rotate(195deg) skewY(60deg); }
-.slice:nth-child(9) { -moz-transform: rotate(225deg) skewY(60deg);transform: rotate(225deg) skewY(60deg); }
-
-.slice:last-child { -moz-transform: rotate(255deg) skewY(60deg);transform: rotate(255deg) skewY(60deg); }
-
+.slice:first-child {-moz-transform: rotate(-60deg) skewY(60deg);transform: rotate(-60deg) skewY(60deg);}
+.slice:nth-child(2) { -moz-transform: rotate(-30deg) skewY(60deg); transform: rotate(-30deg) skewY(60deg); }
+.slice:nth-child(3) { -moz-transform: rotate(0deg) skewY(60deg);transform: rotate(0deg) skewY(60deg); }
+.slice:nth-child(4) { -moz-transform: rotate(30deg) skewY(60deg); transform: rotate(30deg) skewY(60deg);}
+.slice:nth-child(5) { -moz-transform: rotate(60deg) skewY(60deg); transform: rotate(60deg) skewY(60deg); }
+.slice:nth-child(6) { -moz-transform: rotate(90deg) skewY(60deg); transform: rotate(90deg) skewY(60deg);}
+.slice:nth-child(7) { -moz-transform: rotate(120deg) skewY(60deg); transform: rotate(120deg) skewY(60deg);}
+.slice:nth-child(8) { -moz-transform: rotate(150deg) skewY(60deg);transform: rotate(150deg) skewY(60deg); }
+.slice:nth-child(9) { -moz-transform: rotate(180deg) skewY(60deg);transform: rotate(180deg) skewY(60deg); }
+.slice:nth-child(10) { -moz-transform: rotate(210deg) skewY(60deg);transform: rotate(210deg) skewY(60deg); }
+.slice:nth-child(11) { -moz-transform: rotate(240deg) skewY(60deg);transform: rotate(240deg) skewY(60deg); }
+.slice:last-child { -moz-transform: rotate(270deg) skewY(60deg);transform: rotate(270deg) skewY(60deg); }
 /* covers for the inner part of the links so there's no hover trigger between
    star button & menu links; give them a red background to see them */
 .slice:after {
@@ -436,7 +404,6 @@ a.ctrl:focus, .ctrl a:focus { outline: none; }
     /* "unskew" & rotate by -A°/2 */
     -moz-transform: skewY(-60deg) rotate(-15deg);
     transform: skewY(-60deg) rotate(-15deg);
-
     background: /* lateral separators */
             linear-gradient(75deg, 
         transparent 50%, grey 50%, transparent 54%) no-repeat 36.5% 0,
@@ -448,9 +415,6 @@ a.ctrl:focus, .ctrl a:focus { outline: none; }
     background-size: 15% 15%, 15% 15%, cover;
     line-height: 1.4;
 }
-
-
-
 
 
 @media only screen and (min-width: 50em) {}
