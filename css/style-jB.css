@@ -40,7 +40,7 @@ html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: b
 
 
 body{ font-family: Arial, sans-serif;font-size: .875em;/*14px*/}
-main {font-size: 1em; line-height: 1.5em;max-width: 940px;margin: 0 auto;padding: 0 2.5em;}
+main {font-size: 1em; line-height: 1.5em;max-width: 940px;margin: 0 auto;padding: 0 .5em;}
 header {}
 nav {}
 article {}
@@ -64,7 +64,7 @@ input:focus{box-shadow: 0 .25em .25em .25em #000;}
 
 a{text-decoration: none;}
 
-button{}
+button{text-transform: uppercase;font-size: .875em; padding: .25em .5em;background:transparent;}
 p{}
 
 span{}
@@ -124,8 +124,8 @@ input {height: 2em;color: #000;border-radius: 5px;border: 1px solid #999;box-sha
 label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;}
 select {}
 :valid{}
-:invalid;
-input:invalid{border: 1px solid red;}
+:invalid{}
+input:invalid{border: 1px solid red !important;}
 input:invalid ~ fieldset button.save{opacity: .1;}
 /*proof on concept ghosting save button that's preceded by invalid input(s) */
 
@@ -291,10 +291,52 @@ Author: Luiz Felipe Tartarotti Fialho
 .radios label, .checkboxes label {color: #000; margin-bottom: .33em;text-transform: none;font-size: 1em;}
 .vertical-form label{display: block;}
 .horz-form-float {padding-top: 1em;overflow: hidden;}
-.horz-form-float .form-control, .search-row .form-control {float: left;margin:0 1% 2em 1%;}
+.horz-form-float .form-control, .search-row .form-control, .horz-form-float .row-of-inputs input {float: left;margin:0 1% 2em 1%;}
 .horz-form-float:after {display: table;float: none; clear:both;}
 
-.third-field, .third-field {width: 31.33%;}
+
+
+
+
+.row-of-inputs.third-fields input {width:32%;}
+.row-of-inputs.fourth-fields input {width:23.5%;}
+.row-of-inputs.fifth-fields input {width:18.4%;}
+
+
+.row-of-inputs input:first-of-type {margin-left: 0;}
+.row-of-inputs input:last-of-type {margin-right: 0!important;}
+
+/*clearfix -- but WHATCHOUT -- THIS MESSES UP AN ERROR AFTER CLASS -- MUST TEASE APART*/
+.row-of-inputs:after{content:'';display:table;float: none;clear: both;} 
+
+
+.row-of-inputs.third-fields input + label,.row-of-inputs.third-fields input + .tooltip + label, .row-of-inputs.third-fields input:first-of-type + label,.row-of-inputs.third-fields input:first-of-type + .tooltip + label {margin-left: -33%;}
+.row-of-inputs.third-fields input:last-of-type + label,.row-of-inputs.third-fields input:last-of-type + .tooltip + label {margin-left: -32%;}
+
+.row-of-inputs.fourth-fields input + label,.row-of-inputs.fourth-fields input + .tooltip + label, .row-of-inputs.fourth-fields input:first-of-type + label,.row-of-inputs.fourth-fields input:first-of-type + .tooltip + label {margin-left: -24.5%;}
+.row-of-inputs.fourth-fields input:last-of-type + label,.row-of-inputs.fourth-fields input:last-of-type + .tooltip + label {margin-left: -23.5%;}
+
+.row-of-inputs.fifth-fields input + label,.row-of-inputs.fifth-fields input + .tooltip + label, .row-of-inputs.fifth-fields input:first-of-type + label,.row-of-inputs.fifth-fields input:first-of-type + .tooltip + label {margin-left: -19.4%;}
+.row-of-inputs.fifth-fields input:last-of-type + label,.row-of-inputs.fifth-fields input:last-of-type + .tooltip + label {margin-left: -18.4%;}
+
+
+
+
+.helper-tip:after {content: url(../img/helper-tip.svg); display: inline-block;width: .625rem; position: relative;left:.33em;}
+input.error + label.helper-tip:after {/*content:'';*/background: red;}
+
+/* i had this going away b/c a validation tooltip was going to take over -- i can still do that*/
+
+/*behind an invalid class, an error tooltip that had been set to displayNone could be shown
+
+:invalid .helper-tip after;
+
+hmmm this might be helped if each input and label were wrapped together...
+ */
+
+
+
+.third-field {width: 31.33%;}
 .quarter-field {width: 23%;}
 .fifth-field {width: 18%;}
 .sixth-field {width: 14.666%;}
@@ -303,9 +345,15 @@ Author: Luiz Felipe Tartarotti Fialho
 .two-thirds-field {width:64.666%;}
 .three-quarters-field {width:73%;}
 .full-field {width:98%;}
+
+.horz-form-float .row-of-inputs input + label, .tooltip + label, .text-area label, .drag-drop-area label {float: left;margin-top: -.75em;}
+
+
 .horz-form-float .form-control + label, .tooltip + label, .text-area label, .drag-drop-area label {float: left;margin-top: -.75em;}
 .char-counter{float: left;margin-top: -.8em;background: #fff;font-size: .8em;color: #a0a0a0;text-transform: uppercase;}
+
 .horz-form-float .form-control.third-field + label, .form-control.third-field + .tooltip + label {margin-left: -32.33%;}
+
 .horz-form-float .form-control.quarter-field + label, .form-control.quarter-field + .tooltip + label {margin-left: -24%;}
 .horz-form-float .form-control.fifth-field + label, .form-control.fifth-field + .tooltip + label {margin-left: -19%;}
 .horz-form-float .form-control.sixth-field + label, .form-control.sixth-field + .tooltip + label {margin-left: -15.666%;}
@@ -329,11 +377,9 @@ Author: Luiz Felipe Tartarotti Fialho
 .has-char-counter span {float:right;}
 .has-char-counter .char-counter {margin-top: -.25em;}
 
-.helper-tip:after {content: url(../img/helper-tip.svg); display: inline-block;width: 10px; position: relative;left:.33em;}
 
 fieldset.full-width {width: 100%;}
 fieldset.vertical-checkboxes, fieldset.vertical-radios {margin-right: 2em;vertical-align: top;}
-input.error + label.helper-tip:after {content:'';}
 fieldset.vertical-checkboxes legend.legend-presspass, fieldset.vertical-radios legend.legend-presspass {max-width: 15em;}
 legend.legend-presspass {border: none;font-size: .9em; color: #aaa; text-transform: uppercase;margin: 0 0 .5em 0;padding: 0;}
 fieldset {margin-bottom: 1em;display: inline-block;}

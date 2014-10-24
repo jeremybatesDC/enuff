@@ -55,26 +55,52 @@
 
 
 <form class="horz-form-float">
-  <input class="form-control third-field" id="one"/>
-    <label for="one">third</label>
+    
+    <div class="row-of-inputs third-fields">
+        <input id="Aone"/>
+        <label for="Aone" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">thirdA</label>
 
-    <input class="form-control third-field" id="two"/>
-    <label for="two" class="helper-tip" data-toggle="tooltip" data-placement="top" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red" data-original-title="">third</label>
+        <input id="Btwo"/>
+        <label for="Btwo" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">third</label>
 
-    <input class="form-control third-field error" id="three" data-toggle="tooltip" data-placement="top" title="Helper Text Becomes Error Message" data-original-title=""/>
-    <label for="three">third</label>
+        <input id="Cthree" title="Helper Text Becomes Error Message" required="required"/>
+        <label for="Cthree" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">third</label>
+    </div>
 
-    <input class="form-control quarter-field" id="four"/>
-    <label for="four">fourth</label>
+    <div class="row-of-inputs fourth-fields">
+        <input id="A2"/>
+        <label for="A2" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">fourth</label>
 
-    <input class="form-control quarter-field" id="five"/>
-    <label for="five">fourth</label>
+        <input id="B2"/>
+        <label for="B2" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">fourth</label>
 
-    <input class="form-control quarter-field" id="six"/>
-    <label for="six">fourth</label>
+        <input id="C2" title="Helper Text Becomes Error Message" required="required"/>
+        <label for="C2" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">fourth</label>
+        <input id="D2" title="Helper Text Becomes Error Message" required="required"/>
+        <label for="D2" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">fourth</label>
+    </div>
 
-    <input class="form-control quarter-field error" id="seven" data-toggle="tooltip" data-placement="top" title="Long Long Error Message" data-original-title=""/>
-    <label for="seven">fourth</label>
+    <div class="row-of-inputs fifth-fields">
+        <input id="A3"/>
+        <label for="A3" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">fifth</label>
+
+        <input id="B3"/>
+        <label for="B3" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">fifth</label>
+
+        <input id="C3" title="Helper Text Becomes Error Message" required="required"/>
+        <label for="C3" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">fifth</label>
+        
+        <input id="D3" title="Helper Text Becomes Error Message" required="required"/>
+        <label for="D3" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">fifth</label>
+        
+        <input id="E3" title="Helper Text Becomes Error Message" required="required"/>
+        <label for="E3" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">fifth</label>
+
+    </div>
+
+
+
+    
     
     <input class="form-control half-field" id="eight"/>
     <label for="eight" class="helper-tip" data-toggle="tooltip" data-placement="top" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red" data-original-title="">half</label>
@@ -82,20 +108,7 @@
     <input class="form-control half-field" id="nine"/>
     <label for="nine">half</label>
 
-    <input class="form-control fifth-field" id="ten"/>
-    <label for="ten">fifth</label>
-
-    <input class="form-control fifth-field" id="eleven"/>
-    <label for="eleven">fifth</label>
-
-    <input class="form-control fifth-field" id="twelve"/>
-    <label for="twelve">fifth</label>
-
-    <input class="form-control fifth-field" id="thirteen"/>
-    <label for="thirteen">fifth</label>
-
-    <input class="form-control fifth-field error" id="fourteen" data-toggle="tooltip" data-placement="top" title="Long Long Error Message" data-original-title="" />
-    <label for="fourteen">fifth</label>
+    
 
     <input class="form-control sixth-field" id="fifteen"/>
     <label for="fifteen">sixth</label>
@@ -148,10 +161,12 @@
 
     <input class="form-control eighth-field error" id="thirtyOne" data-toggle="tooltip" data-placement="top" title="Long Long Error Message" data-original-title=""/>
     <label for="thirtyOne">1/8</label>
+    
     <fieldset>
         <button type="button" class="cancel">Cancel</button>
         <button type="submit" class="save">Save</button>
     </fieldset>
+
 </form>
 
 
