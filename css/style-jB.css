@@ -9,6 +9,36 @@ html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: b
 /*I like to make default font-size explicit, and then to base ems off of it*/
 
 
+/* cheat cheat*/
+/*
+100px=6.25em;
+72px=4.5em;
+60px=3.75em;
+48px=3em;
+42px=2.625em;
+40px=2.5em;
+36px=2.25em;
+32px=2em;
+28px=1.75em;
+24px=1.5em;
+20px=1.25em;
+18px=1.125em;
+16px=1em;
+14px=.875em;
+12px=.75em;
+10px=.625em;
+9px=.5625em;
+8px=.5em;
+7px=.4375em;
+6px=.375em;
+5px=.3125em;
+4px=.25em;
+3px=.1875em;
+2px=.125em;
+1px=.0625em;
+*/
+
+
 body{ font-family: Arial, sans-serif;font-size: .875em;/*14px*/}
 main {font-size: 1em; line-height: 1.5em;max-width: 940px;margin: 0 auto;padding: 0 2.5em;}
 header {}
@@ -25,7 +55,7 @@ html, body {height: 100%;}
 :link{}
 :hover{}
 :focus{}
-input:focus{box-shadow: 0 1px blue;}
+input:focus{box-shadow: 0 .25em .25em .25em #000;}
 :active{}
 :visited{}
 :target{}
@@ -94,7 +124,12 @@ input {height: 2em;color: #000;border-radius: 5px;border: 1px solid #999;box-sha
 label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;}
 select {}
 :valid{}
-:invalid, :-moz-submit-invalid{}
+:invalid;
+input:invalid{border: 1px solid red;}
+input:invalid ~ fieldset button.save{opacity: .1;}
+/*proof on concept ghosting save button that's preceded by invalid input(s) */
+
+
 :required{}
 :optional{}
 :checked{}

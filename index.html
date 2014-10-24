@@ -142,12 +142,16 @@
     <input class="form-control eighth-field" id="twentyNine"  />
     <label for="twentyNine" class="helper-tip" data-toggle="tooltip" data-placement="top" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red" data-original-title="">1/8</label>
 
-    <input class="form-control eighth-field" id="thirty"/>
-    <label for="thirty" class="error">1/8</label>
+    <input class="form-control eighth-field" id="thirty" required="required"/>
+    <label for="thirty" class="error">invalid</label>
     <!--<span class="helper-tip">?</span>-->
 
     <input class="form-control eighth-field error" id="thirtyOne" data-toggle="tooltip" data-placement="top" title="Long Long Error Message" data-original-title=""/>
     <label for="thirtyOne">1/8</label>
+    <fieldset>
+        <button type="button" class="cancel">Cancel</button>
+        <button type="submit" class="save">Save</button>
+    </fieldset>
 </form>
 
 
