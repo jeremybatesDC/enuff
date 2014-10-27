@@ -40,7 +40,7 @@ html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: b
 
 
 body{ font-family: 'Arial', sans-serif;font-size: .875em;/*14px*/}
-main {font-size: 1em; line-height: 1.5em;max-width: 940px;margin: 0 auto;padding: 0 .5em;}
+main {font-size: 1em; line-height: 1.5em;max-width: 56rem;margin: 0 auto;padding: 0 .5em;}
 header {}
 nav {}
 article {}
@@ -404,7 +404,7 @@ hmmm this might be helped if each input and label were wrapped together...
 .quarter-field {width: 23.95%;}
 .fifth-field {width: 19%;}
 .sixth-field {width: 14.666%;}
-.eighth-field {width: 11.214%;}
+.eighth-field {width: 11.21%;}
 .half-field {width:49.1%;}
 .two-thirds-field {width:65.5%;}
 .three-quarters-field {width:74.05%;}
@@ -416,6 +416,13 @@ hmmm this might be helped if each input and label were wrapped together...
 .forty-field{width: 38.35%;}
 /* dunno why, but i don't want to do a 70/30 -- 66 33 is good enough for that, no?*/
 
+
+.uneven input:last-of-type{float: right;}
+
+.uneven .eighth-field {width: 10.7%;} 
+
+
+/* yes, super-hacky -- futz with the margins and float the last one right so it always looks aligned*/
 
 
 
