@@ -122,7 +122,7 @@ form{}
 fieldset{}
 input {height: 2em;color: #000;border-radius: 5px;border: 1px solid #999;box-shadow: none;padding: 0 .25em;font-family: Arial;/*default is trebuchet -- ugh*/}
 label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;}
-select {}
+select {height: 2em;}
 :valid{border: 1px solid green;}
 :invalid{}
 input:invalid{border: 1px solid red;}
@@ -457,6 +457,33 @@ hmmm this might be helped if each input and label were wrapped together...
 .horz-form-float .form-control.half-field + label, .form-control.half-field + .tooltip + label {margin-left: -49%;}
 .horz-form-float .form-control.two-thirds-field + label, .form-control.two-thirds-field + .tooltip + label {margin-left: -65.666%;}
 .horz-form-float .form-control.full-field + label, .form-control.full-field + .tooltip + label {margin-left: -99%;}*/
+
+
+.flexgrid .row {min-height: 2em;}
+
+.flexgrid .row fieldset {
+  padding: 0 .5em;
+  margin: 0;
+}
+
+.flexgrid .row div:first-child fieldset {
+  padding-left: 0;
+}
+
+.flexgrid .row div:last-child fieldset {
+  padding-right: 0;
+}
+
+
+.flexgrid .row input, .flexgrid .row select {
+  width: 100%;
+}
+
+.flexgrid .row label {
+  display: inline-block;
+  position: relative;
+  top: 1em;
+}
 
 
 
