@@ -9,10 +9,6 @@
  * }
 */
 
-.grid {
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
 
 .row {
   -moz-box-sizing: border-box;
@@ -29,8 +25,7 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+
 }
 
 .row.reverse {
