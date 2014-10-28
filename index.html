@@ -8,17 +8,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/normalize-custom-jB.css">
-    <link rel="stylesheet" href="css/flexboxgrid.css"/>
+    <link rel="stylesheet" href="css/flexboxgrid-min.css"/>
     <link rel="stylesheet" href="css/style-jB.css">
     <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
 
-    <style>
-    /*circNav initial state is in critical path*/
-.tip {z-index: 1;margin: -5em;width: 10em; height: 10em;-moz-transform: scale(.001);transform: scale(.001);list-style: none;opacity: 0;}
-
-
-
-    </style>
 </head>
 
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -60,24 +53,26 @@
 <form class="flexgrid">
     <div class="row">
         <div class="column-4-hand">
-            <fieldset>
+            <fieldset class="box">
                 <label>Label</label>
                 <input/>
             </fieldset>
         </div>
         <div class="column-4-hand">
-            <fieldset>
+            <fieldset class="box">
                 <label>Label</label>
                 <input/>
             </fieldset>
         </div>
         <div class="column-4-hand">
-            <fieldset>
+            <fieldset class="box">
                 <label>Label</label>
                 <input/>
             </fieldset>
         </div>
     </div>
+
+
     <div class="row">
         <div class="column-3-hand">
             <fieldset>
@@ -124,6 +119,8 @@
             </fieldset>
         </div>
     </div><!--end row-->
+
+
     <div class="row">
         <div class="column-12-hand">
              
@@ -273,62 +270,62 @@
     </div>
     <!--<div class="row-of-inputs ninth-fields">
         <input id="9a"/>
-        <label for="9a" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/9</label>
+        <label for="9a" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/9</label>
 
         <input id="9b"/>
-        <label for="9b" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/9</label>
+        <label for="9b" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/9</label>
 
         <input id="9c" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="9c" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/9</label>
+        <label for="9c" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/9</label>
         
         <input id="9d" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="9d" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/9</label>
+        <label for="9d" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/9</label>
         
         <input id="9e" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="9e" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/9</label>
+        <label for="9e" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/9</label>
 
         <input id="9f" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="9f" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/9</label>
+        <label for="9f" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/9</label>
 
         <input id="9g" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="9g" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/9</label>
+        <label for="9g" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/9</label>
 
         <input id="9h" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="9h" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/9</label>
+        <label for="9h" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/9</label>
 
         <input id="9i" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="9i" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/9</label>
+        <label for="9i" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/9</label>
     </div>
     <div class="row-of-inputs tenth-fields">
         <input id="10a"/>
-        <label for="10a" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/10</label>
+        <label for="10a" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/10</label>
 
         <input id="10b"/>
-        <label for="10b" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/10</label>
+        <label for="10b" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/10</label>
 
         <input id="10c" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="10c" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/10</label>
+        <label for="10c" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/10</label>
         
         <input id="10d" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="10d" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/10</label>
+        <label for="10d" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/10</label>
         
         <input id="10e" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="10e" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/10</label>
+        <label for="10e" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/10</label>
 
         <input id="10f" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="9f" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/10</label>
+        <label for="9f" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/10</label>
 
         <input id="10g" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="10g" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/10</label>
+        <label for="10g" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/10</label>
 
         <input id="10h" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="10h" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/10</label>
+        <label for="10h" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/10</label>
 
         <input id="10i" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="10i" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/10</label>
+        <label for="10i" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/10</label>
 
         <input id="10j" title="Helper Text Becomes Error Message" required="required"/>
-        <label for="10j" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error -- because the error is just the helper text in red">1/10</label>
+        <label for="10j" class="helper-tip" title="This title attribute and helper text here needs to be snipped and pasted on the input when there is an error  because the error is just the helper text in red">1/10</label>
     </div> -->
 
 
@@ -1813,7 +1810,9 @@
         <div class="column-4-hand">
             <fieldset>
                 <label>Label</label>
-                <select></select>
+                <select>
+                    <option>1</option>
+                </select>
             </fieldset>
         </div>
         <div class="column-4-hand">
@@ -1823,9 +1822,14 @@
             </fieldset>
         </div>
         <div class="column-4-hand">
-            <fieldset>
-                <label>Label</label>
-                <input/>
+            <fieldset class="hasCheckbox">
+                <div class="checkbox">
+                    <label for="checkbox">
+                        <input class="icon-form-control sr-only" id="checkbox" type="checkbox"/>
+                        <i class="icon icon-form-checkbox"></i>
+                        <span>checkbox label</span>
+                     </label>
+                </div>
             </fieldset>
         </div>
     </div><!--end row-->

@@ -62,6 +62,7 @@ input:focus{box-shadow: 0 .25em .25em .25em #000;}
 ::selection,::-moz-selection {}
 
 
+
 a{text-decoration: none;}
 
 button{text-transform: uppercase;font-size: .875em; padding: .25em .5em;background:transparent;}
@@ -122,8 +123,9 @@ form{}
 fieldset{}
 input {height: 2em;color: #000;border-radius: 5px;border: 1px solid #999;box-shadow: none;padding: 0 .25em;font-family: Arial;/*default is trebuchet -- ugh*/}
 label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;}
-select {height: 2em;}
-:valid{border: 1px solid green;}
+select {height: 100px;}
+option {padding: 1em 0;}
+input:valid{border: 1px solid green;}
 :invalid{}
 input:invalid{border: 1px solid red;}
 input:invalid ~ fieldset button.save{opacity: .1;}
@@ -379,8 +381,7 @@ Author: Luiz Felipe Tartarotti Fialho
 .row-of-inputs.tenth-fields input:last-of-type + label,.row-of-inputs.tenth-fields input:last-of-type + .tooltip + label {margin-left: -8.25%;font-size:.6em;}*/
 
 
-input.error + label.helper-tip:after {/*content:'';*/background: red;}
-
+input.error + label.helper-tip:after {background: red;}
 /* i had this going away b/c a validation tooltip was going to take over -- i can still do that*/
 
 /*behind an invalid class, an error tooltip that had been set to displayNone could be shown
@@ -479,11 +480,20 @@ hmmm this might be helped if each input and label were wrapped together...
   width: 100%;
 }
 
+.flexgrid select {display: inline-block;}
+.flexgrid select option {height: 2em;}
+
 .flexgrid .row label {
   display: inline-block;
   position: relative;
   top: 1em;
 }
+
+
+
+
+
+
 
 
 
@@ -518,6 +528,83 @@ fieldset.horizontal-checkboxes, fieldset.horizontal-radios {margin-right: 3em;}
 fieldset.horizontal-radios .radio-inline, fieldset.horizontal-checkboxes .checkbox-inline {padding-left: .25em;margin-right: 1em;}
 fieldset.text-area{display: block;}
 fieldset.text-area.wysiwyg-area textarea{min-height:25em;}
+
+
+/*gets rid of that annoying effect of the hidden elements being highlighted*/
+
+fieldset.hasCheckbox ::selection, .checkbox ::selection {background: transparent;}
+.checkbox {
+    display: block;
+    min-height: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.icon-form-control + .icon { 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075); 
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075); 
+    /*-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; 
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; */
+} 
+.icon-form-control:active + .icon,
+.icon-form-control:focus + .icon {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+}
+.checkbox .icon-form-checkbox {
+    display: inline-block;
+    width: 18px; 
+    height: 18px; 
+    font-size: 16px; 
+    background: #eee; 
+    border: 1px solid #999; 
+    color: #eee; 
+    margin-right: 5px; 
+    margin-left: -20px;
+    position: relative;
+}
+.checkbox .icon-form-control:checked + .icon-form-checkbox:before { border-color: #999; }
+.checkbox .icon-form-control + .icon-form-checkbox:before { 
+    content: "";
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height: 8px;
+    width: 4px;
+    background: transparent;
+    border: 3px solid #eee;
+    border-top: 0px;
+    border-left: 0px;
+    top: 2px;
+    left: 6px;
+    position: absolute;
+}
+.checkbox .icon-form-control + .icon-form-checkbox:after { 
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: 4px;
+    background: transparent;
+    border: 3px solid #eee;
+    border-top: 0px;
+    border-left: 0px;
+}
 
 
 @media only screen and (min-width: 50em) {}
