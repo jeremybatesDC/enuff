@@ -1,25 +1,24 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> 
 <html class="no-js"> <!--<![endif]-->
+
     <head>
         <meta charset="utf-8" />
-        <title>jB Flex</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link rel="stylesheet" href="../../css/normalize-custom-jB.css">
-        <link rel="stylesheet" href="css/flexboxgrid.css">
-        <link rel="stylesheet" href="css/style.css">
+        <title>Flexbox Grid</title>
 
-        
-
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize-custom-jB.css">
+    <link rel="stylesheet" href="css/flexboxgrid.css"/>
+    <link rel="stylesheet" href="css/flexStyle.css">
     </head>
 
-    <body class="layout">
+    <body class="">
         
-        
+       
         <div class="page js-page">
-            <header>
+            <header class="hero">
                 
             </header>
 
@@ -31,7 +30,8 @@
 
                     <p>Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs,
                         sm, md & lg viewport widths.</p>
-                <div class="flexgrid">
+
+                <div class="flexgrid">        
                     <div class="row">
                         <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
                             <div class="box-row"></div>
@@ -60,6 +60,8 @@
                         </div>
                     </div>
                 </div><!--end flexgrid-->
+
+
 <pre><code>&lt;div class="row">
     &lt;div class="col-xs-12
                 col-sm-8
@@ -76,9 +78,7 @@
                      <h2>Fluid</h2>
 
                     <p>Percent based widths allow fluid resizing of columns and rows.</p>
-
                 <div class="flexgrid">
-
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="box-row"></div>
@@ -132,7 +132,6 @@
                             <div class="box-row"></div>
                         </div>
                     </div>
-
                 </div><!--end flexgrid-->
 <pre><code>.col-xs-6 {
   flex-basis: 50%;
@@ -159,6 +158,7 @@
 
                     <p>Offset a column</p>
                 <div class="flexgrid">
+
                     <div class="row">
                         <div class="col-xs-offset-11 col-xs-1">
                             <div class="box-row"></div>
@@ -228,28 +228,27 @@
                      <h2>Auto Width</h2>
 
                     <p>Add any number of auto sizing columns to a row. Let the grid figure it out.</p>
-
-                <div class="flexgrid">
-                    <div class="row">
-                        <div class="col-xs">
-                            <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs">
-                            <div class="box-row"></div>
-                        </div>
+            <div class="flexgrid">
+                <div class="row">
+                    <div class="col-xs">
+                        <div class="box-row"></div>
                     </div>
-                    <div class="row">
-                        <div class="col-xs">
-                            <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs">
-                            <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs">
-                            <div class="box-row"></div>
-                        </div>
+                    <div class="col-xs">
+                        <div class="box-row"></div>
                     </div>
-                </div><!--end flexgrid-->
+                </div>
+                <div class="row">
+                    <div class="col-xs">
+                        <div class="box-row"></div>
+                    </div>
+                    <div class="col-xs">
+                        <div class="box-row"></div>
+                    </div>
+                    <div class="col-xs">
+                        <div class="box-row"></div>
+                    </div>
+                </div>
+            </div><!--end flexgrid-->
 
 <pre><code>&lt;div class="row">
     &lt;div class="col-xs">
@@ -334,22 +333,21 @@
                 <p>Add classes to align elements to the start or end of a row as well as the top,
                     bottom, or center of a column</p>
                     <h3><code>.start-*</code></h3>
-                <div class="flexgrid">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="box container">
-                                <div class="row start-xs">
-                                    <div class="col-xs-6">
-                                        <div class="box-nested"></div>
-                                    </div>
+            <div class="flexgrid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box container">
+                            <div class="row start-xs">
+                                <div class="col-xs-6">
+                                    <div class="box-nested"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!--end flexgrid-->
+                </div>
+            </div><!--end flexgrid-->
 
-
-                    *default alignment
+                *default alignment
 <pre><code>&lt;div class="row start-xs">
     &lt;div class="col-xs-6">
         &lt;div class="box">
@@ -361,19 +359,19 @@
 
 
                 <h3><code>.center-*</code></h3>
-                <div class="flexgrid">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="box container">
-                                <div class="row center-xs">
-                                    <div class="col-xs-6">
-                                        <div class="box-nested"></div>
-                                    </div>
+            <div class="flexgrid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box container">
+                            <div class="row center-xs">
+                                <div class="col-xs-6">
+                                    <div class="box-nested"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!--end flexgrid-->
+                </div>
+            </div><!--end flexgrid-->
 <pre><code>&lt;div class="row center-xs">
     &lt;div class="col-xs-6">
         &lt;div class="box">
@@ -384,7 +382,6 @@
 </code></pre>
 
                 <h3><code>.end-*</code></h3>
-
             <div class="flexgrid">
                 <div class="row">
                     <div class="col-xs-12">
@@ -398,6 +395,7 @@
                     </div>
                 </div>
             </div><!--end flexgrid-->
+
 <pre><code>&lt;div class="row end-xs">
     &lt;div class="col-xs-6">
         &lt;div class="box">
@@ -433,8 +431,7 @@
 </code></pre>
 
                 <h3><code>.top-*</code></h3>
-
-            <div class="flexgrid"> 
+            <div class="flexgrid">
                 <div class="row top-xs">
                     <div class="col-xs-6">
                         <div class="box-large"></div>
@@ -444,7 +441,6 @@
                     </div>
                 </div>
             </div><!--end flexgrid-->
-
                 *default alignment
 <pre><code>&lt;div class="row top-xs">
     &lt;div class="col-xs-6">
@@ -466,7 +462,6 @@
                     </div>
                 </div>
             </div><!--end flexgrid-->
-
 <pre><code>&lt;div class="row middle-xs">
     &lt;div class="col-xs-6">
         &lt;div class="box">
@@ -477,7 +472,6 @@
 </code></pre>
 
                 <h3><code>.bottom-*</code></h3>
-
             <div class="flexgrid">
                 <div class="row bottom-xs">
                     <div class="col-xs-6">
@@ -505,7 +499,6 @@
 
                 <p>Add classes to distribute the contents of a row or column.</p>
                 <h3><code>.around-*</code></h3>
-
             <div class="flexgrid">
                 <div class="row">
                     <div class="col-xs-12">
@@ -564,7 +557,6 @@
                     </div>
                 </div>
             </div><!--end flexgrid-->
-
 <pre><code>&lt;div class="row between-xs">
     &lt;div class="col-xs-2">
         &lt;div class="box">
@@ -742,12 +734,12 @@
 </code></pre>
 
             </section>
-            <footer>
+            <footer class="page-footer">
                 
             </footer>
         </div>
         </div>
-       
+        
     </body>
 
 </html>
