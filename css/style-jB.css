@@ -457,8 +457,8 @@ hmmm this might be helped if each input and label were wrapped together...
 .horz-form-float .form-control.eighth-field + label, .form-control.eighth-field + .tooltip + label {margin-left: -11.5%;}
 .horz-form-float .form-control.half-field + label, .form-control.half-field + .tooltip + label {margin-left: -49%;}
 .horz-form-float .form-control.two-thirds-field + label, .form-control.two-thirds-field + .tooltip + label {margin-left: -65.666%;}
-.horz-form-float .form-control.full-field + label, .form-control.full-field + .tooltip + label {margin-left: -99%;}*/
-
+.horz-form-float .form-control.full-field + label, .form-control.full-field + .tooltip + label {margin-left: -99%;}
+*/
 
 .flexgrid .row {min-height: 2em;}
 
@@ -492,7 +492,33 @@ hmmm this might be helped if each input and label were wrapped together...
 
 
 
+.flexgrid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
 
+.box-row,
+.box-first,
+.box-nested,
+.box-large,
+.box {
+  position: relative;
+  min-height: 1rem;
+  margin-bottom: 0;
+  background: #007FFF;
+  overflow: hidden;
+}
+
+.box-first {background: #0066CC;border-color: #007FFF;}
+.box-nested {background: #003366;border-color: #007FFF;}
+.box-large {height: 8rem;}
 
 
 
