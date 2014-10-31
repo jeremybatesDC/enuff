@@ -122,8 +122,8 @@ var{}
 /*  forms */
 form{}
 fieldset{}
-input {height: 2em;color: #000;border-radius: 5px;border: 1px solid #999;box-shadow: none;padding: 0 .25em;font-family: Arial;/*default is trebuchet -- ugh*/}
-label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;white-space: nowrap;overflow: hidden;}
+input {height: 2em;color: #000;border-radius: 5px;border: 1px solid #999;box-shadow: none;padding: 0 .25em;font-family: Arial;/*default is trebuchet -- ugh*/font-size: 1rem;}
+label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;/*white-space: nowrap;overflow: hidden;*/}
 select {}
 option {padding: 1em 0;}
 input:valid{border: 1px solid green;}
@@ -292,174 +292,6 @@ Author: Luiz Felipe Tartarotti Fialho
 
 
 .radios label, .checkboxes label {color: #000; margin-bottom: .33em;text-transform: none;font-size: 1em;}
-.vertical-form label{display: block;}
-.horz-form-float {padding-top: 1em;overflow: hidden;}
-.horz-form-float .form-control, .search-row .form-control {float: left;margin:0 1%}
-
-
-
-
-.horz-form-float .row-of-inputs {margin-bottom: 2em;}
-.horz-form-float .row-of-inputs input {float: left;margin:0 1%;}
-
-
-
-
-
-
-
-
-.horz-form-float:after {display: table;float: none; clear:both;}
-
-
-
-
-
-/* what about selects? */
-.row-of-inputs.full-fields input {width:100%;}
-.row-of-inputs.half-fields input {width:49%;}
-.row-of-inputs.third-fields input {width:32%;}
-.row-of-inputs.fourth-fields input {width:23.5%;}
-.row-of-inputs.fifth-fields input {width:18.4%;}
-.row-of-inputs.sixth-fields input {width:15%;}
-.row-of-inputs.seventh-fields input {width:12.57%;}
-.row-of-inputs.eighth-fields input {width:10.75%;}
-.row-of-inputs.ninth-fields input {width:9.33%;}
-.row-of-inputs.tenth-fields input {width:8.2%;}
-
-/* generic mixed? */
-
-/*should i wrap inputs? Maybe. */
-
-
-
-/*refactor -- there is too much specificity below*/
-.horz-form-float .row-of-inputs input:first-of-type {margin-left: 0!important;}
-.horz-form-float .row-of-inputs input:last-of-type {margin-right: 0!important;}
-
-
-/* I could also play with the margins when there are multiple inputs -- might keep the math simpler -- but i think it'll look funny and is bad design practice*/
-/* Yeah, it's ugly*/
-
-
-
-
-/*clearfix -- but WHATCHOUT -- THIS MESSES UP AN ERROR AFTER CLASS -- MUST TEASE APART*/
-.row-of-inputs:after{content:'';display:table;float: none;clear: both;} 
-
-
-.row-of-inputs.full-fields input + label,.row-of-inputs.full-fields input + .tooltip + label, .row-of-inputs.full-fields input:first-of-type + label,.row-of-inputs.full-fields input:first-of-type + .tooltip + label {margin-left: -100%;}
-
-.row-of-inputs.half-fields input + label,.row-of-inputs.half-fields input + .tooltip + label, .row-of-inputs.half-fields input:first-of-type + label,.row-of-inputs.half-fields input:first-of-type + .tooltip + label {margin-left: -50%;}
-.row-of-inputs.half-fields input:last-of-type + label,.row-of-inputs.half-fields input:last-of-type + .tooltip + label {margin-left: -49%;}
-
-.row-of-inputs.half-fields input + label,.row-of-inputs.half-fields input + .tooltip + label, .row-of-inputs.half-fields input:first-of-type + label,.row-of-inputs.half-fields input:first-of-type + .tooltip + label {margin-left: -50%;}
-.row-of-inputs.half-fields input:last-of-type + label,.row-of-inputs.half-fields input:last-of-type + .tooltip + label {margin-left: -49%;}
-
-.row-of-inputs.third-fields input + label,.row-of-inputs.third-fields input + .tooltip + label, .row-of-inputs.third-fields input:first-of-type + label,.row-of-inputs.third-fields input:first-of-type + .tooltip + label {margin-left: -33%;}
-.row-of-inputs.third-fields input:last-of-type + label,.row-of-inputs.third-fields input:last-of-type + .tooltip + label {margin-left: -32%;}
-
-.row-of-inputs.fourth-fields input + label,.row-of-inputs.fourth-fields input + .tooltip + label, .row-of-inputs.fourth-fields input:first-of-type + label,.row-of-inputs.fourth-fields input:first-of-type + .tooltip + label {margin-left: -24.5%;}
-.row-of-inputs.fourth-fields input:last-of-type + label,.row-of-inputs.fourth-fields input:last-of-type + .tooltip + label {margin-left: -23.5%;}
-
-.row-of-inputs.fifth-fields input + label,.row-of-inputs.fifth-fields input + .tooltip + label, .row-of-inputs.fifth-fields input:first-of-type + label,.row-of-inputs.fifth-fields input:first-of-type + .tooltip + label {margin-left: -19.4%;}
-.row-of-inputs.fifth-fields input:last-of-type + label,.row-of-inputs.fifth-fields input:last-of-type + .tooltip + label {margin-left: -18.4%;}
-
-.row-of-inputs.sixth-fields input + label,.row-of-inputs.sixth-fields input + .tooltip + label, .row-of-inputs.sixth-fields input:first-of-type + label,.row-of-inputs.sixth-fields input:first-of-type + .tooltip + label {margin-left: -16%;}
-.row-of-inputs.sixth-fields input:last-of-type + label,.row-of-inputs.sixth-fields input:last-of-type + .tooltip + label {margin-left: -15%;}
-
-.row-of-inputs.seventh-fields input + label,.row-of-inputs.seventh-fields input + .tooltip + label, .row-of-inputs.seventh-fields input:first-of-type + label,.row-of-inputs.seventh-fields input:first-of-type + .tooltip + label {margin-left: -13.5%;}
-.row-of-inputs.seventh-fields input:last-of-type + label,.row-of-inputs.seventh-fields input:last-of-type + .tooltip + label {margin-left: -12.5%;}
-
-.row-of-inputs.eighth-fields input + label,.row-of-inputs.eighth-fields input + .tooltip + label, .row-of-inputs.eighth-fields input:first-of-type + label,.row-of-inputs.eighth-fields input:first-of-type + .tooltip + label {margin-left: -12%;}
-.row-of-inputs.eighth-fields input:last-of-type + label,.row-of-inputs.eighth-fields input:last-of-type + .tooltip + label {margin-left: -11%;}
-
-/*.row-of-inputs.ninth-fields input + label,.row-of-inputs.ninth-fields input + .tooltip + label, .row-of-inputs.ninth-fields input:first-of-type + label,.row-of-inputs.ninth-fields input:first-of-type + .tooltip + label {margin-left: -10.5%;}
-.row-of-inputs.ninth-fields input:last-of-type + label,.row-of-inputs.ninth-fields input:last-of-type + .tooltip + label {margin-left: -9.5%;}
-
-/*need a media query on this one */
-.row-of-inputs.tenth-fields input + label,.row-of-inputs.tenth-fields input + .tooltip + label, .row-of-inputs.tenth-fields input:first-of-type + label,.row-of-inputs.tenth-fields input:first-of-type + .tooltip + label {margin-left: -9.25%;font-size:.6em;}
-.row-of-inputs.tenth-fields input:last-of-type + label,.row-of-inputs.tenth-fields input:last-of-type + .tooltip + label {margin-left: -8.25%;font-size:.6em;}*/
-
-
-input.error + label.helper-tip:after {background: red;}
-/* i had this going away b/c a validation tooltip was going to take over -- i can still do that*/
-
-/*behind an invalid class, an error tooltip that had been set to displayNone could be shown
-
-:invalid .helper-tip after;
-
-hmmm this might be helped if each input and label were wrapped together...
- */
-
- /* might undo rows and keep classes on the inputs maybe */
-
-
-/* i need sass to do the math here -- will be better */
-/*Or really, if these are just in a flexbox grid, that would be best */
-
-
-.horz-form-float .row-of-inputs.multi label {}
-
-/*multi & uneven*/
-.third-field {width: 32.5%;}
-.quarter-field {width: 23.95%;}
-.fifth-field {width: 19%;}
-.sixth-field {width: 14.666%;}
-.eighth-field {width: 11.21%;}
-.half-field {width:49.1%;}
-.two-thirds-field {width:65.5%;}
-.three-quarters-field {width:74.05%;}
-.full-field {width:98%;}
-.ninety-field {width: 89%;}
-.tenth-field {width: 9%;}
-.eighty-field {width: 79%;}
-.sixty-field {width: 59%;}
-.forty-field{width: 38.35%;}
-/* dunno why, but i don't want to do a 70/30 -- 66 33 is good enough for that, no?*/
-
-
-.uneven input:last-of-type{float: right;}
-
-.uneven .eighth-field {width: 10.7%;} 
-
-
-/* yes, super-hacky -- futz with the margins and float the last one right so it always looks aligned*/
-
-
-
-.horz-form-float .row-of-inputs.multi.three-inputs input {float: left;margin:0 .75075%;}
-.horz-form-float .row-of-inputs.multi.four-inputs input {float: left;margin:0 .75%;}
-.horz-form-float .row-of-inputs.multi.five-inputs input {float: left;margin:0 .715%;}
-.horz-form-float .row-of-inputs.multi.six-inputs input {float: left;margin:0 .71%;}
-.horz-form-float .row-of-inputs.multi.seven-inputs input {float: left;margin:0 .71%;}
-
-.helper-tip:after {content: url(../img/helper-tip.svg); display: inline-block;width: .625rem; position: relative;left:.33em;}
-
-
-/* need to test different combos, b/c lengths are weird, too */
-
-/* I can make spacers out of these too */
-
-
-
-
-.horz-form-float .row-of-inputs input + label, .tooltip + label, .text-area label, .drag-drop-area label {float: left;margin-top: -.75em;}
-.horz-form-float .row-of-inputs input.two-thirds-field + label {margin-left: -66.33%;}
-.horz-form-float .row-of-inputs input.third-field + label {margin-left: -32.66%;}
-
-/*
-.horz-form-float .form-control + label, .tooltip + label, .text-area label, .drag-drop-area label {float: left;margin-top: -.75em;}
-.char-counter{float: left;margin-top: -.8em;background: #fff;font-size: .8em;color: #a0a0a0;text-transform: uppercase;}
-.horz-form-float .form-control.third-field + label, .form-control.third-field + .tooltip + label {margin-left: -32.33%;}
-.horz-form-float .form-control.quarter-field + label, .form-control.quarter-field + .tooltip + label {margin-left: -24%;}
-.horz-form-float .form-control.fifth-field + label, .form-control.fifth-field + .tooltip + label {margin-left: -19%;}
-.horz-form-float .form-control.sixth-field + label, .form-control.sixth-field + .tooltip + label {margin-left: -15.666%;}
-.horz-form-float .form-control.eighth-field + label, .form-control.eighth-field + .tooltip + label {margin-left: -11.5%;}
-.horz-form-float .form-control.half-field + label, .form-control.half-field + .tooltip + label {margin-left: -49%;}
-.horz-form-float .form-control.two-thirds-field + label, .form-control.two-thirds-field + .tooltip + label {margin-left: -65.666%;}
-.horz-form-float .form-control.full-field + label, .form-control.full-field + .tooltip + label {margin-left: -99%;}
-*/
 
 /*.flexgrid .row {min-height: 2em;}
 
@@ -503,8 +335,10 @@ section.flexgrid {
   flex-direction: column;
 }
 
-.flexgrid .row label {
-}
+/* can't put bottom margin on the row, because the rows can flex*/
+.flexgrid .row {}
+
+.flexgrid .row label {margin: 0 0 1em 0;}
 
 .flexgrid .row label span {
   position: relative;
@@ -537,6 +371,17 @@ label span :focus {
 .box-first {background: #0066CC;border-color: #007FFF;}
 .box-nested {background: #003366;border-color: #007FFF;}
 .box-large {height: 8rem;}
+
+.bottom {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+
+
+
 
 
 
