@@ -123,8 +123,8 @@ var{}
 form{}
 fieldset{}
 input {height: 2em;color: #000;border-radius: 5px;border: 1px solid #999;box-shadow: none;padding: 0 .25em;font-family: Arial;/*default is trebuchet -- ugh*/}
-label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;}
-select {height: 100px;}
+label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;white-space: nowrap;overflow: hidden;}
+select {}
 option {padding: 1em 0;}
 input:valid{border: 1px solid green;}
 :invalid{}
