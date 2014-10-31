@@ -55,7 +55,8 @@ html, body {height: 100%;}
 :link{}
 :hover{}
 :focus{}
-input:focus{box-shadow: 0 .25em .25em .25em #000;}
+*:focus{box-shadow: none !important;border-color: transparent; !important;outline: none !important}
+/*input:focus{box-shadow: none !important;border-color: transparent; !important;}*/
 :active{}
 :visited{}
 :target{}
@@ -460,7 +461,7 @@ hmmm this might be helped if each input and label were wrapped together...
 .horz-form-float .form-control.full-field + label, .form-control.full-field + .tooltip + label {margin-left: -99%;}
 */
 
-.flexgrid .row {min-height: 2em;}
+/*.flexgrid .row {min-height: 2em;}
 
 .flexgrid .row fieldset {
   padding: 0 .5em;
@@ -488,11 +489,9 @@ hmmm this might be helped if each input and label were wrapped together...
   position: relative;
   top: 1em;
 }
+*/
 
-
-
-
-.flexgrid {
+section.flexgrid {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -502,6 +501,25 @@ hmmm this might be helped if each input and label were wrapped together...
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.flexgrid .row label {
+}
+
+.flexgrid .row label span {
+  position: relative;
+  top: .5em;
+  background: #fff;
+}
+
+label span :focus {
+  box-shadow: none;
+}
+
+
+.flexgrid .row input, .flexgrid .row select {
+  display: block;
+  width: 100%;
 }
 
 .box-row,
