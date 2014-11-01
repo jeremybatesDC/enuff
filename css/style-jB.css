@@ -125,7 +125,7 @@ fieldset{}
 input {height: 2em;color: #000;border-radius: 5px;border: 1px solid #999;box-shadow: none;padding: 0 .25em;font-family: Arial;/*default is trebuchet -- ugh*/font-size: 1rem;}
 label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;/*white-space: nowrap;overflow: hidden;*/}
 select {}
-option {padding: 1em 0;}
+option {/*padding: 1em 0;*//*that screws up firefox selectbox height*/}
 input:valid{border: 1px solid green;}
 :invalid{}
 input:invalid{border: 1px solid red;}
@@ -346,9 +346,7 @@ section.flexgrid {
   background: #fff;
 }
 
-label span :focus {
-  box-shadow: none;
-}
+label span :focus {box-shadow: none;}
 
 
 .flexgrid .row input, .flexgrid .row select {
@@ -402,7 +400,7 @@ label span :focus {
 .has-char-counter .char-counter {margin-top: -.25em;}
 
 
-fieldset.full-width {width: 100%;}
+/*fieldset.full-width {width: 100%;}
 fieldset.vertical-checkboxes, fieldset.vertical-radios {margin-right: 2em;vertical-align: top;}
 fieldset.vertical-checkboxes legend.legend-presspass, fieldset.vertical-radios legend.legend-presspass {max-width: 15em;}
 legend.legend-presspass {border: none;font-size: .9em; color: #aaa; text-transform: uppercase;margin: 0 0 .5em 0;padding: 0;}
@@ -416,12 +414,13 @@ fieldset.horizontal-checkboxes label, fieldset.horizontal-radios label {display:
 fieldset.horizontal-checkboxes, fieldset.horizontal-radios {margin-right: 3em;}
 fieldset.horizontal-radios .radio-inline, fieldset.horizontal-checkboxes .checkbox-inline {padding-left: .25em;margin-right: 1em;}
 fieldset.text-area{display: block;}
-fieldset.text-area.wysiwyg-area textarea{min-height:25em;}
+fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
 
 
 /*gets rid of that annoying effect of the hidden elements being highlighted*/
 
-fieldset.hasCheckbox ::selection, .checkbox ::selection {background: transparent;}
+.hasCheckbox ::selection, .checkbox ::selection {background: transparent;}
+
 .checkbox {
     display: block;
     min-height: 20px;
@@ -429,6 +428,11 @@ fieldset.hasCheckbox ::selection, .checkbox ::selection {background: transparent
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.checkbox label {
+    display: block;
+}
+
 .icon-form-control + .icon { 
     border: 1px solid #ccc; 
     border-radius: 4px; 
@@ -437,6 +441,10 @@ fieldset.hasCheckbox ::selection, .checkbox ::selection {background: transparent
     /*-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; 
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; */
 } 
+
+.checkbox .icon-form-control + .icon {
+  border-radius: .25em;
+}
 .icon-form-control:active + .icon,
 .icon-form-control:focus + .icon {
     border-color: #66afe9;
@@ -494,6 +502,156 @@ fieldset.hasCheckbox ::selection, .checkbox ::selection {background: transparent
     border-top: 0px;
     border-left: 0px;
 }
+
+
+
+.hasRadio ::selection, .radio ::selection {background: transparent;}
+
+.radio {
+    display: block;
+    min-height: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.radio label {
+    display: block;
+}
+
+.icon-form-control + .icon { 
+    border: 1px solid #ccc; 
+    border-radius: 50%; 
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075); 
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075); 
+} 
+.icon-form-control:active + .icon,
+.icon-form-control:focus + .icon {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+}
+.radio .icon-form-radio {
+    display: inline-block;
+    width: 18px; 
+    height: 18px; 
+    font-size: 16px; 
+    background: #eee; 
+    border: 1px solid #999; 
+    color: #eee; 
+    margin-right: 5px; 
+    margin-left: -20px;
+    position: relative;
+}
+.radio .icon-form-control:checked + .icon-form-radio:before { border-color: #999; }
+.radio .icon-form-control + .icon-form-radio:before { 
+    content: "";
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height: 8px;
+    width: 4px;
+    background: transparent;
+    border: 3px solid #eee;
+    border-top: 0px;
+    border-left: 0px;
+    top: 2px;
+    left: 6px;
+    position: absolute;
+}
+.radio .icon-form-control + .icon-form-radio:after { 
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: 4px;
+    background: transparent;
+    border: 3px solid #eee;
+    border-top: 0px;
+    border-left: 0px;
+}
+
+/*
+CSS-only custom select by https://gist.github.com/mojaray2k
+*/
+.customSelect .dropdown {
+  /*position: relative;*/
+  display:block;
+  /*margin-top:0.5em;*/
+  overflow:hidden;
+  width:100%;
+  max-width:100%;
+  border: 1px solid #000;
+  border-radius: .25em;
+}
+ 
+.customSelect select {
+  /* Make sure the select is wider than the container so we can clip the arrow */
+  width:110%;
+  max-width:110%;
+  min-width:110%;
+  height: 2em;
+  /* Remove select styling */
+  appearance: none;
+  -webkit-appearance: none;
+  /* Ugly Firefox way of doing it */
+  -moz-appearance: window;
+  text-indent: 0.01px;
+  text-overflow: "";
+  /* Magic font size number to prevent iOS text zoom */
+  font-size:16px;
+  background:none;
+  border: none;
+  /*color: #444;*/
+  outline: none;
+  /* Padding works surpringly well */
+  /*padding: .4em 19% .4em .8em;*/
+  font-family: helvetica, sans-serif;
+  /*line-height:1;*/
+  /*margin:.2em;*/
+}
+  
+  /* This hides native dropdown button arrow in IE */
+.customSelect select::-ms-expand {display: none;}
+
+ /* Custom arrow - could be an image, SVG, icon font, etc. */
+ .customSelect .dropdown:after {
+  background: none;
+  color: #bbb;
+  content: "\25BC";
+  font-size: .7em;
+  padding:0;
+  position: absolute;
+  right: 1em;
+  top: 1.2em;
+  bottom: .3em;
+  z-index: 1;
+  /* This hack makes the select behind the arrow clickable in some browsers */
+  pointer-events:none;
+}
+ 
+/* Hover style - tricky because we're clipping the overflow */
+
+/*.customSelect .dropdown:hover {border:1px solid #888;}*/
+  
+  /* Focus style */
+.customSelect select:focus {outline: none;box-shadow: 0 0 3px 3px rgba(180,222,250, .85);}
+  /* This hides focus around selected option in FF */
+.customSelect select:-moz-focusring {color: transparent;text-shadow: 0 0 0 #000;}
+
+
 
 
 @media only screen and (min-width: 50em) {}
