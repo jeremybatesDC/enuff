@@ -422,9 +422,10 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
 
 
 .hasCheckbox ::selection, .checkbox ::selection, .hasRadio ::selection, .radio ::selection {background: transparent;}
-.checkbox, .radio {display: block;min-height: 1.25em;padding-left: 1.25em;margin-top: .75em;margin-bottom: .75em;}
+.checkbox, .radio {display: block;min-height: 1.25rem;padding-left: 1.25rem;margin-top: .75rem;margin-bottom: .75rem;}
 .checkbox label, .radio label {display: block;}
-.checkbox .icon-form-control + .icon {border-radius: .25em;}
+.hasCheckbox .checkbox label span, .hasRadio .radio label span {top:0;}
+.checkbox .icon-form-control + .icon {border-radius: .25rem;}
 .radio .icon-form-control + .icon {border-radius: 50%;}
 .icon-form-control + .icon { 
     border: 1px solid #ccc; 
@@ -447,7 +448,7 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
     background: #eee; 
     border: 1px solid #999; 
     color: #eee; 
-    margin-right: .3125em; 
+    margin-right: .3125rem; 
     margin-left: -1.25rem;
     position: relative;
 }
@@ -459,13 +460,13 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    height: .5rem;
-    width: .25rem;
+    height: .8rem;
+    width: .4rem;
     background: transparent;
     border: 3px solid #eee;
     border-top: 0px;
     border-left: 0px;
-    top: 2px;
+    top: .125rem;
     left: .375rem;
     position: absolute;
 }
