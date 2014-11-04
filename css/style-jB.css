@@ -574,8 +574,8 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .pika-single:after { clear: both }
 .pika-single { *zoom: 1 }
 .pika-single.is-hidden {display: none;}
-.pika-single.is-bound {position: absolute;box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);}
-.pika-lendar {float: left;width: 240px;margin: 8px;}
+.pika-single.is-bound {position: absolute;/*box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);*/}
+.pika-lendar {float: left;width: 15rem;margin: .5rem;}
 .pika-title {position: relative;text-align: center;}
 .pika-label {
     display: inline-block;
@@ -584,10 +584,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     z-index: 9999;
     overflow: hidden;
     margin: 0;
-    padding: 5px 3px;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: bold;
+    padding: .33rem .25rem;
+    font-size: .9rem;
+    line-height: 1.25rem;
+    /*font-weight: bold;*/
     background-color: #fff;
 }
 .pika-title select {
@@ -596,7 +596,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     z-index: 9998;
     margin: 0;
     left: 0;
-    top: 5px;
+    top: .33rem;
     filter: alpha(opacity=0);
     opacity: 0;
 }
@@ -609,10 +609,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     outline: none;
     border: 0;
     padding: 0;
-    width: 20px;
-    height: 30px;
+    width: 1.25rem;
+    height: 2rem;
     /* hide text using text-indent trick, using width value (it's enough) */
-    text-indent: 20px;
+    text-indent: 1.25rem;
     white-space: nowrap;
     overflow: hidden;
     background-color: transparent;
@@ -644,20 +644,18 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .pika-select {display: inline-block;*display: inline;}
 .pika-table {width: 100%;border-collapse: collapse;border-spacing: 0;border: 0;}
 .pika-table th,.pika-table td {width: 14.285714285714286%;padding: 0;}
-.pika-table th {color: #999;font-size: 12px;line-height: 25px;font-weight: bold;text-align: center;}
+.pika-table th {color: #999;font-size: .75rem;line-height: 1.5rem;font-weight: bold;text-align: center;}
 .pika-button {
     cursor: pointer;
     display: block;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
     outline: none;
     border: 0;
     margin: 0;
     width: 100%;
-    padding: 5px;
+    padding: .33rem;
     color: #666;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: .75rem;
+    line-height: 1.25rem;
     text-align: right;
     background: #f5f5f5;
 }
@@ -680,12 +678,20 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 
 .pika-button.pika-button:hover {
-    color: #fff !important;
-    background: #ff8000 !important;
-    box-shadow: none !important;
-    border-radius: 3px !important;
+    color: #fff;
+    background: #ff8000;
+    box-shadow: none;
+    border-radius: 3px;
 }
 
+/*.pikaday-override input:nth-letter(1): {
+  display: none;
+}*/
+
+
+.pikaday-override input.hide-day{
+  color: blue;
+}
 
 
 @media only screen and (min-width: 50em) {}
