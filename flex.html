@@ -10,7 +10,15 @@
         <link rel="stylesheet" href="css/normalize-custom-jB.css">
         <link rel="stylesheet" href="css/flexboxgrid.css"/>
         <link rel="stylesheet" href="css/style-jB.css">
+<!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
     </head>
+
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
     <body>
         
@@ -30,8 +38,8 @@
                         </label>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-8 col-lg-10">
-                    	<label><span>Hey Hey Hey</span>
-                        	<input/>
+                    	<label><span>Date by Pikaday</span>
+                            <input type="text" id="datepicker">
                         </label>
                     </div>
                     <div class="col-xs-6 col-sm-3 col-md-2 col-lg-1">
@@ -684,12 +692,28 @@
                     </div>
 
             </section>
+        
 
 
         </main>  
 
         <footer>
         </footer>
+        <script src="js/pikaday.js"></script>
 
+        <script type="text/javascript">
+            var picker = new Pikaday(
+            {
+                field: document.getElementById('datepicker'),
+                firstDay: 1,
+                minDate: new Date('2000-01-01'),
+                maxDate: new Date('2020-12-31'),
+                yearRange: [2000,2020]
+            });
+        </script>
+        <!--CONSIDER USING FONT LOADER TO PREVENT FOUT-->    
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>(window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>'));</script>-->
+        <!--<script src="js/app.js"></script>-->
     </body>
 </html>

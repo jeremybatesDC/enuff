@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/normalize-custom-jB.css">
     <link rel="stylesheet" href="css/flexboxgrid-min.css"/>
     <link rel="stylesheet" href="css/style-jB.css">
+    <link rel="stylesheet" href="css/pikaday.css">
+
     <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
 
 </head>
@@ -48,7 +50,7 @@
 
 
 
-
+<input type="text" id="datepicker">
 
 <form class="flexgrid">
     <div class="row">
@@ -1855,6 +1857,18 @@
     
     <footer>
     </footer>
+<script src="js/pikaday.js"></script>
+
+<script type="text/javascript">
+    var picker = new Pikaday(
+    {
+        field: document.getElementById('datepicker'),
+        firstDay: 1,
+        minDate: new Date('2000-01-01'),
+        maxDate: new Date('2020-12-31'),
+        yearRange: [2000,2020]
+    });
+</script>
 
 <!--CONSIDER USING FONT LOADER TO PREVENT FOUT-->    
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
