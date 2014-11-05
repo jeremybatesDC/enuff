@@ -4,7 +4,7 @@
 <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
-        <title>jB flex forms</title>
+        <title>jB forms</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="css/normalize-custom-jB.css">
@@ -29,56 +29,57 @@
             <section class="flexgrid">
                 
 
-                <h5>Responsive NO BOX ROW</h5>
+                <h3>Responsive</h3>
                 <form class="batesForm">
+                    <fieldset>
                     <div class="row bottom">
-                        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+                        <div class="col-xs-12 col-sm-3 col-md-2">
                         	<label><span>First Name</span>
                             	<input/>
                             </label>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-10">
+                        <div class="col-xs-6 col-sm-6 col-md-8">
                         	<label class="pikaday-override"><span>Birthday</span>
                                 <input id="datepicker" class="hide-day" placeholder="cal icon"/>
                             </label>
                         </div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 col-lg-1">
+                        <div class="col-xs-6 col-sm-3 col-md-2">
                         	<label><span>Last Name</span>
                             	<input/>
                             </label>
                         </div>
                     </div>
                     <div class="row bottom">
-                        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+                        <div class="col-xs-12 col-sm-3 col-md-2">
                         	<label><span>Hey Hey Hey</span>
                             	<input/>
                             </label>
                         </div>
-                        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-11">
+                        <div class="col-xs-12 col-sm-9 col-md-10">
                         	<label><span>Yo Yo Yo Yo</span>
                                 <input/>
                             </label>
                         </div>
                     </div>
                     <div class="row bottom">
-                        <div class="col-xs-10 col-sm-6 col-md-8 col-lg-10">
+                        <div class="col-xs-10 col-sm-6 col-md-8">
                         	<label><span>Hey Hey Hey</span>
                             	<input/>
                             </label>
                         </div>
-                        <div class="col-xs-2 col-sm-6 col-md-4 col-lg-2">
+                        <div class="col-xs-2 col-sm-6 col-md-4">
                         	<label><span>Hey</span>
                             	<input/>
                             </label>
                         </div>
                     </div>
-
+                    </fieldset>
                 </form>
             </section>
 
             <section class="flexgrid">
                      
-                <p>Fluid NO BOX ROW</p>
+                <h3>Fluid</h3>
 
                 
                     <div class="row bottom">
@@ -141,17 +142,17 @@
                                     <label>
                                         <input class="icon-form-control sr-only" id="" type="radio" name="radio1"/>
                                         <i class="icon icon-form-radio"></i>
-                                        <span>radio label</span>
+                                        <span>Lady</span>
                                     </label>
                                     <label>
                                         <input class="icon-form-control sr-only" id="" type="radio" name="radio1"/>
                                         <i class="icon icon-form-radio"></i>
-                                        <span>radio label</span>
+                                        <span>Gentleman</span>
                                     </label>
                                     <label>
                                         <input class="icon-form-control sr-only" id="" type="radio" name="radio1"/>
                                         <i class="icon icon-form-radio"></i>
-                                        <span>radio label</span>
+                                        <span>Smizmar</span>
                                     </label>
                                 </div>
                             </fieldset>
@@ -188,7 +189,7 @@
                         	</label>
                         </div>
                         <div class="col-xs-6 customSelect">
-                        	 <label class="wrapper"><span>This label wraps the select</span>
+                        	 <label class="wrapper"><span>Select</span>
                                 <div class="button dropdown">
                                     <select>
                                         <option></option>
@@ -204,8 +205,56 @@
                     </div>
             </section>
 
+            <article class="tab">
+    <!-- Tab -->
+  <!-- Tab Painel -->
+  <div class="tab-painel">
+    <input class="tab-open" id="tab-1" name="tab-wrap-1" type="radio" aria-hidden="true" hidden checked>
+    <label class="tab-nav" for="tab-1">Tab 1</label>
+    <div class="tab-inner">
+      hey
+    </div>
+  </div>
 
-                
+  <div class="tab-painel">
+    <input class="tab-open" id="tab-2" name="tab-wrap-1" type="radio" aria-hidden="true" hidden>
+    <label class="tab-nav" for="tab-2">Tab 2</label>
+    <div class="tab-inner">
+      you
+    </div>
+  </div>
+
+  <div class="tab-painel">
+    <input class="tab-open" id="tab-3" name="tab-wrap-1" type="radio" aria-hidden="true" hidden />
+    <label class="tab-nav" for="tab-3">Tab 3</label>
+    <div class="tab-inner">
+      man
+    </div>
+  </div>
+</article>
+
+
+
+<!-- Modal -->
+<div>
+    <p>Needs pushstate & scroll fix</p>
+    <a href="#modal-one" class="button">Modal</a>
+</div>
+<article class="modal" id="modal-one" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      Headline
+      <a class="btn-close" href="" aria-hidden="true">×</a>
+    </div>
+    <div class="modal-body">
+      Body
+    </div>
+    <div class="modal-footer">
+      Footer
+    </div>
+  </div>
+</article>
+
 
             <section class="flexgrid">
                 <h2>Offsets</h2>
@@ -692,10 +741,16 @@
                     </div>
 
             </section>
-        
 
 
-        </main>  
+
+</main>  
+
+
+
+
+
+
 
         <footer>
         </footer>

@@ -26,6 +26,7 @@ html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: b
 16px=1em;
 14px=.875em;
 12px=.75em;
+11px=.6875em;
 10px=.625em;
 9px=.5625em;
 8px=.5em;
@@ -66,7 +67,7 @@ html, body {height: 100%;}
 
 a{text-decoration: none;}
 
-button{text-transform: uppercase;font-size: .875em; padding: .25em .5em;background:transparent;}
+button, .button{display: inline-block; text-transform: uppercase;font-size: .875em; padding: .25em .5em;background:transparent;border: 1px solid #000;}
 p{}
 
 span{}
@@ -122,8 +123,8 @@ var{}
 /*  forms */
 form{}
 fieldset{}
-input {height: 2em;color: #000;/*border-radius: 5px;*/border: 1px solid #999;box-shadow: none;padding: 0 .25em;font-family: Arial;/*default is trebuchet -- ugh*/font-size: 1rem;}
-label {background: #fff;font-size: .8em;line-height: 1em; color: #a0a0a0;font-weight: normal;text-transform: uppercase;/*white-space: nowrap;overflow: hidden;*/}
+input {height: 2em;color: #000;/*border-radius: 5px;*/border: 1px solid #999;box-shadow: none;padding: 0 .25em;font-family: Arial;/*default is trebuchet -- ugh*/font-size: .875rem;}
+label {background: #fff;font-size: .625rem;line-height: 1em; color: #888;font-weight: normal;text-transform: uppercase;/*white-space: nowrap;overflow: hidden;*/}
 select {}
 option {/*padding: 1em 0;*//*that screws up firefox selectbox height*/}
 input:valid{border: 1px solid green;}
@@ -425,7 +426,7 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
 .checkbox, .radio {display: block;min-height: 1.25rem;padding-left: 1.25rem;margin-top: .75rem;margin-bottom: .75rem;}
 .checkbox label, .radio label {display: block;}
 .hasCheckbox .checkbox label span, .hasRadio .radio label span {top:0;}
-.checkbox .icon-form-control + .icon {border-radius: .25rem;}
+.checkbox .icon-form-control + .icon {/*border-radius: .25rem;*/}
 .radio .icon-form-control + .icon {border-radius: 50%;}
 .icon-form-control + .icon { 
     border: 1px solid #ccc; 
@@ -497,7 +498,6 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
   width:100%;
   max-width:100%;
   border: 1px solid #000;
-  border-radius: .4em;
 }
  
 .customSelect select {
