@@ -56,15 +56,15 @@
                             </label>
                         </div>
                         <div class="col-xs-12 col-sm-9 col-md-10">
-                        	<label><span>Yo Yo Yo Yo</span>
-                                <input/>
+                        	<label><span>MaxLength</span>
+                                <input type="text" maxlength="4"/>
                             </label>
                         </div>
                     </div>
                     <div class="row bottom">
                         <div class="col-xs-10 col-sm-6 col-md-8">
-                        	<label><span>Hey Hey Hey</span>
-                            	<input/>
+                        	<label><span>Credit card</span>
+                            	<input type="text" maxlength="16" id="creditcard">
                             </label>
                         </div>
                         <div class="col-xs-2 col-sm-6 col-md-4">
@@ -165,44 +165,68 @@
                             </label>
                         </div>
                         <div class="col-xs-8">
-                        	<label><span>Yo Yo Yo Yo</span>
+                        	<label><span>Street Address</span>
                         		<input/>
                         	</label>
                         </div>
                     </div>
                     <div class="row bottom">
                         <div class="col-xs-5">
-                        	<label><span>Yo Yo Yo Yo</span>
+                        	<label><span>City</span>
                         		<input/>
                         	</label>
                         </div>
                         <div class="col-xs-7">
-                        	<label><span>Yo Yo Yo Yo</span>
+                        	<label><span>Zipcode</span>
                         		<input/>
                         	</label>
                         </div>
                     </div>
                     <div class="row bottom">
-                        <div class="col-xs-6">
-                        	<label><span>Yo Yo Yo Yo</span>
-                        		<input/>
-                        	</label>
-                        </div>
-                        <div class="col-xs-6 customSelect">
-                        	 <label class="wrapper"><span>Select</span>
-                                <div class="button dropdown">
+                        
+                        <div class="col-xs-3 customSelect">
+                        	 <label><span>Month</span>
+                                <div class="dropdown">
                                     <select>
                                         <option></option>
-                                        <option>Apples</option>
-                                        <option>Bananas</option>
-                                        <option>Grapes</option>
-                                        <option>Oranges</option>
-                                        <option>A very long option name to test wrapping and visual collisions</option>
+                                        <option>January</option>
+                                        <option>February</option>
+                                        <option>March</option>
+                                        <option>April</option>
+                                        <option>May</option>
+                                        <option>June</option>
+                                        <option>July</option>
+                                        <option>August</option>
+                                        <option>September</option>
+                                        <option>October</option>
+                                        <option>November</option>
+                                        <option>December</option>
                                     </select>
                                 </div>
                             </label>
                         </div>
-                    </div>
+                        <div class="col-xs-3 customSelect">
+                            <label><span>Year</span>
+                                <div class="dropdown">
+                                    <select>
+                                        <option></option>
+                                        <option>2014</option>
+                                        <option>2015</option>
+                                        <option>2016</option>
+                                        <option>2017</option>
+                                        <option>2018</option>
+                                        <option>2019</option>
+                                        <option>2020</option>
+                                    </select>
+                                </div>
+                            </label>
+                        </div>
+                         <div class="col-xs-6">
+                            <label><span>Yo Yo Yo Yo</span>
+                                <input/>
+                            </label>
+                        </div>
+                    </div><!--end row-->
             </section>
 
             <article class="tab">
@@ -742,7 +766,11 @@
 
             </section>
 
+<fieldset>
+            <legend>VMasker(element).maskNumber();</legend>
 
+            <h4>Only numbers</h4>
+        </fieldset>
 
 </main>  
 
@@ -755,8 +783,9 @@
         <footer>
         </footer>
         <script src="js/pikaday.js"></script>
+        <script src="js/vanilla-masker.js"></script>
 
-        <script type="text/javascript">
+        <script>
             var picker = new Pikaday(
             {
                 field: document.getElementById('datepicker'),
@@ -766,6 +795,29 @@
                 yearRange: [2000,2020]
             });
         </script>
+        <script>
+         (function() {
+                // #maskMoney
+                /*VMasker(document.getElementById("default")).maskMoney();
+                VMasker(document.getElementById("defaultValues")).maskMoney();
+                VMasker(document.getElementById("zeroCents")).maskMoney({zeroCents: true});
+                VMasker(document.getElementById("unit")).maskMoney({unit: 'R$'});
+                VMasker(document.getElementById("suffixUnit")).maskMoney({suffixUnit: 'R$'});
+                VMasker(document.getElementById("delimiter")).maskMoney({delimiter: ','});
+                VMasker(document.getElementById("separator")).maskMoney({separator: '.'});*/
+
+                // #maskNumber
+                VMasker(document.getElementById("creditcard")).maskNumber();
+
+                // #maskPattern
+                /*VMasker(document.getElementById("phone")).maskPattern('(99) 9999-9999');
+                VMasker(document.getElementById("phoneValues")).maskPattern('(99) 9999-9999');
+                VMasker(document.getElementById("date")).maskPattern('99/99/9999');
+                VMasker(document.getElementById("doc")).maskPattern('999.999.999-99');
+                VMasker(document.getElementById("carPlate")).maskPattern('AAA-9999');
+                VMasker(document.getElementById("vin")).maskPattern('SS.SS.SSSSS.S.S.SSSSSS');*/
+            })();
+        </script
 
 
         <!--CONSIDER USING FONT LOADER TO PREVENT FOUT-->    

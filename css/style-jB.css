@@ -134,6 +134,13 @@ input:invalid ~ fieldset button.save{opacity: .1;}
 /*proof on concept ghosting save button that's preceded by invalid input(s) */
 
 
+input[type=number] {-moz-appearance: textfield;}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 :required{}
 :optional{}
 :checked{}
@@ -435,7 +442,7 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
 } 
 .icon-form-control:active + .icon,
 .icon-form-control:focus + .icon {
-    border-color: #66afe9;
+    /*border-color: #66afe9;*/
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
@@ -490,7 +497,6 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
 
 /* CSS-only custom select from https://gist.github.com/mojaray2k*/
 .customSelect .dropdown {
-
   /*position: relative;*/
   display:block;
   /*margin-top:0.5em;*/
@@ -502,18 +508,19 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
  
 .customSelect select {
   /* Make sure the select is wider than the container so we can clip the arrow */
-  width:110%;
-  max-width:110%;
-  min-width:110%;
-  height: 2rem;
+  /*width:100%;
+  max-width:100%;
+  min-width:100%;*/
+  height: 1.625rem;
+  padding: 0 0 0 .25em;
   font-family: Arial, sans-serif;
-  font-size: 1rem;
   appearance: none;-webkit-appearance: none;
   /* Ugly Firefox way of doing it */
   -moz-appearance: window;
   text-overflow: "";
   /*may have to revert to hard 16px*/
   /*font-size:16px;*//* Magic font size number to prevent iOS text zoom */
+  font-size: .875rem;
   background:none;
   border: none;
   outline: none;
@@ -521,7 +528,10 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
   /*line-height: 1.5rem;*/ /*line-height doesn't seem to do anything*/
 }
 
-
+.customSelect .dropdown select option {
+  color: blue !important;
+  padding: 1em 0;
+}
 
   /* This hides native dropdown button arrow in IE */
 .customSelect select::-ms-expand {display: none;}
@@ -534,7 +544,7 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
   font-size: 1.5em;
   float: right;
   margin-top: -1.2em;
-  padding-right: 1em;
+  padding: 0 1em 0 0;
   /*padding:0;
   position: absolute;
   margin-right: 1em;
