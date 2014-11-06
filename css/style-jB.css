@@ -156,8 +156,8 @@ input[type=number]::-webkit-outer-spin-button {
 :indeterminate {}
 progress{}
 textarea{resize:none;}
-input[type="radio"] {}
-input[type="checkbox"] {}
+/*input[type="radio"] {}
+input[type="checkbox"] {}*/
 optgroup{}
 
 
@@ -302,7 +302,6 @@ Author: Luiz Felipe Tartarotti Fialho
 
 
 
-.radios label, .checkboxes label {color: #000; margin-bottom: .33em;text-transform: none;font-size: 1em;}
 
 /*.flexgrid .row {min-height: 2em;}
 
@@ -413,80 +412,92 @@ label span :focus {box-shadow: none;}
 .has-char-counter .char-counter {margin-top: -.25em;}
 
 
-/*fieldset.full-width {width: 100%;}
-fieldset.vertical-checkboxes, fieldset.vertical-radios {margin-right: 2em;vertical-align: top;}
-fieldset.vertical-checkboxes legend.legend-presspass, fieldset.vertical-radios legend.legend-presspass {max-width: 15em;}
-legend.legend-presspass {border: none;font-size: .9em; color: #aaa; text-transform: uppercase;margin: 0 0 .5em 0;padding: 0;}
-fieldset {margin-bottom: 1em;display: inline-block;}
-fieldset.error legend {color: red; font-weight: bold;}
-fieldset.vertical-checkboxes, fieldset.vertical-radios {margin-right: 1em;padding-left: .1em;padding-right: 1em;}
-fieldset.vertical-checkboxes input, fieldset.vertical-radios input{float:left;clear: left;}
-fieldset.vertical-checkboxes label,fieldset.vertical-radios label {display: block; padding-left: 1.5em;}
-fieldset.vertical-checkboxes label:after, fieldset.vertical-radios label:after{float:none;clear:both;display: table;}
-fieldset.horizontal-checkboxes label, fieldset.horizontal-radios label {display: inline-block;}
-fieldset.horizontal-checkboxes, fieldset.horizontal-radios {margin-right: 3em;}
-fieldset.horizontal-radios .radio-inline, fieldset.horizontal-checkboxes .checkbox-inline {padding-left: .25em;margin-right: 1em;}
-fieldset.text-area{display: block;}
-fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
 
+fieldset.checkboxes {
+    /*display: block;
+    min-height: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
-/* checkbox from a pen by Kenneth Moore, Gooey Ideas, radios adapted from it*/
-/*gets rid of that annoying effect of the hidden elements being highlighted*/
-/* rename "form-control" class -- makes jB think of bootstrap [shudder] */
+fieldset.checkboxes.checkboxes-stacked label {
+  display: block;
+}
 
-.hasCheckbox ::selection, .checkbox ::selection, .hasRadio ::selection, .radio ::selection {background: transparent;}
-.checkbox, .radio {display: block;min-height: 1.25rem;padding-left: 1.25rem;margin-top: .75rem;margin-bottom: .75rem;}
-.checkbox label, .radio label {display: block;}
-.hasCheckbox .checkbox label span, .hasRadio .radio label span {top:0;}
-.checkbox .icon-form-control + .icon {/*border-radius: .25rem;*/}
-.radio .icon-form-control + .icon {border-radius: 50%;}
+.checkboxes label.checkbox span {
+  top: 0; /*overrides default label, which needs to be encapsulated*/
+}
+
+.checkboxes label.checkbox input[type="checkbox"] {
+  display: inline-block;
+  width: 100px;
+}
+
 .icon-form-control + .icon { 
-    border: 1px solid #000; 
-   /* -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075); 
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075); */
-} 
+    border: 1px solid #ccc; 
+    /*border-radius: 4px; */
+}
+
 .icon-form-control:active + .icon,
 .icon-form-control:focus + .icon {
-    /*border-color: #66afe9;*/
+    border-color: #66afe9;
     outline: 0;
-    /*-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);*/
+    
 }
-.sr-only {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0 0 0 0);border: 0;}
-.checkbox .icon-form-checkbox, .radio .icon-form-radio {
+
+
+
+
+/*screen-reader*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+}
+
+.checkboxes .icon-form-checkbox {
     display: inline-block;
-    width: 1.25rem; 
-    height: 1.25rem; 
-    font-size: 1.25rem; 
+    width: 18px; 
+    height: 18px; 
+    font-size: 16px; 
     background: #eee; 
     border: 1px solid #999; 
     color: #eee; 
-    margin-right: .3125rem; 
-    margin-left: -1.25rem;
+    /*margin-right: 5px; 
+    margin-left: -20px;*/
     position: relative;
 }
-
-/*color of the checkmark itself*/
-.checkbox .icon-form-control:checked + .icon-form-checkbox:before, .radio .icon-form-control:checked + .icon-form-radio:before { border-color: #000; }
-
-.checkbox .icon-form-control + .icon-form-checkbox:before, .radio .icon-form-control + .icon-form-radio:before { 
+.checkboxes .icon-form-control:checked + .icon-form-checkbox:before { border-color: #000; }
+.checkboxes .icon-form-control + .icon-form-checkbox:before { 
     content: "";
     display: inline-block;
+    position: absolute;
+    top: .125rem;
+    left: .33rem;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    height: .8rem;
-    width: .4rem;
+    height: .66rem;
+    width: .33rem;
     background: transparent;
-    border: 3px solid #eee;
+    border: .125rem solid #eee;
     border-top: 0px;
     border-left: 0px;
-    top: .125rem;
-    left: .375rem;
-    position: absolute;
+    
+    
 }
-.checkbox .icon-form-control + .icon-form-checkbox:after, .radio .icon-form-control + .icon-form-radio:after { 
+.checkboxes .icon-form-control + .icon-form-checkbox:after { 
     content: "";
     display: inline-block;
     height: .5rem;
@@ -500,6 +511,13 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
 
 
 
+
+.batesSelect {}
+.batesSelect select{}
+.batesSelect select optgroup {}
+.batesSelect select optgroup option{display: inline!important;}
+.batesSelect select:focus {}
+.batesSelect select:focus optgroup {}
 
 
 
@@ -548,7 +566,7 @@ fieldset.text-area.wysiwyg-area textarea{min-height:25em;}*/
  .customSelect .dropdown:after {
   content: "\25BC";
   background: none;
-  color: #a0a0a;
+  color: #a0a0a0;
   font-size: 1.5em;
   float: right;
   margin-top: -1.2em;

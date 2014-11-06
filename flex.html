@@ -38,7 +38,7 @@
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-8">
                         	<label class="pikaday-override"><span>Birthday</span>
-                                <input class="calendar-field" id="datepicker" class="hide-day"/>
+                                <input class="calendar-field hide-day" id="datepicker"/>
                             </label>
                         </div>
                         <div class="col-xs-6 col-sm-3 col-md-2">
@@ -154,50 +154,11 @@
                         </div>
                     </div>
                     <div class="row bottom">
-                        
-                        <div class="col-xs-6 hasCheckbox">
-                        	<fieldset>
-                                <div class="checkbox">
-                                    <label>
-                                        <input class="icon-form-control sr-only" id="" type="checkbox"/>
-                                        <i class="icon icon-form-checkbox"></i>
-                                        <span>checkbox label</span>
-                                    </label>
-                                    <label>
-                                        <input class="icon-form-control sr-only" id="" type="checkbox"/>
-                                        <i class="icon icon-form-checkbox"></i>
-                                        <span>checkbox label</span>
-                                    </label>
-                                    <label>
-                                        <input class="icon-form-control sr-only" id="" type="checkbox"/>
-                                        <i class="icon icon-form-checkbox"></i>
-                                        <span>checkbox label</span>
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                          <div class="col-xs-6 hasRadio">
-                            <fieldset>
-                                <div class="radio">
-                                    <label>
-                                        <input class="icon-form-control sr-only" id="" type="radio" name="radio1"/>
-                                        <i class="icon icon-form-radio"></i>
-                                        <span>Lady</span>
-                                    </label>
-                                    <label>
-                                        <input class="icon-form-control sr-only" id="" type="radio" name="radio1"/>
-                                        <i class="icon icon-form-radio"></i>
-                                        <span>Gentleman</span>
-                                    </label>
-                                    <label>
-                                        <input class="icon-form-control sr-only" id="" type="radio" name="radio1"/>
-                                        <i class="icon icon-form-radio"></i>
-                                        <span>Smizmar</span>
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
+                        <h3>Need to adjust checkboxes//radios</h3>
                     </div>
+                    <div class="row bottom">
+                        
+                    </div> 
                     <div class="row bottom">
                         <div class="col-xs-4">
                             <label><span>Native Month</span>
@@ -211,17 +172,71 @@
                         </div>
                     </div>
                     <div class="row bottom">
-                        <div class="col-xs-5">
-                        	<label><span>City</span>
-                        		<input/>
-                        	</label>
+                        <div class="col-xs-5 batesSelect">
+                            <!--for selects, wrapping the dropdown in a label might not work...-->
+                        	<label><span>Month</span></label>
+                                <!--<div class="dropdown">-->
+                                    <!--this is hacky, drawing with html. However, it is better than using javascript to help style it. That should only be for behavior. Support for styling selects with css is so poor that I'm willing to do this. Although, Wouldn't optgroup be better? hmmm-->
+                                    <select>
+                                        <optgroup>
+                                            <option></option>
+                                            <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;January</option>
+                                            <option>February</option>
+                                            <option>March</option>
+                                            <option>April</option>
+                                            <option>May</option>
+                                            <option>June</option>
+                                            <option>July</option>
+                                            <option>August</option>
+                                            <option>September</option>
+                                            <option>October</option>
+                                            <option>November</option>
+                                            <option>December</option>
+                                        </optgroup>
+                                    </select>
+                               <!-- </div>-->
                         </div>
-                        <div class="col-xs-7">
-                        	<label><span>Zipcode</span>
-                        		<input/>
-                        	</label>
+                        <div class="col-xs-7 batesSelect">
+                        	<label><span>Month</span></label>
+                                <!--<div class="dropdown">-->
+                                    <!--this is hacky, drawing with html. However, it is better than using javascript to help style it. That should only be for behavior. Support for styling selects with css is so poor that I'm willing to do this. Although, Wouldn't optgroup be better? hmmm-->
+                                    <select>
+                                        <optgroup>
+                                            <option></option>
+                                            <option>January</option>
+                                            <option disabled></option>
+                                            <option>February</option>
+                                            <option disabled></option>
+                                            <option>March</option>
+                                            <option disabled></option>
+                                            <option>April</option>
+                                            <option disabled></option>
+                                            <option>May</option>
+                                            <option disabled></option>
+                                            <option>June</option>
+                                            <option disabled></option>
+                                            <option>July</option>
+                                            <option disabled></option>
+                                            <option>August</option>
+                                            <option disabled></option>
+                                            <option>September</option>
+                                            <option disabled></option>
+                                            <option>October</option>
+                                            <option disabled></option>
+                                            <option>November</option>
+                                            <option disabled></option>
+                                            <option>December</option>
+                                        </optgroup>
+                                    </select>
+                               <!-- </div>-->
+                            
                         </div>
                     </div>
+
+
+
+
+
                     <div class="row bottom">
                         
                         <div class="col-xs-3 customSelect">
@@ -268,8 +283,46 @@
                                 <input type="datetime"/>
                             </label>
                         </div>
-                    </div><!--end row-->
+                    </div>
+
+                    <div class="row bottom">
+                        <div class="col-xs-6"> 
+                            <fieldset class="checkboxes checkboxes-stacked">
+                                <label class="checkbox">
+                                    <input class="icon-form-control sr-only" type="checkbox"/>
+                                    <i class="icon icon-form-checkbox"></i>
+                                    <span>checkbox label</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input class="icon-form-control sr-only" type="checkbox"/>
+                                    <i class="icon icon-form-checkbox"></i>
+                                    <span>checkbox label</span>
+                                </label>
+                            </fieldset>            
+                        </div>
+                        <div class="col-xs-6">
+                            <fieldset class="checkboxes checkboxes-inline">
+                                <label class="checkbox">
+                                    <input class="icon-form-control sr-only" type="checkbox"/>
+                                    <i class="icon icon-form-checkbox"></i>
+                                    <span>checkbox label</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input class="icon-form-control sr-only" type="checkbox"/>
+                                    <i class="icon icon-form-checkbox"></i>
+                                    <span>checkbox label</span>
+                                </label>
+                            </fieldset>
+                        </div>
+                    </div>
+
+
+
+
+
             </section>
+
+
 
             <article class="tab">
             <h3>Tabs</h3>
@@ -305,7 +358,7 @@
 
 <!-- Modal -->
 <div>
-    <p>Needs pushstate & scroll fix</p>
+    <p>Needs pushstate &amp; scroll fix</p>
     <a href="#modal-one" class="button">Modal</a>
 </div>
 <article class="modal" id="modal-one" aria-hidden="true">
