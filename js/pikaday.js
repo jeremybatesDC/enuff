@@ -619,7 +619,8 @@
          */
         toString: function(format)
         {
-        	var options = {year: "numeric", month: "long",day: "numeric" };
+        	var options = {year: "numeric", month: "short",day: "numeric" };
+            //safari doesn't respect this
             //return !isDate(this._d) ? '' : hasMoment ? moment(this._d).format(format || this._o.format) : this._d.toDateString();
             //jB changed format of date
             return !isDate(this._d) ? '' : hasMoment ? moment(this._d).format(format || this._o.format) : this._d.toLocaleDateString("en-US", options);

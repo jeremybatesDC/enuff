@@ -35,12 +35,12 @@
                     <div class="row bottom">
                         <div class="col-xs-12 col-sm-3 col-md-2">
                         	<label><span>First Name</span>
-                            	<input/>
+                            	<input class="mask-alpha"/>
                             </label>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-8">
                         	<label class="pikaday-override"><span>Birthday</span>
-                                <input id="datepicker" class="hide-day" placeholder="cal icon"/>
+                                <input class="calendar-field" id="datepicker" class="hide-day"/>
                             </label>
                         </div>
                         <div class="col-xs-6 col-sm-3 col-md-2">
@@ -51,25 +51,27 @@
                     </div>
                     <div class="row bottom">
                         <div class="col-xs-12 col-sm-3 col-md-2">
-                        	<label><span>Hey Hey Hey</span>
+                        	<label><span>Suffix</span>
                             	<input/>
                             </label>
                         </div>
                         <div class="col-xs-12 col-sm-9 col-md-10">
-                        	<label><span>MaxLength</span>
-                                <input type="text" maxlength="4"/>
+                        	<label><span>Street Name</span>
+                                <input type="text" class="mask-alpha"/>
                             </label>
                         </div>
                     </div>
                     <div class="row bottom">
                         <div class="col-xs-10 col-sm-6 col-md-8">
-                        	<label><span>Credit card</span>
-                            	<input type="text" maxlength="16" id="creditcard">
+                        	<label><span>Credit card masked</span>
+                            	<input type="text" class="mask-credit">
+                                <!--<input type="text" maxlength="16" class="mask-credit">-->
+
                             </label>
                         </div>
                         <div class="col-xs-2 col-sm-6 col-md-4">
-                        	<label><span>Hey</span>
-                            	<input/>
+                        	<label><span>Apt/Ste</span>
+                            	<input id="aptSuite" class="mask-number"/>
                             </label>
                         </div>
                     </div>
@@ -103,8 +105,8 @@
                     </div>
                     <div class="row bottom">
                         <div class="col-xs-2">
-                        	<label><span>Yo Yo Yo Yo</span>
-                        		<input/>
+                        	<label><span>Zipcode Mask</span>
+                        		<input class="mask-zip"/>
                         	</label>
                         </div>
                         <div class="col-xs-10">
@@ -188,19 +190,21 @@
                         	 <label><span>Month</span>
                                 <div class="dropdown">
                                     <select>
-                                        <option></option>
-                                        <option>January</option>
-                                        <option>February</option>
-                                        <option>March</option>
-                                        <option>April</option>
-                                        <option>May</option>
-                                        <option>June</option>
-                                        <option>July</option>
-                                        <option>August</option>
-                                        <option>September</option>
-                                        <option>October</option>
-                                        <option>November</option>
-                                        <option>December</option>
+                                        <optgroup>
+                                            <option></option>
+                                            <option>January</option>
+                                            <option>February</option>
+                                            <option>March</option>
+                                            <option>April</option>
+                                            <option>May</option>
+                                            <option>June</option>
+                                            <option>July</option>
+                                            <option>August</option>
+                                            <option>September</option>
+                                            <option>October</option>
+                                            <option>November</option>
+                                            <option>December</option>
+                                        </optgroup>
                                     </select>
                                 </div>
                             </label>
@@ -222,14 +226,16 @@
                             </label>
                         </div>
                          <div class="col-xs-6">
-                            <label><span>Yo Yo Yo Yo</span>
-                                <input/>
+                            <label><span>Native Datetime</span>
+                                <input type="datetime"/>
                             </label>
                         </div>
                     </div><!--end row-->
             </section>
 
             <article class="tab">
+            <h3>Tabs</h3>
+            <p>need vertical tabs too</p>
     <!-- Tab -->
   <!-- Tab Painel -->
   <div class="tab-painel">
@@ -278,6 +284,17 @@
     </div>
   </div>
 </article>
+
+
+
+<h4>Things I need</h4>
+<ul>
+    <li>swipe to send / swipe back to discard</li>
+    <li>verical tabs</li>
+    <li>css accordion</li>
+    <li>maybe inline checkboxes</li>
+    <li>pure js validation / not sure vanilla does that... </li>
+</ul>
 
 
             <section class="flexgrid">
@@ -766,14 +783,6 @@
 
             </section>
 
-<svg x="0px" y="0px" viewBox="0 0 272 270" enable-background="new 0 0 272 270" xml:space="preserve">
-<line fill="none" stroke="#231F20" stroke-width="18.5096" stroke-miterlimit="10" x1="9" y1="80" x2="258" y2="80"/>
-<path fill="none" stroke="#231F20" stroke-width="18.3777" stroke-miterlimit="10" d="M260.667,260H9V26h251.667V260z M45,78.212
-    V260 M81,78.212V260 M117,78.212V260 M258,116H9 M258,152H9 M258,188H9 M153,78.212V260 M225,78.212V260 M258,224H9 M189,77.201V260
-    "/>
-<rect x="8" y="26" fill="#231F20" width="254" height="46"/>
-</svg>
-
 </main>  
 
 
@@ -809,8 +818,11 @@
                 VMasker(document.getElementById("separator")).maskMoney({separator: '.'});*/
 
                 // #maskNumber
-                VMasker(document.getElementById("creditcard")).maskNumber();
-
+                //VMasker(document.getElementById("creditcard")).maskNumber();
+                VMasker(document.getElementsByClassName("mask-number")).maskNumber();
+                VMasker(document.getElementsByClassName("mask-credit")).maskPattern('9999-9999-9999-9999');
+                VMasker(document.getElementsByClassName("mask-zip")).maskPattern('99999-9999');
+                VMasker(document.getElementsByClassName("mask-alpha")).maskPattern('AAAAAAAAAAAAAAAAAAAAA');
                 // #maskPattern
                 /*VMasker(document.getElementById("phone")).maskPattern('(99) 9999-9999');
                 VMasker(document.getElementById("phoneValues")).maskPattern('(99) 9999-9999');
@@ -819,12 +831,12 @@
                 VMasker(document.getElementById("carPlate")).maskPattern('AAA-9999');
                 VMasker(document.getElementById("vin")).maskPattern('SS.SS.SSSSS.S.S.SSSSSS');*/
             })();
-        </script
+        </script>
 
 
         <!--CONSIDER USING FONT LOADER TO PREVENT FOUT-->    
-        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script>(window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>'));</script>-->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+        <!--<script>(window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>'));</script>-->
         <!--<script src="js/app.js"></script>-->
     </body>
 </html>
