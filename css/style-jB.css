@@ -413,7 +413,7 @@ label span :focus {box-shadow: none;}
 
 
 
-fieldset.checkboxes {
+fieldset.checkboxes, fieldset.radios{
     /*display: block;
     min-height: 20px;
     padding-left: 20px;
@@ -425,33 +425,23 @@ fieldset.checkboxes {
     user-select: none;
 }
 
-fieldset.checkboxes.checkboxes-stacked label {
-  display: block;
-}
+fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked label {display: block;}
+.checkboxes label.checkbox span, .radios label.radio span {top: 0;}
 
-.checkboxes label.checkbox span {
-  top: 0; /*overrides default label, which needs to be encapsulated*/
-}
 
-.checkboxes label.checkbox input[type="checkbox"] {
+/* What's wrong here on safari? The input breaks out of the column*/
+.checkboxes label.checkbox input[type="checkbox"], .radios label.radio input[type="radio"] {
   display: inline-block;
-  width: 100px;
+  max-width: 15rem;
 }
 
-.icon-form-control + .icon { 
-    border: 1px solid #ccc; 
-    /*border-radius: 4px; */
-}
+.has-icon + .icon { border: 1px solid #ccc;}
+.radios .has-icon + .icon {border-radius: 50%;}
 
-.icon-form-control:active + .icon,
-.icon-form-control:focus + .icon {
+.has-icon:active + .icon,.has-icon:focus + .icon {
     border-color: #66afe9;
     outline: 0;
-    
 }
-
-
-
 
 /*screen-reader*/
 .sr-only {
@@ -465,11 +455,11 @@ fieldset.checkboxes.checkboxes-stacked label {
     border: 0;
 }
 
-.checkboxes .icon-form-checkbox {
+.checkboxes .icon-form-checkbox, .radios .icon-form-radio {
     display: inline-block;
-    width: 18px; 
-    height: 18px; 
-    font-size: 16px; 
+    width: 1rem; 
+    height: 1rem; 
+    font-size: 1rem; 
     background: #eee; 
     border: 1px solid #999; 
     color: #eee; 
@@ -477,13 +467,13 @@ fieldset.checkboxes.checkboxes-stacked label {
     margin-left: -20px;*/
     position: relative;
 }
-.checkboxes .icon-form-control:checked + .icon-form-checkbox:before { border-color: #000; }
-.checkboxes .icon-form-control + .icon-form-checkbox:before { 
+.checkboxes .has-icon:checked + .icon-form-checkbox:before, .radios .has-icon:checked + .icon-form-radio:before { border-color: #000; }
+.checkboxes .has-icon + .icon-form-checkbox:before, .radios .has-icon + .icon-form-radio:before { 
     content: "";
     display: inline-block;
     position: absolute;
-    top: .125rem;
-    left: .33rem;
+    /*top: .125rem;*/
+    left: .25rem;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
@@ -497,7 +487,7 @@ fieldset.checkboxes.checkboxes-stacked label {
     
     
 }
-.checkboxes .icon-form-control + .icon-form-checkbox:after { 
+.checkboxes .has-icon + .icon-form-checkbox:after, .radios .has-icon + .icon-form-radio:after { 
     content: "";
     display: inline-block;
     height: .5rem;
@@ -509,15 +499,17 @@ fieldset.checkboxes.checkboxes-stacked label {
 }
 
 
-
-
-
 .batesSelect {}
 .batesSelect select{}
 .batesSelect select optgroup {}
-.batesSelect select optgroup option{display: inline!important;}
+.batesSelect select optgroup option{}
 .batesSelect select:focus {}
 .batesSelect select:focus optgroup {}
+
+
+.test-select:focus optgroup option{
+  /*display: none;*/
+}
 
 
 
