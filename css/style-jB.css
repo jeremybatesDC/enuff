@@ -302,7 +302,7 @@ Author: Luiz Felipe Tartarotti Fialho
 
 .modal-footer {border-top: #eeeeee solid 1px;text-align: right;}
 
-/*toatally awesome hack to prevent body scrolling */
+/*toatally awesome hack to prevent body scrolling -- and it hides the scroll bar*/
 .modal:target + main {display: none;}
 
 /*.flexgrid .row {min-height: 2em;}
