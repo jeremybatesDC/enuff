@@ -275,6 +275,8 @@ Author: Luiz Felipe Tartarotti Fialho
   transform: translate(-50%, 0);
   top: 20%;
 }
+
+
 .modal-dialog {
   background: #fefefe;
   border: #555555 solid 1px;
@@ -300,8 +302,8 @@ Author: Luiz Felipe Tartarotti Fialho
 
 .modal-footer {border-top: #eeeeee solid 1px;text-align: right;}
 
-
-
+/*toatally awesome hack to prevent body scrolling */
+.modal:target + main {display: none;}
 
 /*.flexgrid .row {min-height: 2em;}
 
