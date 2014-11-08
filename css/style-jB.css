@@ -207,6 +207,20 @@ data{}
 
 .btn {font-size: 1em;}
 
+
+
+/*top 100%*/
+.top-section{
+  height:100%;
+}
+.more{
+  display:block;
+  position:absolute;
+  bottom:20px;
+  text-align:center;
+}
+
+
 /*action bar*/
 .save-cancel-bar {margin: 0 1em 1em 1em; padding: 1em 0; border-top: 1px solid #ccc;padding-top:1em;overflow: hidden;}
 .save-cancel-bar:after {float: none;clear:both;}
@@ -297,7 +311,7 @@ Author: Luiz Felipe Tartarotti Fialho
   transition: transform 0.3s ease-out;
   z-index: 1111;
   width: 80%;
-  max-width: 600px;
+  max-width: 40em;
 }
 .modal-body {padding: 1em;}
 .modal-body p {margin: 0;}
@@ -307,7 +321,7 @@ Author: Luiz Felipe Tartarotti Fialho
 .modal-footer {border-top: #eeeeee solid 1px;text-align: right;}
 
 /*toatally awesome hack to prevent body scrolling -- and it hides the scroll bar*/
-.modal:target + header, .modal:target ~ main {display: none;}
+/*.modal:target + header,*/ .modal:target ~ main {display: none;}
 /* what to do about header*/
 
 
