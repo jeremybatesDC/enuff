@@ -22,19 +22,15 @@
 
     <body>
         
-        <header>
-        	<nav></nav>
-            <h1>Kitchen Sink</h1>
-            <!--svg logo -->
-        </header>
+        
 
 
 <!-- Modal -->
-<article class="modal" id="modal-one" aria-hidden="true">
+<aside class="modal" id="modal-one" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-header">
       Headline
-      <a class="btn-close" href="#1" aria-hidden="true">×</a>
+      <a class="btn-close faux-links" href="#1" aria-hidden="true">×</a>
     </div>
     <div class="modal-body">
       Body
@@ -43,8 +39,13 @@
       Footer
     </div>
   </div>
-</article>
+</aside>
 
+        <header>
+            <nav></nav>
+            <h1>Kitchen Sink</h1>
+            <!--svg logo -->
+        </header>
         <main>
             <section class="flexgrid">
                 <h3>Responsive</h3>
@@ -979,7 +980,13 @@
                 VMasker(document.getElementById("vin")).maskPattern('SS.SS.SSSSS.S.S.SSSSSS');*/
             })();
         </script>
-
+        <!--<script>
+            //var fauxLinks = document.getElementsByClassName("faux-links");
+            //fauxLinks.addEventListener("click", keepUrl);
+            //function keepUrl //history.pushState(null, null, '');
+            //);
+        </script>-->
+        
 
         <!--CONSIDER USING FONT LOADER TO PREVENT FOUT-->    
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
