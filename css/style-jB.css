@@ -264,13 +264,84 @@ Author: Luiz Felipe Tartarotti Fialho
 .tab-open:checked ~ .tab-inner {opacity: 100;visibility: visible;}
 
 
+.modal .btn-close {}
+.modal .btn-close:hover {}
+.modal-wrap:before {
+  content: "";
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+}
+.modal-overlay {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 102;
+  background-color: rgba(0,200,0,.5);
+}
+.modal-open:checked ~ .modal-wrap:before,
+.modal-open:checked ~ .modal-wrap .modal-overlay {
+  display: block;
+}
+.modal-open:checked ~ .modal-wrap .modal-dialog {
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  top: 20%;
+}
+.modal-overlay {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 102;
+}
+.modal-dialog {
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  -webkit-transform: translate(-50%, -500%);
+  -ms-transform: translate(-50%, -500%);
+  -o-transform: translate(-50%, -500%);
+  transform: translate(-50%, -500%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  width: 80%;
+  max-width: 600px;
+  height: 100px;
+  z-index: 103;
+  border: 1px solid #000;
+}
+
+/* just hacking away -- trying to cut contents to an unscrollable height while still allowing it to return to same place on page after close*/
+input.modal-open[type=checkbox]:checked ~ main, input.modal-open[type=checkbox]:checked ~ main input, input.modal-open[type=checkbox]:checked ~ main label  {/*display: none;*//*opacity: 0;*//*font-size: .001em;*//*margin: -1000em;*/width: 0 !important;font-size: .01em;}
+input.modal-open[type=checkbox]:checked ~ main *{background-color: red;}
+
+/*.modal input:checked ~ .main-content {display: none !important;}*/
+
+/*toatally awesome hack to prevent body scrolling -- and it hides the scroll bar*/
+/*.modal:target + header,*/ 
+/*.modal:target ~ main {display: none;}*/ /* LOVE LOVE LOVE LOVE*/
+/* what to do about header*/
 
 
 /* from same source as tabs*/
 
 /* CONSIDER USING CHECKBOX HACK FOR MODAL -- I don't like target unless I can master pushstate*/
-
-.modal:before {
+/* This looks old and outdated*/
+/*.modal:before {
   content: "";
   display: none;
   background: rgba(0, 0, 0, 0.6);
@@ -287,10 +358,10 @@ Author: Luiz Felipe Tartarotti Fialho
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   top: 20%;
-}
+}*/
 
 /* can we animate modal close, too?*/
-.modal-dialog {
+/*.modal-dialog {
   background: #fefefe;
   border: #555555 solid 1px;
   border-radius: 5px;
@@ -312,12 +383,9 @@ Author: Luiz Felipe Tartarotti Fialho
 .modal-body p {margin: 0;}
 .modal-header,.modal-footer {padding: 1em;}
 .modal-header {border-bottom: #eeeeee solid 1px;}
+.modal-footer {border-top: #eeeeee solid 1px;text-align: right;}*/
 
-.modal-footer {border-top: #eeeeee solid 1px;text-align: right;}
 
-/*toatally awesome hack to prevent body scrolling -- and it hides the scroll bar*/
-/*.modal:target + header,*/ .modal:target ~ main {display: none;}
-/* what to do about header*/
 
 
 /*.flexgrid .row {min-height: 2em;}
