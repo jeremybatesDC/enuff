@@ -1,12 +1,13 @@
 /*jB custom reset/normalize*/
 /*! normalize.css v1.1.3 | MIT License | git.io/normalize */
-html{box-sizing: border-box;font-size:15px;line-height:1.66em;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: sans-serif;}
-*, *:before, *:after {box-sizing: inherit;}
+html{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: sans-serif;}
+*, *:before, *:after {-moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit;}
 article,aside,body,details,dl,fieldset,figcaption,figure,footer,form,header,hgroup,legend,main,menu,nav,ol,p,section,summary,ul {display: block;margin: 0;padding:0;border:0;}
 audio,canvas,video {display: inline-block;display: inline;zoom: 1;}
 audio:not([controls]) {display: none;height: 0;}
 [hidden] {display: none;}
 body {margin: 0;padding: 0;}
+a{text-decoration: none;}
 a:focus {outline: none;}
 a:active,a:hover {outline: 0;}
 h1 {font-size: 2em;margin: 0.67em 0;}

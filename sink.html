@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> 
-<html class="no-js"> <!--<![endif]-->
+<html class="no-js" id="jBForms"> <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
         <title>jB forms</title>
@@ -25,19 +25,60 @@
 
 <!-- Modal One -->
 
-  <input class="modal-open" id="modal-one" type="checkbox" hidden>
-  <div class="modal-wrap" aria-hidden="true" role="dialog">
-    <label class="modal-overlay" for="modal-one"></label>
+  <input class="modal-open" id="modalOne" type="checkbox" onchange ="change()" hidden>
+  <div id="modalA" class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modalOne"></label>
     <div class="modal-dialog">
       <div class="modal-header">
         <h2>Modal in CSS?</h2>
-        <label class="btn-close" for="modal-one" aria-hidden="true">×</label>
+        <label id="closeModal" class="btn-close" for="modalOne" aria-hidden="true">×</label>
       </div>
       <div class="modal-body">
         <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+        <p>One modal example here! :D</p>
+       
+
       </div>
       <div class="modal-footer">
-        <label class="btn btn-primary" for="modal-one">Nice!</label>
+        <label class="btn btn-primary" for="modalOne">Nice!</label>
       </div>
     </div>
   </div>
@@ -353,7 +394,7 @@
             <p>need vertical tabs too</p>
     <!-- Tab -->
   <!-- Tab Painel -->
-  <div class="tab-painel">
+  <div class="tab-panel">
     <input class="tab-open" id="tab-1" name="tab-wrap-1" type="radio" aria-hidden="true" hidden checked>
     <label class="tab-nav" for="tab-1">Tab 1</label>
     <div class="tab-inner">
@@ -361,7 +402,7 @@
     </div>
   </div>
 
-  <div class="tab-painel">
+  <div class="tab-panel">
     <input class="tab-open" id="tab-2" name="tab-wrap-1" type="radio" aria-hidden="true" hidden>
     <label class="tab-nav" for="tab-2">Tab 2</label>
     <div class="tab-inner">
@@ -369,7 +410,7 @@
     </div>
   </div>
 
-  <div class="tab-painel">
+  <div class="tab-panel">
     <input class="tab-open" id="tab-3" name="tab-wrap-1" type="radio" aria-hidden="true" hidden />
     <label class="tab-nav" for="tab-3">Tab 3</label>
     <div class="tab-inner">
@@ -414,7 +455,7 @@
 <section>
 <article>
 <div class="">
-    <label class="button button-modal" for="modal-one">Modal</label>
+    <label id="modalButton" class="button button-modal" for="modalOne">Modal</label>
 
 </div>
 </article>
@@ -995,7 +1036,7 @@
 
 
 
-
+<div id="modal-test" class="modal-test">modalTest</div>
 
 
         <footer>
@@ -1013,7 +1054,24 @@
                 yearRange: [2000,2020]
             });
         </script>
-        
+        <script>
+        var modalButton = document.getElementById("modalButton");
+        var htmlElement = document.getElementById("jBForms");
+        //below is the hidden input before the modal//
+        var checkboxModal = document.getElementById("modalOne");
+        //below is the modal itself 
+        var modalA = document.getElementById("modalA");
+        var closeModal = document.getElementById("closeModal");
+        function modalFunction(){
+            htmlElement.setAttribute("class","has-modal");
+        }
+        function change(){
+            if (checkboxModal.checked === false) {
+                htmlElement.setAttribute("class","");
+            }
+        }
+        modalButton.addEventListener("click",modalFunction,false);
+        </script>
         <script>
          (function() {
                 // #maskMoney

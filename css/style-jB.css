@@ -1,54 +1,13 @@
-html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;font-family: sans-serif;font-size: 16px;}
-*, *:before, *:after {-moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit;}
-/*@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
-}*/
-/*I like to make default font-size explicit, and then to base ems off of it*/
-
-
-/* cheat cheat*/
-/*
-100px=6.25em;
-72px=4.5em;
-60px=3.75em;
-48px=3em;
-42px=2.625em;
-40px=2.5em;
-36px=2.25em;
-32px=2em;
-28px=1.75em;
-24px=1.5em;
-20px=1.25em;
-18px=1.125em;
-16px=1em;
-14px=.875em;
-12px=.75em;
-11px=.6875em;
-10px=.625em;
-9px=.5625em;
-8px=.5em;
-7px=.4375em;
-6px=.375em;
-5px=.3125em;
-4px=.25em;
-3px=.1875em;
-2px=.125em;
-1px=.0625em;
-*/
-
-
-body{ font-family: 'Arial', sans-serif;font-size: .875em;/*14px*/}
-main {font-size: 1em; line-height: 1.5em;max-width: 56rem;margin: 0 auto;padding: 0 .5em;}
+html {font-family: sans-serif;font-size: 16px;line-height: 24px;}
+/* i like to see an explicit font size that rems/ems are based off of*/
+body{font-family: 'Arial', sans-serif;font-size: .875em;/*14px*/}
+main {font-size: 1em; max-width: 56rem;margin: 0 auto;padding: 0 .5em;}
 header {}
 nav {}
 article {}
 section{}
 aside {}
 footer{}
-
 /*100% height trick*/
 html, body {height: 100%;}
 
@@ -56,21 +15,15 @@ html, body {height: 100%;}
 :link{}
 :hover{}
 :focus{}
-*:focus{box-shadow: none !important;/*border-color: transparent; !important;*/ outline: none !important;}
+*:focus{box-shadow: none;}
 /*input:focus{box-shadow: none !important;border-color: transparent; !important;}*/
 :active{}
 :visited{}
 :target{}
 ::selection,::-moz-selection {}
 
-
-
-a{text-decoration: none;}
-
 button, .button{display: inline-block; text-transform: uppercase;font-size: .875em; padding: .25em .5em;background:transparent;border: 1px solid #000;}
-p{}
 
-span{}
 
 h1,h2,h3,h4,h5, h6{font-weight: normal;}
 h1{font-size: 2em;}
@@ -80,6 +33,8 @@ h4{font-size: 1.4em;}
 h5{font-size: 1.2em;}
 h6{font-size: 1em;}
 
+p{}
+span{}
 
 .breadcrumb {margin: 4em 0 2em 7.5%;background: transparent;text-transform: uppercase; font-size: .9em;}
 .breadcrumb h1{display: inline-block;font-size: 1em;margin:0;padding:0;color: #000;font-weight: bold; letter-spacing: .0125em;}
@@ -96,7 +51,6 @@ menuitem{}
 dl{}
 dd{}
 
-
 /*formatting*/
 b{}
 i{}
@@ -108,7 +62,6 @@ s{}
 pre{}
 code{font-size: 10px; line-height: 1.5em; font-family: Arial, sans-serif;}
 
-
 /*media*/
 figure {}
 img {}
@@ -118,7 +71,6 @@ audio{}
 iframe{}
 track{}
 var{}
-
 
 /*  forms */
 form{}
@@ -142,8 +94,6 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-
-
 :required{}
 :optional{}
 :checked{}
@@ -159,8 +109,6 @@ textarea{resize:none;}
 /*input[type="radio"] {}
 input[type="checkbox"] {}*/
 optgroup{}
-
-
 
 q{}
 blockquote{}
@@ -182,7 +130,6 @@ tfoot{}
 col{}
 colgroup{}
 
-
 svg{}
 /*svg.svg-icon {max-width: 2.5em;}*/
 
@@ -192,7 +139,6 @@ hr{}
 
 sup{}
 sub{}
-
 
 /*template{}
 content{}
@@ -207,8 +153,6 @@ data{}
 
 .btn {font-size: 1em;}
 
-
-
 /*top 100% by Amtt Boldt: http://www.mattboldt.com/css-100-percent-height/ -- this works because html and body above are set to 100% height*/
 .top-section{height:100%;}
 .more{display:block;position:absolute;bottom:20px;text-align:center;}
@@ -220,48 +164,26 @@ data{}
 .form-save {margin-left:1.5em; padding-left: 1.5em; padding-right: 1.5em;float:right;}
 .form-cancel {float: right;}
 
-
-
-
 /*VALIDATION*/
 /*overriding bootstrap*/
 .alert {padding: 1em;margin-bottom: 1.5em; border: 1px solid red;}
 .error{border-color: red;}
 .form-control.error:focus {border-color:red;}
 .login-error-box{max-width: 20em;margin: 0 auto;background: red;text-align: center;color: #fff;}
-/*.tooltip-inner{background: red;}
-.error + .tooltip .tooltip-arrow {border-top-color: red;}
-.tooltip.right .tooltip-arrow {border-right-color: red;}
-.tooltip.left .tooltip-arrow {border-left-color: red;}
-.tooltip.bottom .tooltip-arrow, .tooltip.bottom-left .tooltip-arrow, .tooltip.bottom-right .tooltip-arrow {border-bottom-color: red;}
-.tooltip-inline-wrapper{display: inline;}
-.help-link {display: inline-block;border:1px solid #000;border-radius: 50%; margin-left: .75em; padding: .75em;font-size: .75em; font-weight: bold;background: #fff url(../img/questionMark.jpg) no-repeat;cursor:pointer;position: relative;top:.25em;}
-.helper-tip + .tooltip, .helper-tip + .tooltip .tooltip-inner, .helper-tip + .tooltip .tooltip-arrow {background: #183055; border-top-color: #183055;border-right-color: #183055;border-bottom-color:#183055; border-left-color:#183055; }
-*/
-
-
-
-
-
 
 
 /* TABS & MODAL a la Pure CSS Components - http://www.felipefialho.com/css-components/
 Author: Luiz Felipe Tartarotti Fialho
 */
 .tab {position: relative;}
-.tab-painel {display: inline-block;min-height: 10em;}
+.tab-panel {display: inline-block;min-height: 10em;}
 .tab-nav {border: #aaaaaa solid 1px;cursor: pointer;display: inline-block;}
 .tab-nav:hover,.tab-open:checked ~ .tab-nav {background-color: #666;}
-.tab-inner {
-  opacity: 0;
-  margin-top: 1em;
-  position: absolute;
-  left: 0;
-  -webkit-transition: opacity 0.1s;
-  transition: opacity 0.1s;
-  visibility: hidden;
-}
+.tab-inner {opacity: 0;position: absolute;left: 0;/*-webkit-transition: opacity 0.1s;*/transition: opacity 0.1s;visibility: hidden;}
 .tab-open:checked ~ .tab-inner {opacity: 100;visibility: visible;}
+
+
+
 
 
 .modal .btn-close {}
@@ -293,7 +215,6 @@ Author: Luiz Felipe Tartarotti Fialho
 .modal-open:checked ~ .modal-wrap .modal-dialog {
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   top: 20%;
 }
@@ -312,111 +233,17 @@ Author: Luiz Felipe Tartarotti Fialho
   top: -100%;
   -webkit-transform: translate(-50%, -500%);
   -ms-transform: translate(-50%, -500%);
-  -o-transform: translate(-50%, -500%);
   transform: translate(-50%, -500%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  -moz-transition: -moz-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
   width: 80%;
   max-width: 600px;
-  height: 100px;
+  height: 300px;
   z-index: 103;
   border: 1px solid #000;
+  overflow: scroll;
 }
 
-/* just hacking away -- trying to cut contents to an unscrollable height while still allowing it to return to same place on page after close*/
-input.modal-open[type=checkbox]:checked ~ main, input.modal-open[type=checkbox]:checked ~ main input, input.modal-open[type=checkbox]:checked ~ main label  {/*display: none;*//*opacity: 0;*//*font-size: .001em;*//*margin: -1000em;*/width: 0 !important;font-size: .01em;}
-input.modal-open[type=checkbox]:checked ~ main *{background-color: red;}
-
-/*.modal input:checked ~ .main-content {display: none !important;}*/
-
-/*toatally awesome hack to prevent body scrolling -- and it hides the scroll bar*/
-/*.modal:target + header,*/ 
-/*.modal:target ~ main {display: none;}*/ /* LOVE LOVE LOVE LOVE*/
-/* what to do about header*/
-
-
-/* from same source as tabs*/
-
-/* CONSIDER USING CHECKBOX HACK FOR MODAL -- I don't like target unless I can master pushstate*/
-/* This looks old and outdated*/
-/*.modal:before {
-  content: "";
-  display: none;
-  background: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1001;
-}
-.modal:target:before {display: block;}
-.modal:target .modal-dialog {
-  -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  top: 20%;
-}*/
-
-/* can we animate modal close, too?*/
-/*.modal-dialog {
-  background: #fefefe;
-  border: #555555 solid 1px;
-  border-radius: 5px;
-  position: fixed;
-  left: 50%;
-  top: -100%;
-  -webkit-transform: translate(-50%, -500%);
-  -ms-transform: translate(-50%, -500%);
-  transform: translate(-50%, -500%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  -moz-transition: -moz-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  z-index: 1111;
-  width: 80%;
-  max-width: 40em;
-}
-.modal-body {padding: 1em;}
-.modal-body p {margin: 0;}
-.modal-header,.modal-footer {padding: 1em;}
-.modal-header {border-bottom: #eeeeee solid 1px;}
-.modal-footer {border-top: #eeeeee solid 1px;text-align: right;}*/
-
-
-
-
-/*.flexgrid .row {min-height: 2em;}
-
-.flexgrid .row fieldset {
-  padding: 0 .5em;
-  margin: 0;
-}
-
-.flexgrid .row div:first-child fieldset {
-  padding-left: 0;
-}
-
-.flexgrid .row div:last-child fieldset {
-  padding-right: 0;
-}
-
-
-.flexgrid .row input, .flexgrid .row select {
-  width: 100%;
-}
-
-.flexgrid select {display: inline-block;}
-.flexgrid select option {height: 2em;}
-
-.flexgrid .row label {
-  display: inline-block;
-  position: relative;
-  top: 1em;
-}
-*/
+.has-modal body {overflow: hidden;}
 
 
 /* Accordion by Alex Bergin http://codepen.io/abergin/pen/ihlDf*/ 
@@ -436,7 +263,6 @@ input.modal-open[type=checkbox]:checked ~ main *{background-color: red;}
   -ms-user-select: none;
   user-select: none;
 }
-
 
 .accordions p {
   position: relative;
@@ -487,28 +313,12 @@ input.modal-open[type=checkbox]:checked ~ main *{background-color: red;}
 .accordions ul li input[type=checkbox]:checked ~ i:after {transform: translate(-2px, 0) rotate(-45deg);}
 
 @keyframes flipdown {
-  0% {
-    opacity: 0;
-    transform-origin: top center;
-    transform: rotateX(-90deg);
-  }
-  5% {
-    opacity: 1;
-  }
-  80% {
-    transform: rotateX(8deg);
-  }
-  83% {
-    transform: rotateX(6deg);
-  }
-  92% {
-    transform: rotateX(-3deg);
-  }
-  100% {
-    transform-origin: top center;
-    transform: rotateX(0deg);
-  }
-}
+  0% {opacity: 0;transform-origin: top center;transform: rotateX(-90deg);}
+  5% {opacity: 1;}
+  80% {transform: rotateX(8deg);}
+  83% {transform: rotateX(6deg);}
+  92% {transform: rotateX(-3deg);}
+  100% {transform-origin: top center;transform: rotateX(0deg);}}
 
 
 /*Tooltip by trezy (https://github.com/trezy) http://codepen.io/trezy/pen/Khnzy */
@@ -525,7 +335,6 @@ input.modal-open[type=checkbox]:checked ~ main *{background-color: red;}
 
 [data-tooltip]:hover:after,[data-tooltip]:hover:before {display: block;}
 
-
 section.flexgrid {
   display: -webkit-box;
   display: -webkit-flex;
@@ -540,24 +349,12 @@ section.flexgrid {
 
 /* can't put bottom margin on the row, because the rows can flex*/
 .flexgrid .row {}
-
 .flexgrid .row label {margin: 0 0 1em 0;}
-
-.flexgrid .row label span {
-  position: relative;
-  top: .5em;
-  background: #fff;
-}
+.flexgrid .row label span {position: relative;top: .5em;background: #fff;}
 
 label span :focus {box-shadow: none;}
 
-
-.flexgrid .row input, .flexgrid .row select {
-  display: block;
-  width: 100%;
-}
-
-
+.flexgrid .row input, .flexgrid .row select {display: block;width: 100%;}
 
 .box-row,
 .box-first,
@@ -583,12 +380,6 @@ label span :focus {box-shadow: none;}
 }
 
 
-
-
-
-
-
-
 .drag-drop-area label {margin-top: 0; padding: .5em .5em .5em 0;float:none;}
 .drag-drop-area .drag-drop-directions {position: relative;top:2.125em;}
 .btn-browse {padding: .125em 1em; border-radius: 0;}
@@ -606,8 +397,6 @@ label span :focus {box-shadow: none;}
 
 
 /* Checkboxes by Kenneth Moors, http://codepen.io/GooeyIdeas/pen/nwfIq, modified by jB -- Radios adapted by jB from same pen */
-
-
 fieldset.checkboxes, fieldset.radios{
     /*display: block;
     min-height: 20px;
@@ -623,7 +412,6 @@ fieldset.checkboxes, fieldset.radios{
 fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked label {display: block;}
 .checkboxes label.checkbox span, .radios label.radio span {top: 0;}
 
-
 /* What's wrong here on safari? The input breaks out of the column*/
 .checkboxes label.checkbox input[type="checkbox"], .radios label.radio input[type="radio"] {
   display: inline-block;
@@ -632,7 +420,6 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
 
 .has-icon + .icon { border: 1px solid #ccc;}
 .radios .has-icon + .icon {border-radius: 50%;}
-
 .has-icon:active + .icon,.has-icon:focus + .icon {
     border-color: #66afe9;
     outline: 0;
@@ -671,7 +458,6 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
     left: .25rem;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     transform: rotate(45deg);
     height: .66rem;
     width: .33rem;
@@ -679,8 +465,6 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
     border: .125rem solid #eee;
     border-top: 0px;
     border-left: 0px;
-    
-    
 }
 .checkboxes .has-icon + .icon-form-checkbox:after, .radios .has-icon + .icon-form-radio:after { 
     content: "";
@@ -693,7 +477,6 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
     border-left: 0px;
 }
 
-
 .batesSelect {}
 .batesSelect select{}
 .batesSelect select optgroup {}
@@ -701,12 +484,7 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
 .batesSelect select:focus {}
 .batesSelect select:focus optgroup {}
 
-
-.test-select:focus optgroup option{
-  /*display: none;*/
-}
-
-
+.test-select:focus optgroup option{}
 
 /* CSS-only custom select by Amen Moja Ra from https://gist.github.com/mojaray2k*/
 .customSelect .dropdown {
@@ -737,14 +515,10 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
   background:none;
   border: none;
   outline: none;
-  /*padding: .4em 19% .4em .8em;*/ /*careful with padding -- it can clip*/
-  /*line-height: 1.5rem;*/ /*line-height doesn't seem to do anything*/
+
 }
 
-.customSelect .dropdown select option {
-  color: blue !important;
-  padding: 1em 0;
-}
+.customSelect .dropdown select option {}
 
   /* This hides native dropdown button arrow in IE */
 .customSelect select::-ms-expand {display: none;}
@@ -767,17 +541,12 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
 }
  
 /* Hover style - tricky because we're clipping the overflow */
-
 /*.customSelect .dropdown:hover {border:1px solid #888;}*/
   
   /* Focus style */
 .customSelect select:focus {outline: none;box-shadow: 0 0 3px 3px rgba(180,222,250, .85);}
   /* This hides focus around selected option in FF */
 .customSelect select:-moz-focusring {color: transparent;text-shadow: 0 0 0 #000;}
-
-
-
-
 
 
 /*! * Pikaday * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/ */
@@ -910,13 +679,6 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     border-radius: 3px;
 }
 
-/*.pikaday-override input:nth-letter(1): {
-  display: none;
-}*/
-
-.pikaday-override input.hide-day{
-  /*color: blue;*/
-}
 
 .calendar-field {
   background-image: url(../img/icon-calendar.svg);
@@ -931,4 +693,3 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 144dpi) {
 }
-
