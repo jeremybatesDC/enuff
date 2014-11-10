@@ -335,17 +335,17 @@ Author: Luiz Felipe Tartarotti Fialho
 
 /* Accordion by Alex Bergin http://codepen.io/abergin/pen/ihlDf*/ 
 
-.transition, p, ul li i:before, ul li i:after {
+.accordions .transition, .accordions p, .accordions ul li i:before, .accordions ul li i:after {
   transition: all 0.25s ease-in-out;
 }
 
-.flipIn, h1, ul li {
+.flipIn, .accordions h1, .accordions ul li {
   -webkit-animation: flipdown 0.5s ease both;
   -moz-animation: flipdown 0.5s ease both;
   animation: flipdown 0.5s ease both;
 }
 
-.no-select, h2 {
+.no-select, .accordions h6 {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -355,7 +355,7 @@ Author: Luiz Felipe Tartarotti Fialho
   user-select: none;
 }
 
-
+.accordions h6 {padding: 0; margin: 0;}
 
 .accordions p {
   position: relative;
@@ -364,7 +364,6 @@ Author: Luiz Felipe Tartarotti Fialho
   opacity: 1;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
-  margin-top: 1em;
   z-index: 2;
 }
 
@@ -378,8 +377,8 @@ Author: Luiz Felipe Tartarotti Fialho
   position: relative;
   padding: 0;
   margin: 0;
-  padding-bottom: 4px;
-  padding-top: 18px;
+  padding-bottom: .25rem;
+  padding-top: 1rem;
   border-top: 1px dotted #dce7eb;
 }
 .accordions ul li:nth-of-type(1) {
@@ -405,7 +404,6 @@ Author: Luiz Felipe Tartarotti Fialho
   position: absolute;
   -webkit-transform: translate(-6px, 0);
   transform: translate(-6px, 0);
-  margin-top: 16px;
   right: 0;
 }
 .accordions ul li i:before, .accordions ul li i:after {
@@ -857,15 +855,15 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   position: fixed;
   top:0;
   left: 0;
-  background: #000;
+  background: transparent;
   width: 10em;
   height: 100%;
   margin-left: -8em;
   z-index: 10;
 }
 
-#sideMenu.side-menu:target {margin-left: 0;}
-.hamburger-container {float: right;}
+#sideMenu.side-menu:target {margin-left: 0;background: #000;}
+.hamburger-container {float: right;background: #000;}
 .hamburger-container a {color: #fff;}
 #sideMenu.side-menu a.hamburger-close{display: none;}
 #sideMenu.side-menu:target a.hamburger-close{display: block;}
