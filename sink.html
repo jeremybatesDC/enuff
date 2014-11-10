@@ -21,12 +21,18 @@
 <![endif]-->
 
     <body>
-        
-    <header id="header" class="header header--fixed hide-from-print slide headroom--top" role="banner">
-    <div class="container">
-        <h1>Kitchen Sink</h1>
+     <aside class="side-menu" id="sideMenu">
+    <div class="hamburger-container">
+        <a href="#sideMenu" class="hamburger-open">Open</a>
+        <a href="#" class="hamburger-close">Close</a>
     </div>
-</header>
+    </aside>
+
+    <header id="header" class="header header--fixed hide-from-print slide headroom--top" role="banner">
+        <div class="header-inner">
+            <h1>Kitchen Sink</h1>
+        </div>
+    </header>
 <!-- Modal One -->
 
   <input class="modal-open" id="modalOne" type="checkbox" onchange ="change()" hidden>
@@ -104,12 +110,17 @@
   </div>
 </aside>-->
 
+
 <!--make this the header if possible, but i'm getting scroll on body with modal when it's a header-->
 <div class="top-section">
   <!--<p>This content takes up 100% of the viewport at the top</p>-->
   <p class="more">Learn More</p>
 </div>
      
+
+
+
+
         <main class="main-content">
             <section class="flexgrid">
                 <h3>Responsive</h3>
@@ -422,7 +433,7 @@
 </article>
 
 <article>
-<section>
+<section class="accordions">
 <h3>Accordions</h3>
 <ul>
   <li>
@@ -570,9 +581,9 @@
     new Headroom(header, {
         tolerance: {
           down : 10,
-          up : 20
+          up : 10
         },
-        offset : 205,
+        offset : 0,
         classes: {
           initial: "slide",
           pinned: "slide--reset",
