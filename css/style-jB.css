@@ -269,7 +269,7 @@ Author: Luiz Felipe Tartarotti Fialho
   overflow: hidden;
   max-height: 800px;
   opacity: 1;
-  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);transform: translate(0, 0);
   margin-top: 14px;
   z-index: 2;
 }
@@ -282,6 +282,7 @@ Author: Luiz Felipe Tartarotti Fialho
 .accordions ul li:last-of-type {padding-bottom: 0;}
 .accordions ul li i {
   position: absolute;
+  -webkit-transform: translate(-6px, 0);
   transform: translate(-6px, 0);
   margin-top: 16px;
   right: 0;
@@ -289,12 +290,12 @@ Author: Luiz Felipe Tartarotti Fialho
 .accordions ul li i:before, ul li i:after {
   content: "";
   position: absolute;
-  background-color: #000;
+  background-color: blue;
   width: 3px;
   height: 9px;
 }
-.accordions ul li i:before {transform: translate(-2px, 0) rotate(45deg);}
-.accordions ul li i:after {transform: translate(2px, 0) rotate(-45deg);}
+.accordions ul li i:before {-webkit-transform: translate(-2px, 0) rotate(45deg);transform: translate(-2px, 0) rotate(45deg);}
+.accordions ul li i:after {-webkit-transform: translate(2px, 0) rotate(-45deg);transform: translate(2px, 0) rotate(-45deg);}
 .accordions ul li input[type=checkbox] {
   position: absolute;
   cursor: pointer;
@@ -307,18 +308,20 @@ Author: Luiz Felipe Tartarotti Fialho
   margin-top: 0;
   max-height: 0;
   opacity: 0;
-  transform: translate(0, 50%);
+  -webkit-transform: translate(0, 50%);transform: translate(0, 50%);
 }
-.accordions ul li input[type=checkbox]:checked ~ i:before {transform: translate(2px, 0) rotate(45deg);}
-.accordions ul li input[type=checkbox]:checked ~ i:after {transform: translate(-2px, 0) rotate(-45deg);}
+.accordions ul li input[type=checkbox]:checked ~ i:before {-webkit-transform: translate(2px, 0) rotate(45deg);transform: translate(2px, 0) rotate(45deg);}
+.accordions ul li input[type=checkbox]:checked ~ i:after {-webkit-transform: translate(-2px, 0) rotate(-45deg);transform: translate(-2px, 0) rotate(-45deg);}
 
 @keyframes flipdown {
-  0% {opacity: 0;transform-origin: top center;transform: rotateX(-90deg);}
+  0% {opacity: 0;-webkit-transform-origin: top center;transform-origin: top center;-webkit-transform: rotateX(-90deg);transform: rotateX(-90deg);}
   5% {opacity: 1;}
-  80% {transform: rotateX(8deg);}
-  83% {transform: rotateX(6deg);}
-  92% {transform: rotateX(-3deg);}
-  100% {transform-origin: top center;transform: rotateX(0deg);}}
+  80% {-webkit-transform: rotateX(8deg);transform: rotateX(8deg);}
+  83% {-webkit-transform: rotateX(6deg);transform: rotateX(6deg);}
+  92% {-webkit-transform: rotateX(-3deg);transform: rotateX(-3deg);}
+  100% {-webkit-transform-origin: top center;transform-origin: top center;-webkit-transform: rotateX(0deg);transform: rotateX(0deg);}}
+
+
 
 
 /*Tooltip by trezy (https://github.com/trezy) http://codepen.io/trezy/pen/Khnzy */
