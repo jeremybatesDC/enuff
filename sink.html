@@ -21,29 +21,73 @@
 <![endif]-->
 
     <body>
-     <aside class="side-menu" id="sideMenu">
-        <div class="hamburger-container">
-            <a id="menuClosed" href="#sideMenu" class="hamburger-open">Open</a>
-            <a href="#menuClosed" class="hamburger-close">Close</a>
-        </div>
-    </aside>
-
+    
+    <input class="hamburger-control" type="checkbox" name="hamburger-toggle"/>
+<!--set headroom so it only operates at 36+ ems-->
     <header id="header" class="header header--fixed hide-from-print slide headroom--top" role="banner">
+        
         <nav class="header-inner">
             <ul class="row navigation">
                 <li class="col-xs-12 col-sm-3">
-                    yo
+                    <div class="accordions">
+                        <ul>
+                          <li>
+                            <input type="checkbox" checked>
+                            <h6>Menu Item 1</h6><i></i>
+                            <ul>
+                                <li>Sub1</li>    
+                                <li>Sub2</li>
+                                <li>
+                                    <div class="accordions">
+                                        <ul>
+                                          <li>
+                                            <input type="checkbox" checked>
+                                            <h6>Submenu Item</h6>
+                                            <i></i>
+                                            
+                                            <p>Sub 1</p>
+                                            <p>Sub 2</p>
+                                            <p>Sub 3</p>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                          </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="col-xs-12 col-sm-3">
-                    yo
+                    <div class="accordions">
+                        <ul>
+                          <li>
+                            <input type="checkbox" checked>
+                            <h6>Menu Item 2</h6><i></i>
+                            
+                            
+                            <p>Sub 1</p>
+                            <p>Sub 2</p>
+                            <p>Sub 3</p>
+                          </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="col-xs-12 col-sm-3">
-                    yo
+                    <input id="nav3" class="nav-radio" type="radio" name="navRadio"/>
+                    <label class="replacement" for="submenu3">3replacement</label>
                 </li>
                  <li class="col-xs-12 col-sm-3">
-                    yo
+                    <label for="nav4">4</label>
+                    <input id="nav4" class="nav-radio" type="radio" name="navRadio"/>
+                    <div class="nav-dropdown">
+                        <label for="nav4a">yoA</label>
+                        <input id="nav4a" class="nav-checkbox" type="checkbox"/>
+                            <!--<ul class="nav-dropdown nav-dropdown-nested">-->
+                    </div>
+
                 </li>
-            </ul>
+            </ul><!--end row navigation-->
         </nav>
     </header>
 <!-- Modal One -->

@@ -179,81 +179,40 @@ data{}
 
 
 /*nav.header-inner {width: 10em;}*/
+.hamburger-control {position: fixed;top:0;left:0;z-index: 11;}
+
 
 
 .header {background-color: rgba(0,0,0,.5);}
-.header--fixed {position: fixed;z-index: 9;left: 0;top: 0;width: 10em;}
-.slide {
-    -webkit-transition: all .25s ease-in-out;
-    -moz-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
-}
-
-.slide--reset {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-}
-
-.slide--up {
-    -webkit-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    transform: translateY(-100%);
-}
-
-.animated {
-    -webkit-animation-duration: .5s;
-    -moz-animation-duration: .5s;
-    animation-duration: .5s;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-@-webkit-keyframes slideDown {
-    0% {-webkit-transform: translateY(-100%);}
-    100% {-webkit-transform: translateY(0);}
-}
-
-@-moz-keyframes slideDown {
-    0% {-moz-transform: translateY(-100%);}
-    100% {-moz-transform: translateY(0);}
-}
-
-@keyframes slideDown {
-    0% {transform: translateY(-100%);}
-    100% {transform: translateY(0);}
-}
-
-.animated.slideDown {
-    -webkit-animation-name: slideDown;
-    -moz-animation-name: slideDown;
-    animation-name: slideDown;
-}
-
-@-webkit-keyframes slideUp {
-    0% {-webkit-transform: translateY(0);}
-    100% {-webkit-transform: translateY(-100%);}
-}
-
-@-moz-keyframes slideUp {
-    0% {-moz-transform: translateY(0);}
-    100% {-moz-transform: translateY(-100%);}
-}
+.header--fixed {display:none;position: fixed;z-index: 9;left: -10em;top: 0;width: 10em;height:100%;}
+input.hamburger-control:checked + .header--fixed {display:inline-block;left:0;}
 
 
 
-@keyframes slideUp {
-    0% {transform: translateY(0);}
-    100% {transform: translateY(-100%);}
-}
+/* need to make selection and user selecy transparent none etc*/
 
-.animated.slideUp {
-    -webkit-animation-name: slideUp;
-    -moz-animation-name: slideUp;
-    animation-name: slideUp;
-}
+.navigation label {background: transparent;color: #000;}
+.navigation input {opacity: 0;}
+.replacement {display: none;}
+.navigation input.nav-radio:checked + .replacement{display: inline-block;}
+.navigation input.nav-radio:checked ~ .to-replace {display: none;}
 
+.nav-submenu {display: none;}
+.nav-radio:checked {display: none;}
+.nav-radio:checked + .replacement {display: inline-block;}
+
+.nav-radio:checked + .nav-submenu{display: inline-block;}
+
+
+
+.nav-dropdown, .nav-dropdown-nested{display: none;}
+.nav-radio:checked + .nav-dropdown {display: inline-block;}
+/*.nav-checkbox::not(:checked) + .nav-dropdown .nav-checkbox:checked + .nav-dropdown-nested{display: none;}
+.nav-checkbox::checked + .nav-dropdown .nav-checkbox::not(:checked) + .nav-dropdown-nested{display: none;}*/
+
+/* so the challenge is, when you hit the top-level nav to close the dropdown, without closing the 2nd level, the 3rd level doeesn't close and clicking back on the top-level nav item reveals the 2nd and 3rd-level navs*/
+/*what if it were a radio button?*/
+.nav-radio:checked + .nav-dropdown .nav-checkbox:checked + .nav-dropdown-nested{display: inline-block;}
 
 /*This is in a media query*/
 .side-menu {display: none;}
@@ -341,12 +300,6 @@ Author: Luiz Felipe Tartarotti Fialho
   transition: all 0.25s ease-in-out;
 }
 
-.flipIn, .accordions h1, .accordions ul li {
-  -webkit-animation: flipdown 0.5s ease both;
-  -moz-animation: flipdown 0.5s ease both;
-  animation: flipdown 0.5s ease both;
-}
-
 .no-select, .accordions h6 {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -359,15 +312,16 @@ Author: Luiz Felipe Tartarotti Fialho
 
 .accordions h6 {padding: 0; margin: 0;}
 
-.accordions p {
+.accordions p, .navigation .accordions p, .accordions ul li ul li {
   position: relative;
   overflow: hidden;
-  max-height: 800px;
   opacity: 1;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
   z-index: 2;
+  color: purple;
 }
+
 
 .accordions ul {
   list-style: none;
@@ -375,27 +329,26 @@ Author: Luiz Felipe Tartarotti Fialho
   padding: 0;
   margin: 0;
 }
-.accordions ul li {
+
+.accordions ul li, .accordions ul li ul li  {
   position: relative;
-  padding: 0;
+  padding: 1rem 0 .25rem;
   margin: 0;
-  padding-bottom: .25rem;
-  padding-top: 1rem;
   border-top: 1px dotted #dce7eb;
 }
-.accordions ul li:nth-of-type(1) {
+.accordions ul li:nth-of-type(1), .accordions ul li ul li:nth-of-type(1) {
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
-.accordions ul li:nth-of-type(2) {
+.accordions ul li:nth-of-type(2), .accordions ul li ul li:nth-of-type(2) {
   -webkit-animation-delay: 0.75s;
   -moz-animation-delay: 0.75s;
   animation-delay: 0.75s;
 }
 
-.accordions ul li:nth-of-type(3) {
+.accordions ul li:nth-of-type(3), .accordions ul li ul li:nth-of-type(3) {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
@@ -404,9 +357,9 @@ Author: Luiz Felipe Tartarotti Fialho
 }
 .accordions ul li i {
   position: absolute;
-  -webkit-transform: translate(-6px, 0);
-  transform: translate(-6px, 0);
-  right: 0;
+  -webkit-transform: translateY(-1em);
+  transform: translateY(-1em);
+  right: 2em;
 }
 .accordions ul li i:before, .accordions ul li i:after {
   content: "";
@@ -431,13 +384,13 @@ Author: Luiz Felipe Tartarotti Fialho
   z-index: 1;
   opacity: 0;
 }
-.accordions ul li input[type=checkbox]:checked ~ p {
-  margin-top: 0;
-  max-height: 0;
-  opacity: 0;
+.accordions ul li input[type=checkbox]:checked ~ p, .accordions ul li input[type=checkbox]:checked ~ ul  {
+  margin-top: 0;max-height: 0;opacity: 0;
   -webkit-transform: translate(0, 50%);
   transform: translate(0, 50%);
 }
+
+
 .accordions ul li input[type=checkbox]:checked ~ i:before {
   -webkit-transform: translate(2px, 0) rotate(45deg);
   transform: translate(2px, 0) rotate(45deg);
@@ -447,36 +400,9 @@ Author: Luiz Felipe Tartarotti Fialho
   transform: translate(-2px, 0) rotate(-45deg);
 }
 
-@keyframes flipdown {
-  0% {
-    opacity: 0;
-    -webkit-transform-origin: top center;
-    transform-origin: top center;
-    -webkit-transform: rotateX(-90deg);
-    transform: rotateX(-90deg);
-  }
-  5% {
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: rotateX(8deg);
-    transform: rotateX(8deg);
-  }
-  83% {
-    -webkit-transform: rotateX(6deg);
-    transform: rotateX(6deg);
-  }
-  92% {
-    -webkit-transform: rotateX(-3deg);
-    transform: rotateX(-3deg);
-  }
-  100% {
-    -webkit-transform-origin: top center;
-    transform-origin: top center;
-    -webkit-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-  }
-}
+/*this is where sass would be handy*/
+.navigation .accordions ul li{ border: none;padding: 0;}
+
 
 /*Tooltip by trezy (https://github.com/trezy) http://codepen.io/trezy/pen/Khnzy */
 [data-tooltip] {position: relative;}
@@ -848,29 +774,104 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 @media only screen and (min-width: 36em) {
 
-
+.hamburger-control {display: none;}
+.hamburger-control:checked {}
 nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
 /*nav.header-inner {}*/
-.header--fixed {left: 5em; width: 100%;}
+.header--fixed {display: inline-block;width: 100%;left: 0;height: 5em;overflow:visible;}
+
 /*side-navigation*/
 .side-menu {
   display: inline-block;
   position: fixed;
   top:5em;
   left: 0;
-  background: transparent;
+  background: #000;
   width: 10em;
   height: 100%;
   margin-left: -8em;
   z-index: 10;
 }
 
-#sideMenu.side-menu:target {margin-left: 0;background: #000;}
-.hamburger-container {float: right;background: #000;}
+/*#sideMenu.side-menu:target {margin-left: 0;background: #000;}*/
+.nav-control input{}
 .hamburger-container a {color: #fff;}
-#sideMenu.side-menu a.hamburger-close{display: none;}
+/*#sideMenu.side-menu a.hamburger-close{display: none;}
 #sideMenu.side-menu:target a.hamburger-close{display: block;}
-#sideMenu.side-menu:target a.hamburger-open{display: none;}
+#sideMenu.side-menu:target a.hamburger-open{display: none;}*/
+
+
+.slide {
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+.slide--reset {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.slide--up {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.animated {
+    -webkit-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideDown {
+    0% {-webkit-transform: translateY(-100%);}
+    100% {-webkit-transform: translateY(0);}
+}
+
+@-moz-keyframes slideDown {
+    0% {-moz-transform: translateY(-100%);}
+    100% {-moz-transform: translateY(0);}
+}
+
+@keyframes slideDown {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(0);}
+}
+
+.animated.slideDown {
+    -webkit-animation-name: slideDown;
+    -moz-animation-name: slideDown;
+    animation-name: slideDown;
+}
+
+@-webkit-keyframes slideUp {
+    0% {-webkit-transform: translateY(0);}
+    100% {-webkit-transform: translateY(-100%);}
+}
+
+@-moz-keyframes slideUp {
+    0% {-moz-transform: translateY(0);}
+    100% {-moz-transform: translateY(-100%);}
+}
+
+
+
+@keyframes slideUp {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-100%);}
+}
+
+.animated.slideUp {
+    -webkit-animation-name: slideUp;
+    -moz-animation-name: slideUp;
+    animation-name: slideUp;
+}
+
 
 
 }
