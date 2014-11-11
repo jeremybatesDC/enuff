@@ -178,9 +178,11 @@ data{}
 /*headroom.js by @WickyNilliams*/
 
 
+/*nav.header-inner {width: 10em;}*/
+
 
 .header {background-color: rgba(0,0,0,.5);}
-.header--fixed {position: fixed;z-index: 9;right: 0;left: 0;top: 0;}
+.header--fixed {position: fixed;z-index: 9;left: 0;top: 0;width: 10em;}
 .slide {
     -webkit-transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
@@ -844,16 +846,17 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 36em) {
 
 
-.header-inner {padding: 0 0 0 10em;}
-
+nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
+/*nav.header-inner {}*/
+.header--fixed {left: 5em; width: 100%;}
 /*side-navigation*/
 .side-menu {
   display: inline-block;
   position: fixed;
-  top:0;
+  top:5em;
   left: 0;
   background: transparent;
   width: 10em;

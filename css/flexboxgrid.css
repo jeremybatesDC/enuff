@@ -308,7 +308,7 @@
   order: 1;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 36em) {
   .col-sm,
   .col-sm-1,
   .col-sm-2,
@@ -570,7 +570,7 @@
   }
 }
 
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 48em) {
   .col-md,
   .col-md-1,
   .col-md-2,
@@ -830,7 +830,7 @@
   }
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 60em) {
   .col-lg,
   .col-lg-1,
   .col-lg-2,
