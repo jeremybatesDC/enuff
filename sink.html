@@ -23,7 +23,6 @@
     <body id="!">
     
     <input class="hamburger-control" type="checkbox" name="hamburger-toggle"/>
-<!--set headroom so it only operates at 36+ ems-->
     <header id="header" class="header header--fixed hide-from-print slide headroom--top" role="banner">
         
         <nav class="header-inner">
@@ -128,21 +127,7 @@
         <p>One modal example here! :D</p>
         <p>One modal example here! :D</p>
         <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-        <p>One modal example here! :D</p>
-       
-
+        
       </div>
       <div class="modal-footer">
         <label class="btn btn-primary" for="modalOne">Nice!</label>
@@ -151,32 +136,12 @@
   </div>
 
 
-<!-- Modal -->
-<!--<aside class="modal" id="modal-one" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-header">
-      Headline
-      <a class="btn-close faux-links" href="#1" aria-hidden="true" data-attribute="modal-close">×</a>
-    </div>
-    <div class="modal-body">
-      Body
-    </div>
-    <div class="modal-footer">
-      Footer
-    </div>
-  </div>
-</aside>-->
-
-
 <!--make this the header if possible, but i'm getting scroll on body with modal when it's a header-->
 <div class="top-section">
   <!--<p>This content takes up 100% of the viewport at the top</p>-->
   <p class="more">Learn More</p>
 </div>
      
-
-
-
 
         <main class="main-content">
             <section class="flexgrid">
@@ -216,7 +181,6 @@
                         <div class="col-xs-10 col-sm-6 col-md-8">
                         	<label><span>Credit card masked</span>
                             	<input type="text" class="mask-credit">
-                                <!--<input type="text" maxlength="16" class="mask-credit">-->
 
                             </label>
                         </div>
@@ -261,8 +225,6 @@
                             </label>
                         </div>
 
-
-
                     </div><!--end row-->
                     
                     </fieldset>
@@ -274,14 +236,7 @@
                      
                 <h3>Fluid</h3>
 
-                
-                    <div class="row bottom">
-                        <div class="col-xs-12">
-                        	<label><span>Yo Yo Yo Yo</span>
-                        		<input/>
-                        	</label>
-                        </div>
-                    </div>
+              
                     <div class="row bottom">
                         <div class="col-xs-1">
                         	<label><span>M.</span>
@@ -319,9 +274,6 @@
                         	</label>
                         </div>
                     </div>
-                    
-
-
 
 
                     <div class="row bottom">
@@ -405,8 +357,6 @@
                         </div>
                     </div>
 
-                    
-
 
                     <div class="row bottom">
                         <div class="col-xs-6"> 
@@ -452,11 +402,7 @@
                     </div>
 
 
-
-
             </section>
-
-
 
             <article class="tab">
             <h3>Tabs</h3>
@@ -470,7 +416,6 @@
       hey
     </div>
   </div>
-
   <div class="tab-panel">
     <input class="tab-open" id="tab-2" name="tab-wrap-1" type="radio" aria-hidden="true" hidden>
     <label class="tab-nav" for="tab-2">Tab 2</label>
@@ -478,7 +423,6 @@
       you
     </div>
   </div>
-
   <div class="tab-panel">
     <input class="tab-open" id="tab-3" name="tab-wrap-1" type="radio" aria-hidden="true" hidden />
     <label class="tab-nav" for="tab-3">Tab 3</label>
@@ -522,7 +466,6 @@
 <article>
 <div class="">
     <label id="modalButton" class="button button-modal" for="modalOne">Modal</label>
-
 </div>
 </article>
 </section>
@@ -531,12 +474,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-
-
-
-
             <br>
             <hr>
             <h3>Tooltip</h3>
@@ -544,7 +481,6 @@
             <br>
             <hr>
             <br>
-
 
 <h4>Things I need</h4>
 <ul>
@@ -556,20 +492,14 @@
     <li>synthetic page load?</li>
     <li>back to top smooth scroll</li>
     <li>social</li>
+    <li>fix back-to-top in bot left, but not with 1vh of the top</li>
 </ul>
-
-
-
-
-           
+  
 </main>  
-
 
 <a data-scroll data-options='{ "easing": "easeOutCubic" }' href="#!">Back to the top</a>
 
-        <footer>
-            
-        </footer>
+        <footer></footer>
 
 
         <script src="js/pikaday.js"></script>
@@ -606,28 +536,10 @@
         </script>
         <script>
          (function() {
-                // #maskMoney
-                /*VMasker(document.getElementById("default")).maskMoney();
-                VMasker(document.getElementById("defaultValues")).maskMoney();
-                VMasker(document.getElementById("zeroCents")).maskMoney({zeroCents: true});
-                VMasker(document.getElementById("unit")).maskMoney({unit: 'R$'});
-                VMasker(document.getElementById("suffixUnit")).maskMoney({suffixUnit: 'R$'});
-                VMasker(document.getElementById("delimiter")).maskMoney({delimiter: ','});
-                VMasker(document.getElementById("separator")).maskMoney({separator: '.'});*/
-
-                // #maskNumber
-                //VMasker(document.getElementById("creditcard")).maskNumber();
                 VMasker(document.getElementsByClassName("mask-number")).maskNumber();
                 VMasker(document.getElementsByClassName("mask-credit")).maskPattern('9999-9999-9999-9999');
                 VMasker(document.getElementsByClassName("mask-zip")).maskPattern('99999-9999');
                 VMasker(document.getElementsByClassName("mask-alpha")).maskPattern('AAAAAAAAAAAAAAAAAAAAA');
-                // #maskPattern
-                /*VMasker(document.getElementById("phone")).maskPattern('(99) 9999-9999');
-                VMasker(document.getElementById("phoneValues")).maskPattern('(99) 9999-9999');
-                VMasker(document.getElementById("date")).maskPattern('99/99/9999');
-                VMasker(document.getElementById("doc")).maskPattern('999.999.999-99');
-                VMasker(document.getElementById("carPlate")).maskPattern('AAA-9999');
-                VMasker(document.getElementById("vin")).maskPattern('SS.SS.SSSSS.S.S.SSSSSS');*/
             })();
         </script>
         <script>
@@ -636,7 +548,6 @@
                 if(window.location.hash) {
                   header.classList.add("slide--up");
                 }
-
                 new Headroom(header, {
                     tolerance: {
                       down : 10,
@@ -650,22 +561,7 @@
                     }
                 }).init();
             }());
-
         </script>
-        <script>
-            smoothScroll.init();
-        </script>
-        <!--<script>
-            //var fauxLinks = document.getElementsByClassName("faux-links");
-            //fauxLinks.addEventListener("click", keepUrl);
-            //function keepUrl //history.pushState(null, null, '');
-            //);
-        </script>-->
-        
-
-        <!--CONSIDER USING FONT LOADER TO PREVENT FOUT-->    
-        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
-        <!--<script>(window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>'));</script>-->
-        <!--<script src="js/app.js"></script>-->
+        <script>smoothScroll.init();</script>
     </body>
 </html>
