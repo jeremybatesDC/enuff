@@ -177,11 +177,11 @@ data{}
 
 
 /*nav.header-inner {width: 10em;}*/
-.hamburger-control {position: fixed;top:0;left:0;z-index: 11;}
-
+label.icon-hamburger {display: inline-block;position: fixed;top:0;left:0;width: 3em; height: 3em;overflow:hidden;background-color: #fff;background-image:url(../img/iconmonstr-menu-icon.svg); background-repeat:no-repeat;z-index:12;}
+input.hamburger-control {position: fixed;top:0;left:0;z-index: 11;width: 1em;opacity: 0;}
 .header {background-color: rgba(150,150,150,1);}
 .header--fixed {display:none;position: fixed;z-index: 9;left: -10em;top: 0;width: 10em;height:100%;}
-input.hamburger-control:checked + .header--fixed {display:inline-block;left:0;}
+input.hamburger-control:checked + label + .header--fixed {display:inline-block;left:0;}
 
 
 
@@ -292,7 +292,7 @@ Author: Luiz Felipe Tartarotti Fialho
 
 /* Accordion by Alex Bergin http://codepen.io/abergin/pen/ihlDf*/ 
 
-.accordions .transition, .accordions p, .accordions ul li i:before, .accordions ul li i:after {
+.accordions .transition, .accordions p, .accordions ul, .accordions ul li i:before, .accordions ul li i:after {
   transition: all 0.25s ease-in-out;
 }
 
@@ -486,6 +486,7 @@ body:not(:-moz-handler-blocked) .parallax {display: none;}
     right: 0;
     bottom: 0;
     padding: 100% 0;
+    border: 1px solid #000;
   }
 
   .parallax__layer--base {-webkit-transform: translateZ(0);transform: translateZ(0);}
@@ -810,6 +811,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 
 @media only screen and (min-width: 36em) {
+.icon-hamburger:after {content: "";}
 
 .hamburger-control {display: none;}
 .hamburger-control:checked {}

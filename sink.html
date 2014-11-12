@@ -22,7 +22,10 @@
 
     <body>
     
-    <input class="hamburger-control" type="checkbox" name="hamburger-toggle"/>
+    <!--must be a free-range-input-->
+    <!--<label for="hamburgerToggle" class="icon-hamburger"></label>-->
+    <input class="hamburger-control" type="checkbox" id="hamburgerToggle"//>
+    <label class="icon-hamburger" for="hamburgerToggle"></label>
     <header id="header" class="header header--fixed hide-from-print slide headroom--top" role="banner">
         
         <nav class="header-inner">
@@ -41,12 +44,12 @@
                                         <ul>
                                           <li>
                                             <input type="checkbox" checked>
-                                            <h6>Submenu Item</h6>
-                                            <i></i>
-                                            
-                                            <p>Sub 1</p>
-                                            <p>Sub 2</p>
-                                            <p>Sub 3</p>
+                                            <h6>Submenu Item</h6><i></i>
+                                            <ul>
+                                                <li>Sub 1</li>
+                                                <li>Sub 2</li>
+                                                <li>Sub 3</li>
+                                            <ul>
                                           </li>
                                         </ul>
                                     </div>
@@ -138,7 +141,6 @@
 
 <!--make this the header if possible, but i'm getting scroll on body with modal when it's a header-->
 <div id="!" class="top-section">
-  <p>Logo here?</p>
   <!--this parallax doesn't behave properly in FF, as it makes the scroll area WAY too tall and I'm having toruble fixing that. So I'm using body:not(:-moz-handler-blocked) .parallax {isplay: none;}-->
   <div class="parallax">
   <div class="para-inner">
@@ -148,6 +150,7 @@
     <div class="parallax__layer parallax__layer--base">
       <div class="title title2">Title2</div>
     </div>
+
   </div>
   </div>
   <a data-scroll data-options='{ "easing": "easeOutCubic" }' class="more" href="##">Learn More</a>
