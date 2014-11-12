@@ -190,7 +190,7 @@ input.hamburger-control:checked + .header--fixed {display:inline-block;left:0;}
 
 
 /* need to make selection and user selecy transparent none etc*/
-
+.navigation {padding: 0;margin:0;}
 .navigation label {background: transparent;color: #000;}
 .navigation input {opacity: 0;}
 .replacement {display: none;}
@@ -461,6 +461,54 @@ label span :focus {box-shadow: none;}
   -ms-flex-align: end;
   align-items: flex-end;
 }
+
+
+
+
+.parallax {
+    /*height: 110%;*/
+    height: 40em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-1px);
+    transform: translateZ(-1px);
+  }
+/* add some padding to force scrollbars */
+  .parallax__layer {
+    /*padding: 110% 0;*/
+    padding: 40em 0;
+  }
+
+   /* centre the content in the parallax layers */
+  .title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+ .title2 {
+    top: 45%;
+  }
 
 
 .drag-drop-area label {margin-top: 0; padding: .5em .5em .5em 0;float:none;}
@@ -778,7 +826,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .hamburger-control:checked {}
 nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
 /*nav.header-inner {}*/
-.header--fixed {display: inline-block;width: 100%;left: 0;height: 5em;overflow:visible;}
+.header--fixed {display: inline-block;width: 100%;left: 0;height: auto;max-height: 2em;overflow:visible;}
 
 /*side-navigation*/
 .side-menu {
