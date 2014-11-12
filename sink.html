@@ -20,7 +20,7 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-    <body>
+    <body id="!">
     
     <input class="hamburger-control" type="checkbox" name="hamburger-toggle"/>
 <!--set headroom so it only operates at 36+ ems-->
@@ -565,13 +565,17 @@
 </main>  
 
 
-
+<a data-scroll data-options='{ "easing": "easeOutCubic" }' href="#!">Back to the top</a>
 
         <footer>
+            
         </footer>
+
+
         <script src="js/pikaday.js"></script>
         <script src="js/vanilla-masker.js"></script>
         <script src="js/headroom.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
         <script>
             var picker = new Pikaday(
             {
@@ -627,27 +631,29 @@
             })();
         </script>
         <script>
-            
-(function() {
-    var header = document.querySelector("#header");
-    if(window.location.hash) {
-      header.classList.add("slide--up");
-    }
+            (function() {
+                var header = document.querySelector("#header");
+                if(window.location.hash) {
+                  header.classList.add("slide--up");
+                }
 
-    new Headroom(header, {
-        tolerance: {
-          down : 10,
-          up : 10
-        },
-        offset : 0,
-        classes: {
-          initial: "slide",
-          pinned: "slide--reset",
-          unpinned: "slide--up"
-        }
-    }).init();
-}());
+                new Headroom(header, {
+                    tolerance: {
+                      down : 10,
+                      up : 10
+                    },
+                    offset : 0,
+                    classes: {
+                      initial: "slide",
+                      pinned: "slide--reset",
+                      unpinned: "slide--up"
+                    }
+                }).init();
+            }());
 
+        </script>
+        <script>
+            smoothScroll.init();
         </script>
         <!--<script>
             //var fauxLinks = document.getElementsByClassName("faux-links");
