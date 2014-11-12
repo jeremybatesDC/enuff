@@ -20,7 +20,7 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-    <body id="!">
+    <body>
     
     <input class="hamburger-control" type="checkbox" name="hamburger-toggle"/>
     <header id="header" class="header header--fixed hide-from-print slide headroom--top" role="banner">
@@ -137,22 +137,24 @@
 
 
 <!--make this the header if possible, but i'm getting scroll on body with modal when it's a header-->
-<div class="top-section">
-  <!--<p>This content takes up 100% of the viewport at the top</p>-->
-  <!--this doesn't behave properly in FF, as it makes the scroll area WAY too tall and I'm having toruble fixing that. So I'm using body:not(:-moz-handler-blocked) .parallax {isplay: none;}-->
+<div id="!" class="top-section">
+  <p>Logo here?</p>
+  <!--this parallax doesn't behave properly in FF, as it makes the scroll area WAY too tall and I'm having toruble fixing that. So I'm using body:not(:-moz-handler-blocked) .parallax {isplay: none;}-->
   <div class="parallax">
+  <div class="para-inner">
     <div class="parallax__layer parallax__layer--back">
-      <div class="title">Hi</div>
+      <div class="title">Title</div>
     </div>
     <div class="parallax__layer parallax__layer--base">
-      <div class="title title2">Welcome</div>
+      <div class="title title2">Title2</div>
     </div>
   </div>
-  <a data-scroll data-options='{ "easing": "easeOutCubic" }' class="more" href="#main">Learn More</a>
+  </div>
+  <a data-scroll data-options='{ "easing": "easeOutCubic" }' class="more" href="##">Learn More</a>
 </div>
      
 
-        <main class="main-content" id="main">
+        <main class="main-content" id="#">
             <section class="flexgrid">
                 <h3>Responsive</h3>
                 <form class="batesForm">
@@ -506,14 +508,7 @@
   
 </main>  
 
-<div class="parallax">
-    <div class="parallax__layer parallax__layer--back">
-      <div class="title">Hi</div>
-    </div>
-    <div class="parallax__layer parallax__layer--base">
-      <div class="title title2">Welcome</div>
-    </div>
-  </div>
+
 
 <a data-scroll data-options='{ "easing": "easeOutCubic" }' href="#!">Back to the top</a>
 

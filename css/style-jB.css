@@ -154,9 +154,7 @@ data{}
 
 .btn {font-size: 1em;}
 
-/*top 100% by Amtt Boldt: http://www.mattboldt.com/css-100-percent-height/ -- this works because html and body above are set to 100% height*/
-.top-section{height:100%;}
-.more{display:block;position:absolute;bottom:20px;text-align:center;}
+
 
 
 /*action bar*/
@@ -181,9 +179,7 @@ data{}
 /*nav.header-inner {width: 10em;}*/
 .hamburger-control {position: fixed;top:0;left:0;z-index: 11;}
 
-
-
-.header {background-color: rgba(0,0,0,.5);}
+.header {background-color: rgba(150,150,150,1);}
 .header--fixed {display:none;position: fixed;z-index: 9;left: -10em;top: 0;width: 10em;height:100%;}
 input.hamburger-control:checked + .header--fixed {display:inline-block;left:0;}
 
@@ -466,9 +462,17 @@ label span :focus {box-shadow: none;}
 /* css-only scroll in firefox in my 100% top portion makes for a super elongated scroll area...*/
 body:not(:-moz-handler-blocked) .parallax {display: none;}
 
+
+/*top 100% by Amtt Boldt: http://www.mattboldt.com/css-100-percent-height/ -- this works because html and body above are set to 100% height*/
+.top-section{height:100%;border-bottom: 1px solid #000;}
+.more{display:block;position:absolute;bottom:20px;text-align:center;}
+
+/* padding & percentage height is based on width -- so i need some intrinsic ratio*/
+
+/* maybe solve via media query -- but really i want to be able to absolutely position in within top section... might need intrinsic ratios*/
 .parallax {
-    height: 100%;
-    max-height: 800px;
+    height: 0;
+    padding-bottom: 66%;
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-perspective: 1px;
@@ -481,31 +485,19 @@ body:not(:-moz-handler-blocked) .parallax {display: none;}
     left: 0;
     right: 0;
     bottom: 0;
-  }
-
-  .parallax__layer--base {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-
-  .parallax__layer--back {
-    -webkit-transform: translateZ(-1px);
-    transform: translateZ(-1px);
-  }
-/* add some padding to force scrollbars */
-  .parallax__layer {
     padding: 100% 0;
   }
 
-   /* centre the content in the parallax layers */
+  .parallax__layer--base {-webkit-transform: translateZ(0);transform: translateZ(0);}
+  .parallax__layer--back {-webkit-transform: translateZ(-1px);transform: translateZ(-1px);}
+  
   .title {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin-top:-66%;
   }
-
+  .title.title2 {
+    color: blue;
+  }
 
 
 .drag-drop-area label {margin-top: 0; padding: .5em .5em .5em 0;float:none;}
