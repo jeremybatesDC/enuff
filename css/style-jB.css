@@ -77,10 +77,7 @@ var{}
 form{}
 fieldset{}
 input {height: 2em;color: #000;/*border-radius: 5px;*/border: 1px solid #999;box-shadow: none;padding: 0 .25em;font-family: Arial;/*default is trebuchet -- ugh*/font-size: .875rem;}
-label {background: #fff;font-size: .625rem;line-height: 1em; color: #888;font-weight: normal;text-transform: uppercase;/*white-space: nowrap;overflow: hidden;*/-webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;}
+label {background: #fff;font-size: .625rem;line-height: 1em; color: #888;font-weight: normal;text-transform: uppercase;/*white-space: nowrap;overflow: hidden;*/}
 select {}
 option {/*padding: 1em 0;*//*that screws up firefox selectbox height*/}
 optgroup{/*display: inline-block; width: 300%;*/}
@@ -193,7 +190,7 @@ input.hamburger-control:checked + .header--fixed {display:inline-block;left:0;}
 
 
 /* need to make selection and user selecy transparent none etc*/
-.navigation {padding: 0;margin:0;}
+
 .navigation label {background: transparent;color: #000;}
 .navigation input {opacity: 0;}
 .replacement {display: none;}
@@ -465,21 +462,17 @@ label span :focus {box-shadow: none;}
   align-items: flex-end;
 }
 
-
-
+/* css parallax by Keith Clark: http://keithclark.co.uk/articles/pure-css-parallax-websites/*/
+/* css-only scroll in firefox in my 100% top portion makes for a super elongated scroll area...*/
+body:not(:-moz-handler-blocked) .parallax {display: none;}
 
 .parallax {
-    /*height: 110%;*/
-    height: 40em;
+    height: 100%;
+    max-height: 800px;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     -webkit-perspective: 1px;
     perspective: 1px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
   }
 
   .parallax__layer {
@@ -501,8 +494,7 @@ label span :focus {box-shadow: none;}
   }
 /* add some padding to force scrollbars */
   .parallax__layer {
-    /*padding: 110% 0;*/
-    padding: 40em 0;
+    padding: 100% 0;
   }
 
    /* centre the content in the parallax layers */
@@ -514,9 +506,6 @@ label span :focus {box-shadow: none;}
     transform: translate(-50%, -50%);
   }
 
- .title2 {
-    top: 45%;
-  }
 
 
 .drag-drop-area label {margin-top: 0; padding: .5em .5em .5em 0;float:none;}
@@ -832,9 +821,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 .hamburger-control {display: none;}
 .hamburger-control:checked {}
+.navigation {margin: 0;}
 nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
 /*nav.header-inner {}*/
-.header--fixed {display: inline-block;width: 100%;left: 0;height: auto;max-height: 2em;overflow:visible;}
+.header--fixed {display: inline-block;width: 100%;left: 0;height: 2em;overflow:visible;}
 
 /*side-navigation*/
 .side-menu {
