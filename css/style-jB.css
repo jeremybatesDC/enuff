@@ -77,7 +77,10 @@ var{}
 form{}
 fieldset{}
 input {height: 2em;color: #000;/*border-radius: 5px;*/border: 1px solid #999;box-shadow: none;padding: 0 .25em;font-family: Arial;/*default is trebuchet -- ugh*/font-size: .875rem;}
-label {background: #fff;font-size: .625rem;line-height: 1em; color: #888;font-weight: normal;text-transform: uppercase;/*white-space: nowrap;overflow: hidden;*/}
+label {background: #fff;font-size: .625rem;line-height: 1em; color: #888;font-weight: normal;text-transform: uppercase;/*white-space: nowrap;overflow: hidden;*/-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
 select {}
 option {/*padding: 1em 0;*//*that screws up firefox selectbox height*/}
 optgroup{/*display: inline-block; width: 300%;*/}
@@ -472,6 +475,11 @@ label span :focus {box-shadow: none;}
     overflow-y: auto;
     -webkit-perspective: 1px;
     perspective: 1px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
   }
 
   .parallax__layer {
