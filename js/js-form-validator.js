@@ -642,11 +642,12 @@
                     // }
 
                     if (se) {
+                        //ideally this will target the input itself (using this?) and apply the tooltip attrs
                         errorDiv = document.createElement('a');
                         errorDiv.setAttribute('class', errorClassName);
                         errorDiv.setAttribute('data-type', 'validator-error');
                         errorDiv.setAttribute('data-tooltip', '');
-                        errorDiv.setAttribute('data-tooltip-message', 'yo');
+                        errorDiv.setAttribute('data-tooltip-message', errorObj.errorText);
                         errorDiv.innerHTML = '?';
                         refNode.parentNode.insertBefore(errorDiv, refNode.nextSibling);
                     }
