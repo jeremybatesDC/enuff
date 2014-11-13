@@ -1,0 +1,81 @@
+/*@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}*/
+/*I like to make default font-size explicit, and then to base ems off of it*/
+
+
+/* cheat cheat*/
+/*
+100px=6.25em;
+72px=4.5em;
+60px=3.75em;
+48px=3em;
+42px=2.625em;
+40px=2.5em;
+36px=2.25em;
+32px=2em;
+28px=1.75em;
+24px=1.5em;
+20px=1.25em;
+18px=1.125em;
+16px=1em;
+14px=.875em;
+12px=.75em;
+11px=.6875em;
+10px=.625em;
+9px=.5625em;
+8px=.5em;
+7px=.4375em;
+6px=.375em;
+5px=.3125em;
+4px=.25em;
+3px=.1875em;
+2px=.125em;
+1px=.0625em;
+*/
+
+
+/*.tooltip-inner{background: red;}
+.error + .tooltip .tooltip-arrow {border-top-color: red;}
+.tooltip.right .tooltip-arrow {border-right-color: red;}
+.tooltip.left .tooltip-arrow {border-left-color: red;}
+.tooltip.bottom .tooltip-arrow, .tooltip.bottom-left .tooltip-arrow, .tooltip.bottom-right .tooltip-arrow {border-bottom-color: red;}
+.tooltip-inline-wrapper{display: inline;}
+.help-link {display: inline-block;border:1px solid #000;border-radius: 50%; margin-left: .75em; padding: .75em;font-size: .75em; font-weight: bold;background: #fff url(../img/questionMark.jpg) no-repeat;cursor:pointer;position: relative;top:.25em;}
+.helper-tip + .tooltip, .helper-tip + .tooltip .tooltip-inner, .helper-tip + .tooltip .tooltip-arrow {background: #183055; border-top-color: #183055;border-right-color: #183055;border-bottom-color:#183055; border-left-color:#183055; }
+*/
+
+
+
+/*.flexgrid .row {min-height: 2em;}
+
+.flexgrid .row fieldset {
+  padding: 0 .5em;
+  margin: 0;
+}
+
+.flexgrid .row div:first-child fieldset {
+  padding-left: 0;
+}
+
+.flexgrid .row div:last-child fieldset {
+  padding-right: 0;
+}
+
+
+.flexgrid .row input, .flexgrid .row select {
+  width: 100%;
+}
+
+.flexgrid select {display: inline-block;}
+.flexgrid select option {height: 2em;}
+
+.flexgrid .row label {
+  display: inline-block;
+  position: relative;
+  top: 1em;
+}
+*/
