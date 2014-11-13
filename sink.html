@@ -515,8 +515,10 @@
 </main>  
 
 
-
 <a data-scroll data-options='{ "easing": "easeOutCubic" }' href="#!">Back to the top</a>
+
+<button id="cancelButton"> <--Cancel</button>
+<button id="sendButton">Send --></button>
 
         <footer></footer>
 
@@ -525,7 +527,9 @@
         <script src="js/vanilla-masker.js"></script>
         <script src="js/headroom.min.js"></script>
         <script src="js/smooth-scroll.min.js"></script>
-        <script>
+        <script src="js/hammer.min.js"></script>
+        <script src="js/init.js"></script>
+        <!--<script>
             var picker = new Pikaday(
             {
                 field: document.getElementById('datepicker'),
@@ -582,5 +586,24 @@
             }());
         </script>
         <script>smoothScroll.init();</script>
+<script>
+var sendButton = document.getElementById('sendButton');
+var cancelButton = document.getElementById('cancelButton');
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(sendButton);
+var mc2 = new Hammer(cancelButton);
+//var mc = new Hammer.Manager(myElement, myOptions);
+// listen to events...
+mc.on("swiperight panright", function(ev) {
+    sendButton.textContent = "Sent";
+    sendButton.style.background = "green";
+});
+mc2.on("swipeleft panleft", function(ev) {
+    cancelButton.textContent = "Cancelled";
+    cancelButton.style.background = "red";
+});
+
+</script>-->
     </body>
 </html>
