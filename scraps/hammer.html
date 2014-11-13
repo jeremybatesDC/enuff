@@ -1,0 +1,34 @@
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+<style>
+	
+#submitButton {
+  background: silver;
+  height: 300px;
+  text-align: center;
+  font: 30px/300px Helvetica, Arial, sans-serif;
+}
+
+</style>
+<div id="submitButton"></div>
+
+
+<script>
+var myElement = document.getElementById('submitButton');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+//var mc = new Hammer.Manager(myElement, myOptions);
+
+
+// listen to events...
+mc.on("swiperight panright", function(ev) {
+    myElement.textContent = ev.type +" gesture detected.";
+    myElement.style.background = "green";
+});
+
+mc.on("swipeleft panleft", function(ev) {
+    myElement.textContent = ev.type +" gesture detected.";
+    myElement.style.background = "red";
+});
+</script>
