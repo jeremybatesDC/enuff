@@ -815,7 +815,42 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 
 
+
+/* can i use before & after to put icon that corresponds to th? That might be too hard-coded... Althought I could do a disc*/
+.hasResponsive-table table{
+  width: 100%;
+}
+
+.hasResponsive-table thead tr {
+  width: 100%;
+  height: auto;
+  padding-bottom: 0;
+
+}
+
+.hasResponsive-table thead tr th{
+  width: 25%;
+  height: auto;
+}
+
+
+.hasResponsive-table tr{
+  display: inline-block;
+  border: 1px solid #000;
+  width: 50%;
+  height: 0;
+  padding-bottom: 10em;
+  overflow: hidden;
+}
+
+.hasResponsive-table tr td {
+  display: block;
+}
+
+
+
 @media only screen and (min-width: 36em) {
+
 .icon-hamburger:after {content: "";}
 
 label.icon-hamburger {display: none;}
@@ -846,6 +881,34 @@ nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
 /*#sideMenu.side-menu a.hamburger-close{display: none;}
 #sideMenu.side-menu:target a.hamburger-close{display: block;}
 #sideMenu.side-menu:target a.hamburger-open{display: none;}*/
+
+
+
+.hasResponsive-table tr{
+  display: table-row;
+}
+
+
+.hasResponsive-table td {
+  border: 1px solid #000;
+}
+
+
+.hasResponsive-table thead tr th{
+  width: auto;
+}
+
+
+.hasResponsive-table tr{
+  display: table-row;
+}
+
+.hasResponsive-table tr td {
+  display: table-cell;
+}
+
+
+
 
 
 .slide {
@@ -907,7 +970,6 @@ nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
 }
 
 
-
 @keyframes slideUp {
     0% {transform: translateY(0);}
     100% {transform: translateY(-100%);}
@@ -919,9 +981,7 @@ nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
     animation-name: slideUp;
 }
 
-
-
-}
+} /*end media query */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 144dpi) {
 }
