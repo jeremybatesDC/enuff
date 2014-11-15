@@ -392,7 +392,6 @@ Author: Luiz Felipe Tartarotti Fialho
   transform: translate(0, 50%);
 }
 
-
 .accordions ul li input[type=checkbox]:checked ~ i:before {
   -webkit-transform: translate(2px, 0) rotate(45deg);
   transform: translate(2px, 0) rotate(45deg);
@@ -411,12 +410,24 @@ Author: Luiz Felipe Tartarotti Fialho
 [data-tooltip]:before,[data-tooltip]:after {display: none;position: absolute;top: 0;}
 [data-tooltip]:before {content: "";/*left: 20px;margin-top: 1em;*/}
 [data-tooltip]:after {
-  content: attr(data-tooltip-label) ":\A" attr(data-tooltip-message);
-  /*left: 1em;
-  margin-top: 1.5em;
-  white-space: pre-wrap;
-  width: 100px;*/
+  content: attr(data-tooltip-label) "\A" attr(data-tooltip-message);
+  /*left: 1em;*/
+  top: -2em;
+  /*margin-top: 1.5em;*/
+  /*white-space: pre-wrap;*/
+  width: 8rem;
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(0,0,0,.1);
+  padding: .5em;
+  font-size: .75em;
+  line-height: 1.5em;
 }
+
+[data-tooltip].tooltip-r:after{left: 0;}
+[data-tooltip].tooltip-l:after{right: 0;}
+[data-tooltip].tooltip-t:after {left: -4em;top: -2em;}
+[data-tooltip].tooltip-b:after {left: -4em;top: 2em;}
+
 
 [data-tooltip]:hover:after,[data-tooltip]:hover:before {display: block;}
 
@@ -852,6 +863,11 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   display: block;
 }
 
+.hasResponsive-table tbody tr td:before {
+  content: "- ";
+}
+
+
 
 
 @media only screen and (min-width: 36em) {
@@ -889,30 +905,12 @@ nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
 
 
 
-.hasResponsive-table tr{
-  display: table-row;
-}
-
-
-.hasResponsive-table td {
-  border: 1px solid #000;
-}
-
-
-.hasResponsive-table thead tr th{
-  width: auto;
-}
-
-
-.hasResponsive-table tr{
-  display: table-row;
-}
-
-.hasResponsive-table tr td {
-  display: table-cell;
-}
-
-
+.hasResponsive-table tr{display: table-row;}
+.hasResponsive-table td {border: 1px solid #000;}
+.hasResponsive-table thead tr th{width: auto;}
+.hasResponsive-table tr{display: table-row;}
+.hasResponsive-table tr td {display: table-cell;}
+.hasResponsive-table tbody tr td:before {content: "";}
 
 
 
