@@ -256,7 +256,7 @@ Author: Luiz Felipe Tartarotti Fialho
   right: 0;
   top: 0;
   z-index: 102;
-  background-color: rgba(0,200,0,.5);
+  background-color: rgba(0,0,0,.5);
 }
 .modal-open:checked ~ .modal-wrap:before,
 .modal-open:checked ~ .modal-wrap .modal-overlay {
@@ -287,13 +287,27 @@ Author: Luiz Felipe Tartarotti Fialho
   transition: transform 0.3s ease-out;
   width: 80%;
   max-width: 600px;
-  height: 300px;
-  z-index: 103;
+  height: 20%
+  max-height:20em;
   border: 1px solid #000;
+  overflow: hidden;
+  background: #fff;
+  z-index: 103;
+  padding: 1em;
+}
+
+.modal-body {
+  height: 15%;
+  height: 15em;
   overflow: scroll;
 }
 
+
+
+
 .has-modal body {overflow: hidden;}
+
+
 
 
 /* Accordion by Alex Bergin http://codepen.io/abergin/pen/ihlDf*/ 
