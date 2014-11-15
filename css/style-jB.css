@@ -180,7 +180,11 @@ data{}
 
 .header {background-color: rgba(150,150,150,1);}
 .header--fixed {display:none;position: fixed;z-index: 9;left: -10em;top: 0;width: 10em;height:100%;}
-label.icon-hamburger {display: inline-block;position: fixed;top:0;left:0;width: 3em; height: 3em;overflow:hidden;background-color: #fff;background-image:url(../img/iconmonstr-menu-icon.svg); background-repeat:no-repeat;z-index:12;}
+label.icon-hamburger {display: inline-block;position: fixed;top:0;left:0;width: 3em; height: 3em;overflow:hidden;background-color: #fff;background-image:url(../img/iconmonstr-menu-icon.svg); background-repeat:no-repeat;z-index:12;-webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;}
 input.hamburger-control {position: fixed;top:0;left:0;z-index: 11;width: 1em;opacity: 0;}
 input.hamburger-control:checked + label + .header--fixed {display:inline-block;left:0;}
 
