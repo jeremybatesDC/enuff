@@ -633,12 +633,12 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
     border-left: 0px;
 }
 
-.batesSelect {}
-.batesSelect select{}
-.batesSelect select optgroup {}
-.batesSelect select optgroup option{}
-.batesSelect select:focus {}
-.batesSelect select:focus optgroup {}
+.enuffSelect {}
+.enuffSelect select{}
+.enuffSelect select optgroup {}
+.enuffSelect select optgroup option{}
+.enuffSelect select:focus {}
+.enuffSelect select:focus optgroup {}
 
 .test-select:focus optgroup option{}
 
