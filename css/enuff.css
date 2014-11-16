@@ -496,6 +496,9 @@ body:not(:-moz-handler-blocked) .parallax {display: none;}
 
 /*top 100% by Amtt Boldt: http://www.mattboldt.com/css-100-percent-height/ -- this works because html and body above are set to 100% height*/
 .top-section{height:100%;border-bottom: 1px solid #000;}
+.top-section figure.has-logo {text-align: center;padding-top: 10%;}
+/*.top-section img.logo {width: 100%; max-width: 36em;margin: 0 auto;}*/
+.top-section svg.enuff-logo {width: 100%; max-width: 36em;}
 .more{display:block;position:absolute;bottom:20px;text-align:center;}
 
 /* padding & percentage height is based on width -- so i need some intrinsic ratio*/
