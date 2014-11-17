@@ -178,15 +178,15 @@ data{}
 
 /*nav.header-inner {width: 10em;}*/
 
-.header {background-color: rgba(150,150,150,1);}
-.header--fixed {display:none;position: fixed;z-index: 9;left: -10em;top: 0;width: 10em;height:100%;}
+.header {background-color: rgba(150,150,150,1);transition: left .5s ease;}
+.header--fixed {/*display:none;*/position: fixed;z-index: 9;left: -10em;top: 0;width: 10em;height:100%;}
 label.icon-hamburger {display: inline-block;position: fixed;top:0;left:0;width: 3em; height: 3em;overflow:hidden;background-color: transparent;background-image:url(../img/iconmonstr-menu-icon.svg); background-repeat:no-repeat;z-index:12;-webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;}
 input.hamburger-control {position: fixed;top:0;left:0;z-index: 11;width: 1em;opacity: 0;}
-input.hamburger-control:checked + label + .header--fixed {display:inline-block;left:0;}
+input.hamburger-control:checked + label + .header--fixed {/*display:inline-block;*/left:0;}
 
 nav.header-inner {margin-top: 3em;}
 
@@ -251,6 +251,17 @@ font-weight: bold;
 
 
 
+/*the transition isn't applying in ff*/
+/*.modal-wrap:before, .modal-overlay,.modal-open:checked ~ .modal-wrap:before,.modal-open:checked ~ .modal-wrap .modal-overlay, .modal-open:checked ~ .modal-wrap .modal-dialog, .modal-dialog,.modal-body {transition: all 1s ease;}
+*/
+.modal-wrap,
+.modal-overlay,
+.modal-open,
+.modal-dialog,
+.modal-body {transition: all .5s ease;}
+
+
+
 .modal .btn-close {}
 .modal .btn-close:hover {}
 .modal-wrap:before {
@@ -262,6 +273,7 @@ font-weight: bold;
   right: 0;
   bottom: 0;
   z-index: 101;
+  opacity: 0;
 }
 .modal-overlay {
   bottom: 0;
@@ -272,10 +284,15 @@ font-weight: bold;
   top: 0;
   z-index: 102;
   background-color: rgba(0,0,0,.5);
+  opacity: 0;
 }
+
+
+
 .modal-open:checked ~ .modal-wrap:before,
 .modal-open:checked ~ .modal-wrap .modal-overlay {
   display: block;
+  opacity: 1;
 }
 .modal-open:checked ~ .modal-wrap .modal-dialog {
   -webkit-transform: translate(-50%, 0);
@@ -283,15 +300,7 @@ font-weight: bold;
   transform: translate(-50%, 0);
   top: 20%;
 }
-.modal-overlay {
-  bottom: 0;
-  display: none;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 102;
-}
+
 .modal-dialog {
   position: fixed;
   left: 50%;
@@ -302,7 +311,7 @@ font-weight: bold;
   transition: transform 0.3s ease-out;
   width: 80%;
   max-width: 600px;
-  height: 20%
+  /*height: 20%;*/
   max-height:20em;
   border: 1px solid #000;
   overflow: hidden;
@@ -863,15 +872,12 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 
 /* can i use before & after to put icon that corresponds to th? That might be too hard-coded... Althought I could do a disc*/
-.hasResponsive-table table{
-  width: 100%;
-}
+.hasResponsive-table table{width: 100%;}
 
 .hasResponsive-table thead tr {
   width: 100%;
   height: auto;
   padding-bottom: 0;
-
 }
 
 .hasResponsive-table thead tr th{
@@ -893,7 +899,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .hasResponsive-table tr td {
   display: block;
   margin: 0;
+  font-size: .75em;
 }
+
+
 
 /*.hasResponsive-table tbody tr td:before {
   content: "- ";
@@ -936,18 +945,6 @@ nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
 /*nav.header-inner {}*/
 .header--fixed {display: inline-block;width: 100%;left: 0;height: 2em;overflow:visible;}
 
-/*side-navigation*/
-.side-menu {
-  display: inline-block;
-  position: fixed;
-  top:5em;
-  left: 0;
-  background: #000;
-  width: 10em;
-  height: 100%;
-  margin-left: -8em;
-  z-index: 10;
-}
 
 /*#sideMenu.side-menu:target {margin-left: 0;background: #000;}*/
 .nav-control input{}

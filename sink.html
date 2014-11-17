@@ -75,20 +75,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="col-xs-12 col-sm-3">
-                    <input id="nav3" class="nav-radio" type="radio" name="navRadio"/>
-                    <label class="replacement" for="submenu3">3replacement</label>
-                </li>
-                 <li class="col-xs-12 col-sm-3">
-                    <label for="nav4">4</label>
-                    <input id="nav4" class="nav-radio" type="radio" name="navRadio"/>
-                    <div class="nav-dropdown">
-                        <label for="nav4a">yoA</label>
-                        <input id="nav4a" class="nav-checkbox" type="checkbox"/>
-                            <!--<ul class="nav-dropdown nav-dropdown-nested">-->
-                    </div>
-
-                </li>
+                
             </ul><!--end row navigation-->
         </nav>
     </header>
@@ -303,28 +290,14 @@
 </g>
 </svg>
 </figure>
-    <!--<figure class="has-logo">
-        <img class="logo" src="img/enuff.svg"/>
-    </figure>-->
-<!--this parallax doesn't behave properly in FF, as it makes the scroll area WAY too tall and I'm having toruble fixing that. So I'm using body:not(:-moz-handler-blocked) .parallax {isplay: none;}-->
-<!--<div class="parallax">
-<div class="para-inner">
-<div class="parallax__layer parallax__layer--back">
-  <div class="title">Title</div>
-</div>
-<div class="parallax__layer parallax__layer--base">
-  <div class="title title2">Title2</div>
-</div>
 
-</div>
-</div>-->
 <a data-scroll data-options='{ "easing": "easeOutCubic" }' class="more" href="##">See some things</a>
 </div>
  
 
     <main class="main-content" id="#">
 
-    <article>
+    <article> <!--wraps flexgrid -->
         <section class="flexgrid">
             <h3>Responsive</h3>
             <form class="batesForm">
@@ -464,7 +437,7 @@
                             <div class="dropdown">
                                 <select>
                                     <optgroup>
-                                        <option></option>
+                                        <option>&nbsp;</option>
                                         <option>January</option>
                                         <option>February</option>
                                         <option>March</option>
@@ -486,7 +459,7 @@
                         <label><span>Year</span>
                             <div class="dropdown">
                                 <select>
-                                    <option></option>
+                                    <option>&nbsp;</option>
                                     <option>2014</option>
                                     <option>2015</option>
                                     <option>2016</option>
@@ -581,10 +554,11 @@
                         </fieldset>
                     </div>
                 </div>
+            </section>
     	</article>
 
 
-        </section>
+        
 
         
         <article>
