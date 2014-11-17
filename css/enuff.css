@@ -5,6 +5,10 @@ main {font-size: 1em; max-width: 56rem;margin: 0 auto;padding: 0 .5em;}
 header {}
 nav {}
 article {}
+.enuff-css article {
+  padding-bottom: 5em; border-bottom: 1px solid #999;
+}
+
 section{}
 aside {}
 footer{}
@@ -222,13 +226,6 @@ nav.header-inner {margin-top: 3em;}
 
 
 
-
-
-/*.enuff-has-tabs input{}
-.enuff-has-tabs input {}
-.enuff-has-tabs input + div {opacity: 0;}
-.enuff-has-tabs input:checked + div{opacity: 1;}*/
-
 .enuff-has-tabs label { 
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -237,18 +234,26 @@ nav.header-inner {margin-top: 3em;}
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  /*border: 1px solid #000;*/
+  padding: .5em 1em;
 }
-.enuff-has-tabs input {opacity: 0;height:1px;width:1px;}
+.enuff-has-tabs input {display: none;}
 .enuff-has-tabs p {display: none;}
 .enuff-has-tabs input:first-of-type:checked ~ p:first-of-type,.enuff-has-tabs input:nth-of-type(2):checked ~ p:nth-of-type(2), .enuff-has-tabs input:nth-of-type(3):checked ~ p:nth-of-type(3) {
   display: block;
 }
 
 .enuff-has-tabs input:first-of-type:checked ~ label:first-of-type,.enuff-has-tabs input:nth-of-type(2):checked ~ label:nth-of-type(2), .enuff-has-tabs input:nth-of-type(3):checked ~ label:nth-of-type(3) {
-color: green;
-font-weight: bold;
+background: #f0f0f0;
+
 }
 
+.enuff-has-tabs p {
+  padding: 1em;
+  background: #f0f0f0;
+  font-size: .8em;
+  line-height: 1.5em;
+}
 
 
 /*the transition isn't applying in ff*/
@@ -359,7 +364,8 @@ font-weight: bold;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
   z-index: 2;
-  color: purple;
+  font-size: .8em;
+  line-height: 1.5em;
 }
 
 
@@ -440,6 +446,11 @@ font-weight: bold;
 
 .navigation .accordions ul li i {top:.75em;right: 1em;}
 
+
+.navigation .accordions ul li, .navigation .accordions ul li ul li {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 
 /*Tooltip by trezy (https://github.com/trezy) http://codepen.io/trezy/pen/Khnzy */
 

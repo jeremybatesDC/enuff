@@ -20,7 +20,7 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<body>
+<body class="enuff-css">
     
     <!--must be a free-range-input-->
     <!--<label for="hamburgerToggle" class="icon-hamburger"></label>-->
@@ -44,7 +44,7 @@
                                         <ul>
                                           <li>
                                             <input type="checkbox" checked>
-                                            <h6>Submenu Item</h6><i></i>
+                                            <h6>Submenu 3</h6><i></i>
                                             <ul>
                                                 <li>Sub 1</li>
                                                 <li>Sub 2</li>
@@ -66,11 +66,11 @@
                           <li>
                             <input type="checkbox" checked>
                             <h6>js</h6><i></i>
-                            
-                            
-                            <p>Sub 1</p>
-                            <p>Sub 2</p>
-                            <p>Sub 3</p>
+                            <ul>
+                                <li>Sub 1</li>
+                                <li>Sub 2</li>
+                                <li>Sub 3</li>
+                            <ul>
                           </li>
                         </ul>
                     </div>
@@ -562,15 +562,12 @@
 
         
         <article>
-        <h3>ENUFF TABS</h3>
-        <h4>what to do about the inputs themselves? hide behind the labels? push them off the page entirely?</h4>
+        <h3>Enuff Tabs</h3>
 	        <section class="enuff-has-tabs">
 		        <input type="radio" name="enuffTabs1" id="enuffTabA" checked>
 		        <input type="radio" name="enuffTabs1" id="enuffTabB">
 		        <input type="radio" name="enuffTabs1" id="enuffTabC">
-		        <label for="enuffTabA">a</label>
-	        	<label for="enuffTabB">b</label>
-	        	<label for="enuffTabC">c</label>
+                <label for="enuffTabA">Label A</label><label for="enuffTabB">This is Label B</label><label for="enuffTabC">Label C</label>
 		        <p>Lorem ipsum dolizzle sit amizzle, consectetuer adipiscing elit. Nullizzle sapien velizzle, brizzle volutpat, yippiyo go to hizzle, gravida gangster, arcu. Pellentesque fo shizzle my nizzle tortor. Shiz erizzle. Shiznit izzle dolor dapibizzle turpis tempus dang. Maurizzle break it down nibh et owned. Own yo' izzle go to hizzle. Pellentesque eleifend rhoncizzle ma nizzle. In owned black platea dictumst. Donec dapibizzle. Curabitizzle dawg urna, pretium eu, mattizzle pizzle, eleifend i'm in the shizzle, nunc. Pot suscipizzle. Integizzle sempizzle bow wow wow stuff its fo rizzle.</p>		        
 		        <p>Rizzle nizzle ma nizzle ut break it down bibendum molestie. Shizzlin dizzle vestibulum boom shackalack fo that's the shizzle. I'm in the shizzle cool we gonna chung magna. Yippiyo hizzle, nisl nizzle rizzle egestizzle, shit dolor vestibulizzle ligula, my shizz auctizzle justo dolor quizzle augue. Dope izzle stuff sit amet fo shizzle sagittizzle. Mofo tempizzle shiznit izzle owned. In rhoncus we gonna chung leo. Lorizzle ipsum dolizzle sit shut the shizzle up, yippiyo yippiyo gangsta. Phasellus nisi ligula, posuere sizzle bling bling, tellivizzle hizzle, tristique mattis, libero. Own yo' sempizzle faucibizzle diam. Ut nizzle black. Nunc sheezy rizzle a dizzle accumsan egestizzle. Quisque condimentum shit laorizzle nunc. Aenizzle , nisi quis varizzle shizzle my nizzle crocodizzle, lectizzle things tellivizzle shut the shizzle up, nizzle shut the shizzle up eros i saw beyonces tizzles and my pizzle went crizzle quis nisi. Vivamus own yo' quizzle, aliquizzle sheezy amet, ornare that's the shizzle, pulvinizzle own yo', felis.</p>
 		        <p>Praesent rizzle mammasay mammasa mamma oo sa nizzle maurizzle shizznit bibendizzle. Aliquam break it down viverra lectus. Sure izzle enim et tellivizzle i'm in the shizzle yippiyo. Aliquizzle lobortizzle, mauris gangsta dapibizzle the bizzle, nulla ligula bibendizzle , izzle black fo shizzle dui crunk arcu. Vivamus gravida lacus id ipsum. Crackalackin arcu magna, fermentizzle sit amet, faucibus in, placerat shiznit, break it down. Izzle vehicula laorizzle sizzle. Vestibulizzle fo shizzle diam, ghetto get down get down, condimentum izzle, malesuada bizzle, check out this. Morbi pimpin' placerizzle nulla. Maecenas sizzle erizzle shiz break it down. Bow wow wow you son of a bizzle bow wow wow, egestizzle bling bling, accumsan quis, elementizzle eget, neque. Nulla iaculizzle yippiyo shut the shizzle up orci sure sodales. Fusce sagittizzle, nulla eget sollicitudizzle shut the shizzle up, lacizzle quam luctizzle erizzle, vitae the bizzle augue purus boom shackalack arcu. Yippiyo pimpin' lacus. Nunc sizzle mi. Dizzle shut the shizzle up turpizzle. Vestibulizzle a own yo'. Sizzle cool erizzle, brizzle id, phat izzle, ass izzle, pot. That's the shizzle . Nulla get down get down erizzle, tristique sit shiz, ultricizzle pizzle, fo shizzle my nizzle phat, augue.</p>
@@ -581,7 +578,6 @@
         <article>
             <section class="accordions">
             <h3>Accordions</h3>
-            <h6>how does this work without labels?</h6>
             <ul>
             <li>
             <input type="checkbox" checked>
@@ -602,14 +598,15 @@
             <p>By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
             </li>
             </ul>
-            <br>
-            <br>
-            <br>
-            <br>
+            
             </section>
         </article>
 
+      
+
+
         <article>
+            <h3>Modal Button</h3>
             <section>
                 <div class="">
                     <label id="modalButton" class="button button-modal" for="modalOne">Modal</label>
@@ -617,16 +614,9 @@
             </section>
         </article>
 
+       
 
-        <article>
-
-            <section>
-
-            </section>
-
-
-
-        </article>
+        
 
 
 
@@ -789,6 +779,7 @@
         <section>
         <h4>Things I need</h4>
         <ul>
+        <li>why do the accordions and navs have "checked" in the markup? Things are backwards</li>
         <li>refer to total size</li>
         <li>polish hammer js swipes</li>
         <li>tooltip error messages, credit AND popover touch state</li>
@@ -803,7 +794,6 @@
         <li>animate svg logo -- maybe with path draw</li>
         <li>social share &amp; also follow me on twitter </li>
         <li>fix back-to-top in bot left, but not with 1vh of the top</li>
-        <li>responsive tables</li>
         <li>pull scripts from bower when possible for current versions</li>
         <li>break down css files and import modules (using sass if need be)</li>
         <li>grunt build -- only load necessary css -- critical path stuff too</li>
