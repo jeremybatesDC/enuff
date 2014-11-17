@@ -225,14 +225,50 @@ nav.header-inner {margin-top: 3em;}
 /* TABS & MODAL a la Pure CSS Components - http://www.felipefialho.com/css-components/
 Author: Luiz Felipe Tartarotti Fialho
 */
-.tab {position: relative;}
+.has-tabs {border: 1px solid #000;position: relative;}
 .tab-panel {display: inline-block;min-height: 10em;}
-.tab-nav {border: #aaaaaa solid 1px;cursor: pointer;display: inline-block;}
+.tab-nav {border: #aaa solid 1px;cursor: pointer;display: inline-block;}
+.tab-inner {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 10em;
+  /*-webkit-transition: opacity 0.1s;*/
+  background: rgba(150,150,150,.5);
+  transition: opacity 0.1s;
+  visibility: hidden;
+  overflow: scroll;
+}
 .tab-nav:hover,.tab-open:checked ~ .tab-nav {background-color: #666;}
-.tab-inner {opacity: 0;position: absolute;left: 0;/*-webkit-transition: opacity 0.1s;*/transition: opacity 0.1s;visibility: hidden;}
-.tab-open:checked ~ .tab-inner {opacity: 100;visibility: visible;}
 
+.tab-open:checked ~ .tab-inner {opacity: 1;visibility: visible;display: block;}
 
+/*.enuff-has-tabs input{}
+.enuff-has-tabs input {}
+.enuff-has-tabs input + div {opacity: 0;}
+.enuff-has-tabs input:checked + div{opacity: 1;}*/
+
+.enuff-has-tabs label { 
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.enuff-has-tabs input {opacity: 0;height:1px;width:1px;}
+.enuff-has-tabs p {display: none;}
+.enuff-has-tabs input:first-of-type:checked ~ p:first-of-type,.enuff-has-tabs input:nth-of-type(2):checked ~ p:nth-of-type(2), .enuff-has-tabs input:nth-of-type(3):checked ~ p:nth-of-type(3) {
+  display: block;
+}
+
+.enuff-has-tabs input:first-of-type:checked ~ label:first-of-type,.enuff-has-tabs input:nth-of-type(2):checked ~ label:nth-of-type(2), .enuff-has-tabs input:nth-of-type(3):checked ~ label:nth-of-type(3) {
+color: green;
+font-weight: bold;
+}
 
 
 
@@ -339,17 +375,11 @@ Author: Luiz Felipe Tartarotti Fialho
 }
 
 
-.accordions ul {
-  list-style: none;
-  perspective: 900;
-  padding: 0;
-  margin: 0;
-}
+.accordions ul {perspective: 900;}
 
 .accordions ul li, .accordions ul li ul li  {
   position: relative;
   padding: 1rem 0 .25rem;
-  margin: 0;
   border-top: 1px dotted #dce7eb;
 }
 .accordions ul li:nth-of-type(1), .accordions ul li ul li:nth-of-type(1) {
@@ -368,21 +398,21 @@ Author: Luiz Felipe Tartarotti Fialho
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
-.accordions ul li:last-of-type {
-  padding-bottom: 0;
-}
+.accordions ul li:last-of-type {padding-bottom: 0;}
+
 .accordions ul li i {
   position: absolute;
-  -webkit-transform: translateY(-1em);
-  transform: translateY(-1em);
+  /*-webkit-transform: translateY(-1em);
+  transform: translateY(-1em);*/
+  top: 1em;
   right: 2em;
 }
 .accordions ul li i:before, .accordions ul li i:after {
   content: "";
   position: absolute;
   background-color: #ff6873;
-  width: 3px;
-  height: 9px;
+  width: .1875rem;
+  height: .5625rem;
 }
 .accordions ul li i:before {
   -webkit-transform: translate(-2px, 0) rotate(45deg);
@@ -415,8 +445,12 @@ Author: Luiz Felipe Tartarotti Fialho
   transform: translate(-2px, 0) rotate(-45deg);
 }
 
+
+
 /*this is where sass would be handy*/
 .navigation .accordions ul li{ border: none;padding: 0;}
+
+.navigation .accordions ul li i {top:.75em;right: 1em;}
 
 
 /*Tooltip by trezy (https://github.com/trezy) http://codepen.io/trezy/pen/Khnzy */
@@ -896,6 +930,7 @@ input.hamburger-control {display: none;}
 /*input.hamburger-control:checked + label + .header--fixed {display:inline-block;left:0;}*/
 
 .navigation {margin: 0;}
+.navigation .accordions ul {margin:0;}
 nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
 /*nav.header-inner {}*/
 .header--fixed {display: inline-block;width: 100%;left: 0;height: 2em;overflow:visible;}
