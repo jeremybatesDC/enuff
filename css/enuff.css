@@ -930,6 +930,22 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   content: "*";
 }
 
+/* try to make more durable with nth selectors */
+.has-table-sort input.ff-selector-type-all:checked ~ label.ff-label-type-all,
+.has-table-sort input.ff-selector-type-1:checked ~ label.ff-label-type-1,
+.has-table-sort input.ff-selector-type-2:checked ~ label.ff-label-type-2,
+.has-table-sort input.ff-selector-type-3:checked ~ label.ff-label-type-3{
+  background: #000;
+  color: #fff;
+}
+
+.has-table-sort input, .has-table-sort input.ff-selector-type-1:checked ~ .ff-items tbody tr:not(.ff-item-type-1),
+.has-table-sort input.ff-selector-type-2:checked ~ .ff-items tbody tr:not(.ff-item-type-2),
+.has-table-sort input.ff-selector-type-3:checked ~ .ff-items tbody tr:not(.ff-item-type-3)
+{
+  display: none;
+}
+
 
 @media only screen and (min-width: 36em) {
 
@@ -958,12 +974,16 @@ nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
 .hasResponsive-table tr{display: table-row;}
 .hasResponsive-table td {border: 1px solid #000;}
 .hasResponsive-table thead tr th{width: auto;}
+.hasResponsive-table table.three-columns td {width: 33%;}
+
 .hasResponsive-table tr{display: table-row;}
 .hasResponsive-table tr td {display: table-cell;}
 .hasResponsive-table tbody tr td:before {content: "";}
 
 
 
+
+/*these animations were put in a media query for a reason... maybe to do with the responsive nav...*/
 .slide {
     -webkit-transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
@@ -1033,8 +1053,9 @@ nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
     -moz-animation-name: slideUp;
     animation-name: slideUp;
 }
-
 } /*end media query */
+
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 144dpi) {
 }
