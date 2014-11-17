@@ -442,18 +442,17 @@ font-weight: bold;
 
 
 /*Tooltip by trezy (https://github.com/trezy) http://codepen.io/trezy/pen/Khnzy */
+
+/* i don't like forcing z-index, but I did so here b/c it was being fussy*/
 [data-tooltip] {position: relative;}
-[data-tooltip]:before,[data-tooltip]:after {display: none;position: absolute;top: 0;}
+[data-tooltip]:before,[data-tooltip]:after {display: none;position: absolute;top: 0;z-index: 1;}
 [data-tooltip]:before {content: "";/*left: 20px;margin-top: 1em;*/}
 [data-tooltip]:after {
   content: attr(data-tooltip-label) "\A" attr(data-tooltip-message);
-  /*left: 1em;*/
   top: -2em;
-  /*margin-top: 1.5em;*/
-  /*white-space: pre-wrap;*/
   width: 8rem;
-  background: rgba(255,255,255,.9);
-  border: 1px solid rgba(0,0,0,.1);
+  background: #fff;
+  border: 1px solid #000;
   padding: .5em;
   font-size: .75em;
   line-height: 1.5em;
