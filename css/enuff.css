@@ -222,28 +222,7 @@ nav.header-inner {margin-top: 3em;}
 
 
 
-/* TABS & MODAL a la Pure CSS Components - http://www.felipefialho.com/css-components/
-Author: Luiz Felipe Tartarotti Fialho
-*/
-.has-tabs {border: 1px solid #000;position: relative;}
-.tab-panel {display: inline-block;min-height: 10em;}
-.tab-nav {border: #aaa solid 1px;cursor: pointer;display: inline-block;}
-.tab-inner {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 10em;
-  /*-webkit-transition: opacity 0.1s;*/
-  background: rgba(150,150,150,.5);
-  transition: opacity 0.1s;
-  visibility: hidden;
-  overflow: scroll;
-}
-.tab-nav:hover,.tab-open:checked ~ .tab-nav {background-color: #666;}
 
-.tab-open:checked ~ .tab-inner {opacity: 1;visibility: visible;display: block;}
 
 /*.enuff-has-tabs input{}
 .enuff-has-tabs input {}
@@ -903,6 +882,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 .hasResponsive-table tr{
   display: inline-block;
+  margin: 0;
   border: 1px solid #000;
   width: 50%;
   height: 0;
@@ -912,13 +892,34 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 .hasResponsive-table tr td {
   display: block;
+  margin: 0;
 }
 
-.hasResponsive-table tbody tr td:before {
+/*.hasResponsive-table tbody tr td:before {
   content: "- ";
+}*/
+
+.hasResponsive-table table, .hasResponsive-table table tr,.hasResponsive-table th, .hasResponsive-table td {
+    border-collapse: collapse;
 }
 
+/* the technique below can also be used, without pseudo elements, to color code*/
 
+.hasResponsive-table thead th:first-child:before, .hasResponsive-table tbody tr td:first-child:before  {
+  content: "-";
+}
+
+.hasResponsive-table thead th:nth-child(2):before, .hasResponsive-table tbody tr td:nth-child(2):before  {
+  content: "+";
+}
+
+.hasResponsive-table thead th:nth-child(3):before, .hasResponsive-table tbody tr td:nth-child(3):before  {
+  content: "~";
+}
+
+.hasResponsive-table thead th:nth-child(4):before, .hasResponsive-table tbody tr td:nth-child(4):before  {
+  content: "*";
+}
 
 
 @media only screen and (min-width: 36em) {
