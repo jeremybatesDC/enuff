@@ -368,6 +368,9 @@ background: #f0f0f0;
 .enuff-accordions input[type=checkbox]:checked ~ p {font-size: .75em;line-height: 1.5em;opacity: 1;}
 
 
+.navigation .enuff-accordions ul {font-size: 0em;line-height: 0;opacity: 0;transition: 1s opacity ease;}
+.navigation .enuff-accordions input[type=checkbox]:checked ~ ul {font-size: .75em;line-height: 1.5em;opacity: 1;}
+
 
 /*header.slide--reset .enuff-accordions input[type=checkbox]:checked ~ p {
   font-size: 0em;line-height: 0;opacity: 0;
