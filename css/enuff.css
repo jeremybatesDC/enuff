@@ -44,7 +44,6 @@ span{}
 .breadcrumb {margin: 4em 0 2em 7.5%;background: transparent;text-transform: uppercase; font-size: .9em;}
 .breadcrumb h1{display: inline-block;font-size: 1em;margin:0;padding:0;color: #000;font-weight: bold; letter-spacing: .0125em;}
 
-h6.presspass-alert-danger {background: red;color:#fff;margin-bottom: 2em;}
 
 
 
@@ -339,7 +338,46 @@ background: #f0f0f0;
 
 
 
+
+
+.enuff-accordions .enuff-accordion-header {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0; 
+  margin: 0;
+}
+
+/* of it's super hacky */ 
+.enuff-accordions input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 98%; /*at 100% it leaks over -- must debug */
+  margin: 0;
+  opacity: 0;
+  background: #ccc;
+}
+
+.enuff-accordions input[type=checkbox] + .enuff-accordion-header:after {content: "+";float: right;}
+.enuff-accordions input[type=checkbox]:checked + .enuff-accordion-header:after {content: "-";}
+.enuff-accordions p {font-size: 0em;opacity: 0;transition: 1s opacity ease;}
+.enuff-accordions input[type=checkbox]:checked + h6 + p {font-size: .75em;line-height: 1.5em;opacity: 1;}
+
+
+
+
+
 /* Accordion by Alex Bergin http://codepen.io/abergin/pen/ihlDf*/ 
+
+
+
+/*Disentagle nav from here -- it's bad */
+
+
 
 .accordions .transition, .accordions p, .accordions ul, .accordions ul li i:before, .accordions ul li i:after {
   transition: all 0.25s ease-in-out;
@@ -367,7 +405,6 @@ background: #f0f0f0;
   font-size: .8em;
   line-height: 1.5em;
 }
-
 
 .accordions ul {perspective: 900;}
 
@@ -438,6 +475,9 @@ background: #f0f0f0;
   -webkit-transform: translate(-2px, 0) rotate(-45deg);
   transform: translate(-2px, 0) rotate(-45deg);
 }
+
+
+
 
 
 
