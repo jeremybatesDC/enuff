@@ -369,6 +369,10 @@ background: #f0f0f0;
 
 
 
+/*header.slide--reset .enuff-accordions input[type=checkbox]:checked ~ p {
+  font-size: 0em;line-height: 0;opacity: 0;
+}*/
+
 
 
 /* Accordion by Alex Bergin http://codepen.io/abergin/pen/ihlDf*/ 
@@ -1050,6 +1054,7 @@ nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     transform: translateY(-100%);
+    overflow: hidden; /* this prevents nav dropdowns from showing on scroll down */
 }
 
 .animated {
