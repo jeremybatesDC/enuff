@@ -364,8 +364,8 @@ background: #f0f0f0;
 
 .enuff-accordions input[type=checkbox] + .enuff-accordion-header:after {content: "+";float: right;}
 .enuff-accordions input[type=checkbox]:checked + .enuff-accordion-header:after {content: "-";}
-.enuff-accordions p {font-size: 0em;opacity: 0;transition: 1s opacity ease;}
-.enuff-accordions input[type=checkbox]:checked + h6 + p {font-size: .75em;line-height: 1.5em;opacity: 1;}
+.enuff-accordions p {font-size: 0em;line-height: 0;opacity: 0;transition: 1s opacity ease;}
+.enuff-accordions input[type=checkbox]:checked ~ p {font-size: .75em;line-height: 1.5em;opacity: 1;}
 
 
 
