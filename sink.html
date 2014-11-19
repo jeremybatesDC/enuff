@@ -284,7 +284,14 @@
 </svg>
 </figure>
 
-<a data-scroll data-options='{ "easing": "easeOutCubic" }' class="more" href="##">See some things</a>
+<a data-scroll data-options='{ "easing": "easeOutCubic" }' class="more" href="##">    
+<figure class="has-icon">
+    <svg viewBox="-385 40 400 400" xml:space="preserve">
+    <circle fill="rgba(200,200,200,.33)" cx="-185.087" cy="239.25" r="195.25"/>
+    <polygon fill="#FFFFFF" points="-318.987,190.542 -283.312,154.695 -185.088,252.453 -86.863,154.695 -51.187,190.542 -185.088,323.805 "/>
+    </svg>
+</figure>
+</a>
 </div>
  
 
@@ -783,7 +790,7 @@
             <li>synthetic page load?</li>
             <li>animate svg logo -- maybe with path draw</li>
             <li>social share &amp; also follow me on twitter </li>
-            <li>fix back-to-top in bot left, but not with 1vh of the top</li>
+            <li>fix back-to-top in bot right, but not with 5 or so vh of the top -- also, consider a double up arrow to indicate "ALL the way up"</li>
             <li>pull scripts from bower when possible for current versions</li>
             <li>break down css files and import modules (using sass if need be)</li>
             <li>grunt build -- only load necessary css -- critical path stuff too</li>
@@ -822,7 +829,14 @@
     </main>  
 
 
-    <a data-scroll data-options='{ "easing": "easeOutCubic" }' href="#!">Back to the top</a>
+<a data-scroll data-options='{ "speed": 900, "easing": "easeInOut" }' href="#!"> 
+    <figure class="has-icon">
+        <svg class="icon-arrow" viewBox="-385 40 400 400" xml:space="preserve">
+        <circle fill="rgba(200,200,200,.33)" cx="-185.087" cy="239.25" r="195.25"/>
+        <polygon fill="#FFFFFF" points="-51.185,287.959 -86.861,323.806 -185.084,226.048 -283.309,323.806 -318.985,287.959 -185.084,154.696 "/>
+        </svg>
+    </figure>
+</a>
 
     <button id="cancelButton"> <--Cancel</button>
     <button id="sendButton">Send --></button>

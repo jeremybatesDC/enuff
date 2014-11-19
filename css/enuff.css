@@ -76,6 +76,15 @@ iframe{}
 track{}
 var{}
 
+
+
+figure.has-icon {width: 5em;height: 5em;border-radius: 50%;box-shadow: 3px 3px #000;transition: .33s all ease;}
+figure.has-icon:hover, figure.has-icon:active, figure.has-icon:focus {transform: translate(3px);box-shadow: none;}
+svg.icon-arrow {max-width: 100%;}
+
+
+
+
 /*  forms */
 form{}
 fieldset{}
