@@ -1,0 +1,515 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"l",
+				"line-height"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"mari",
+				"margin"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"ta",
+				"table-row"
+			],
+			[
+				"s",
+				"style"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"padding-",
+				"padding-bottom"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"on",
+				"onclick"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"hi",
+				"hidden"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"back",
+				"background"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "sink.html",
+			"settings":
+			{
+				"buffer_size": 49515,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/enuff.css",
+			"settings":
+			{
+				"buffer_size": 29966,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jrlazar/Documents/jB/enuff/sink.html",
+		"/Users/jrlazar/Documents/jB/JScourse/quiz2.html",
+		"/Users/jrlazar/Documents/jB/course/quiz2.html",
+		"/Users/jrlazar/Documents/jB/enuff/scraps/enuff-accordions.html",
+		"/Users/jrlazar/Documents/jB/enuff/css/enuff.css",
+		"/Users/jrlazar/Documents/jB/enuff/scraps/responsiveTables.html",
+		"/Users/jrlazar/Documents/jB/enuff/scraps/tabsold.html",
+		"/Users/jrlazar/Documents/jB/enuff/scraps/scraps.css",
+		"/Users/jrlazar/Documents/jB/enuff/img/enuff.svg",
+		"/Users/jrlazar/Documents/jB/jBoil/sink.html",
+		"/Users/jrlazar/Documents/jB/jBoil/css/style-jB.css",
+		"/Users/jrlazar/Documents/jB/jBoil/scraps/flexgrid-examples.html",
+		"/Users/jrlazar/Downloads/staticFiles/html/kitchenSink.html",
+		"/Users/jrlazar/Documents/jB/jBoil/scraps/legacyScripts.html",
+		"/Users/jrlazar/Downloads/hammer.js-master/tests/unit/gestures/test_swipe.js",
+		"/Users/jrlazar/Documents/jB/jBoil/scraps/validation.html",
+		"/Users/jrlazar/Documents/jB/jBoil/js/js-form-validator.js",
+		"/Users/jrlazar/Documents/jB/jBoil/img/iconmonstr-menu-icon.svg",
+		"/Users/jrlazar/Documents/jB/jBoil/js/pikaday-sans-moment.js",
+		"/Users/jrlazar/Downloads/smooth-scroll-master/index.html",
+		"/Users/jrlazar/Documents/jB/jBoil/css/flexboxgrid.css",
+		"/Users/jrlazar/Documents/jB/jBoil/scraps/headroom.css",
+		"/Users/jrlazar/Documents/jB/jBoil/scraps/headroom.html",
+		"/Users/jrlazar/Documents/jB/jBoil/scraps/accordions.html",
+		"/Users/jrlazar/Documents/jB/jBoil/css/normalize-custom-jB.css",
+		"/Users/jrlazar/Downloads/collapse/collapse.css",
+		"/Users/jrlazar/Downloads/tips-master 2/dist/tips.css",
+		"/Users/jrlazar/Downloads/demo/css/SCSStips.css",
+		"/Users/jrlazar/Downloads/demo/css/tip.css",
+		"/Users/jrlazar/Downloads/demo/css/styles.css",
+		"/Users/jrlazar/Documents/jB/jBoil/index.html",
+		"/Users/jrlazar/Documents/jB/jBoil/flex.html",
+		"/Users/jrlazar/Downloads/thedayhascome-Fluid-Baseline-Grid-be5fa84/index.html",
+		"/Users/jrlazar/Documents/jB/jBdroidFeb12/template.html",
+		"/Users/jrlazar/Documents/jB/jBdroidFeb12/index.html",
+		"/Users/jrlazar/Documents/jB/Sunovion/AA/Allergy/css/vendor/PIE-1.0.0/PIE_uncompressed.htc",
+		"/Users/jrlazar/Documents/jB/effeckt/page-transitions.html",
+		"/Users/jrlazar/Documents/jB/10_20_2013/build/css/copd.css",
+		"/Users/jrlazar/Downloads/10_21_2013/build/c/master.html",
+		"/Users/jrlazar/Documents/jB/10_20_2013/build/c/resources-and-support/resources.html",
+		"/Users/jrlazar/Documents/jB/10_20_2013/build/c/index.html",
+		"/Users/jrlazar/Downloads/10_19_2013/index.html",
+		"/Users/jrlazar/Documents/jB/10_17_2013/build/c/resources-and-support/doctor.html",
+		"/Users/jrlazar/Documents/jB/10_16_2013/build/c/master.html",
+		"/Users/jrlazar/Downloads/10_13_11.29/care.html",
+		"/Users/jrlazar/Downloads/10_13_11.29/slider.html",
+		"/Users/jrlazar/Downloads/10_13_11.29/build/c/nebulizers/index.html",
+		"/Users/jrlazar/Documents/jB/Sunovion/build/c/index.html",
+		"/Users/jrlazar/Desktop/carousel.js",
+		"/Users/jrlazar/Documents/jB/copd.css",
+		"/Users/jrlazar/Documents/jB/Sunovion/build/c/about-c/index.html",
+		"/Users/jrlazar/Documents/jB/Sunovion/COPD_legacy/nebulizers/index.html",
+		"/Users/jrlazar/Documents/jB/Sunovion/tabs.html",
+		"/Users/jrlazar/Documents/jB/Sunovion/build/c/test.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"h6",
+			"accord",
+			"tooltip",
+			"modal",
+			"accord",
+			"article",
+			"tool",
+			"modal",
+			"side-menu",
+			"table",
+			"-webkit-box;",
+			"logo",
+			"batesSelect",
+			"bates",
+			"jb",
+			"modal",
+			"tables",
+			"header-inner",
+			"ham",
+			"hamb",
+			"table",
+			"hamb",
+			"Tooltippery",
+			"errorClassName",
+			"hambur",
+			"header",
+			"main",
+			"firef",
+			"moment",
+			"label",
+			"momen",
+			".navigat",
+			"header",
+			"need",
+			"6px",
+			"position: relative;\n  overflow: hidden;\n  opacity: 1;\n  -webkit-transform: translate(0, 0);\n  transform: translate(0, 0);\n  z-index: 2;",
+			"accor",
+			"ham",
+			"hamb",
+			"z-in",
+			"header-inn",
+			"side-m",
+			"checked",
+			".header--fixed",
+			"header",
+			"navigation",
+			"header-inn",
+			"open",
+			"side",
+			"headroom",
+			"nav",
+			"accord",
+			"inner",
+			"hamburger-container",
+			"container",
+			"z-in",
+			"header",
+			"container",
+			"accord",
+			"p {",
+			"side",
+			"z-index",
+			"z-inex",
+			"tool",
+			"-webkit-transition",
+			"pointer-e",
+			"modal-body",
+			"modalOne",
+			"modalButton",
+			"modallyYours",
+			"modal-one",
+			"modal",
+			"main",
+			"modal",
+			"header",
+			"data",
+			"target",
+			"tool",
+			"target",
+			"100px",
+			"icon-form-control",
+			"select",
+			"test",
+			"icon-form-control",
+			"sr",
+			"hasR",
+			"check",
+			"select",
+			"radio",
+			"id=\"\"",
+			"ZIPCODE",
+			" p",
+			"nebu",
+			"caregi",
+			"1400",
+			"position",
+			"tabs",
+			"width",
+			"1400",
+			"nebu",
+			"1400",
+			"nebu",
+			"1400",
+			"different",
+			"bucket",
+			"left:",
+			"lefft",
+			"fixed",
+			"fixe",
+			"fixed",
+			"940",
+			"page",
+			"940",
+			"menuHorizontal",
+			".content",
+			"neb",
+			".ui-tabs-vertical",
+			"  .ui-tabs-vertical { width: 55em; }\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"enuffSelect",
+			"has-icon",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "sink.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 49515,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2094,
+								2094
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 265.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/enuff.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29966,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9252,
+								9252
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4264.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "enuff.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
