@@ -28,6 +28,24 @@
 
 }
 
+.col {
+  /*-moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;*/
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+ /* -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;*/
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: no-wrap;
+  -ms-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+
+}
+
 .row.reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;

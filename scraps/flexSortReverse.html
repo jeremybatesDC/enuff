@@ -1,0 +1,211 @@
+<head>
+    <link rel="stylesheet" href="../css/flexboxgrid.css"/>
+    <link rel="stylesheet" href="../css/enuff.css"/>
+</head>
+             
+<style>
+
+.row {color: #fff;}
+
+
+
+
+
+.row.reverse {
+  /*-webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;*/
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-flex-wrap: row-reverse;
+  -ms-flex-wrap: row-reverse;
+  flex-wrap: row-reverse;
+}
+
+.col.reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-flex-wrap: column-reverse;
+  -ms-flex-wrap: column-reverse;
+  flex-wrap: column-reverse;
+}
+
+#sortAZ:checked ~ .row.reverse {
+  /*-webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;*/
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: row;
+  -ms-flex-wrap: row;
+  flex-wrap: row;
+}
+
+#sortAZ3:checked ~ .row.reverse {
+  /*-webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;*/
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: row;
+  -ms-flex-wrap: row;
+  flex-wrap: row;
+}
+
+#sortAZ3:checked ~ .col.reverse {
+  /*-webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;*/
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: column;
+  -ms-flex-wrap: column;
+  flex-wrap: column;
+}
+
+</style>            
+            
+           
+
+
+
+<h2>THIS ACTUALLY LOOKS LIKE A COLUMN REVERSE -- AH, IT IS. WHAT I WANT IS ROW-REVERSE</h2>
+
+<section class="flexgrid">
+     <h2>Reversing</h2>
+     <h3><code>.reverse</code></h3>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box container">
+                <input id="sortAZ" type="radio" name="flexSort" checked>A-Z
+                <input id="sortZA" type="radio" name="flexSort">Z-A
+
+                <div class="row reverse">
+                    <div class="col-xs-2">
+                        <div class="box-nested">1</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-nested">2</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-nested">3</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-nested">4</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-nested">5</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-nested">6</div>
+                    </div>
+                </div><!--end row-->
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="flexgrid">
+     <h2>Reversing</h2>
+     
+    <div class="row">
+        
+
+        <div class="col-xs-12">
+            <div class="box container">
+                <input id="sortAZ3" type="radio" name="flexSort3" checked>A-Z
+                <input id="sortZA3" type="radio" name="flexSort3">Z-A
+                <div class="col reverse">
+                        <div>A</div>
+                        <div>B</div>
+                    
+                        <div>C</div>
+                   
+                        <div>D</div>
+                    
+                        <div>E</div>
+                    
+                        <div>F</div>
+                    </div>
+                </div><!--end row-->
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<section class="flexgrid enuff-flex-sort">
+    <h2>Reordering</h2>
+    <p>Add classes to reorder columns.</p>
+    <h3><code>.first-*</code></h3>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box container">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div class="box-first">1</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-first">2</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-first">3</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-first">4</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-first">5</div>
+                    </div>
+                    <div class="col-xs-2 first-xs">
+                        <div class="box-nested">6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3><code>.last-*</code></h3>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box container">
+                <div class="row">
+                    <div class="col-xs-2 last-xs">
+                        <div class="box-nested">1</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-first">2</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-first">3</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-first">4</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-first">5</div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="box-first">6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
