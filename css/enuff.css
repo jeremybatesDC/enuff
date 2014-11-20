@@ -1016,8 +1016,6 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 
 
-
-
 .AtoZ:checked ~ .row.reverse {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -1039,16 +1037,23 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .faux-table {border: 1px solid #000 !important;}
 
 .faux-row {
+  /*display: table-row;*/
   width: 100%;
   border-top:1px solid #000;
 }
 
+.faux-row:nth-of-type(odd){
+  background: #eee;
+}
+
+
 .faux-row div {
   display: inline-block;
+  /* i get problems w/ display table-cell  */
   width: 24%;
   margin: 0;
   padding: 0;
-  border-right: 1px solid #000;
+  /*border-right: 1px solid #000;*/
 }
 
 
