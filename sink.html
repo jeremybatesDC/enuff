@@ -22,6 +22,8 @@
 
 <body class="enuff-css">
     
+    
+
     <!--must be a free-range-input-->
     <!--<label for="hamburgerToggle" class="icon-hamburger"></label>-->
     <input class="hamburger-control" type="checkbox" id="hamburgerToggle"/>
@@ -575,6 +577,8 @@
 
         </article>
 
+        <span id="testTarget" class="test-target">&nbsp;</span>
+        <span id="testTarget2" class="test-target">&nbsp;</span>
 
         <article>
             <section class="enuff-accordions">
@@ -648,7 +652,14 @@
         </article>
 
        
-
+        <!--<article class="">
+            <section>
+            <div>
+                <a href="#testTarget">link</a>
+                <p>This text should turn yellow</p>
+            </div>
+            </section>
+        </article>-->
         
 
 
@@ -773,7 +784,7 @@
 
         
         
-        <article>
+        <article class="test-thing-to-change">
             <h3>Table sort via flexbox</h3>
             <h4>JS will be neeed to populate the data anyway, but this is fun</h4>
             <section class="flexgrid has-faux-table">
@@ -781,6 +792,8 @@
                 <input class="flex-sorter AtoZ" id="sortAZ3" type="radio" name="flexSort3" checked>
                 <label for="sortZA3">Z-A</label>
                 <input class="flex-sorter ZtoA" id="sortZA3" type="radio" name="flexSort3">
+                <a href="#testTarget">affect even rows</a>
+                <a href="#testTarget2">affect odd rows</a>
                 <div class="col reverse faux-table">
                     <div class="faux-row">
                         <div>Fister</div>
@@ -821,6 +834,11 @@
                 </div><!--end col-->
             </section>
         </article>
+
+
+
+
+
         
         <article>
         <section>

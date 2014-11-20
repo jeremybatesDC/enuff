@@ -734,7 +734,19 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
 .enuffSelect select:focus {}
 .enuffSelect select:focus optgroup {}
 
+
+/*tests to delete afterwards*/
 .test-select:focus optgroup option{}
+.test-target {display: none;}
+
+/* need to refactor to make better use of classes & IDs -- more possibilities*/
+#testTarget:target ~ .test-thing-to-change .faux-row:nth-of-type(odd) {
+  background: yellow;
+}
+
+#testTarget2:target ~ .test-thing-to-change .faux-row:nth-of-type(odd) {
+  background: green;
+}
 
 /* CSS-only custom select by Amen Moja Ra from https://gist.github.com/mojaray2k*/
 .customSelect .dropdown {
