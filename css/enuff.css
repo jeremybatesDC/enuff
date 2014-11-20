@@ -346,7 +346,7 @@ background: #f0f0f0;
 
 
 
-
+section.enuff-accordions {}
 
 
 .enuff-accordions .enuff-accordion-header {
@@ -365,10 +365,13 @@ background: #f0f0f0;
 .enuff-accordions input[type=checkbox] {
   position: absolute;
   cursor: pointer;
-  width: 98%; /*at 100% it leaks over -- must debug */
+  width: 100%;
+  /*must debug -- it's because the absolute breaks out of the container -- these can be re-written and discarded*/
+  max-width: 600px;
   margin: 0;
   opacity: 0;
   background: #ccc;
+  overflow: hidden;
 }
 
 .enuff-accordions input[type=checkbox] + .enuff-accordion-header:after {content: "+";float: right;}
@@ -1013,6 +1016,43 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 
 
+
+
+.AtoZ:checked ~ .row.reverse {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: row;
+  -ms-flex-wrap: row;
+  flex-wrap: row;
+}
+
+.ZtoA:checked ~ .col.reverse {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: column;
+  -ms-flex-wrap: column;
+  flex-wrap: column;
+}
+
+.faux-table {border: 1px solid #000 !important;}
+
+.faux-row {
+  width: 100%;
+  border-top:1px solid #000;
+}
+
+.faux-row div {
+  display: inline-block;
+  width: 24%;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid #000;
+}
+
+
+
 @media only screen and (min-width: 36em) {
 
 .icon-hamburger:after {content: "";}
@@ -1045,7 +1085,6 @@ nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
 .hasResponsive-table tr{display: table-row;}
 .hasResponsive-table tr td {display: table-cell;}
 .hasResponsive-table tbody tr td:before {content: "";}
-
 
 
 
