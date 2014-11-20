@@ -340,13 +340,33 @@ background: #f0f0f0;
 }
 
 
-
-
 .has-modal body {overflow: hidden;}
 
 
+/* dead simple*/
+.has-enuff-accordions input {display: none;} /* refactor above so this isn't necessary -- must encapsulate enuff-labels */
+.has-enuff-accordions .enuff-accordions-content {/*display: none;*/ font-size: 0;line-height: 0;}
+/* add as many as needed*/
+.has-enuff-accordions input:first-of-type:checked ~ p:first-of-type,
+.has-enuff-accordions input:nth-of-type(2):checked ~ p:nth-of-type(2),
+.has-enuff-accordions input:nth-of-type(3):checked ~ p:nth-of-type(3)
+ {
+  font-size: 1em;
+  line-height: 1.5em;
+  }
 
-section.enuff-accordions {}
+.has-enuff-accordions label {display: block;width: 100%;}
+.has-enuff-accordions label:after {
+  content: "+";
+  float: right; /*does anything need to clear this float?*/
+}
+.has-enuff-accordions input:checked + label:after {
+  content: "-";
+}
+
+
+/* save for table sorting*/
+/*.has-enuff-accordions input.show-all:checked ~ p {display: block;}*/
 
 
 .enuff-accordions .enuff-accordion-header {
