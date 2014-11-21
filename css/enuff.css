@@ -345,17 +345,28 @@ background: #f0f0f0;
 
 /* dead simple*/
 .has-enuff-accordions input {display: none;} /* refactor above so this isn't necessary -- must encapsulate enuff-labels */
-.has-enuff-accordions .enuff-accordions-content {/*display: none;*/ font-size: 0;line-height: 0;}
+.has-enuff-accordions .enuff-accordions-content {/*display: none;*/ font-size: 0;line-height: 0; opacity: 0; transition: .5s opacity ease;}
 /* add as many as needed*/
-.has-enuff-accordions input:first-of-type:checked ~ p:first-of-type,
-.has-enuff-accordions input:nth-of-type(2):checked ~ p:nth-of-type(2),
-.has-enuff-accordions input:nth-of-type(3):checked ~ p:nth-of-type(3)
- {
+.has-enuff-accordions input:first-of-type:checked ~ div:first-of-type,
+.has-enuff-accordions input:nth-of-type(2):checked ~ div:nth-of-type(2),
+.has-enuff-accordions input:nth-of-type(3):checked ~ div:nth-of-type(3) {
   font-size: 1em;
   line-height: 1.5em;
+  opacity: 1;
   }
 
-.has-enuff-accordions label {display: block;width: 100%;}
+.has-enuff-accordions label {
+  display: block;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .has-enuff-accordions label:after {
   content: "+";
   float: right; /*does anything need to clear this float?*/
@@ -364,12 +375,34 @@ background: #f0f0f0;
   content: "-";
 }
 
+.enuff-accordions-group input:first-of-type:checked + label:first-of-type,
+.enuff-accordions-group input:nth-of-type(2):checked + label:nth-of-type(2),
+.enuff-accordions-group input:nth-of-type(3):checked + label:nth-of-type(3) {
+  color: #000;
+}
+
+.enuff-accordions-group label {
+  font-size: 1.5em;
+  text-transform: none;
+  padding: .25em 0;
+  margin: .25em 0 0 0;
+  background: #ccc;
+}
+
+.enuff-accordions-content {
+  margin-bottom: 1em;
+}
+
+.enuff-accordions-group input:checked ~ .enuff-accordions-content {
+  background: #ccc;
+}
 
 /* save for table sorting*/
 /*.has-enuff-accordions input.show-all:checked ~ p {display: block;}*/
 
+/* ok i was able to encapuslate these for the navigation with LI -- but refactor*/
 
-.enuff-accordions .enuff-accordion-header {
+#header li.enuff-accordions .enuff-accordion-header {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -382,7 +415,7 @@ background: #f0f0f0;
 }
 
 /* of it's super hacky */ 
-.enuff-accordions input[type=checkbox] {
+#header li.enuff-accordions input[type=checkbox] {
   position: absolute;
   cursor: pointer;
   width: 100%;
@@ -394,14 +427,14 @@ background: #f0f0f0;
   overflow: hidden;
 }
 
-.enuff-accordions input[type=checkbox] + .enuff-accordion-header:after {content: "+";float: right;}
-.enuff-accordions input[type=checkbox]:checked + .enuff-accordion-header:after {content: "-";}
-.enuff-accordions p {font-size: 0em;line-height: 0;opacity: 0;transition: 1s opacity ease;}
-.enuff-accordions input[type=checkbox]:checked ~ p {font-size: .75em;line-height: 1.5em;opacity: 1;}
+#header li.enuff-accordions input[type=checkbox] + .enuff-accordion-header:after {content: "+";float: right;}
+#header li.enuff-accordions input[type=checkbox]:checked + .enuff-accordion-header:after {content: "-";}
+#header li.enuff-accordions p {font-size: 0em;line-height: 0;opacity: 0;transition: 1s opacity ease;}
+#header li.enuff-accordions input[type=checkbox]:checked ~ p {font-size: .75em;line-height: 1.5em;opacity: 1;}
 
 
-.navigation .enuff-accordions ul {font-size: 0em;line-height: 0;opacity: 0;transition: 1s opacity ease;}
-.navigation .enuff-accordions input[type=checkbox]:checked ~ ul {font-size: .75em;line-height: 1.5em;opacity: 1;}
+#header .navigation .enuff-accordions ul {font-size: 0em;line-height: 0;opacity: 0;transition: 1s opacity ease;}
+#header .navigation .enuff-accordions input[type=checkbox]:checked ~ ul {font-size: .75em;line-height: 1.5em;opacity: 1;}
 
 
 /*header.slide--reset .enuff-accordions input[type=checkbox]:checked ~ p {
