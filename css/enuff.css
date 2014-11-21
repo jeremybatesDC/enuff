@@ -232,7 +232,9 @@ nav.header-inner {margin-top: 3em;}
 .side-menu {display: none;}
 
 
+/*rename has-enuff-tabs*/
 
+.enuff-has-tabs {}
 
 .enuff-has-tabs label { 
   -webkit-tap-highlight-color: transparent;
@@ -246,22 +248,24 @@ nav.header-inner {margin-top: 3em;}
   padding: .5em 1em;
 }
 .enuff-has-tabs input {display: none;}
-.enuff-has-tabs p {display: none;}
-.enuff-has-tabs input:first-of-type:checked ~ p:first-of-type,.enuff-has-tabs input:nth-of-type(2):checked ~ p:nth-of-type(2), .enuff-has-tabs input:nth-of-type(3):checked ~ p:nth-of-type(3) {
-  display: block;
+.enuff-has-tabs div {/*display: none;*/padding: 1em;background: #f0f0f0;font-size: 0;line-height: 0;opacity:0;}
+.enuff-has-tabs input:first-of-type:checked ~ div:first-of-type,
+.enuff-has-tabs input:nth-of-type(2):checked ~ div:nth-of-type(2), 
+.enuff-has-tabs input:nth-of-type(3):checked ~ div:nth-of-type(3) {font-size: .8em;line-height: 1.5em; opacity: 1;}
+
+/* go nuts */
+.enuff-has-tabs p {opacity: 0;line-height: 0;font-size: 0;transition: 1s opacity ease;}
+.enuff-has-tabs input:first-of-type:checked ~ div:first-of-type p,
+.enuff-has-tabs input:nth-of-type(2):checked ~ div:nth-of-type(2) p,
+.enuff-has-tabs input:nth-of-type(3):checked ~ div:nth-of-type(3) p {
+  opacity: 1;line-height: 1.5;font-size: 1em;
 }
 
 .enuff-has-tabs input:first-of-type:checked ~ label:first-of-type,.enuff-has-tabs input:nth-of-type(2):checked ~ label:nth-of-type(2), .enuff-has-tabs input:nth-of-type(3):checked ~ label:nth-of-type(3) {
 background: #f0f0f0;
-
 }
 
-.enuff-has-tabs p {
-  padding: 1em;
-  background: #f0f0f0;
-  font-size: .8em;
-  line-height: 1.5em;
-}
+
 
 
 /*the transition isn't applying in ff*/
@@ -797,7 +801,7 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
   background: yellow;
 }
 
-#testTarget2:target ~ .test-thing-to-change .faux-row:nth-of-type(odd) {
+#testTarget2:target ~ .test-thing-to-change .faux-row:nth-of-type(even) {
   background: green;
 }
 
