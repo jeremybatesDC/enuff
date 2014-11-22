@@ -349,7 +349,7 @@ background: #f0f0f0;
 
 /* dead simple*/
 .has-enuff-accordions input {display: none;} /* refactor above so this isn't necessary -- must encapsulate enuff-labels */
-.has-enuff-accordions .enuff-accordions-content {/*display: none;*/ font-size: 0;line-height: 0; opacity: 0; transition: .5s opacity ease;}
+.has-enuff-accordions .enuff-accordions-content {font-size: 0;line-height: 0; opacity: 0; transition: .5s opacity ease;}
 /* add as many as needed*/
 .has-enuff-accordions input:first-of-type:checked ~ div:first-of-type,
 .has-enuff-accordions input:nth-of-type(2):checked ~ div:nth-of-type(2),
@@ -797,13 +797,40 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
 .test-target {display: none;}
 
 /* need to refactor to make better use of classes & IDs -- more possibilities*/
-#testTarget:target ~ .test-thing-to-change .faux-row:nth-of-type(odd) {
+/*#testTarget:target ~ .test-thing-to-change .faux-row:nth-of-type(odd) {
   background: yellow;
 }
 
 #testTarget2:target ~ .test-thing-to-change .faux-row:nth-of-type(even) {
   background: green;
 }
+
+#testTarget3:target ~ .test-thing-to-change .faux-row {
+  background: red;
+}*/
+
+/*#testTarget:target ~ .test-thing-to-change [data-position="pitcher"] {
+  background: yellow;
+}*/
+
+#hitters:target ~ .test-thing-to-change [data-position]:not([data-position="hitter"]) {
+display: none;
+} 
+
+#pitchers:target ~ .test-thing-to-change [data-position]:not([data-position="pitcher"]) {
+  display: none;
+}
+
+
+/* i was trying to use the href attribute here, but it wouldn't take for some reason*/
+#hitters:target ~ .test-thing-to-change  a.link-to-hitters, #pitchers:target ~ .test-thing-to-change  a.link-to-pitchers,#showAll:target ~ .test-thing-to-change  a.link-to-showAll {
+font-weight: bold;
+}
+
+/*#testTarget3:target ~ .test-thing-to-change .faux-row {
+  background: red;
+}*/
+
 
 /* CSS-only custom select by Amen Moja Ra from https://gist.github.com/mojaray2k*/
 .customSelect .dropdown {
