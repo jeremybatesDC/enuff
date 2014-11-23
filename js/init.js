@@ -57,6 +57,11 @@
             }).init();
         }());
        smoothScroll.init();
+       
+       /*document.addEventListener("DOMContentLoaded", function(event) {
+            Socialite.load(document.getElementById("socialDemo"));
+        });*/
+       
 
 //var mc = new Hammer.Manager(myElement, myOptions);
 // listen to events...
