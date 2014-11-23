@@ -348,17 +348,6 @@ background: #f0f0f0;
 
 
 /* dead simple*/
-.has-enuff-accordions input {display: none;} /* refactor above so this isn't necessary -- must encapsulate enuff-labels */
-.has-enuff-accordions .enuff-accordions-content {font-size: 0;line-height: 0; opacity: 0; transition: .5s opacity ease;}
-/* add as many as needed*/
-.has-enuff-accordions input:first-of-type:checked ~ div:first-of-type,
-.has-enuff-accordions input:nth-of-type(2):checked ~ div:nth-of-type(2),
-.has-enuff-accordions input:nth-of-type(3):checked ~ div:nth-of-type(3) {
-  font-size: 1em;
-  line-height: 1.5em;
-  opacity: 1;
-  }
-
 .has-enuff-accordions label {
   display: block;
   width: 100%;
@@ -370,6 +359,24 @@ background: #f0f0f0;
   -ms-user-select: none;
   user-select: none;
 }
+
+.has-enuff-accordions input {display: none;} /* refactor above so this isn't necessary -- must encapsulate enuff-labels */
+.has-enuff-accordions .enuff-accordions-content {
+  font-size: 0;
+  line-height: 0; 
+  opacity: 0; 
+  transition: .5s opacity ease;
+}
+/* add as many as needed*/
+.has-enuff-accordions input:first-of-type:checked ~ div:first-of-type,
+.has-enuff-accordions input:nth-of-type(2):checked ~ div:nth-of-type(2),
+.has-enuff-accordions input:nth-of-type(3):checked ~ div:nth-of-type(3) {
+  font-size: 1em;
+  line-height: 1.5em;
+  opacity: 1;
+  }
+
+
 
 .has-enuff-accordions label:after {
   content: "+";
@@ -393,10 +400,9 @@ background: #f0f0f0;
   background: #ccc;
 }
 
-.enuff-accordions-content {
-  margin-bottom: 1em;
-}
 
+
+.enuff-accordions-content {margin-bottom: 1em;}
 .enuff-accordions-group input:checked ~ .enuff-accordions-content {
   background: #ccc;
 }
