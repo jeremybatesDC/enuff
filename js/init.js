@@ -58,10 +58,7 @@
         }());
        smoothScroll.init();
 
-       document.addEventListener("DOMContentLoaded", function(event) {
-            var theContext = document.getElementById("socialDemo");
-            Socialite.load(theContext);
-        });
+       //document.addEventListener("DOMContentLoaded", function(event) {});
        
                
 
