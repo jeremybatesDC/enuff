@@ -657,41 +657,6 @@ body:not(:-moz-handler-blocked) .parallax {display: none;}
 
 /* padding & percentage height is based on width -- so i need some intrinsic ratio*/
 
-/* maybe solve via media query -- but really i want to be able to absolutely position in within top section... might need intrinsic ratios*/
-.parallax {
-    height: 0;
-    padding-bottom: 80%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-perspective: 1px;
-    perspective: 1px;
-  }
-
-  .parallax__layer {
-    position: absolute;
-    top: 20%;
-    left: 0;
-    right: 0;
-    /*bottom: 0;*/
-    padding: 50% 0;
-    border: 1px solid #000;
-  }
-
-
-  .parallax__layer--base {-webkit-transform: translateZ(0);transform: translateZ(0);}
-  .parallax__layer--back {-webkit-transform: translateZ(-1px);transform: translateZ(-1px);}
-  
-  .parallax__layer .parallax__layer--base {height: 50px;}
-
-
-  .title {
-    position: absolute;
-    margin-top:-66%;
-  }
-  .title.title2 {
-    color: blue;
-  }
-
 
 .drag-drop-area label {margin-top: 0; padding: .5em .5em .5em 0;float:none;}
 .drag-drop-area .drag-drop-directions {position: relative;top:2.125em;}
@@ -796,6 +761,27 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
 .enuffSelect select optgroup option{}
 .enuffSelect select:focus {}
 .enuffSelect select:focus optgroup {}
+
+
+
+
+/* Social */
+
+figure.social-icon svg {
+  width: 1.75rem; /* the context is less than 100% here... 2 rem is too big */
+  transition: .5s all ease;
+}
+
+figure.social-icon svg:hover{
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 10px;
+  /*stroke-linecap: round;
+  stroke-linejoin: round;*/
+  transform: scale(.875);
+  transform-origin: center bottom;
+}
+
 
 
 /*tests to delete afterwards*/
