@@ -58,6 +58,19 @@
         }());
        smoothScroll.init();
 
+       //I want to wrap this with a focus, but the element isn't created until the script runs.
+       //another problem is multiple events -- need a check that says if event and not-already-showing then
+       var varAutoCompleteTrigger = document.getElementById("autoCompleteTrigger");
+       varAutoCompleteTrigger.addEventListener("focus",runAutoComplete,false);
+       function runAutoComplete(){
+           var varAutoComplete = completely(document.getElementById('autoCompleteContainer'), {});
+           varAutoComplete.options = ['apples', 'cocoa','coffee','orange'];
+           varAutoComplete.repaint(); 
+           setTimeout(function() {
+            varAutoComplete.input.focus();
+
+            },0);
+       }
        //document.addEventListener("DOMContentLoaded", function(event) {});
        
                
