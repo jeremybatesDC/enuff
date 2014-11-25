@@ -5,9 +5,7 @@ main {font-size: 1em; max-width: 56rem;margin: 0 auto;padding: 0 .5em;}
 header {}
 nav {}
 article {}
-.enuff-css article {
-  padding-bottom: 5em; border-bottom: 1px solid #999;
-}
+.enuff-css article {padding-bottom: 5em; border-bottom: 1px solid #999;}
 
 section{}
 aside {}
@@ -139,7 +137,6 @@ svg{}
 
 br{}
 hr{}
-
 sup{}
 sub{}
 
@@ -170,12 +167,10 @@ data{}
 .form-control.error:focus {border-color:red;}
 .login-error-box{max-width: 20em;margin: 0 auto;background: red;text-align: center;color: #fff;}
 
-
 /*headroom.js by @WickyNilliams*/
-
 /*nav.header-inner {width: 10em;}*/
 
-.header {background-color: rgba(150,150,150,1);transition: left .5s ease;}
+.header {background-color: rgba(200,200,200,1);transition: left .5s ease;}
 .header--fixed {/*display:none;*/position: fixed;z-index: 9;left: -10em;top: 0;width: 10em;height:100%;}
 label.icon-hamburger {display: inline-block;position: fixed;top:0;left:0;width: 3em; height: 3em;overflow:hidden;background-color: transparent;background-image:url(../img/iconmonstr-menu-icon.svg); background-repeat:no-repeat;z-index:12;
   -webkit-user-select: none;
@@ -186,12 +181,9 @@ label.icon-hamburger {display: inline-block;position: fixed;top:0;left:0;width: 
 }
 input.hamburger-control {position: fixed;top:0;left:0;z-index: 11;width: 1em;opacity: 0;}
 input.hamburger-control:checked + label + .header--fixed {/*display:inline-block;*/left:0;}
-
 nav.header-inner {margin-top: 3em;}
 
-
 /* need to make selection and user selecy transparent none etc*/
-
 
 /*This is in a media query*/
 .side-menu {display: none;}
@@ -514,7 +506,7 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
     /*margin-right: 5px; 
     margin-left: -20px;*/
     position: relative;
-    
+
 }
 .checkboxes .has-icon:checked + .icon-form-checkbox:before, .radios .has-icon:checked + .icon-form-radio:before { border-color: #000; }
 .checkboxes .has-icon + .icon-form-checkbox:before, .radios .has-icon + .icon-form-radio:before { 
@@ -544,9 +536,7 @@ fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked lab
     border-left: 0px;
 }
 
-
 /* Social */
-
 figure.social-icon svg {
   width: 1.75rem; /* the context is less than 100% here... 2 rem is too big */
   transition: .5s all ease;
@@ -561,8 +551,6 @@ figure.social-icon svg:hover{
   transform: scale(.875);
   transform-origin: center bottom;
 }
-
-
 
 /*tests to delete afterwards*/
 .test-select:focus optgroup option{}

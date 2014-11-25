@@ -939,6 +939,7 @@
             <li>horizontal accordions</li>
             <li>maybe inline checkboxes</li>
             <li>typeahead: COMPLETE.LY</li>
+            <li>fix arrow svgs (they have weird viewbox issues in illustrator</li>
             <li>tooltips popover on touch (maybe listen to them w/ hammer and decide? Can hammer tell the difference beween a click and a press?</li>
             <li>consistent animation and style</li>
             <li>add credits to the sink</li>
@@ -946,7 +947,6 @@
             <li>fork me on github</li>
             <li>synthetic page load?</li>
             <li>animate svg logo -- maybe with path draw</li>
-            <li>Social SVG sprite</li>
             <li>fix back-to-top in bot right, but not with 5 or so vh of the top -- also, consider a double up arrow to indicate "ALL the way up"</li>
             <li>pull scripts from bower when possible for current versions</li>
             <li>break down css files and import modules (using sass if need be)</li>
@@ -981,23 +981,31 @@
 
         
         </section>
-</article>
-    </main>  
+    </article>
+</main>  
 
-
+<!--back to top-->
 <a data-scroll data-options='{ "speed": 900, "easing": "easeInOut" }' href="#!"> 
     <figure class="has-icon">
-        <svg class="icon-arrow" viewBox="-385 40 400 400" xml:space="preserve">
-        <circle fill="rgba(200,200,200,.33)" cx="-185.087" cy="239.25" r="195.25"/>
-        <polygon fill="#FFFFFF" points="-51.185,287.959 -86.861,323.806 -185.084,226.048 -283.309,323.806 -318.985,287.959 -185.084,154.696 "/>
+        <svg version="1.1" x="0px" y="0px" viewBox="0 0 400 400" xml:space="preserve">
+            <circle fill="rgba(200,200,200,.33)" cx="199.413" cy="199.25" r="195.25"/>
+                <g>
+                    <polygon fill="#FFFFFF" points="319.413,176 287.454,203.719 199.414,128.128 111.388,203.719 79.413,176 199.414,72.956   "/>
+                    <polygon fill="#FFFFFF" points="319.413,287.348 287.454,315.066 199.414,239.475 111.388,315.066 79.413,287.348 199.414,184.303 
+                            "/>
+                </g>
         </svg>
     </figure>
 </a>
 
-    <button id="cancelButton"> <--Cancel</button>
-    <button id="sendButton">Send --></button>
+<article>
+    <section>
+        <button id="cancelButton"> <--Cancel</button>
+        <button id="sendButton">Send --></button>
+    </section>
+</article>
 
-    <footer></footer>
+<footer></footer>
 
 
     <script src="js/pikaday-sans-moment.js"></script>
