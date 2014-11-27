@@ -68,7 +68,6 @@
            varAutoComplete.repaint(); 
            setTimeout(function() {
             varAutoComplete.input.focus();
-
             },0);
        }
        //document.addEventListener("DOMContentLoaded", function(event) {});

@@ -3,12 +3,16 @@
 <html lang="en">
 <head>
 <title>web.browser.console - complete.ly</title>
-<script src='http://lorenzoongithub.github.io/completely/complete.ly.1.0.1.min.js'></script>
+<link rel="stylesheet" href="../css/enuff.css">
+<script src='../js//complete.ly.1.0.1.edited.js'></script>
 </head>
 <body>
     
-	<div id='main'>
-		<div id='wrap' ></div>
+    <fieldset id="completelyInputHolder">
+    	
+    </fieldset>
+	<div id="main">
+		<div id="wrap"></div>
 	</div>
 	
 	<script>
@@ -16,7 +20,7 @@
 		promptInnerHTML : '&gt;', 
 	});
 	
-	var main = document.getElementById('main');
+	var main = document.getElementById('completelyInputHolder');
 	
 	pv.onEnter = function() {
 		var text = pv.input.value;
@@ -28,12 +32,6 @@
 		var divIn = document.createElement('span');
 		divIn.innerHTML = '&gt;'+text;
 		main.appendChild(divIn);
-		/*if (resp) {
-			var divOut = document.createElement('div');
-			divOut.style.color = '#34A';
-			divOut.innerHTML = ''+resp;
-			main.appendChild(divOut);
-		}*/
 		pv.setText('');
 		main.appendChild(pv.wrapper);
 		pv.wrapper.scrollIntoView();

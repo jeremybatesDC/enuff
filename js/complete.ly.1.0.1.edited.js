@@ -11,7 +11,7 @@ function completely(container, config) {
     //config.fontSize =                       config.fontSize   || '16px';
     //config.fontFamily =                     config.fontFamily || 'sans-serif';
     config.promptInnerHTML =                config.promptInnerHTML || ''; 
-    config.color =                          config.color || '#333';
+    //config.color =                          config.color || '#333';
     config.hintColor =                      config.hintColor || '#aaa';
     config.backgroundColor =                config.backgroundColor || '#fff';
     config.dropDownBorderColor =            config.dropDownBorderColor || '#aaa';
@@ -23,11 +23,11 @@ function completely(container, config) {
     txtInput.spellcheck = false; 
     //txtInput.style.fontSize =        config.fontSize;
     //txtInput.style.fontFamily =      config.fontFamily;
-    txtInput.style.color =           config.color;
+    //txtInput.style.color =           config.color;
     txtInput.style.backgroundColor = config.backgroundColor;
     txtInput.style.width = '100%';
     txtInput.style.outline = '0';
-    txtInput.style.border =  '0';
+    //txtInput.style.border =  '0';
     txtInput.style.margin =  '0';
     txtInput.style.padding = '0';
     
@@ -36,7 +36,7 @@ function completely(container, config) {
     txtHint.style.position = 'absolute';
     txtHint.style.top =  '0';
     txtHint.style.left = '0';
-    txtHint.style.borderColor = 'transparent';
+    //txtHint.style.borderColor = 'transparent';
     txtHint.style.boxShadow =   'none';
     txtHint.style.color = config.hintColor;
     
@@ -47,7 +47,7 @@ function completely(container, config) {
     var wrapper = document.createElement('div');
     wrapper.style.position = 'relative';
     wrapper.style.outline = '0';
-    wrapper.style.border =  '0';
+    //wrapper.style.border =  '0';
     wrapper.style.margin =  '0';
     wrapper.style.padding = '0';
     
@@ -56,10 +56,10 @@ function completely(container, config) {
     prompt.style.outline = '0';
     prompt.style.margin =  '0';
     prompt.style.padding = '0';
-    prompt.style.border =  '0';
+    //prompt.style.border =  '0';
     //prompt.style.fontSize =   config.fontSize;
     //prompt.style.fontFamily = config.fontFamily;
-    prompt.style.color =           config.color;
+    //prompt.style.color =           config.color;
     prompt.style.backgroundColor = config.backgroundColor;
     prompt.style.top = '0';
     prompt.style.left = '0';
@@ -123,7 +123,7 @@ function completely(container, config) {
                 for (var i=0;i<array.length;i++) {
                     if (array[i].indexOf(token)!==0) { continue; }
                     var divRow =document.createElement('div');
-                    divRow.style.color = config.color;
+                    //divRow.style.color = config.color;
                     divRow.onmouseover = onMouseOver; 
                     divRow.onmouseout =  onMouseOut;
                     divRow.onmousedown = onMouseDown; 
