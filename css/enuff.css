@@ -324,6 +324,15 @@ background: #f0f0f0;
   opacity: 1;
   }
 
+.has-enuff-accordions input:first-child:checked ~ div:first-child,
+.has-enuff-accordions input:nth-child(2):checked ~ div:nth-child(2),
+.has-enuff-accordions input:nth-child(3):checked ~ div:nth-child(3) {
+  font-size: 1em;
+  line-height: 1.5em;
+  opacity: 1;
+  }
+
+
 .has-enuff-accordions label:after {
   content: "+";
   float: right; /*does anything need to clear this float?*/
@@ -337,6 +346,8 @@ background: #f0f0f0;
 .enuff-accordions-group input:nth-of-type(3):checked + label:nth-of-type(3) {
   color: #000;
 }
+
+
 
 .enuff-accordions-group label {
   font-size: 1.5em;
