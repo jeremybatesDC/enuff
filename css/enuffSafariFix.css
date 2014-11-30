@@ -1,0 +1,1019 @@
+html {font-family: sans-serif;font-size: 16px;line-height: 24px;}
+/* i like to see an explicit font size that rems/ems are based off of*/
+body{font-family: 'Arial', sans-serif;font-size: .875em;/*14px*/}
+main {font-size: 1em; max-width: 56rem;margin: 0 auto;padding: 0 .5em;}
+header {}
+nav {}
+article {}
+.enuff-css article {padding-bottom: 5em; border-bottom: 1px solid #999;}
+
+section{}
+aside {}
+footer{}
+/*100% height trick*/
+html, body {height: 100%;}
+
+/*pseduo*/
+:link{}
+:hover{}
+:focus{}
+*:focus{box-shadow: none;}
+/*input:focus{box-shadow: none !important;border-color: transparent; !important;}*/
+:active{}
+:visited{}
+:target{}
+::selection,::-moz-selection {}
+
+button, .button{display: inline-block; text-transform: uppercase;font-size: .875em; padding: .25em .5em;background:transparent;border: 1px solid #000;}
+
+h1,h2,h3,h4,h5, h6{font-weight: normal;}
+h1{font-size: 2em;}
+.header h1 {font-size: 1em; color: #fff;}
+h2{font-size: 1.8em;}
+h3{font-size: 1.6em;}
+h4{font-size: 1.4em;}
+h5{font-size: 1.2em;}
+h6{font-size: 1em;}
+p{}
+span{}
+
+.breadcrumb {margin: 4em 0 2em 7.5%;background: transparent;text-transform: uppercase; font-size: .9em;}
+.breadcrumb h1{display: inline-block;font-size: 1em;margin:0;padding:0;color: #000;font-weight: bold; letter-spacing: .0125em;}
+
+
+ol{}
+ul {list-style: none;}
+li{}
+menu{}
+menuitem{}
+dl{}
+dd{}
+
+/*formatting*/
+b{}
+i{}
+em{}
+strong{}
+small{}
+u{}
+s{}
+pre{}
+code{font-size: 10px; line-height: 1.5em; font-family: Arial, sans-serif;}
+
+/*media*/
+figure {}
+img {}
+figcaption{}
+video{}
+audio{}
+iframe{}
+track{}
+var{}
+
+figure.has-icon {width: 5em;height: 5em;border-radius: 50%;box-shadow: 3px 3px #000;transition: .33s all ease;}
+figure.has-icon:hover, figure.has-icon:active, figure.has-icon:focus {transform: translate(3px);box-shadow: none;}
+svg.icon-arrow {max-width: 100%;}
+
+
+/*  forms */
+form{}
+fieldset{}
+input {height: 2em;color: #000;/*border-radius: 5px;*/border: 1px solid #999;box-shadow: none;padding: 0 .25em;font-family: Arial;/*default is trebuchet -- ugh*/font-size: .875rem;}
+label {background: #fff;font-size: .625rem;line-height: 1em; color: #888;font-weight: normal;text-transform: uppercase;/*white-space: nowrap;overflow: hidden;*/}
+select {}
+option {/*padding: 1em 0;*//*that screws up firefox selectbox height*/}
+optgroup{/*display: inline-block; width: 300%;*/}
+input:valid{/*border: 1px solid green;*/} /* revisit */
+:invalid{}
+input:invalid{border: 1px solid red;}
+input:invalid ~ fieldset button.save{opacity: .1;}
+/*proof on concept ghosting save button that's preceded by invalid input(s) */
+
+
+input[type=number] {-moz-appearance: textfield;}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+:required{}
+:optional{}
+:checked{}
+:enabled{}
+:default{}
+:disabled{}
+:out-of-range{}
+:in-range {}
+:-moz-read-write, read-write {}
+:indeterminate {}
+progress{}
+textarea{resize:none;}
+/*input[type="radio"] {}
+input[type="checkbox"] {}*/
+optgroup{}
+
+q{}
+blockquote{}
+details{}
+dialog{}
+legend {}
+summary {}
+
+/* tables */
+table {}
+caption{}
+tbody{}
+th{}
+tr{}
+td{}
+tfoot{}
+:empty{}
+col{}
+colgroup{}
+
+svg{}
+/*svg.svg-icon {max-width: 2.5em;}*/
+
+br{}
+hr{}
+sup{}
+sub{}
+
+/*template{}
+content{}
+decorator{}
+element {}
+shadow {}*/
+
+address{}
+time{}
+
+data{}
+
+.btn {font-size: 1em;}
+
+
+/*action bar*/
+.save-cancel-bar {margin: 0 1em 1em 1em; padding: 1em 0; border-top: 1px solid #ccc;padding-top:1em;overflow: hidden;}
+.save-cancel-bar:after {float: none;clear:both;}
+.form-save {margin-left:1.5em; padding-left: 1.5em; padding-right: 1.5em;float:right;}
+.form-cancel {float: right;}
+
+/*VALIDATION*/
+/*overriding bootstrap*/
+.alert {padding: 1em;margin-bottom: 1.5em; border: 1px solid red;}
+.error{border-color: red;}
+.form-control.error:focus {border-color:red;}
+.login-error-box{max-width: 20em;margin: 0 auto;background: red;text-align: center;color: #fff;}
+
+/*headroom.js by @WickyNilliams*/
+/*nav.header-inner {width: 10em;}*/
+
+
+.header {background-color: rgba(200,200,200,1);transition: left .5s ease;}
+.header-fixed {/*display:none;*/position: fixed;z-index: 9;left: -10em;top: 0;width: 10em;height:100%;overflow: scroll;}
+label.icon-hamburger {display: inline-block;position: fixed;top:0;left:0;width: 3em; height: 3em;overflow:hidden;background-color: transparent;background-image:url(../img/iconmonstr-menu-icon.svg); background-repeat:no-repeat;z-index:12;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input.hamburger-control {position: fixed;top:0;left:0;z-index: 11;width: 1em;opacity: 0;}
+input.hamburger-control:checked + label + .header-fixed {/*display:inline-block;*/left:0;}
+nav.header-inner {margin-top: 3em;}
+
+/* more specific than the enuff accords*/
+header .navigation label {font-size: 1em;background: rgba(200,200,200,1)}
+.nav-dropdown {padding-left: 1em; margin: 0;font-size: .9em;}
+.nav-dropdown .nested {padding-left: 2em;}
+/* need to make selection and user selecy transparent none etc*/
+
+/*This is in a media query*/
+.side-menu {display: none;}
+
+/*rename has-enuff-tabs*/
+
+.enuff-has-tabs {}
+.enuff-has-tabs label { 
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /*border: 1px solid #000;*/
+  padding: .5em 1em;
+}
+.enuff-has-tabs input {display: none;}
+.enuff-has-tabs div {/*display: none;*/padding: 1em;background: #f0f0f0;font-size: 0;line-height: 0;opacity:0;}
+.enuff-has-tabs input:first-of-type:checked ~ div:first-of-type,
+.enuff-has-tabs input:nth-of-type(2):checked ~ div:nth-of-type(2), 
+.enuff-has-tabs input:nth-of-type(3):checked ~ div:nth-of-type(3) {font-size: .8em;line-height: 1.5em; opacity: 1;}
+
+/* go nuts */
+.enuff-has-tabs p {opacity: 0;line-height: 0;font-size: 0;transition: 1s opacity ease;}
+.enuff-has-tabs input:first-of-type:checked ~ div:first-of-type p,
+.enuff-has-tabs input:nth-of-type(2):checked ~ div:nth-of-type(2) p,
+.enuff-has-tabs input:nth-of-type(3):checked ~ div:nth-of-type(3) p {
+  opacity: 1;line-height: 1.5;font-size: 1em;
+}
+
+.enuff-has-tabs input:first-of-type:checked ~ label:first-of-type,.enuff-has-tabs input:nth-of-type(2):checked ~ label:nth-of-type(2), .enuff-has-tabs input:nth-of-type(3):checked ~ label:nth-of-type(3) {
+background: #f0f0f0;
+}
+
+
+/*the transition isn't applying in ff*/
+/*.modal-wrap:before, .modal-overlay,.modal-open:checked ~ .modal-wrap:before,.modal-open:checked ~ .modal-wrap .modal-overlay, .modal-open:checked ~ .modal-wrap .modal-dialog, .modal-dialog,.modal-body {transition: all 1s ease;}
+*/
+.modal-wrap,
+.modal-overlay,
+.modal-open,
+.modal-dialog,
+.modal-body {transition: all .5s ease;}
+
+.modal .btn-close {}
+.modal .btn-close:hover {}
+.modal-wrap:before {
+  content: "";
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  opacity: 0;
+}
+.modal-overlay {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 102;
+  background-color: rgba(0,0,0,.5);
+  opacity: 0;
+}
+
+.modal-open:checked ~ .modal-wrap:before,
+.modal-open:checked ~ .modal-wrap .modal-overlay {
+  display: block;
+  opacity: 1;
+}
+.modal-open:checked ~ .modal-wrap .modal-dialog {
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  top: 20%;
+}
+
+.modal-dialog {
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  -webkit-transform: translate(-50%, -500%);
+  -ms-transform: translate(-50%, -500%);
+  transform: translate(-50%, -500%);
+  transition: transform 0.3s ease-out;
+  width: 80%;
+  max-width: 600px;
+  /*height: 20%;*/
+  max-height:20em;
+  border: 1px solid #000;
+  overflow: hidden;
+  background: #fff;
+  z-index: 103;
+  padding: 1em;
+}
+
+.modal-body {
+  height: 15%;
+  height: 15em;
+  overflow: scroll;
+}
+
+.has-modal body {overflow: hidden;}
+
+
+/* dead simple*/
+.has-enuff-accordions label {
+  display: block;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-enuff-accordions input {display: none;} /* refactor above so this isn't necessary -- must encapsulate enuff-labels */
+.has-enuff-accordions .enuff-accordions-content {
+  font-size: 0;
+  line-height: 0; 
+  opacity: 0; 
+  transition: .5s opacity ease;
+}
+/* add as many as needed*/
+.has-enuff-accordions input:first-of-type:checked ~ div:first-of-type,
+.has-enuff-accordions input:nth-of-type(2):checked ~ div:nth-of-type(2),
+.has-enuff-accordions input:nth-of-type(3):checked ~ div:nth-of-type(3) {
+  font-size: 1em;
+  line-height: 1.5em;
+  opacity: 1;
+  }
+
+.has-enuff-accordions input:first-child:checked ~ div:first-child,
+.has-enuff-accordions input:nth-child(2):checked ~ div:nth-child(2),
+.has-enuff-accordions input:nth-child(3):checked ~ div:nth-child(3) {
+  font-size: 1em;
+  line-height: 1.5em;
+  opacity: 1;
+  }
+
+
+.has-enuff-accordions label:after {
+  content: "+";
+  float: right; /*does anything need to clear this float?*/
+}
+.has-enuff-accordions input:checked + label:after {
+  content: "-";
+}
+
+.enuff-accordions-group input:first-of-type:checked + label:first-of-type,
+.enuff-accordions-group input:nth-of-type(2):checked + label:nth-of-type(2),
+.enuff-accordions-group input:nth-of-type(3):checked + label:nth-of-type(3) {
+  color: #000;
+}
+
+
+
+.enuff-accordions-group label {
+  font-size: 1.5em;
+  text-transform: none;
+  padding: .25em 0;
+  margin: .25em 0 0 0;
+  background: rgba(200,200,200,1);
+}
+
+.enuff-accordions-content {margin-bottom: 1em;}
+.enuff-accordions-group input:checked ~ .enuff-accordions-content {
+  background: rgba(200,200,200,1)
+}
+
+/* save for table sorting*/
+/*.has-enuff-accordions input.show-all:checked ~ p {display: block;}*/
+
+/*Tooltip by trezy (https://github.com/trezy) http://codepen.io/trezy/pen/Khnzy */
+
+/* i don't like forcing z-index, but I did so here b/c it was being fussy*/
+[data-tooltip] {position: relative;}
+[data-tooltip]:before,[data-tooltip]:after {display: none;position: absolute;top: 0;z-index: 1;}
+[data-tooltip]:before {content: "";/*left: 20px;margin-top: 1em;*/}
+[data-tooltip]:after {
+  content: attr(data-tooltip-label) "\A" attr(data-tooltip-message);
+  top: -2em;
+  width: 8rem;
+  background: #fff;
+  border: 1px solid #000;
+  padding: .5em;
+  font-size: .75em;
+  line-height: 1.5em;
+}
+
+[data-tooltip].tooltip-r:after{left: 0;}
+[data-tooltip].tooltip-l:after{right: 0;}
+[data-tooltip].tooltip-t:after {left: -4em;top: -2em;}
+[data-tooltip].tooltip-b:after {left: -4em;top: 2em;}
+
+
+[data-tooltip]:hover:after,[data-tooltip]:hover:before {display: block;}
+
+section.flexgrid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* can't put bottom margin on the row, because the rows can flex*/
+.flexgrid .row {}
+.flexgrid .row label {margin: 0 0 1em 0;}
+.flexgrid .row label span {position: relative;top: .5em;background: #fff;}
+
+label span :focus {box-shadow: none;}
+
+.flexgrid .row input, .flexgrid .row select {display: block;width: 100%;}
+
+.box-row,
+.box-first,
+.box-nested,
+.box-large,
+.box {
+  position: relative;
+  min-height: 1rem;
+  margin-bottom: 0;
+  background: #007FFF;
+  overflow: hidden;
+}
+
+.box-first {background: #0066CC;border-color: #007FFF;}
+.box-nested {background: #003366;border-color: #007FFF;}
+.box-large {height: 8rem;}
+
+.bottom {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+/* css parallax by Keith Clark: http://keithclark.co.uk/articles/pure-css-parallax-websites/*/
+/* css-only scroll in firefox in my 100% top portion makes for a super elongated scroll area...*/
+body:not(:-moz-handler-blocked) .parallax {display: none;}
+
+
+/*top 100% by Amtt Boldt: http://www.mattboldt.com/css-100-percent-height/ -- this works because html and body above are set to 100% height*/
+.top-section{height:100%;border-bottom: 1px solid #000;}
+.top-section figure.has-logo {text-align: center;padding-top: 10%;}
+/*.top-section img.logo {width: 100%; max-width: 36em;margin: 0 auto;}*/
+.top-section svg.enuff-logo {width: 100%; max-width: 36em;}
+.more{display:block;position:absolute;bottom:20px;text-align:center;}
+
+/* padding & percentage height is based on width -- so i need some intrinsic ratio*/
+
+
+.drag-drop-area label {margin-top: 0; padding: .5em .5em .5em 0;float:none;}
+.drag-drop-area .drag-drop-directions {position: relative;top:2.125em;}
+.btn-browse {padding: .125em 1em; border-radius: 0;}
+.draggable-box-inner {min-height: 25em;padding: 1em;border-radius: .5em;background:#ddd;}
+.drag-drop-area .lower-directions {float: right;margin-top: -1em;background: #fff;font-size: .8em;text-transform: uppercase;font-weight: bold;}
+.drag-drop-area{margin-bottom: 3em;}
+
+.text-area label {margin-bottom: -.8em;}
+.text-area .char-counter, .has-char-counter .char-counter {float:right;}
+.text-area strong, .drag-drop-area strong, .char-counter strong{font-style: normal;color: #000;}
+
+.has-char-counter label {margin-bottom: -.8em;}
+.has-char-counter span {float:right;}
+.has-char-counter .char-counter {margin-top: -.25em;}
+
+
+/* Checkboxes by Kenneth Moors, http://codepen.io/GooeyIdeas/pen/nwfIq, modified by jB -- Radios adapted by jB from same pen */
+fieldset.checkboxes, fieldset.radios{
+    /*display: block;
+    min-height: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked label {display: block;}
+.checkboxes label.checkbox span, .radios label.radio span {top: 0;}
+
+/* What's wrong here on safari? The input breaks out of the column*/
+.checkboxes label.checkbox input[type="checkbox"], .radios label.radio input[type="radio"] {
+  display: inline-block;
+  max-width: 15rem;
+}
+
+.has-icon + .icon { border: 1px solid #ccc;}
+.radios .has-icon + .icon {border-radius: 50%;}
+.has-icon:active + .icon,.has-icon:focus + .icon {
+    border-color: #66afe9;
+    outline: 0;
+}
+
+/*screen-reader*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+}
+
+.checkboxes .icon-form-checkbox, .radios .icon-form-radio {
+    display: inline-block;
+    width: 1rem; 
+    height: 1rem; 
+    font-size: 1rem; 
+    background: #eee; 
+    border: 1px solid #999; 
+    color: #eee; 
+    /*margin-right: 5px; 
+    margin-left: -20px;*/
+    position: relative;
+
+}
+.checkboxes .has-icon:checked + .icon-form-checkbox:before, .radios .has-icon:checked + .icon-form-radio:before { border-color: #000; }
+.checkboxes .has-icon + .icon-form-checkbox:before, .radios .has-icon + .icon-form-radio:before { 
+    content: "";
+    display: inline-block;
+    position: absolute;
+    /*top: .125rem;*/
+    left: .25rem;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height: .66rem;
+    width: .33rem;
+    background: transparent;
+    border: .125rem solid #eee;
+    border-top: 0px;
+    border-left: 0px;
+}
+.checkboxes .has-icon + .icon-form-checkbox:after, .radios .has-icon + .icon-form-radio:after { 
+    content: "";
+    display: inline-block;
+    height: .5rem;
+    width: .25rem;
+    background: transparent;
+    border: 3px solid #eee;
+    border-top: 0px;
+    border-left: 0px;
+}
+
+/* Social */
+figure.social-icon svg {
+  width: 1.75rem; /* the context is less than 100% here... 2 rem is too big */
+  transition: .5s all ease;
+}
+
+figure.social-icon svg:hover{
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 10px;
+  /*stroke-linecap: round;
+  stroke-linejoin: round;*/
+  transform: scale(.875);
+  transform-origin: center bottom;
+}
+
+/*tests to delete afterwards*/
+.test-select:focus optgroup option{}
+.test-target {display: none;}
+
+
+#hitters:target ~ .test-thing-to-change [data-position]:not([data-position="hitter"]) {
+display: none;
+} 
+
+#pitchers:target ~ .test-thing-to-change [data-position]:not([data-position="pitcher"]) {
+  display: none;
+}
+
+
+/* i was trying to use the href attribute here, but it wouldn't take for some reason*/
+#hitters:target ~ .test-thing-to-change  a.link-to-hitters, #pitchers:target ~ .test-thing-to-change  a.link-to-pitchers,#showAll:target ~ .test-thing-to-change  a.link-to-showAll {
+font-weight: bold;
+}
+
+
+
+/* CSS-only custom select by Amen Moja Ra from https://gist.github.com/mojaray2k*/
+.customSelect .dropdown {
+  /*position: relative;*/
+  display:block;
+  /*margin-top:0.5em;*/
+  overflow:hidden;
+  width:100%;
+  max-width:100%;
+  border: 1px solid #999;
+}
+ 
+.customSelect select {
+  /* Make sure the select is wider than the container so we can clip the arrow */
+  /*width:100%;
+  max-width:100%;
+  min-width:100%;*/
+  height: 1.625rem;
+  padding: 0 0 0 .25em;
+  font-family: Arial, sans-serif;
+  appearance: none;-webkit-appearance: none;
+  /* Ugly Firefox way of doing it */
+  -moz-appearance: window;
+  text-overflow: "";
+  /*may have to revert to hard 16px*/
+  /*font-size:16px;*//* Magic font size number to prevent iOS text zoom */
+  font-size: .875rem;
+  background:none;
+  border: none;
+  outline: none;
+
+}
+
+.customSelect .dropdown select option {}
+
+  /* This hides native dropdown button arrow in IE */
+.customSelect select::-ms-expand {display: none;}
+
+ /* Custom arrow - could be an image, SVG, icon font, etc. */
+ .customSelect .dropdown:after {
+  content: "\25BC";
+  background: none;
+  color: #a0a0a0;
+  font-size: 1.5em;
+  float: right;
+  margin-top: -1.2em;
+  padding: 0 1em 0 0;
+  /*padding:0;
+  position: absolute;
+  margin-right: 1em;
+  top: 1em;*/
+  /* This hack makes the select behind the arrow clickable in some browsers */
+  pointer-events:none;
+}
+ 
+/* Hover style - tricky because we're clipping the overflow */
+/*.customSelect .dropdown:hover {border:1px solid #888;}*/
+  
+  /* Focus style */
+.customSelect select:focus {outline: none;box-shadow: 0 0 3px 3px rgba(180,222,250, .85);}
+  /* This hides focus around selected option in FF */
+.customSelect select:-moz-focusring {color: transparent;text-shadow: 0 0 0 #000;}
+
+/*! * Pikaday * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/ */
+.pika-single {
+    z-index: 9999;
+    display: block;
+    position: relative;
+    color: #333;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-bottom-color: #bbb;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+clear child float (pika-lendar), using the famous micro clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.pika-single:before,.pika-single:after {content: " ";display: table;}
+.pika-single:after { clear: both }
+.pika-single { *zoom: 1 }
+.pika-single.is-hidden {display: none;}
+.pika-single.is-bound {position: absolute;/*box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);*/}
+.pika-lendar {float: left;width: 15rem;margin: .5rem;}
+.pika-title {position: relative;text-align: center;}
+.pika-label {
+    display: inline-block;
+    *display: inline;
+    position: relative;
+    z-index: 9999;
+    overflow: hidden;
+    margin: 0;
+    padding: .33rem .25rem;
+    font-size: .9rem;
+    line-height: 1.25rem;
+    /*font-weight: bold;*/
+    background-color: #fff;
+}
+.pika-title select {
+    cursor: pointer;
+    position: absolute;
+    z-index: 9998;
+    margin: 0;
+    left: 0;
+    top: .33rem;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.pika-prev,
+.pika-next {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    border: 0;
+    padding: 0;
+    width: 1.25rem;
+    height: 2rem;
+    /* hide text using text-indent trick, using width value (it's enough) */
+    text-indent: 1.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    opacity: .5;
+    *position: absolute;
+    *top: 0;
+}
+
+.pika-prev:hover,.pika-next:hover {opacity: 1;}
+
+.pika-prev,
+.is-rtl .pika-next {
+    float: left;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+    *left: 0;
+}
+
+.pika-next,
+.is-rtl .pika-prev {
+    float: right;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
+    *right: 0;
+}
+
+.pika-prev.is-disabled,.pika-next.is-disabled {cursor: default;opacity: .2;}
+.pika-select {display: inline-block;*display: inline;}
+.pika-table {width: 100%;border-collapse: collapse;border-spacing: 0;border: 0;}
+.pika-table th,.pika-table td {width: 14.285714285714286%;padding: 0;}
+.pika-table th {color: #999;font-size: .75rem;line-height: 1.5rem;font-weight: bold;text-align: center;}
+.pika-button {
+    cursor: pointer;
+    display: block;
+    outline: none;
+    border: 0;
+    margin: 0;
+    width: 100%;
+    padding: .33rem;
+    color: #666;
+    font-size: .75rem;
+    line-height: 1.25rem;
+    text-align: right;
+    background: #f5f5f5;
+}
+
+.pika-week {font-size: 11px;color: #999;}
+.is-today .pika-button {color: #33aaff;font-weight: bold;}
+.is-selected .pika-button {
+    color: #fff;
+    font-weight: bold;
+    background: #33aaff;
+    box-shadow: inset 0 1px 3px #178fe5;
+    border-radius: 3px;
+}
+
+.is-disabled .pika-button {
+    pointer-events: none;
+    cursor: default;
+    color: #999;
+    opacity: .3;
+}
+
+.pika-button.pika-button:hover {
+    color: #fff;
+    background: #ff8000;
+    box-shadow: none;
+    border-radius: 3px;
+}
+
+.calendar-field {
+  background-image: url(../img/icon-calendar.svg);
+  background-size: 2.25em;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+
+/* can i use before & after to put icon that corresponds to th? That might be too hard-coded... Althought I could do a disc*/
+.hasResponsive-table table{width: 100%;}
+
+.hasResponsive-table thead tr {
+  width: 100%;
+  height: auto;
+  padding-bottom: 0;
+}
+
+.hasResponsive-table thead tr th{
+  width: 25%;
+  height: auto;
+}
+
+
+.hasResponsive-table tr{
+  display: inline-block;
+  margin: 0;
+  border: 1px solid #000;
+  width: 50%;
+  height: 0;
+  padding-bottom: 10em;
+  overflow: hidden;
+}
+
+.hasResponsive-table tr td {
+  display: block;
+  margin: 0;
+  font-size: .75em;
+}
+
+
+/*.hasResponsive-table tbody tr td:before {
+  content: "- ";
+}*/
+
+.hasResponsive-table table, .hasResponsive-table table tr,.hasResponsive-table th, .hasResponsive-table td {
+    border-collapse: collapse;
+}
+
+/* the technique below can also be used, without pseudo elements, to color code*/
+
+.hasResponsive-table thead th:first-child:before, .hasResponsive-table tbody tr td:first-child:before  {
+  content: "-";
+}
+
+.hasResponsive-table thead th:nth-child(2):before, .hasResponsive-table tbody tr td:nth-child(2):before  {
+  content: "+";
+}
+
+.hasResponsive-table thead th:nth-child(3):before, .hasResponsive-table tbody tr td:nth-child(3):before  {
+  content: "~";
+}
+
+.hasResponsive-table thead th:nth-child(4):before, .hasResponsive-table tbody tr td:nth-child(4):before  {
+  content: "*";
+}
+
+/* try to make more durable with nth selectors */
+.has-table-sort input.ff-selector-type-all:checked ~ label.ff-label-type-all,
+.has-table-sort input.ff-selector-type-1:checked ~ label.ff-label-type-1,
+.has-table-sort input.ff-selector-type-2:checked ~ label.ff-label-type-2,
+.has-table-sort input.ff-selector-type-3:checked ~ label.ff-label-type-3{
+  background: #000;
+  color: #fff;
+}
+
+.has-table-sort input, .has-table-sort input.ff-selector-type-1:checked ~ .ff-items tbody tr:not(.ff-item-type-1),
+.has-table-sort input.ff-selector-type-2:checked ~ .ff-items tbody tr:not(.ff-item-type-2),
+.has-table-sort input.ff-selector-type-3:checked ~ .ff-items tbody tr:not(.ff-item-type-3)
+{
+  display: none;
+}
+
+
+.AtoZ:checked ~ .row.reverse {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: row;
+  -ms-flex-wrap: row;
+  flex-wrap: row;
+}
+
+.ZtoA:checked ~ .col.reverse {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: column;
+  -ms-flex-wrap: column;
+  flex-wrap: column;
+}
+
+.faux-table {border: 1px solid #000 !important;}
+
+.faux-row {
+  /*display: table-row;*/
+  width: 100%;
+  border-top:1px solid #000;
+}
+
+.faux-row:nth-of-type(odd){
+  background: #eee;
+}
+
+
+.faux-row div {
+  display: inline-block;
+  /* i get problems w/ display table-cell  */
+  width: 24%;
+  margin: 0;
+  padding: 0;
+  /*border-right: 1px solid #000;*/
+}
+
+
+@media only screen and (min-width: 36em) {
+
+.icon-hamburger:after {content: "";}
+
+label.icon-hamburger {display: none;}
+input.hamburger-control {display: none;}
+/*input.hamburger-control:checked + label + .header--fixed {display:inline-block;left:0;}*/
+
+.navigation {margin: 0;}
+.navigation .accordions ul {margin:0;}
+nav.header-inner {max-width: 60em; margin: 0 auto;padding: 0 0 0 10em;}
+/*nav.header-inner {}*/
+.header-fixed {display: inline-block;width: 100%;left: 0;height: 2em;overflow:visible;}
+
+
+/*#sideMenu.side-menu:target {margin-left: 0;background: #000;}*/
+.nav-control input{}
+.hamburger-container a {color: #fff;}
+/*#sideMenu.side-menu a.hamburger-close{display: none;}
+#sideMenu.side-menu:target a.hamburger-close{display: block;}
+#sideMenu.side-menu:target a.hamburger-open{display: none;}*/
+
+
+
+.hasResponsive-table tr{display: table-row;}
+.hasResponsive-table td {border: 1px solid #000;}
+.hasResponsive-table thead tr th{width: auto;}
+.hasResponsive-table table.three-columns td {width: 33%;}
+
+.hasResponsive-table tr{display: table-row;}
+.hasResponsive-table tr td {display: table-cell;}
+.hasResponsive-table tbody tr td:before {content: "";}
+
+
+
+/*these animations were put in a media query for a reason... maybe to do with the responsive nav...*/
+.slide {
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+.slide--reset {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.slide--up {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+    overflow: hidden; /* this prevents nav dropdowns from showing on scroll down */
+}
+
+.animated {
+    -webkit-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideDown {
+    0% {-webkit-transform: translateY(-100%);}
+    100% {-webkit-transform: translateY(0);}
+}
+
+@-moz-keyframes slideDown {
+    0% {-moz-transform: translateY(-100%);}
+    100% {-moz-transform: translateY(0);}
+}
+
+@keyframes slideDown {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(0);}
+}
+
+.animated.slideDown {
+    -webkit-animation-name: slideDown;
+    -moz-animation-name: slideDown;
+    animation-name: slideDown;
+}
+
+@-webkit-keyframes slideUp {
+    0% {-webkit-transform: translateY(0);}
+    100% {-webkit-transform: translateY(-100%);}
+}
+
+@-moz-keyframes slideUp {
+    0% {-moz-transform: translateY(0);}
+    100% {-moz-transform: translateY(-100%);}
+}
+
+
+@keyframes slideUp {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-100%);}
+}
+
+.animated.slideUp {
+    -webkit-animation-name: slideUp;
+    -moz-animation-name: slideUp;
+    animation-name: slideUp;
+}
+} /*end media query */
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+}
