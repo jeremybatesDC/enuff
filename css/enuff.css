@@ -170,8 +170,9 @@ data{}
 /*headroom.js by @WickyNilliams*/
 /*nav.header-inner {width: 10em;}*/
 
+
 .header {background-color: rgba(200,200,200,1);transition: left .5s ease;}
-.header--fixed {/*display:none;*/position: fixed;z-index: 9;left: -10em;top: 0;width: 10em;height:100%;}
+.header--fixed {/*display:none;*/position: fixed;z-index: 9;left: -10em;top: 0;width: 10em;height:100%;overflow: scroll;}
 label.icon-hamburger {display: inline-block;position: fixed;top:0;left:0;width: 3em; height: 3em;overflow:hidden;background-color: transparent;background-image:url(../img/iconmonstr-menu-icon.svg); background-repeat:no-repeat;z-index:12;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -183,6 +184,10 @@ input.hamburger-control {position: fixed;top:0;left:0;z-index: 11;width: 1em;opa
 input.hamburger-control:checked + label + .header--fixed {/*display:inline-block;*/left:0;}
 nav.header-inner {margin-top: 3em;}
 
+/* more specific than the enuff accords*/
+header .navigation label {font-size: 1em;background: rgba(200,200,200,1)}
+.nav-dropdown {padding-left: 1em; margin: 0;font-size: .9em;}
+.nav-dropdown .nested {padding-left: 2em;}
 /* need to make selection and user selecy transparent none etc*/
 
 /*This is in a media query*/
@@ -354,12 +359,12 @@ background: #f0f0f0;
   text-transform: none;
   padding: .25em 0;
   margin: .25em 0 0 0;
-  background: #ccc;
+  background: rgba(200,200,200,1);
 }
 
 .enuff-accordions-content {margin-bottom: 1em;}
 .enuff-accordions-group input:checked ~ .enuff-accordions-content {
-  background: #ccc;
+  background: rgba(200,200,200,1)
 }
 
 /* save for table sorting*/
