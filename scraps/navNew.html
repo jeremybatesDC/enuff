@@ -5,19 +5,24 @@
         <meta charset="utf-8" />
         <title>enuff</title>
         <meta name="description" content="">
+        <link rel="stylesheet" href="../css/normalize-custom-enuff.css">
+        <link rel="stylesheet" href="../css/flexboxgrid.css"/>
        	<link rel="stylesheet" href="enuffSafariFix.css">
+
     </head>
 
 <body class="enuff-css">
     
 <style>
 body {margin: 0;padding:0;}
-header {width: 5em;background: #ccc;margin-left: -5em;}	
+header {position: fixed: top: 0;width: 5em;background: #ccc;margin-left: -5em;}	
 input:checked + header {margin-left: 0;}
 .ghost {display: none;}
 label {-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
-header nav .navigation {margin: 0;padding:0;}
-header nav .navigation label {margin: 0; padding: 0;font-size: .9em;}
+header nav ul.navigation {margin: 0;padding:0; background: transparent;}
+header nav ul.navigation-nested {margin-top: 1em; background: transparent;}
+header nav .navigation label {margin: 0; padding: 0;font-size: .9em;background: transparent;}
+header .enuff-accordions-group input:checked ~ .enuff-accordions-content {background: transparent;}
 
 @media all and (min-width: 36em)
 {
@@ -25,8 +30,12 @@ header nav .navigation label {margin: 0; padding: 0;font-size: .9em;}
 		width: 100%;
 		margin-left: 0;
 	}
+
+	.navigation {height: 2em;overflow: visible;}
 	.for-mobile {display: none;}
 }
+
+
 
 </style>
 
@@ -35,22 +44,25 @@ header nav .navigation label {margin: 0; padding: 0;font-size: .9em;}
 
 <header> <!--consider putting this back into a grid-->
 	<nav class="has-enuff-accordions">
-        <ul class="navigation enuff-accordions-group">
-            <li>
+        <ul class="navigation enuff-accordions-group row">
+            <li class="col-xs-12 col-sm-4">
 	            <input id="testRadio1" name="testRadio" type="radio" /> 
 	            <label for="testRadio1">Pitchers</label>
 	            <div class="enuff-accordions-content">
-	                <p>Clayton Kershaw, Jon Lester</p>
+	                <ul class="navigation-nested">
+	                	<li>Roger Clemens</li>
+	                	<li>Clayton Kershaw</li>
+	                </ul>
 	            </div>
             </li>
-            <li>
+            <li class="col-xs-12 col-sm-4"> 
 	            <input id="testRadio2" name="testRadio" type="radio" />
 	            <label for="testRadio2">Batters</label>
 	            <div class="enuff-accordions-content">
 	                <p>Jose Canseco, Barry Bonds</p>
 	            </div>
             </li>
-            <li>
+            <li class="col-xs-12 col-sm-4">
 	            <input id="testRadio3" name="testRadio" type="radio" /> 
 	            <label for="testRadio3">Managers</label>
 	            <div class="enuff-accordions-content">
