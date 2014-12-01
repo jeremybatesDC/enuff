@@ -8,17 +8,6 @@ article {}
 .enuff-css article {padding-bottom: 5em; border-bottom: 1px solid #999;}
 
 
-header {
-  width: 5em;
-  background: #ccc;
-  position: fixed;
-  left: -4em;
-}
-
-input:checked + header {
-  left:0;
-}
-
 
 section{}
 aside {}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html class="no-js" id="jBForms">
+    <head>
+        <meta charset="utf-8" />
+        <title>enuff</title>
+        <meta name="description" content="">
+       	<link rel="stylesheet" href="enuffSafariFix.css">
+    </head>
+
+<body class="enuff-css">
+    
+<style>
+body {margin: 0;padding:0;}
+header {width: 5em;background: #ccc;margin-left: -5em;}	
+input:checked + header {margin-left: 0;}
+.ghost {display: none;}
+label {-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+header nav .navigation {margin: 0;padding:0;}
+header nav .navigation label {margin: 0; padding: 0;font-size: .9em;}
+
+@media all and (min-width: 36em)
+{
+	header {
+		width: 100%;
+		margin-left: 0;
+	}
+	.for-mobile {display: none;}
+}
+
+</style>
+
+<label for="navigationToggle" class="for-mobile">hamburger</label>
+<input class="ghost for-mobile" id="navigationToggle" type="checkbox"/>
+
+<header> <!--consider putting this back into a grid-->
+	<nav class="has-enuff-accordions">
+        <ul class="navigation enuff-accordions-group">
+            <li>
+	            <input id="testRadio1" name="testRadio" type="radio" /> 
+	            <label for="testRadio1">Pitchers</label>
+	            <div class="enuff-accordions-content">
+	                <p>Clayton Kershaw, Jon Lester</p>
+	            </div>
+            </li>
+            <li>
+	            <input id="testRadio2" name="testRadio" type="radio" />
+	            <label for="testRadio2">Batters</label>
+	            <div class="enuff-accordions-content">
+	                <p>Jose Canseco, Barry Bonds</p>
+	            </div>
+            </li>
+            <li>
+	            <input id="testRadio3" name="testRadio" type="radio" /> 
+	            <label for="testRadio3">Managers</label>
+	            <div class="enuff-accordions-content">
+	                <p>Matt Williams, Buck Showalter</p>
+	            </div> 
+            </li>
+        </ul>
+    </nav>
+</header>
+
+</body>
+
+
+</html>
