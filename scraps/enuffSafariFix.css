@@ -300,17 +300,17 @@ background: #f0f0f0;
   transition: .5s opacity ease;
 }
 /* add as many as needed*/
-.has-enuff-accordions input:first-of-type:checked ~ div:first-of-type,
-.has-enuff-accordions input:nth-of-type(2):checked ~ div:nth-of-type(2),
-.has-enuff-accordions input:nth-of-type(3):checked ~ div:nth-of-type(3) {
+.has-enuff-accordions input:first-of-type:checked ~ .enuff-accordions-content:first-of-type,
+.has-enuff-accordions input:nth-of-type(2):checked ~ .enuff-accordions-content:nth-of-type(2),
+.has-enuff-accordions input:nth-of-type(3):checked ~ .enuff-accordions-content:nth-of-type(3) {
   font-size: 1em;
   line-height: 1.5em;
   opacity: 1;
   }
 
-.has-enuff-accordions input:first-child:checked ~ div:first-child,
-.has-enuff-accordions input:nth-child(2):checked ~ div:nth-child(2),
-.has-enuff-accordions input:nth-child(3):checked ~ div:nth-child(3) {
+.has-enuff-accordions input:first-child:checked ~ .enuff-accordions-content:first-child,
+.has-enuff-accordions input:nth-child(2):checked ~ .enuff-accordions-content:nth-child(2),
+.has-enuff-accordions input:nth-child(3):checked ~ .enuff-accordions-content:nth-child(3) {
   font-size: 1em;
   line-height: 1.5em;
   opacity: 1;
