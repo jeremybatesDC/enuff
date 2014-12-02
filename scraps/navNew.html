@@ -14,7 +14,7 @@
 <body class="enuff-css">
     
 <style>
-header {position: fixed: top: 0;width: 5em;height: 100%;background: #ccc;margin-left: -5em;}	
+header {position: fixed: top: 0;width: 7.5em;height: 100%;background: #ccc;margin-left: -7.5em;}	
 input:checked + header {margin-left: 0;}
 header nav input {height: 0; display: none;}
 .ghost {display: none;}
@@ -24,23 +24,30 @@ header nav ul.navigation {margin: 0;padding:0; background: transparent;}
 header nav ul.navigation li {margin: 0;padding: 0;}
 header nav ul.navigation-nested {margin-top: 1em; background: transparent;}
 .navigation fieldset {}
-.navigation label {margin: 0; padding: 0;background: transparent;text-transform: none;font-size: 1em;}
+.navigation input:checked + label {color: #000;}
+.navigation label {margin: 0; padding: 0;background: transparent;font-size: .8em;}
 .navigation label:after{
 	content: "v";
 	float: right;
+	padding-right: 1em;
 }
+
+.navigation .reset-radios {display: none;}
+
+.navigation input:checked ~ .reset-radios {display: block;position: relative;top:-1em;margin-bottom: -1em;}
+
+.navigation input:checked ~ .reset-radios label {display: block;}
 
 .navigation .reset-radios input + label:after, .navigation .reset-radios input:checked + label:after {
 	content: none;
 	float: none;
 }
 
-.navigation input:checked + label:after {
-	content: "^";
-}
+.navigation input:checked + label:after {content: "^";}
 
+ul.nav-dropdown{display: none;margin: .5em 0;font-size: .75em;}
+ul.nav-dropdown li {line-height: 1.25em;}
 
-.nav-dropdown{display: none;}
 .nav-menu-item input:checked ~ .nav-dropdown {display: block;}
 
 @media all and (min-width: 48em)
@@ -65,44 +72,50 @@ header nav ul.navigation-nested {margin-top: 1em; background: transparent;}
 <header><!--the positioning is off in chrome and firefox, which tells me a double-adjacent selector is being used. NOPE, but the nth-of-types are screwy-->
 	<nav class="">
         <ul class="navigation row">
-            <li class="col-xs-12 col-md-4 nav-menu-item">
+
+        	<li class="col-xs-12 col-md-3 nav-menu-item">
+        	</li>
+            <li class="col-xs-12 col-md-3 nav-menu-item">
 	            
 	            <input id="testRadio1" name="testRadio" type="radio" /> 
-	            <label for="testRadio1">P</label>
+	            <label for="testRadio1">Pitchers</label>
+	            <fieldset class="reset-radios">
+		            <input id="testRadioGhost1" name="testRadio" type="radio" /> 
+		            <label for="testRadioGhost1">&nbsp;</label>
+	            </fieldset>
 	            <ul class="nav-dropdown">
 	                	<li>Roger Clemens</li>
 	                	<li>Clayton Kershaw</li>
 	            </ul>
-	            <fieldset class="reset-radios">
-		            <input id="testRadioGhost1" name="testRadio" type="radio" /> 
-		            <label for="testRadioGhost1">^</label>
-	            </fieldset>
+	            
             </li>
-            <li class="col-xs-12 col-md-4 nav-menu-item">
+            <li class="col-xs-12 col-md-3 nav-menu-item">
 	            
 	            <input id="testRadio2" name="testRadio" type="radio" /> 
-	            <label for="testRadio2">OF</label>
+	            <label for="testRadio2">Outfielders</label>
+	            <fieldset class="reset-radios">
+		            <input id="testRadioGhost1" name="testRadio" type="radio" /> 
+		            <label for="testRadioGhost1">&nbsp;</label>
+	            </fieldset>
 	            <ul class="nav-dropdown">
 	                	<li>Bryce Harper</li>
 	                	<li>Jayson Werth</li>
 	            </ul>
-	            <fieldset class="reset-radios">
-		            <input id="testRadioGhost1" name="testRadio" type="radio" /> 
-		            <label for="testRadioGhost1">^</label>
-	            </fieldset>
+	            
             </li>
-            <li class="col-xs-12 col-md-4 nav-menu-item">
+            <li class="col-xs-12 col-md-3 nav-menu-item">
 	            
 	            <input id="testRadio3" name="testRadio" type="radio" /> 
-	            <label for="testRadio3">I</label>
+	            <label for="testRadio3">Infielders</label>
+	            <fieldset class="reset-radios">
+		            <input id="testRadioGhost1" name="testRadio" type="radio" /> 
+		            <label for="testRadioGhost1">&nbsp;</label>
+	            </fieldset>
 	            <ul class="nav-dropdown">
 	                	<li>Ian Desmond</li>
 	                	<li>Ryan Zimmerman</li>
 	            </ul>
-	            <fieldset class="reset-radios">
-		            <input id="testRadioGhost1" name="testRadio" type="radio" /> 
-		            <label for="testRadioGhost1">^</label>
-	            </fieldset>
+	            
             </li>
         </ul>
     </nav>
