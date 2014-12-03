@@ -14,38 +14,61 @@
 <body class="enuff-css">
     
 <style>
-header {position: fixed: top: 0;width: 7.5em;height: 100%;background: #ccc;margin-left: -7.5em;}	
+/* need the padding or line-height of the label to dictate non-mobile top bar height*/
+header {position: fixed; top: 0;width: 7.5em;height: 100%;background: #ccc;margin-left: -7.5em;}
+.hamburger-icon{
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	width: 2rem; 
+	height: 2rem; 
+	background: url(../img/iconmonstr-menu-icon.svg) no-repeat center;
+	background-size: 100%;
+	z-index: 1;
+}
+
 input:checked + header {margin-left: 0;}
 header nav input {height: 0; display: none;}
 .ghost {display: none;}
 label {-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 
-header nav ul.navigation {margin: 0;padding:0; background: transparent;}
+header nav ul.navigation {margin: 0;padding:3em 0 0 0; background: transparent;}
+/* this is just a reset here -- i'll apply padding more specifically*/
 header nav ul.navigation li {margin: 0;padding: 0;}
+header nav ul.navigation li.nav-menu-item {margin-bottom: 1em;}
+header nav ul.navigation li.nav-menu-item label:first-of-type{padding-top: .5em; padding-bottom: .5em;}
+
 header nav ul.navigation-nested {margin-top: 1em; background: transparent;}
-.navigation fieldset {}
-.navigation input:checked + label {color: #000;}
-.navigation label {margin: 0; padding: 0;background: transparent;font-size: .8em;}
-.navigation label:after{
+ul.navigation fieldset {}
+ul.navigation input:checked + label {color: #000;}
+ul.navigation label {margin: 0; padding: 0;background: transparent;font-size: .8em;}
+ul.navigation label:after{
 	content: "v";
 	float: right;
 	padding-right: 1em;
 }
 
-.navigation .reset-radios {display: none;}
+ul.navigation .reset-radios {display: none;}
+/*this will take some monkeying around...*/
+ul.navigation input:checked ~ .reset-radios {
+	display: block;
+	position: relative;
+	top:-1.5em;
+	margin-bottom: -1.5em;
+	line-height: 1;
+}
 
-.navigation input:checked ~ .reset-radios {display: block;position: relative;top:-1em;margin-bottom: -1em;}
+ul.navigation input:checked ~ .reset-radios label {display: block;}
 
-.navigation input:checked ~ .reset-radios label {display: block;}
-
-.navigation .reset-radios input + label:after, .navigation .reset-radios input:checked + label:after {
+ul.navigation .reset-radios input + label:after, .navigation .reset-radios input:checked + label:after {
 	content: none;
 	float: none;
 }
 
-.navigation input:checked + label:after {content: "^";}
+ul.navigation input:checked + label:after {content: "^";}
 
-ul.nav-dropdown{display: none;margin: .5em 0;font-size: .75em;}
+ul.nav-dropdown{display: none;margin: 0;font-size: .75em;}
 ul.nav-dropdown li {line-height: 1.25em;}
 
 .nav-menu-item input:checked ~ .nav-dropdown {display: block;}
@@ -54,23 +77,26 @@ ul.nav-dropdown li {line-height: 1.25em;}
 {
 	header {
 		width: 100%;
+		/*height: auto;*/
 		height: 2em;
 		margin-left: 0;
 	}
 
-	.navigation {}
+	header nav ul.navigation {padding-top: 0;}
+	header nav ul.navigation li.nav-menu-item{margin-bottom: 0;}
 	.for-mobile {display: none;}
+	ul.navigation label:after{padding-right: 50%;}
 }
 
 
 
 </style>
 
-<label for="navigationToggle" class="for-mobile">hamburger</label>
+<label for="navigationToggle" class="hamburger-icon for-mobile">&nbsp;</label>
 <input class="ghost for-mobile" id="navigationToggle" type="checkbox"/>
 
 <header><!--the positioning is off in chrome and firefox, which tells me a double-adjacent selector is being used. NOPE, but the nth-of-types are screwy-->
-	<nav class="">
+	<nav>
         <ul class="navigation row">
 
         	<li class="col-xs-12 col-md-3 nav-menu-item">
