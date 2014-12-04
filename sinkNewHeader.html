@@ -22,95 +22,6 @@
 
 <body class="enuff-css">
     
-    <style>
-/* need the padding or line-height of the label to dictate non-mobile top bar height*/
-.hamburger-icon{
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    width: 2rem; 
-    height: 2rem; 
-    background: url(img/iconmonstr-menu-icon.svg) no-repeat center;
-    background-size: 100%;
-    z-index: 10;
-}
-
-input:checked + header {left: 0;}
-header nav input {height: 0; display: none;}
-.ghost {display: none;}
-label {-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
-
-header nav ul.navigation {margin: 0;padding:3em 0 0 0; background: transparent;}
-/* this is just a reset here -- i'll apply padding more specifically*/
-header nav ul.navigation li {margin: 0;padding: 0;}
-header nav ul.navigation li.nav-menu-item {margin-bottom: 1em;}
-header nav ul.navigation li.nav-menu-item label:first-of-type{padding-top: .5em; padding-bottom: .5em;}
-
-header nav ul.navigation-nested {margin-top: 1em; background: transparent;}
-ul.navigation fieldset {}
-ul.navigation input:checked + label {color: #000;}
-ul.navigation label {margin: 0; padding: 0;background: transparent;font-size: .8em;}
-ul.navigation label:after{
-    content: "v";
-    float: right;
-    padding-right: 1em;
-}
-
-ul.navigation .reset-radios {display: none;}
-/*this will take some monkeying around...*/
-ul.navigation input:checked ~ .reset-radios {
-    display: block;
-    position: relative;
-    top:-1.5em;
-    margin-bottom: -1.5em;
-    line-height: 1;
-}
-
-ul.navigation input:checked ~ .reset-radios label {display: block;}
-
-ul.navigation .reset-radios input + label:after, .navigation .reset-radios input:checked + label:after {
-    content: none;
-    float: none;
-}
-
-ul.navigation input:checked + label:after {content: "^";}
-
-ul.nav-dropdown{display: none;margin: 0;font-size: .75em;}
-ul.nav-dropdown li {line-height: 1.25em;}
-.nav-menu-item input:checked ~ .nav-dropdown {display: block;}
-
-ul.nav-dropdown li ul {display: none;}
-ul.nav-dropdown li input:checked ~ ul {display: block;}
-
-ul.navigation li input:checked ~ .reset-radios {
-    display: block;
-    position: relative;
-    top:-1.5em;
-    margin-bottom: -1.5em;
-    line-height: 1;
-}
-
-ul.navigation li input:checked ~ .reset-radios label {display: block;}
-
-
-
-
-@media all and (min-width: 36em)
-{
-    header {width: 100%;height: 2em;margin-left: 0;}
-    header nav ul.navigation {padding-top: 0;}
-    header nav ul.navigation li.nav-menu-item{margin-bottom: 0;}
-    .for-mobile {display: none;}
-    ul.navigation label:after{padding-right: 33%;}
-}
-
-</style>
-
-    <!--must be a free-range-input-->
-
-    <!--<input class="hamburger-control" type="checkbox" id="hamburgerToggle"/>
-    <label class="icon-hamburger" for="hamburgerToggle"></label>-->
     <label for="navigationToggle" class="hamburger-icon for-mobile">&nbsp;</label>
     <input class="ghost for-mobile" id="navigationToggle" type="checkbox"/>
 
@@ -119,7 +30,7 @@ ul.navigation li input:checked ~ .reset-radios label {display: block;}
         <nav>
         <ul class="navigation row">
 
-            <li class="col-xs-12 col-sm-3 nav-menu-item">
+            <li class="col-xs-12 col-sm-1 nav-menu-item">
             </li>
             <li class="col-xs-12 col-sm-3 nav-menu-item">
                 
@@ -237,137 +148,31 @@ ul.navigation li input:checked ~ .reset-radios label {display: block;}
 
                     </li>
                 </ul>
-                
+            </li>
+            <li class="col-xs-12 col-sm-1 nav-menu-item">
+                <figure class="social-icon twitter-icon">
+                    <svg x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
+                        <path id="twitter-icon" d="M462,128.223c-15.158,6.724-31.449,11.269-48.547,13.31c17.449-10.461,30.854-27.025,37.164-46.764
+                            c-16.333,9.687-34.422,16.721-53.676,20.511c-15.418-16.428-37.386-26.691-61.698-26.691c-54.56,0-94.668,50.916-82.337,103.787
+                            c-70.25-3.524-132.534-37.177-174.223-88.314c-22.142,37.983-11.485,87.691,26.158,112.85c-13.854-0.438-26.891-4.241-38.285-10.574
+                            c-0.917,39.162,27.146,75.781,67.795,83.949c-11.896,3.237-24.926,3.978-38.17,1.447c10.754,33.58,41.972,58.018,78.96,58.699
+                            C139.604,378.282,94.846,390.721,50,385.436c37.406,23.982,81.837,37.977,129.571,37.977c156.932,0,245.595-132.551,240.251-251.435
+                            C436.339,160.061,450.668,145.174,462,128.223z"/>
+                    </svg>
+                </figure>
+            </li>
+            <li class="col-xs-12 col-sm-1 nav-menu-item">
+                <figure class="social-icon facebook-icon">
+                    <svg x="0px" y="0px" viewBox="128 128 256 256" xml:space="preserve">
+                    <path id="facebook-icon" d="M230.033,220.346h-21.572v35.213h21.572V359h41.482V255.119h28.941l3.081-34.773h-32.022
+                        c0,0,0-12.985,0-19.807c0-8.199,1.651-11.445,9.573-11.445c6.384,0,22.448,0,22.448,0V153c0,0-23.663,0-28.721,0
+                        c-30.867,0-44.783,13.589-44.783,39.615C230.033,215.283,230.033,220.346,230.033,220.346z"/>
+                    </svg>
+                </figure>
             </li>
         </ul>
     </nav>
-        <!--<nav class="header-inner">
-            <ul class="row navigation">
-                <li class="col-xs-12 col-sm-1">
-                    
-                </li>
-                
-                <li class="col-xs-12 col-sm-3 has-enuff-accordions">
-                    <fieldset class="enuff-accordions-group">
-                        <input id="navCheckbox1" type="checkbox" /> 
-                        <label for="navCheckbox1">CSS</label>
-                        <div class="enuff-accordions-content">
-                            <ul class="nav-dropdown">
-                                <li class="has-enuff-accordions">
-                                    <fieldset class="enuff-accordions-group">
-                                        <input id="navCheckbox0" type="checkbox" /> 
-                                        <label for="navCheckbox0">Componenet</label>
-                                        <div class="enuff-accordions-content">
-                                            <ul class="nav-dropdown nested">
-                                                <li>Shpongle</li>
-                                                <li>Glitch Mob</li>
-                                            </ul>
-                                        </div>
-                                    </fieldset>
-                                </li>
-                                <li class="has-enuff-accordions">
-                                    <fieldset class="enuff-accordions-group">
-                                        <input id="navCheckbox00" type="checkbox" /> 
-                                        <label for="navCheckbox00">Component</label>
-                                        <div class="enuff-accordions-content">
-                                            <ul class="nav-dropdown nested">
-                                                <li>Shpongle</li>
-                                                <li>Glitch Mob</li>
-                                            </ul>
-                                        </div>
-                                    </fieldset>
-                                </li>
-                            </ul>
-                        </div>
-                    </fieldset>
-                </li>
-                <li class="col-xs-12 col-sm-3 has-enuff-accordions">
-                    <fieldset class="enuff-accordions-group">
-                        <input id="navCheckbox2" type="checkbox" /> 
-                        <label for="navCheckbox2">JS</label>
-                        <div class="enuff-accordions-content">
-                            <ul class="nav-dropdown">
-                                <li class="has-enuff-accordions">
-                                    <fieldset class="enuff-accordions-group">
-                                        <input id="navCheckboxA" type="checkbox" /> 
-                                        <label for="navCheckboxA">Componenet</label>
-                                        <div class="enuff-accordions-content">
-                                            <ul class="nav-dropdown nested">
-                                                <li>Shpongle</li>
-                                                <li>Glitch Mob</li>
-                                            </ul>
-                                        </div>
-                                    </fieldset>
-                                </li>
-                                <li class="has-enuff-accordions">
-                                    <fieldset class="enuff-accordions-group">
-                                        <input id="navCheckboxB" type="checkbox" /> 
-                                        <label for="navCheckboxB">Component</label>
-                                        <div class="enuff-accordions-content">
-                                            <ul class="nav-dropdown nested">
-                                                <li>Shpongle</li>
-                                                <li>Glitch Mob</li>
-                                            </ul>
-                                        </div>
-                                    </fieldset>
-                                </li>
-                            </ul>
-                            
-                        </div>
-                    </fieldset>
-                </li>
-                  <li class="col-xs-12 col-sm-1">
-                    
-                </li>
-                <li class="col-xs-12 col-sm-1">
-                    <figure class="social-icon twitter-icon">
-                        <svg x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
-                            <path id="twitter-icon" d="M462,128.223c-15.158,6.724-31.449,11.269-48.547,13.31c17.449-10.461,30.854-27.025,37.164-46.764
-                                c-16.333,9.687-34.422,16.721-53.676,20.511c-15.418-16.428-37.386-26.691-61.698-26.691c-54.56,0-94.668,50.916-82.337,103.787
-                                c-70.25-3.524-132.534-37.177-174.223-88.314c-22.142,37.983-11.485,87.691,26.158,112.85c-13.854-0.438-26.891-4.241-38.285-10.574
-                                c-0.917,39.162,27.146,75.781,67.795,83.949c-11.896,3.237-24.926,3.978-38.17,1.447c10.754,33.58,41.972,58.018,78.96,58.699
-                                C139.604,378.282,94.846,390.721,50,385.436c37.406,23.982,81.837,37.977,129.571,37.977c156.932,0,245.595-132.551,240.251-251.435
-                                C436.339,160.061,450.668,145.174,462,128.223z"/>
-                        </svg>
-                    </figure>
-                </li>
-                 <li class="col-xs-12 col-sm-1">
-                    <figure class="social-icon facebook-icon">
-                        <svg x="0px" y="0px" viewBox="128 128 256 256" xml:space="preserve">
-                        <path id="facebook-icon" d="M230.033,220.346h-21.572v35.213h21.572V359h41.482V255.119h28.941l3.081-34.773h-32.022
-                            c0,0,0-12.985,0-19.807c0-8.199,1.651-11.445,9.573-11.445c6.384,0,22.448,0,22.448,0V153c0,0-23.663,0-28.721,0
-                            c-30.867,0-44.783,13.589-44.783,39.615C230.033,215.283,230.033,220.346,230.033,220.346z"/>
-                        </svg>
-                    </figure>
-                    
-                </li>
-                <li class="col-xs-12 col-sm-1">
-                    <figure class="social-icon">
-                        <svg x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
-                            <path id="linkedin-icon" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
-                                C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
-                                 M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
-                                c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
-                                s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
-                        </svg>
-                    </figure>
-                </li>
-                <li class="col-xs-12 col-sm-1">
-                    <figure class="social-icon instagram-icon">
-                        <svg x="0px" y="0px" viewBox="128 128 256 256" xml:space="preserve">
-                            <path id="instagram-6-icon" d="M335.237,240.146h-17.935c1.306,5.073,2.077,10.372,2.077,15.85c0,35.011-28.376,63.386-63.38,63.386
-                                c-35.005,0-63.382-28.375-63.382-63.386c0-5.478,0.774-10.778,2.081-15.85h-17.935v87.159c0,4.371,3.548,7.916,7.93,7.916h142.61
-                                c4.383,0,7.932-3.545,7.932-7.916L335.237,240.146L335.237,240.146z M335.237,184.689c0-4.375-3.55-7.923-7.933-7.923h-23.763
-                                c-4.378,0-7.923,3.548-7.923,7.923v23.772c0,4.372,3.545,7.923,7.923,7.923h23.763c4.383,0,7.933-3.551,7.933-7.923V184.689z
-                                 M256,216.385c-21.882,0-39.617,17.731-39.617,39.611c0,21.878,17.736,39.62,39.617,39.62c21.879,0,39.618-17.742,39.618-39.62
-                                C295.618,234.115,277.879,216.385,256,216.385 M335.237,359H176.765C163.642,359,153,348.355,153,335.221V176.766
-                                C153,163.639,163.642,153,176.765,153h158.472c13.125,0,23.763,10.639,23.763,23.766v158.455C359,348.355,348.362,359,335.237,359"
-                                />
-                        </svg>
-                    </figure>
-                </li>
-            </ul>
-        </nav>-->
+        
     </header>
 
         <!-- Modal One -->
@@ -413,8 +218,7 @@ ul.navigation li input:checked ~ .reset-radios label {display: block;}
 <div id="!" class="top-section">
 
 
-<!--<svg class="enuff-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 663.119 367.481" enable-background="new 0 0 663.119 367.481"
-     xml:space="preserve">-->
+
 <figure class="has-logo">
 <svg class="enuff-logo" viewBox="0 0 663.119 367.481" xml:space="preserve">
 <g>
