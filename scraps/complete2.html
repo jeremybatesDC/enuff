@@ -12,6 +12,10 @@
 eventually need to rip them out of the js file.
 */
 #completelyInputHolder[style] {border: 1px solid #000;height: 4em;}
+.tag-span {display: inline-block;border: 1px solid #000;padding: .0 .5em; margin: .25em .25em;}
+.tag-span:hover{cursor: pointer;}
+
+
 
 </style>
 <article>
@@ -34,12 +38,17 @@ eventually need to rip them out of the js file.
 		} catch (e) {
 			resp = 'error:<i>'+e+'</i>';
 		}
-		var divIn = document.createElement('span');
-		divIn.innerHTML = '-'+text + ' ';
-		main.appendChild(divIn);
+		var tagToAdd = document.createElement('span');
+		tagToAdd.addEventListener("click",deleteTag,false);
+
+
+		tagToAdd.innerHTML = '-'+text;
+		tagToAdd.setAttribute("class","tag-span");
+		main.appendChild(tagToAdd);
 		pv.setText('');
 		main.appendChild(pv.wrapper);
 		pv.wrapper.scrollIntoView();
+		//dev tools says the next line is bad
 		setTimeout(function() { pv.input.onclick() },0); // for IE
 	}
 	
@@ -90,8 +99,14 @@ eventually need to rip them out of the js file.
 		pv.startFrom = text.lastIndexOf('.')+1;
 		pv.repaint();
 	};
-	
+	//dev tools says the next line is bad
 	setTimeout(function() { pv.input.onclick() },0);
+
+	function deleteTag(theClicking){
+		//really it should generate a popOver to confirm
+		theClicking.target.remove();
+	}
+
 	</script>
 </body>
 </html>
