@@ -3,22 +3,27 @@
 <html lang="en">
 <head>
 <title>web.browser.console - complete.ly</title>
-<link rel="stylesheet" href="../css/enuff.css">
 <script src='../js//complete.ly.1.0.1.edited.js'></script>
 </head>
 <body>
-    
-    <fieldset id="completelyInputHolder">
+
+<style>
+/* there are so many damn configurable inline styles that i have to override them
+eventually need to rip them out of the js file.
+*/
+#completelyInputHolder[style] {border: 1px solid #000;height: 4em;}
+
+</style>
+<article>
+    <h4>your tags</h4>
+    <div id="completelyInputHolder">*</div>
     	
-    </fieldset>
-	<div id="main">
-		<div id="wrap"></div>
-	</div>
-	
+
+    
+		<div id="inputOptions"></div>
+	</article>
 	<script>
-	var pv = completely(document.getElementById('wrap'),{
-		promptInnerHTML : '&gt;', 
-	});
+	var pv = completely(document.getElementById('inputOptions'));
 	
 	var main = document.getElementById('completelyInputHolder');
 	
@@ -30,12 +35,12 @@
 			resp = 'error:<i>'+e+'</i>';
 		}
 		var divIn = document.createElement('span');
-		divIn.innerHTML = '&gt;'+text;
+		divIn.innerHTML = '-'+text + ' ';
 		main.appendChild(divIn);
 		pv.setText('');
 		main.appendChild(pv.wrapper);
 		pv.wrapper.scrollIntoView();
-		setTimeout(function() { pv.input.focus() },0); // for IE
+		setTimeout(function() { pv.input.onclick() },0); // for IE
 	}
 	
 	function extractTextForAutocompletion(code) {
@@ -66,30 +71,27 @@
 		
 	};
 	
-	pv.options = [];
-    for (var i in window) { pv.options.push(''+i); }
+	pv.options = ['coffee','cocoa','apple'];
 	pv.options.sort();
 	pv.onChange = function (text) {
 		if (text.length == 0) {
-			pv.options = [];
 			pv.repaint();
 			return; 
 		}
 		var v = extractTextForAutocompletion(text);
-		if (v.v1 == '') v.v1 = 'window';
+		
 		try {
 		   oj = eval(v.v1);
 		} catch (ex) {
 		   oj = null;
 		}
-		pv.options =[];
 		for (var i in oj) { pv.options.push(''+i); }
 		pv.options.sort();
 		pv.startFrom = text.lastIndexOf('.')+1;
 		pv.repaint();
 	};
 	
-	setTimeout(function() { pv.input.focus() },0);
+	setTimeout(function() { pv.input.onclick() },0);
 	</script>
 </body>
 </html>

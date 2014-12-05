@@ -43,7 +43,8 @@ function completely(container, config) {
     txtInput.style.backgroundColor ='transparent';
     txtInput.style.verticalAlign = 'top';
     txtInput.style.position = 'relative';
-    
+    //there is a bug w/ hint text showing after all letters have been backed up
+    txtInput.setAttribute("placeholder","start typing");
     var wrapper = document.createElement('div');
     wrapper.style.position = 'relative';
     wrapper.style.outline = '0';
