@@ -16,11 +16,16 @@ Putting these in REM should help keep things better encapsulated and more intuit
 .vertical-accordions {
   border: 1px solid #000;
   height: 10em;
-  max-width: 60rem;
+  /* don't want to have to add tis up correctly -- i want to use calc for width of content*/
+  width: 20rem;
   overflow: hidden;
 }
 
 
+.vertical-accord-innerWrap {
+position: relative;
+left: -4rem;
+}
 
 .vertical-accordions label {
   /* i don't understand why this is not working*/
@@ -43,10 +48,6 @@ Putting these in REM should help keep things better encapsulated and more intuit
 
 .vertical-accordions input:checked + label {background: red; border-bottom: none;  margin-right: 0;}
 
-
- 
-
-
 .has-enuff-accordions .vertical-accordions div.vert-accord {
   display: inline-block;
 }
@@ -54,11 +55,12 @@ Putting these in REM should help keep things better encapsulated and more intuit
 
 .has-enuff-accordions .vertical-accordions .enuff-accordions-content {
   display: none;
+  /*can't we do a calc 100% - 6rem*/
   width: 10rem;
   /*the reason here for the hieght is that firefox is displaying the content 1px differently than webkit
   so, if i make the height slightly larger than the container, which hides the overflow, it'll look right
   */
-  height: 101%;
+  height: 102%;
   background: red;
   margin-left: -4.25rem;
   margin-right: -4.25rem;
@@ -89,6 +91,7 @@ Putting these in REM should help keep things better encapsulated and more intuit
   <p>Can't use line-height for transitions on vertical accords. Transitioning other properties resulted in some jankiness. Display none is fine for now. Would really like the width to transition smoothly, however</p>
             <section class="has-enuff-accordions">
               <div class="vertical-accordions">
+                <div class="vertical-accord-innerWrap">
                   <input id="testRadio_vert1" name="testRadio_v0" type="radio"/> 
                   <label for="testRadio_vert1">Pitchers</label>
                   <div class="enuff-accordions-content">
@@ -106,6 +109,6 @@ Putting these in REM should help keep things better encapsulated and more intuit
                   <div class="enuff-accordions-content">
                       Matt Williams, Buck Showalter
                   </div>
-                <!-- </div> -->
+                </div>
               </div>
           </section>
