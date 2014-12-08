@@ -13,9 +13,12 @@ html{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: bo
 /* vertical accordions are more fragile because of the transform. 
 Putting these in REM should help keep things better encapsulated and more intuitive*/
 
-.has-enuff-accordions .vertical-accordions {}
+.has-enuff-accordions .vertical-accordions {
+  height: 10rem;
+  overflow: hidden;
+}
 
-.has-enuff-accordions .vertical-accordions .enuff-accordions-content p {display: inline-block;margin: 0;padding: 0;}
+.has-enuff-accordions .vertical-accordions .enuff-accordions-content p {display: inline-block;margin: 0;padding: 0;height: 5rem;}
 
 .vertical-accordions label {
   display: inline-block;  
@@ -29,6 +32,7 @@ Putting these in REM should help keep things better encapsulated and more intuit
   transform: rotate(-90deg);
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
+  margin-top:5rem;  
   /* transform origin leads to some problems*/
   
   /*using a negative margin-right in this scenario is problematic.
@@ -38,14 +42,17 @@ Putting these in REM should help keep things better encapsulated and more intuit
   
 .vertical-accord-innerWrap {}
 
-.vertical-accordions input:checked + label {color: red; margin-right: 0; }
+.vertical-accordions input:checked + label {color: red; margin-right: 0;}
+
 
 .has-enuff-accordions .vertical-accordions .enuff-accordions-content {
   display: inline-block;
   visibility: hidden;
   width: 0;
   vertical-align: top;
-  transition: 1s width ease;
+  /* transitioning opacity gives a weird result in chrome*/
+  color:transparent;
+  transition: 1s width ease-out, 2.5s color ease-in;
 }
 
 
@@ -54,7 +61,10 @@ Putting these in REM should help keep things better encapsulated and more intuit
 .has-enuff-accordions input:nth-of-type(3):checked ~ .enuff-accordions-content:nth-of-type(3) {
   visibility: visible;
   width: 10rem;
+  color: #000;
   }
+
+
 
 </style>        
 
