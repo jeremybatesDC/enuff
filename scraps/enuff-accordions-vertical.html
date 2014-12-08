@@ -7,83 +7,54 @@
 html{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: sans-serif;}
 *, *:before, *:after {-moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit;}
 
-
 .has-enuff-accordions input {display: none;} /* refactor above so this isn't necessary -- must encapsulate enuff-labels */
-
+/*all of the problems have to do with the rotated labels. There MUST be a better way to handle them */
 
 /* vertical accordions are more fragile because of the transform. 
 Putting these in REM should help keep things better encapsulated and more intuitive*/
-.vertical-accordions {
-  border: 1px solid #000;
-  height: 10em;
-  /* don't want to have to add tis up correctly -- i want to use calc for width of content*/
-  width: 20rem;
-  overflow: hidden;
-}
 
+.has-enuff-accordions .vertical-accordions {}
 
-.vertical-accord-innerWrap {
-position: relative;
-left: -4rem;
-}
+.has-enuff-accordions .vertical-accordions .enuff-accordions-content p {display: inline-block;margin: 0;padding: 0;}
 
 .vertical-accordions label {
-  /* i don't understand why this is not working*/
-  display: inline-block;
-  width: 10rem;
-  height: 2rem;
+  display: inline-block;  
+  font-size: 2rem;
+  width:2rem;
+  overflow: visible;
+  /*if i give these an explicit width, i can align them left (or bottom really)*/
+  /*and, since it's the width that determines how far apart these are (they are rotated), this should work*/
+  text-transform: uppercase;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  -webkit-transform-origin: 50%;
-  -moz-transform-origin: 50%;
-  transform-origin: 50%;
-  font-size: 2rem;
-  text-transform: uppercase;
-  border: 1px solid #000;
-  /* below is the cause of much trouble*/
-  margin-top: 4rem;
-  margin-right: -8rem;
-  padding: 0; 
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  /* transform origin leads to some problems*/
+  
+  /*using a negative margin-right in this scenario is problematic.
+  There ends up being a difference in the margin between the content and the label in safari and chrome
+  */
 }
+  
+.vertical-accord-innerWrap {}
 
-.vertical-accordions input:checked + label {background: red; border-bottom: none;  margin-right: 0;}
-
-.has-enuff-accordions .vertical-accordions div.vert-accord {
-  display: inline-block;
-}
-
+.vertical-accordions input:checked + label {color: red; margin-right: 0; }
 
 .has-enuff-accordions .vertical-accordions .enuff-accordions-content {
-  display: none;
-  /*can't we do a calc 100% - 6rem*/
-  width: 10rem;
-  /*the reason here for the hieght is that firefox is displaying the content 1px differently than webkit
-  so, if i make the height slightly larger than the container, which hides the overflow, it'll look right
-  */
-  height: 102%;
-  background: red;
-  margin-left: -4.25rem;
-  margin-right: -4.25rem;
-  position: relative;
-  top: -4rem;
-  font-size: 1rem;
-  color: #000;
+  display: inline-block;
+  visibility: hidden;
+  width: 0;
+  vertical-align: top;
+  transition: 1s width ease;
 }
 
-/* safari prefers the significantly less-elegant way below  
-  there seem to be some odd niggles with how it handles chained adjascenet selectors */
-/*.vertical-accordions input:checked + label + .enuff-accordions-content {
- 
-}*/
 
 .has-enuff-accordions input:first-of-type:checked ~ .enuff-accordions-content:first-of-type,
 .has-enuff-accordions input:nth-of-type(2):checked ~ .enuff-accordions-content:nth-of-type(2),
 .has-enuff-accordions input:nth-of-type(3):checked ~ .enuff-accordions-content:nth-of-type(3) {
-  display: inline-block;
+  visibility: visible;
+  width: 10rem;
   }
-
-
-
 
 </style>        
 
@@ -95,20 +66,20 @@ left: -4rem;
                   <input id="testRadio_vert1" name="testRadio_v0" type="radio"/> 
                   <label for="testRadio_vert1">Pitchers</label>
                   <div class="enuff-accordions-content">
-                      Clayton Kershaw, Jon Lester
+                      <p>Clayton Kershaw and Jon Lester are lefties, but Kershaw is like twice as good. Seriously man. This is fragile as fuck. Long long long. Long long long long long long long very long</p>
                   </div>
                 
                   <input id="testRadio_vert2" name="testRadio_v0" type="radio"/>
                   <label for="testRadio_vert2">Batters</label>
                   <div class="enuff-accordions-content">
-                      Jose Canseco, Barry Bonds
+                      <p>Jose Canseco, Barry Bonds are probably aliens. Look into it. That might be correct. It at least has face validity. What is this gets really really long? It should cutoff, right? I think it does get cutoff</p>
                   </div>
                 
                   <input id="testRadio_03" name="testRadio_v0" type="radio"/> 
                   <label for="testRadio_03">Managers</label>
                   <div class="enuff-accordions-content">
-                      Matt Williams, Buck Showalter
+                      <p>Matt Williams and Buck Showalter are super-great managers. Williams won Manager of the Year in hsi frist season. Showalter is a seasoned hand. Both work in the DC area. Long long long</p>
                   </div>
                 </div>
-              </div>
+              </div><!--end vertical accordions-->
           </section>
