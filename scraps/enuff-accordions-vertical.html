@@ -14,11 +14,12 @@ html{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: bo
 Putting these in REM should help keep things better encapsulated and more intuitive*/
 
 .has-enuff-accordions .vertical-accordions {
-  height: 10rem;
+  /* make the height a clean multiple of the line-height -- hmmm, calculation is off*/
+  height: 12rem;
   overflow: hidden;
 }
 
-.has-enuff-accordions .vertical-accordions .enuff-accordions-content p {display: inline-block;margin: 0;padding: 0;height: 5rem;}
+.has-enuff-accordions .vertical-accordions .enuff-accordions-content p {display: inline-block;margin: 0;padding: 0;font-size: 1rem; line-height: 1.5rem;}
 
 .vertical-accordions label {
   display: inline-block;  
@@ -32,15 +33,19 @@ Putting these in REM should help keep things better encapsulated and more intuit
   transform: rotate(-90deg);
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
-  margin-top:5rem;  
+  margin-top:5.5rem;  
   /* transform origin leads to some problems*/
   
   /*using a negative margin-right in this scenario is problematic.
   There ends up being a difference in the margin between the content and the label in safari and chrome
   */
 }
+
+.has-enuff-accordions .vertical-accordions label:after {
+  content: "";
+} 
   
-.vertical-accord-innerWrap {}
+.vertical-accord-innerWrap {padding-top: 2rem;}
 
 .vertical-accordions input:checked + label {color: red; margin-right: 0;}
 
@@ -50,15 +55,16 @@ Putting these in REM should help keep things better encapsulated and more intuit
   visibility: hidden;
   width: 0;
   vertical-align: top;
+  margin-top: -2rem;
   /* transitioning opacity gives a weird result in chrome*/
   color:transparent;
   transition: .33s width ease-in, .5s color cubic-bezier(1,0,1,.01);
 }
 
 
-.has-enuff-accordions input:first-of-type:checked ~ .enuff-accordions-content:first-of-type,
-.has-enuff-accordions input:nth-of-type(2):checked ~ .enuff-accordions-content:nth-of-type(2),
-.has-enuff-accordions input:nth-of-type(3):checked ~ .enuff-accordions-content:nth-of-type(3) {
+.has-enuff-accordions .vertical-accordions input:first-of-type:checked ~ .enuff-accordions-content:first-of-type,
+.has-enuff-accordions .vertical-accordions input:nth-of-type(2):checked ~ .enuff-accordions-content:nth-of-type(2),
+.has-enuff-accordions .vertical-accordions input:nth-of-type(3):checked ~ .enuff-accordions-content:nth-of-type(3) {
   visibility: visible;
   width: 10rem;
   color: #000;
@@ -68,8 +74,10 @@ Putting these in REM should help keep things better encapsulated and more intuit
 
 </style>        
 
-  <h1>Vertical Accordions</h1>
+  <h4>Vertical Accordions</h4>
   <p>Can't use line-height for transitions on vertical accords. Transitioning other properties resulted in some jankiness. Display none is fine for now. Would really like the width to transition smoothly, however</p>
+
+  <hr>
             <section class="has-enuff-accordions">
               <div class="vertical-accordions">
                 <div class="vertical-accord-innerWrap">
@@ -93,3 +101,4 @@ Putting these in REM should help keep things better encapsulated and more intuit
                 </div>
               </div><!--end vertical accordions-->
           </section>
+<hr>
