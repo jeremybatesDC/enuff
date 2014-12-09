@@ -1,0 +1,63 @@
+<style>
+
+/*doing this in REMS since the vertical stuff is a bit hackier and more fragile*/
+.enuff-has-tabs.enuff-vertical-tabs label {
+    display: inline-block;
+    width: 5rem;
+    height: 2rem;
+    /*padding: .5em 1em;*/
+    position: relative;
+    text-align: left;
+}
+/*this is so hacky -- but i think i want to avoid absolute positioning...*/
+.enuff-has-tabs.enuff-vertical-tabs label:nth-of-type(2){left:-5rem;top:3rem}
+.enuff-has-tabs.enuff-vertical-tabs label:nth-of-type(3){left:-10rem;top:5rem;}
+.enuff-has-tabs.enuff-vertical-tabs input {display: none;}
+.enuff-has-tabs.enuff-vertical-tabs .enuff-tab-content {display: inline-block;width: calc(100% - 5rem);margin: -2rem 0 0 5rem;background: #f0f0f0;font-size: 0;line-height: 0;opacity:0;}
+
+/* the stuff is the same for horizontal and vertical*/
+.enuff-has-tabs input:first-of-type:checked ~ .enuff-tab-content:first-of-type,
+.enuff-has-tabs input:nth-of-type(2):checked ~ .enuff-tab-content:nth-of-type(2), 
+.enuff-has-tabs input:nth-of-type(3):checked ~ .enuff-tab-content:nth-of-type(3) {font-size: .8em;line-height: 1.5em; opacity: 1;}
+
+/* go nuts */
+.enuff-has-tabs p {opacity: 0;line-height: 0;font-size: 0;transition: 1s opacity ease;}
+.enuff-has-tabs input:first-of-type:checked ~ .enuff-tab-content:first-of-type p,
+.enuff-has-tabs input:nth-of-type(2):checked ~ .enuff-tab-content:nth-of-type(2) p,
+.enuff-has-tabs input:nth-of-type(3):checked ~ .enuff-tab-content:nth-of-type(3) p {
+  opacity: 1;line-height: 1.5;font-size: 1em;
+}
+
+.enuff-has-tabs input:first-of-type:checked ~ label:first-of-type,
+.enuff-has-tabs input:nth-of-type(2):checked ~ label:nth-of-type(2), 
+.enuff-has-tabs input:nth-of-type(3):checked ~ label:nth-of-type(3) {
+background: #f0f0f0;
+}
+
+
+</style>       
+        <p>Rizzle nizzle ma nizzle ut break it down bibendum molestie. Shizzlin dizzle vestibulum boom shackalack fo that's the shizzle. I'm in the shizzle cool we gonna chung magna. Yippiyo hizzle, nisl nizzle rizzle egestizzle, shit dolor vestibulizzle ligula, my shizz auctizzle justo dolor quizzle augue. Dope izzle stuff sit amet fo shizzle sagittizzle. Mofo tempizzle shiznit izzle owned. In rhoncus we gonna chung leo. Lorizzle ipsum dolizzle sit shut the shizzle up, yippiyo yippiyo gangsta. Phasellus nisi ligula, posuere sizzle bling bling, tellivizzle hizzle, tristique mattis, libero. Own yo' sempizzle faucibizzle diam. Ut nizzle black. Nunc sheezy rizzle a dizzle accumsan egestizzle. Quisque condimentum shit laorizzle nunc. Aenizzle , nisi quis varizzle shizzle my nizzle crocodizzle, lectizzle things tellivizzle shut the shizzle up, nizzle shut the shizzle up eros i saw beyonces tizzles and my pizzle went crizzle quis nisi. Vivamus own yo' quizzle, aliquizzle sheezy amet, ornare that's the shizzle, pulvinizzle own yo', felis.</p>
+        <p>Rizzle nizzle ma nizzle ut break it down bibendum molestie. Shizzlin dizzle vestibulum boom shackalack fo that's the shizzle. I'm in the shizzle cool we gonna chung magna. Yippiyo hizzle, nisl nizzle rizzle egestizzle, shit dolor vestibulizzle ligula, my shizz auctizzle justo dolor quizzle augue. Dope izzle stuff sit amet fo shizzle sagittizzle. Mofo tempizzle shiznit izzle owned. In rhoncus we gonna chung leo. Lorizzle ipsum dolizzle sit shut the shizzle up, yippiyo yippiyo gangsta. Phasellus nisi ligula, posuere sizzle bling bling, tellivizzle hizzle, tristique mattis, libero. Own yo' sempizzle faucibizzle diam. Ut nizzle black. Nunc sheezy rizzle a dizzle accumsan egestizzle. Quisque condimentum shit laorizzle nunc. Aenizzle , nisi quis varizzle shizzle my nizzle crocodizzle, lectizzle things tellivizzle shut the shizzle up, nizzle shut the shizzle up eros i saw beyonces tizzles and my pizzle went crizzle quis nisi. Vivamus own yo' quizzle, aliquizzle sheezy amet, ornare that's the shizzle, pulvinizzle own yo', felis.</p>
+        <p>Rizzle nizzle ma nizzle ut break it down bibendum molestie. Shizzlin dizzle vestibulum boom shackalack fo that's the shizzle. I'm in the shizzle cool we gonna chung magna. Yippiyo hizzle, nisl nizzle rizzle egestizzle, shit dolor vestibulizzle ligula, my shizz auctizzle justo dolor quizzle augue. Dope izzle stuff sit amet fo shizzle sagittizzle. Mofo tempizzle shiznit izzle owned. In rhoncus we gonna chung leo. Lorizzle ipsum dolizzle sit shut the shizzle up, yippiyo yippiyo gangsta. Phasellus nisi ligula, posuere sizzle bling bling, tellivizzle hizzle, tristique mattis, libero. Own yo' sempizzle faucibizzle diam. Ut nizzle black. Nunc sheezy rizzle a dizzle accumsan egestizzle. Quisque condimentum shit laorizzle nunc. Aenizzle , nisi quis varizzle shizzle my nizzle crocodizzle, lectizzle things tellivizzle shut the shizzle up, nizzle shut the shizzle up eros i saw beyonces tizzles and my pizzle went crizzle quis nisi. Vivamus own yo' quizzle, aliquizzle sheezy amet, ornare that's the shizzle, pulvinizzle own yo', felis.</p>
+        <p>Rizzle nizzle ma nizzle ut break it down bibendum molestie. Shizzlin dizzle vestibulum boom shackalack fo that's the shizzle. I'm in the shizzle cool we gonna chung magna. Yippiyo hizzle, nisl nizzle rizzle egestizzle, shit dolor vestibulizzle ligula, my shizz auctizzle justo dolor quizzle augue. Dope izzle stuff sit amet fo shizzle sagittizzle. Mofo tempizzle shiznit izzle owned. In rhoncus we gonna chung leo. Lorizzle ipsum dolizzle sit shut the shizzle up, yippiyo yippiyo gangsta. Phasellus nisi ligula, posuere sizzle bling bling, tellivizzle hizzle, tristique mattis, libero. Own yo' sempizzle faucibizzle diam. Ut nizzle black. Nunc sheezy rizzle a dizzle accumsan egestizzle. Quisque condimentum shit laorizzle nunc. Aenizzle , nisi quis varizzle shizzle my nizzle crocodizzle, lectizzle things tellivizzle shut the shizzle up, nizzle shut the shizzle up eros i saw beyonces tizzles and my pizzle went crizzle quis nisi. Vivamus own yo' quizzle, aliquizzle sheezy amet, ornare that's the shizzle, pulvinizzle own yo', felis.</p>
+       <article>
+        <h3>Enuff Tabs</h3>
+	        <section class="enuff-has-tabs enuff-vertical-tabs">
+            
+		        <input type="radio" name="enuffTabsVert" id="enuffTabAVert" checked>
+		        <input type="radio" name="enuffTabsVert" id="enuffTabBVert">
+		        <input type="radio" name="enuffTabsVert" id="enuffTabCVert">
+                <!--smoosh these together to prevent physical space from being displayed-->
+                <label for="enuffTabAVert">Label A</label><label for="enuffTabBVert">This is Label B</label><label for="enuffTabCVert">Label C</label>
+		        <div class="enuff-tab-content">
+                <p>Lorem ipsum dolizzle sit amizzle, consectetuer adipiscing elit. Nullizzle sapien velizzle, brizzle volutpat, yippiyo go to hizzle, gravida gangster, arcu. Pellentesque fo shizzle my nizzle tortor. Shiz erizzle. Shiznit izzle dolor dapibizzle turpis tempus dang. Maurizzle break it down nibh et owned. Own yo' izzle go to hizzle. Pellentesque eleifend rhoncizzle ma nizzle. In owned black platea dictumst. Donec dapibizzle. Curabitizzle dawg urna, pretium eu, mattizzle pizzle, eleifend i'm in the shizzle, nunc. Pot suscipizzle. Integizzle sempizzle bow wow wow stuff its fo rizzle.</p>
+                </div>
+                <div class="enuff-tab-content">
+                <p>Rizzle nizzle ma nizzle ut break it down bibendum molestie. Shizzlin dizzle vestibulum boom shackalack fo that's the shizzle. I'm in the shizzle cool we gonna chung magna. Yippiyo hizzle, nisl nizzle rizzle egestizzle, shit dolor vestibulizzle ligula, my shizz auctizzle justo dolor quizzle augue. Dope izzle stuff sit amet fo shizzle sagittizzle. Mofo tempizzle shiznit izzle owned. In rhoncus we gonna chung leo. Lorizzle ipsum dolizzle sit shut the shizzle up, yippiyo yippiyo gangsta. Phasellus nisi ligula, posuere sizzle bling bling, tellivizzle hizzle, tristique mattis, libero. Own yo' sempizzle faucibizzle diam. Ut nizzle black. Nunc sheezy rizzle a dizzle accumsan egestizzle. Quisque condimentum shit laorizzle nunc. Aenizzle , nisi quis varizzle shizzle my nizzle crocodizzle, lectizzle things tellivizzle shut the shizzle up, nizzle shut the shizzle up eros i saw beyonces tizzles and my pizzle went crizzle quis nisi. Vivamus own yo' quizzle, aliquizzle sheezy amet, ornare that's the shizzle, pulvinizzle own yo', felis.</p>
+                </div>
+		        <div class="enuff-tab-content">
+                <p>Praesent rizzle mammasay mammasa mamma oo sa nizzle maurizzle shizznit bibendizzle. Aliquam break it down viverra lectus. Sure izzle enim et tellivizzle i'm in the shizzle yippiyo. Aliquizzle lobortizzle, mauris gangsta dapibizzle the bizzle, nulla ligula bibendizzle , izzle black fo shizzle dui crunk arcu. Vivamus gravida lacus id ipsum. Crackalackin arcu magna, fermentizzle sit amet, faucibus in, placerat shiznit, break it down. Izzle vehicula laorizzle sizzle. Vestibulizzle fo shizzle diam, ghetto get down get down, condimentum izzle, malesuada bizzle, check out this. Morbi pimpin' placerizzle nulla. Maecenas sizzle erizzle shiz break it down. Bow wow wow you son of a bizzle bow wow wow, egestizzle bling bling, accumsan quis, elementizzle eget, neque. Nulla iaculizzle yippiyo shut the shizzle up orci sure sodales. Fusce sagittizzle, nulla eget sollicitudizzle shut the shizzle up, lacizzle quam luctizzle erizzle, vitae the bizzle augue purus boom shackalack arcu. Yippiyo pimpin' lacus. Nunc sizzle mi. Dizzle shut the shizzle up turpizzle. Vestibulizzle a own yo'. Sizzle cool erizzle, brizzle id, phat izzle, ass izzle, pot. That's the shizzle . Nulla get down get down erizzle, tristique sit shiz, ultricizzle pizzle, fo shizzle my nizzle phat, augue.</p>
+                </div>
+	        </section>
+
+        </article>
