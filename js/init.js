@@ -1,3 +1,4 @@
+//putting this into a window.onload results in some probs. after modal closes, but wont scroll
         var modalButton = document.getElementById("modalButton");
         var htmlElement = document.getElementById("jBForms");
         //below is the hidden input before the modal//
@@ -60,7 +61,7 @@
 
        //I want to wrap this with a focus, but the element isn't created until the script runs.
        //another problem is multiple events -- need a check that says if event and not-already-showing then
-       var varAutoCompleteTrigger = document.getElementById("autoCompleteTrigger");
+       /*var varAutoCompleteTrigger = document.getElementById("autoCompleteTrigger");
        varAutoCompleteTrigger.addEventListener("focus",runAutoComplete,false);
        function runAutoComplete(){
            var varAutoComplete = completely(document.getElementById('autoCompleteContainer'), {});
@@ -69,7 +70,7 @@
            setTimeout(function() {
             varAutoComplete.input.focus();
             },0);
-       }
+       }*/
        //document.addEventListener("DOMContentLoaded", function(event) {});
        
                
@@ -84,3 +85,87 @@ mc2.on("swipeleft panleft", function(ev) {
     cancelButton.textContent = "Cancelled";
     cancelButton.style.background = "red";
 });
+
+
+  //this script allows freeform input.
+  //But you can also configure it to be a multiSelect
+  //by only allowing a tag to be made from a list item 
+  //and then by removing it from the list 
+  var inputOptionsDiv = completely(document.getElementById('inputOptions'));
+  
+  var completelyInputHolderDiv = document.getElementById('completelyInputHolder');
+  
+  inputOptionsDiv.onEnter = function() {
+    var text = inputOptionsDiv.input.value;
+    try {
+      resp = eval(text);  
+    } catch (e) {
+      resp = 'error:<i>'+e+'</i>';
+    }
+    var tagToAdd = document.createElement('span');
+    tagToAdd.addEventListener("click",deleteTag,false);
+
+
+    tagToAdd.innerHTML = '-'+text;
+    tagToAdd.setAttribute("class","tag-span");
+    completelyInputHolderDiv.appendChild(tagToAdd);
+    inputOptionsDiv.setText('');
+    completelyInputHolderDiv.appendChild(inputOptionsDiv.wrapper);
+    //dev tools says the next line is bad
+    setTimeout(function() { inputOptionsDiv.input.onclick() },0); // for IE
+  }
+  
+  function extractTextForAutocompletion(code) {
+    
+    var isLetterOrDigitOrWhitespaceOrDot = function(ch) { 
+      return ch === '.'         ||
+             (ch>='A'&&ch<='Z') ||
+             (ch>='a'&&ch<='z') ||
+             (ch>='0'&&ch<='9') ||
+             ch==='$'           ||
+             ch==='_'           ||
+             ' \n\r\t\f\x0b\xa0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000'.indexOf(ch) !==-1; // whitespaces
+    };
+    
+    var snip = code;
+    for (var i=code.length-1;i>=0;i--) {
+      var ch = code.charAt(i);
+      if (isLetterOrDigitOrWhitespaceOrDot(ch)===false) {
+        snip = code.substring(i+1);
+        break; 
+      }
+    }
+    
+    var ix = snip.lastIndexOf('.');
+    if (ix === -1) return { v1 :'', v2 : snip };
+    else           return { v1 : snip.substring(0,ix),
+                          v2 : snip.substring(ix+1) };
+    
+  };
+  
+  inputOptionsDiv.options = ['coffee','cocoa','apple','banana','dog','elephant','frog','gopher','hotdog','ice cream','jelly bean','kitkat','lolipop','msomething','queenbee','raccoon','snake','turtle','usomething','vsomething','wsomething','xsomething','ysomething','zsomething'];
+  inputOptionsDiv.options.sort();
+  inputOptionsDiv.onChange = function (text) {
+    if (text.length == 0) {
+      inputOptionsDiv.repaint();
+      return; 
+    }
+    var v = extractTextForAutocompletion(text);
+    
+    try {
+       oj = eval(v.v1);
+    } catch (ex) {
+       oj = null;
+    }
+    for (var i in oj) { inputOptionsDiv.options.push(''+i); }
+    inputOptionsDiv.options.sort();
+    inputOptionsDiv.startFrom = text.lastIndexOf('.')+1;
+    inputOptionsDiv.repaint();
+  };
+  //dev tools says the next line is bad
+  setTimeout(function() { inputOptionsDiv.input.onclick() },0);
+
+  function deleteTag(theClicking){
+    //really it should generate a popOver to confirm
+    theClicking.target.remove();
+  }
