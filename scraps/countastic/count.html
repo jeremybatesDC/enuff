@@ -1,0 +1,34 @@
+<html><head>
+
+  <!-- Meta Tags -->
+
+
+  
+  <link rel="stylesheet" href="countastic.css">
+
+  
+
+</head>
+<body>
+      <section class="has-counter">
+                <textarea class="input textarea" placeholder="yoyoyo" id="tweet-area"></textarea>
+                <div class="clearfix"></div>
+                <br>
+                <button class="btn btn-empty"> CHARS(<span id="counter" class="success">140</span>) </button>
+                <button class="btn btn-info" id="counter-btn">Submit </button>            
+      </section>
+  <script type="text/javascript" src="countastic.js"></script>
+  <script>
+
+
+
+function countastic() {
+  new Countastic({
+    countable: '#tweet-area',
+    button: '#counter-btn',
+  });
+}
+countastic();
+
+  </script>
+</body></html>
