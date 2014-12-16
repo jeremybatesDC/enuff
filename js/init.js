@@ -59,24 +59,7 @@
         }());
        smoothScroll.init();
 
-       //I want to wrap this with a focus, but the element isn't created until the script runs.
-       //another problem is multiple events -- need a check that says if event and not-already-showing then
-       /*var varAutoCompleteTrigger = document.getElementById("autoCompleteTrigger");
-       varAutoCompleteTrigger.addEventListener("focus",runAutoComplete,false);
-       function runAutoComplete(){
-           var varAutoComplete = completely(document.getElementById('autoCompleteContainer'), {});
-           varAutoComplete.options = ['apples', 'cocoa','coffee','orange'];
-           varAutoComplete.repaint(); 
-           setTimeout(function() {
-            varAutoComplete.input.focus();
-            },0);
-       }*/
-       //document.addEventListener("DOMContentLoaded", function(event) {});
-       
-               
 
-//var mc = new Hammer.Manager(myElement, myOptions);
-// listen to events...
 mc.on("swiperight panright", function(ev) {
     sendButton.textContent = "Sent";
     sendButton.style.background = "green";
@@ -87,10 +70,6 @@ mc2.on("swipeleft panleft", function(ev) {
 });
 
 
-  //this script allows freeform input.
-  //But you can also configure it to be a multiSelect
-  //by only allowing a tag to be made from a list item 
-  //and then by removing it from the list 
   var inputOptionsDiv = completely(document.getElementById('inputOptions'));
   
   var completelyInputHolderDiv = document.getElementById('completelyInputHolder');
@@ -169,3 +148,11 @@ mc2.on("swipeleft panleft", function(ev) {
     //really it should generate a popOver to confirm
     theClicking.target.remove();
   }
+
+  function countastic() {
+  new Countastic({
+    countable: '#tweet-area',
+    button: '#counter-btn',
+  });
+}
+countastic();
