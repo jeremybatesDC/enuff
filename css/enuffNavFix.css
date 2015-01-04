@@ -417,7 +417,7 @@ background: #f0f0f0;
 .has-enuff-accordions input {display: none;} /* refactor above so this isn't necessary -- must encapsulate enuff-labels */
 .has-enuff-accordions .enuff-accordions-content {
   font-size: 0;
-  line-height: 0; 
+  line-height: 0;
   opacity: 0; 
   transition: .5s opacity ease;
 }
@@ -463,7 +463,7 @@ background: #f0f0f0;
   background: rgba(200,200,200,1);
 }
 
-.enuff-accordions-content {margin-bottom: 1em;}
+.enuff-accordions-content {margin-bottom: .25rem;}
 .enuff-accordions-group input:checked ~ .enuff-accordions-content {
   background: rgba(200,200,200,1)
 }
