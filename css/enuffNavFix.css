@@ -1,7 +1,7 @@
 html {font-family: sans-serif;font-size: 16px;line-height: 24px;}
 /* i like to see an explicit font size that rems/ems are based off of*/
 body{font-family: 'Arial', sans-serif;font-size: .875em;/*14px*/}
-main {font-size: 1em; max-width: 56rem;margin: 0 auto;padding: 0 .5em;}
+main {font-size: 1em; max-width: 52rem;margin: 0 auto;padding: 0 .5em;}
 header {}
 nav {}
 article {}
