@@ -10,6 +10,12 @@ var sendButton = document.getElementById('sendButton');
 var cancelButton = document.getElementById('cancelButton');
 var inputOptionsDiv = completely(document.getElementById('inputOptions'));
 var completelyInputHolderDiv = document.getElementById('completelyInputHolder');
+var allHeaderInputs = document.querySelectorAll("header input");
+var navigationToggle = document.getElementById("navigationToggle");
+var allNavLinks = document.querySelectorAll("a");
+var topLevelNavItems = document.querySelectorAll(".top-level-nav");
+var secondLevelNavItems = document.querySelectorAll(".second-level-nav");
+
 // create a simple instance
 // by default, it only adds horizontal recognizers
 var mc = new Hammer(sendButton);
@@ -155,3 +161,22 @@ function countastic() {
   });
 }
 countastic();
+
+//navigation (uncheck items on selection and top level change)
+for(var i = 0; i < allNavLinks.length; i+=1){
+    allNavLinks[i].addEventListener("click", handleClicks, false);
+}
+for(var k = 0; k < topLevelNavItems.length; k+=1){
+    topLevelNavItems[k].addEventListener("click", handleToplevelClicks, false);
+}
+function handleClicks(event){
+    for(var j = 0; j < allHeaderInputs.length; j+=1){
+        allHeaderInputs[j].checked = false;
+    }
+    navigationToggle.checked = false;
+}
+function handleToplevelClicks(event){
+    for(var l = 0; l < secondLevelNavItems.length; l+=1){
+        secondLevelNavItems[l].checked = false;
+    }
+}

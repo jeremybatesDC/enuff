@@ -37,14 +37,14 @@
             <li class="col-xs-12 col-sm-3 nav-menu-item">
                 
                 <input id="testRadio1" name="testRadio" type="radio" /> 
-                <label for="testRadio1">Pitchers</label>
+                <label for="testRadio1" class="top-level-nav">Pitchers</label>
                 <fieldset class="reset-radios">
                     <input id="testRadioGhost1" name="testRadio" type="radio" /> 
                     <label for="testRadioGhost1">&nbsp;</label>
                 </fieldset>
                 <ul class="nav-dropdown">
                     <li>
-                        <input id="testRadio1a" name="testRadioInnerA" type="radio" /> 
+                        <input id="testRadio1a" name="testRadioInnerA" class="second-level-nav" type="radio" /> 
                         <label for="testRadio1a">Roger Clemens</label>
                         <fieldset class="reset-radios">
                             <input id="testRadioGhost1z" name="testRadioInnerA" type="radio" /> 
@@ -57,7 +57,7 @@
 
                     </li>
                     <li>
-                        <input id="testRadio1b" name="testRadioInnerA" type="radio" /> 
+                        <input id="testRadio1b" name="testRadioInnerA" class="second-level-nav" type="radio" /> 
                         <label for="testRadio1b">Jordan Zimmerman</label>
                         <fieldset class="reset-radios">
                             <input id="testRadioGhost1z" name="testRadioInnerA" type="radio" /> 
@@ -78,14 +78,14 @@
             <li class="col-xs-12 col-sm-3 nav-menu-item">
                 
                 <input id="testRadio2" name="testRadio" type="radio" /> 
-                <label for="testRadio2">Outfielders</label>
+                <label for="testRadio2" class="top-level-nav">Outfielders</label>
                 <fieldset class="reset-radios">
                     <input id="testRadioGhost1" name="testRadio" type="radio" /> 
                     <label for="testRadioGhost1">&nbsp;</label>
                 </fieldset>
                 <ul class="nav-dropdown">
                     <li>
-                        <input id="testRadio2a" name="testRadioInnerB" type="radio" /> 
+                        <input id="testRadio2a" name="testRadioInnerB" class="second-level-nav" type="radio" /> 
                         <label for="testRadio2a">Bryce Harper</label>
                         <fieldset class="reset-radios">
                             <input id="testRadioGhost2y" name="testRadioInnerB" type="radio" /> 
@@ -98,7 +98,7 @@
 
                     </li>
                     <li>
-                        <input id="testRadio2b" name="testRadioInnerB" type="radio" /> 
+                        <input id="testRadio2b" name="testRadioInnerB" class="second-level-nav" type="radio" /> 
                         <label for="testRadio2b">Jayson Werth</label>
                         <fieldset class="reset-radios">
                             <input id="testRadioGhost2z" name="testRadioInnerB" type="radio" /> 
@@ -118,14 +118,14 @@
             <li class="col-xs-12 col-sm-3 nav-menu-item">
                 
                 <input id="testRadio3" name="testRadio" type="radio" /> 
-                <label for="testRadio3">Infielders</label>
+                <label for="testRadio3" class="top-level-nav">Infielders</label>
                 <fieldset class="reset-radios">
                     <input id="testRadioGhost1" name="testRadio" type="radio" /> 
                     <label for="testRadioGhost1">&nbsp;</label>
                 </fieldset>
                 <ul class="nav-dropdown">
                     <li>
-                        <input id="testRadio3a" name="testRadioInnerC" type="radio" /> 
+                        <input id="testRadio3a" name="testRadioInnerC" class="second-level-nav" type="radio" /> 
                         <label for="testRadio3a">Ian Desmond</label>
                         <fieldset class="reset-radios">
                             <input id="testRadioGhost3y" name="testRadioInnerC" type="radio" /> 
@@ -138,7 +138,7 @@
 
                     </li>
                     <li>
-                        <input id="testRadio3b" name="testRadioInnerC" type="radio" /> 
+                        <input id="testRadio3b" name="testRadioInnerC" class="second-level-nav" type="radio" /> 
                         <label for="testRadio3b">Ryan Zimmerman</label>
                         <fieldset class="reset-radios">
                             <input id="testRadioGhost3z" name="testRadioInnerC" type="radio" /> 
@@ -856,7 +856,7 @@
 
 
         <article>
-            <h3>Modal Button</h3>
+            <h3>Modal</h3>
             <section>
                 <div class="">
                     <label id="modalButton" class="button button-modal" for="modalOne">Modal</label>
@@ -865,10 +865,75 @@
         </article>
 
       
+        <article>
+            <section>
+                <h4>Complete.ly Tags Implentation</h4>
+                <div id="completelyInputHolder">*</div>
+                <div id="inputOptions"></div>
+
+            </section>
+
+        </article>
 
 
-
-
+        <article class="test-thing-to-change">
+            <h3>Table sort via flexbox (and target) - no JS</h3>
+            
+            <h6>JS will be neeed to populate the data anyway, but this is fun</h6>
+            <section class="flexgrid has-faux-table">
+                <label for="sortAZ3">A-Z</label>
+                <input class="flex-sorter AtoZ" id="sortAZ3" type="radio" name="flexSort3" checked>
+                <label for="sortZA3">Z-A</label>
+                <input class="flex-sorter ZtoA" id="sortZA3" type="radio" name="flexSort3">
+                <a class="link-to-hitters" href="#hitters">Hitters</a>
+                <a class="link-to-pitchers" href="#pitchers">Pitchers</a>
+                <a class="link-to-showAll" href="#showAll">Show All</a>
+                <div class="faux-row faux-table-header">
+                    <div>Last</div>
+                    <div>First</div>
+                    <div>Position</div>
+                    <div>City</div>
+                </div>
+                <div class="col reverse faux-table">
+                    <div class="faux-row" data-position="pitcher">
+                        <div>Fister</div>
+                        <div>Doug</div>
+                        <div>Pitcher</div>
+                        <div>DC</div>
+                    </div>
+                    <div class="faux-row" data-position="hitter">
+                        <div>Ellis</div>
+                        <div>Mark</div>
+                        <div>Utility Infielder Long Test</div>
+                        <div>LA</div>
+                    </div>
+                    <div class="faux-row" data-position="hitter">
+                        <div>Davis</div>
+                        <div>Chris</div>
+                        <div>Junkie</div>
+                        <div>MD</div>
+                    </div>
+                    <div class="faux-row" data-position="pitcher">
+                        <div>Clemens</div>
+                        <div>Roger</div>
+                        <div>Pitcher</div>
+                        <div>TX</div>
+                    </div>
+                    <div class="faux-row" data-position="hitter">
+                        <div>Bates</div>
+                        <div>Joseph</div>
+                        <div>US Marshall</div>
+                        <div>CT</div>
+                    </div>
+                    <div class="faux-row" data-position="pitcher">
+                        <div>Adams</div>
+                        <div>Sam</div>
+                        <div>Patriot</div>
+                        <div>MA</div>
+                    </div>
+                </div><!--end col-->
+            </section>
+        </article>
 
 
 
@@ -988,75 +1053,9 @@
 
         
         
-        <article class="test-thing-to-change">
-            <h3>Table sort via flexbox (and target) - no JS</h3>
-            <h4>I could also have completely different page layouts (like switch page themes) -- I could also present 2 different ways of viewing a table (compact or full like Baseball reference offers)</h4>
-            <h5>Could also use data-attributes here to highlight hitters' first names, for instance, or to show only batting averages and *possibly hiding other columns</h5>
-            <h6>JS will be neeed to populate the data anyway, but this is fun</h6>
-            <section class="flexgrid has-faux-table">
-                <label for="sortAZ3">A-Z</label>
-                <input class="flex-sorter AtoZ" id="sortAZ3" type="radio" name="flexSort3" checked>
-                <label for="sortZA3">Z-A</label>
-                <input class="flex-sorter ZtoA" id="sortZA3" type="radio" name="flexSort3">
-                <a class="link-to-hitters" href="#hitters">Hitters</a>
-                <a class="link-to-pitchers" href="#pitchers">Pitchers</a>
-                <a class="link-to-showAll" href="#showAll">Show All</a>
-                <div class="faux-row faux-table-header">
-                    <div>Last</div>
-                    <div>First</div>
-                    <div>Position</div>
-                    <div>City</div>
-                </div>
-                <div class="col reverse faux-table">
-                    <div class="faux-row" data-position="pitcher">
-                        <div>Fister</div>
-                        <div>Doug</div>
-                        <div>Pitcher</div>
-                        <div>DC</div>
-                    </div>
-                    <div class="faux-row" data-position="hitter">
-                        <div>Ellis</div>
-                        <div>Mark</div>
-                        <div>Utility Infielder Long Test</div>
-                        <div>LA</div>
-                    </div>
-                    <div class="faux-row" data-position="hitter">
-                        <div>Davis</div>
-                        <div>Chris</div>
-                        <div>Junkie</div>
-                        <div>MD</div>
-                    </div>
-                    <div class="faux-row" data-position="pitcher">
-                        <div>Clemens</div>
-                        <div>Roger</div>
-                        <div>Pitcher</div>
-                        <div>TX</div>
-                    </div>
-                    <div class="faux-row" data-position="hitter">
-                        <div>Bates</div>
-                        <div>Joseph</div>
-                        <div>US Marshall</div>
-                        <div>CT</div>
-                    </div>
-                    <div class="faux-row" data-position="pitcher">
-                        <div>Adams</div>
-                        <div>Sam</div>
-                        <div>Patriot</div>
-                        <div>MA</div>
-                    </div>
-                </div><!--end col-->
-            </section>
-        </article>
+        
 
-        <article>
-            <section>
-                <h4>your tags</h4>
-                <div id="completelyInputHolder">*</div>
-                <div id="inputOptions"></div>
-
-            </section>
-
-        </article>
+        
       
         <article>
             <section>
@@ -1076,7 +1075,7 @@
 
         </article>
         
-        <article>
+        <!--<article>
         <section>
         <h4>Things I need</h4>
         <ul>
@@ -1140,7 +1139,7 @@
 
         
         </section>
-    </article>
+    </article>-->
 </main>  
 
 <!--back to top-->
@@ -1176,23 +1175,6 @@
     <script src='js/countastic.min.js'></script>
     <script src="js/init.js"></script>
 
-    <script>
-    var allHeaderInputs = document.querySelectorAll("header input");
-    var navigationToggle = document.getElementById("navigationToggle");
-    var allNavLinks = document.querySelectorAll("a");
-    for(var i = 0; i < allNavLinks.length; i+=1){
-        allNavLinks[i].addEventListener("click", handleClicks, false);
-    }
-    function handleClicks(event){
-        //alert("yo");
-        //event.preventDefault();
-        for(var j = 0; j < allHeaderInputs.length; j+=1){
-            allHeaderInputs[j].checked = false;
-        }
-        navigationToggle.checked = false;
-    } 
-
-    </script>  
 
 </body>
 </html>
