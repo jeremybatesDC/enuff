@@ -110,7 +110,8 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-:required{}
+:required{border-color: inherit !important;}
+.error:required {border-color: red !important;}
 :optional{}
 :checked{}
 :enabled{}
@@ -186,9 +187,46 @@ header nav ul.navigation li.nav-menu-item label.avatar-label:first-of-type{paddi
 /*VALIDATION*/
 /*overriding bootstrap*/
 .alert {padding: 1em;margin-bottom: 1.5em; border: 1px solid red;}
-.error{border-color: red;}
-.form-control.error:focus {border-color:red;}
+/*refactor*/
+label.error input, .customSelect label.error .dropdown{border-color: red !important;}
+
+label.error:hover:after {
+  content:"short error message";
+  text-transform: none;
+  font-size: .5rem;
+  top: -2rem;
+}
+
+
 .login-error-box{max-width: 20em;margin: 0 auto;background: red;text-align: center;color: #fff;}
+
+label.error:after{
+content: "!";
+font-size: 1rem;
+line-height: 0;
+/*line-hight 0 is key*/
+color: red;
+float: right;
+position: relative;
+top: -.75rem;
+left: -.5rem;
+}
+
+.backend-error-container {
+  margin: 1rem .5rem;
+  min-height: 2rem;
+  background: red;
+  color: #fff;
+}
+
+fieldset.radios.error, fieldset.checkboxes.error  {
+  border: 1px solid red;
+}
+
+/*label.error input:focus, label.error input:focus {
+}*/
+
+
 
 
 /*gotta fix these login styles*/
@@ -581,7 +619,9 @@ Putting these in REM should help keep things better encapsulated and more intuit
   }
 
 
-
+.has-counter {max-width: 30rem;}
+.has-counter textarea {width: 100%; padding: .33rem;}
+.has-counter label {position: relative;top:.66rem;}
 
 .has-counter button.btn.btn-empty {opacity: .6;}
 
@@ -632,7 +672,23 @@ Putting these in REM should help keep things better encapsulated and more intuit
   opacity: .6;
 }
 
+.has-counter .chars {
+  position: relative;
+  top: -.6rem;
+  float: right;
+  font-size: .6rem;
+  background: #fff;
+  color: #888;
+  padding: 0;
+  margin: 0;
+}
 
+.has-counter .chars:after{
+  content: "";
+  display: table;
+  float: none;
+  clear: both;
+} 
 
 
 /* save for table sorting*/
@@ -751,6 +807,8 @@ fieldset.checkboxes, fieldset.radios{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    padding: .5rem;
+    margin: 1rem 0;
 }
 
 fieldset.checkboxes.checkboxes-stacked label, fieldset.radios.radios-stacked label {display: block;}
@@ -908,7 +966,7 @@ font-weight: bold;
   font-size: 1.5em;
   float: right;
   margin-top: -1.2em;
-  padding: 0 1em 0 0;
+  padding: 0 .2rem 0 0;
   /*padding:0;
   position: absolute;
   margin-right: 1em;

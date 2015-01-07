@@ -332,19 +332,257 @@
     <div class="breadcrumb">
         <h1>This is the page</h1>
     </div>
+    
     <article> <!--wraps flexgrid -->
+        <h3>User Information</h3>
         <section class="flexgrid">
-            <h3>Responsive</h3>
-            <form class="batesForm">
+            <div class="row bottom">
+
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <label><span>First *</span>
+                        <input class="mask-alpha" required="required"/>
+                    </label>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <label><span>Last *</span>
+                        <input class="mask-alpha" required="required"/>
+                    </label>
+                </div>
+            </div><!--end row-->
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <label><span>Email *</span>
+                        <input type="email" required="required"/>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <label><span>Street *</span>
+                        <input class="mask-alpha" required="required"/>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <label><span>Address 2</span>
+                        <input class="mask-alpha"/>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 col-md-3">
+                    <label><span>City *</span>
+                        <input class="mask-alpha" required="required"/>
+                    </label>
+                </div>
+                <div class="col-xs-4 col-sm-1 col-md-1 customSelect">
+                    <label><span>State*</span>
+                            <div class="dropdown">
+                                <select required="required">
+                                    <optgroup>
+                                        <option>&nbsp;</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AK">AK</option>
+                                        <option value="AZ">AZ</option>
+                                        <option value="AR">AR</option>
+                                        <option value="CA">CA</option>
+                                        <option value="CO">CO</option>
+                                        <option value="CT">CT</option>
+                                        <option value="DE">DE</option>
+                                        <option value="DC">DC</option>
+                                        <option value="FL">FL</option>
+                                        <option value="GA">GA</option>
+                                        <option value="HI">HI</option>
+                                        <option value="ID">ID</option>
+                                        <option value="IL">IL</option>
+                                        <option value="IN">IN</option>
+                                        <option value="IA">IA</option>
+                                        <option value="KS">KS</option>
+                                        <option value="KY">KY</option>
+                                        <option value="LA">LA</option>
+                                        <option value="ME">ME</option>
+                                        <option value="MD">MD</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MI">MI</option>
+                                        <option value="MN">MN</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MO">MO</option>
+                                        <option value="MT">MT</option>
+                                        <option value="NE">NE</option>
+                                        <option value="NV">NV</option>
+                                        <option value="NH">NH</option>
+                                        <option value="NJ">NJ</option>
+                                        <option value="NM">NM</option>
+                                        <option value="NY">NY</option>
+                                        <option value="NC">NC</option>
+                                        <option value="ND">ND</option>
+                                        <option value="OH">OH</option>
+                                        <option value="OK">OK</option>
+                                        <option value="OR">OR</option>
+                                        <option value="PA">PA</option>
+                                        <option value="RI">RI</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SD">SD</option>
+                                        <option value="TN">TN</option>
+                                        <option value="TX">TX</option>
+                                        <option value="UT">UT</option>
+                                        <option value="VT">VT</option>
+                                        <option value="VA">VA</option>
+                                        <option value="WA">WA</option>
+                                        <option value="WV">WV</option>
+                                        <option value="WI">WI</option>
+                                        <option value="WY">WY</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </label>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <label><span>Zipcode *</span>
+                        <input class="mask-zip" required="required"/>
+                    </label>
+                </div>
+            </div>
+
+        </section>
+
+
+        <h3>User Information Error States</h3>
+
+        
+        <section class="flexgrid">
+        <div class="row bottom backend-error-container">
+            <div class="col-xs-12">
+            Backend error messages here    
+            </div>
+        </div>
+
+            <div class="row bottom">
+
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <label class="error"><span>First *</span>
+                        <input class="mask-alpha" required="required"/>
+                    </label>
+                </div>
+
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <label class="error"><span>Last *</span>
+                        <input class="mask-alpha" required="required"/>
+                    </label>
+                </div>
+            </div><!--end row-->
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <label class="error"><span>Email *</span>
+                        <input type="email" required="required"/>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <label class="error"><span>Street *</span>
+                        <input class="mask-alpha" required="required"/>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <label><span>Address 2</span>
+                        <input class="mask-alpha"/>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 col-md-3">
+                    <label><span>City *</span>
+                        <input class="mask-alpha" required="required"/>
+                    </label>
+                </div>
+                <div class="col-xs-4 col-sm-1 col-md-1 customSelect">
+                    <label><span>State*</span>
+                            <div class="dropdown">
+                                <select required="required">
+                                    <optgroup>
+                                        <option>&nbsp;</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AK">AK</option>
+                                        <option value="AZ">AZ</option>
+                                        <option value="AR">AR</option>
+                                        <option value="CA">CA</option>
+                                        <option value="CO">CO</option>
+                                        <option value="CT">CT</option>
+                                        <option value="DE">DE</option>
+                                        <option value="DC">DC</option>
+                                        <option value="FL">FL</option>
+                                        <option value="GA">GA</option>
+                                        <option value="HI">HI</option>
+                                        <option value="ID">ID</option>
+                                        <option value="IL">IL</option>
+                                        <option value="IN">IN</option>
+                                        <option value="IA">IA</option>
+                                        <option value="KS">KS</option>
+                                        <option value="KY">KY</option>
+                                        <option value="LA">LA</option>
+                                        <option value="ME">ME</option>
+                                        <option value="MD">MD</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MI">MI</option>
+                                        <option value="MN">MN</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MO">MO</option>
+                                        <option value="MT">MT</option>
+                                        <option value="NE">NE</option>
+                                        <option value="NV">NV</option>
+                                        <option value="NH">NH</option>
+                                        <option value="NJ">NJ</option>
+                                        <option value="NM">NM</option>
+                                        <option value="NY">NY</option>
+                                        <option value="NC">NC</option>
+                                        <option value="ND">ND</option>
+                                        <option value="OH">OH</option>
+                                        <option value="OK">OK</option>
+                                        <option value="OR">OR</option>
+                                        <option value="PA">PA</option>
+                                        <option value="RI">RI</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SD">SD</option>
+                                        <option value="TN">TN</option>
+                                        <option value="TX">TX</option>
+                                        <option value="UT">UT</option>
+                                        <option value="VT">VT</option>
+                                        <option value="VA">VA</option>
+                                        <option value="WA">WA</option>
+                                        <option value="WV">WV</option>
+                                        <option value="WI">WI</option>
+                                        <option value="WY">WY</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </label>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <label><span>Zipcode *</span>
+                        <input class="mask-zip" required="required"/>
+                    </label>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="flexgrid">
+            <h3>Fields</h3>
+            <form>
                 <fieldset>
                 <div class="row bottom">
                     <div class="col-xs-12 col-sm-3 col-md-2">
-                    	<label><span>First Name</span>
+                    	<label><span>Email</span>
                         	<input class="mask-alpha"/>
                         </label>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-8">
-                    	<label class="pikaday-override"><span>Birthday</span>
+                    	<label class="pikaday-override"><span>Pikaday</span>
                             <input class="calendar-field hide-day" id="datepicker"/>
                         </label>
                     </div>
@@ -530,8 +768,8 @@
                         </fieldset>            
                     </div>
                     <div class="col-xs-6">
-                        <fieldset class="checkboxes checkboxes-stacked">
-                            <h4>Checkboxes Error</h4>
+                        <fieldset class="checkboxes checkboxes-stacked error">
+                            <h4>Checkboxes Required Error</h4>
                             <label class="checkbox">
                                 <input class="has-icon sr-only" type="checkbox"/>
                                 <i class="icon icon-form-checkbox"></i>
@@ -569,8 +807,8 @@
                         </fieldset>            
                     </div>
                     <div class="col-xs-6">
-                        <fieldset class="radios radios-stacked">
-                            <h4>Radios Error</h4>
+                        <fieldset class="radios radios-stacked error">
+                            <h4>Radios Required Error</h4>
                             <label class="radio">
                                 <input class="has-icon sr-only" type="radio" name="radio-orientation"/>
                                 <i class="icon icon-form-radio"></i>
@@ -596,7 +834,7 @@
             <h3>Login/Signup</h3>
             <section class="flexgrid">
                 <div class="row bottom">
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-6">
                         <h4>Initial</h4>
                         <div class="enuff-has-tabs">
                             <input type="radio" name="enuffTabsLogin" id="enuffTabLoginA" class="ghost" checked>
@@ -626,7 +864,10 @@
                         </div>
                         
                     </div>
-                    <div class="col-xs-12 col-sm-6">
+                </div><!--end row-->
+
+                <div class="row bottom">
+                    <div class="col-xs-6">
                         <h4>Error State</h4>
                         <div class="enuff-has-tabs">
                             <input type="radio" name="enuffTabsLoginError" id="enuffTabLogin1" class="ghost" checked>
@@ -655,7 +896,8 @@
                             </form>
                         </div>
                     </div>
-                </div>
+
+                </div><!--end row-->
 
             </section>
 
@@ -840,9 +1082,10 @@
         <article>
             <h3>Countastic</h3>
             <section class="has-counter">
-                <textarea class="input textarea" placeholder="yoyoyo" id="tweet-area"></textarea>
+                <label>Tweet</label>
+                <textarea class="input textarea" id="tweet-area"></textarea>
                 <div class="clearfix"></div>
-                <div> CHARS(<span id="counter" class="success">140</span>) </div>
+                <div class="chars"> CHARS(<span id="counter" class="success">140</span>) </div>
                 <!--<button class="btn btn-info" id="counter-btn">Submit </button>-->
                 
           
