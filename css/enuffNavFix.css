@@ -1144,6 +1144,8 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 @media only screen and (min-width: 36em) {
 
+#backToTopLink {display: inline-block;visibility: hidden;}
+
 #backToTopLink {display: inline-block;position: fixed;bottom: 1rem;right:1rem;}
 
 header nav ul.navigation {padding-top: 0;}

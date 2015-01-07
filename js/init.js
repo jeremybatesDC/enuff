@@ -15,6 +15,8 @@ var navigationToggle = document.getElementById("navigationToggle");
 var allNavLinks = document.querySelectorAll("a");
 var topLevelNavItems = document.querySelectorAll(".top-level-nav");
 var secondLevelNavItems = document.querySelectorAll(".second-level-nav");
+var backToTopLink = document.getElementById('backToTopLink');
+
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
@@ -180,3 +182,12 @@ function handleToplevelClicks(event){
         secondLevelNavItems[l].checked = false;
     }
 }
+
+window.onscroll = function(){
+    if(pageYOffset < 1000){
+        backToTopLink.style.visibility="hidden";
+    }
+    else{
+        backToTopLink.style.visibility="visible";
+    }
+};
