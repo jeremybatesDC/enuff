@@ -190,11 +190,13 @@ header nav ul.navigation li.nav-menu-item label.avatar-label:first-of-type{paddi
 /*refactor*/
 label.error input, .customSelect label.error .dropdown{border-color: red !important;}
 
+/*content of pseudo element can be replaced via js*/
 label.error:hover:after {
   content:"short error message";
   text-transform: none;
   font-size: .5rem;
   top: -2rem;
+  left: 0;
 }
 
 
