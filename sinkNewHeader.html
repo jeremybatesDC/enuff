@@ -993,7 +993,6 @@
             <li>404</li>
             <li>breadcrumb</li>
             <li>maybe inline checkboxes</li>
-            <li>typeahead: COMPLETE.LY -- maybe configure it for a multiselect</li>
             <li>fix arrow svgs (they have weird viewbox issues in illustrator</li>
             <li>tooltips popover on touch (maybe listen to them w/ hammer and decide? Can hammer tell the difference beween a click and a press?</li>
             <li>consistent animation and style</li>
@@ -1040,7 +1039,7 @@
 </main>  
 
 <!--back to top-->
-<a data-scroll data-options='{ "speed": 900, "easing": "easeInOut" }' href="#!"> 
+<a id="backToTopLink" data-scroll data-options='{ "speed": 900, "easing": "easeInOut" }' href="#!"> 
     <figure class="has-icon">
         <svg version="1.1" x="0px" y="0px" viewBox="0 0 400 400" xml:space="preserve">
             <circle fill="rgba(200,200,200,.33)" cx="199.413" cy="199.25" r="195.25"/>
@@ -1071,7 +1070,14 @@
     <script src='js/complete.ly.1.0.1.edited.js'></script>
     <script src='js/countastic.min.js'></script>
     <script src="js/init.js"></script>
-
-
+<script>
+    window.onscroll = function()
+{
+    if(pageOffset >= 1000)
+    {
+        document.getElementById('backToTopLink').style.visibility="visible";
+    }
+};
+</script>
 </body>
 </html>

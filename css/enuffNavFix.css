@@ -1138,8 +1138,13 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   padding: 0;
 }
 
+/*backToTop button is an attractive nuisence on mobile*/
+#backToTopLink {display: none;}
+
 
 @media only screen and (min-width: 36em) {
+
+#backToTopLink {display: inline-block;position: fixed;bottom: 1rem;right:1rem;}
 
 header nav ul.navigation {padding-top: 0;}
 
@@ -1148,7 +1153,7 @@ header nav ul.navigation {padding-top: 0;}
 header nav ul.navigation li.nav-menu-item{margin-bottom: 0;}
 
 .for-mobile {display: none;}
-ul.navigation label:after{/*padding-right: 33%;*/}
+ul.navigation label:after{padding-right: 25%;}
 
 
 
