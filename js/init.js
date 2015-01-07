@@ -126,7 +126,7 @@ function extractTextForAutocompletion(code) {
                           v2 : snip.substring(ix+1) };    
 };
   
-inputOptionsDiv.options = ['coffee','cocoa','apple','banana','dog','elephant','frog','gopher','hotdog','ice cream','jelly bean','kitkat','lolipop','msomething','queenbee','raccoon','snake','turtle','usomething','vsomething','wsomething','xsomething','ysomething','zsomething'];
+inputOptionsDiv.options = ['coffee','cocoa','apple','alligator','banana','dough','dog','enuff','elephant','frogurt','frog','golf','gopher','hamburger','hotdog','ill','ice cream','jackrabbit','jelly bean','kitten','kitkat','lemon','lolipop','magic','maryland','qbert','queenbee','racecar','raccoon','snafoo','snake','tummy','turtle','usurp','userError','valentine','VEDay','watermellon','water','xtra','xray','yesterday','yes','zeplin','zappos'];
 inputOptionsDiv.options.sort();
 inputOptionsDiv.onChange = function (text) {
     var v = extractTextForAutocompletion(text);
