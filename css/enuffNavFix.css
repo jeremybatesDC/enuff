@@ -193,6 +193,10 @@ form.login-form {
   padding: 2rem;
 }
 
+.login-form label {
+  background: transparent;
+}
+
 /*not sure why this is needed -- must debug*/
 .flexgrid .row form.login-form label span {
   top: .66em;
@@ -202,6 +206,10 @@ form.login-form {
 
 .login-and-signup .flexgrid .row input:first-of-type:checked ~ .enuff-tab-content:first-of-type, .login-and-signup .flexgrid .row input:nth-of-type(2):checked ~ .enuff-tab-content:nth-of-type(2){
   display: block;
+}
+
+.login-and-signup .enuff-has-tabs label {
+  padding: 0;
 }
 
 
@@ -898,6 +906,11 @@ font-weight: bold;
   pointer-events:none;
 }
  
+.native input:after {
+  content: '' !important;
+}
+
+
 /* Hover style - tricky because we're clipping the overflow */
 /*.customSelect .dropdown:hover {border:1px solid #888;}*/
   
