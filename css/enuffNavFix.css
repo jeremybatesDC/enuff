@@ -205,7 +205,7 @@ data{}
 
 /* needs some majot refactoring*/
 
-.header {background-color: rgba(200,200,200,1);transition: left .5s ease;}
+.header {background-color: rgba(200,200,200,1);transition: left .5s ease; padding: 0 0 0 .25rem;}
 .header--fixed {/*display:none;*/position: fixed;z-index: 9;left: -10em;top: 0;width: 10em;height:100%;overflow: scroll;}
 
 input:checked + header {left: 0;}
@@ -249,11 +249,17 @@ ul.navigation .reset-radios input + label:after, .navigation .reset-radios input
 
 ul.navigation input:checked + label:after {content: "^";}
 
-ul.nav-dropdown{display: none;margin: 0;font-size: .75em;}
+ul.nav-dropdown{display: none;margin: 0;font-size: .8rem;background: rgba(200,200,200,.9); border-radius: 0 0 .25rem .25rem;}
 ul.nav-dropdown li {line-height: 1.25em;}
 .nav-menu-item input:checked ~ .nav-dropdown {display: block;}
 
-ul.nav-dropdown li ul {display: none;}
+ul.nav-dropdown li ul {display: none; margin: .33rem 0;}
+
+ul.nav-dropdown li ul li {
+  font-size: .66rem;
+  text-transform: none;
+}
+
 ul.nav-dropdown li input:checked ~ ul {display: block;}
 
 ul.navigation li input:checked ~ .reset-radios {
@@ -1142,7 +1148,7 @@ header nav ul.navigation {padding-top: 0;}
 header nav ul.navigation li.nav-menu-item{margin-bottom: 0;}
 
 .for-mobile {display: none;}
-ul.navigation label:after{padding-right: 33%;}
+ul.navigation label:after{/*padding-right: 33%;*/}
 
 
 
