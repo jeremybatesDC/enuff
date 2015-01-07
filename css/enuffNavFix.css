@@ -166,7 +166,8 @@ data{}
 
 
 /* some stupid helpers */
-.ghost {display: none;}
+/*hate to use important, but ghost can be a useful override*/
+.ghost {display: none !important;}
 
 
 .btn {font-size: 1em;}
@@ -184,6 +185,25 @@ data{}
 .error{border-color: red;}
 .form-control.error:focus {border-color:red;}
 .login-error-box{max-width: 20em;margin: 0 auto;background: red;text-align: center;color: #fff;}
+
+
+/*gotta fix these login styles*/
+form.login-form {
+  border: 1px solid #999;
+  padding: 2rem;
+}
+
+/*not sure why this is needed -- must debug*/
+.flexgrid .row form.login-form label span {
+  top: .66em;
+}
+
+.login-and-signup .flexgrid .row form.login-form.enuff-tab-content {display: none;}
+
+.login-and-signup .flexgrid .row input:first-of-type:checked ~ .enuff-tab-content:first-of-type, .login-and-signup .flexgrid .row input:nth-of-type(2):checked ~ .enuff-tab-content:nth-of-type(2){
+  display: block;
+}
+
 
 /*headroom.js by @WickyNilliams*/
 /*nav.header-inner {width: 10em;}*/
