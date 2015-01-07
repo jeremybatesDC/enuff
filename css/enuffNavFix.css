@@ -173,6 +173,10 @@ data{}
 .btn {font-size: 1em;}
 
 
+.avatar {height: 2em;}
+
+header nav ul.navigation li.nav-menu-item label.avatar-label:first-of-type{padding: 0;}
+
 /*action bar*/
 .save-cancel-bar {margin: 0 1em 1em 1em; padding: 1em 0; border-top: 1px solid #ccc;padding-top:1em;overflow: hidden;}
 .save-cancel-bar:after {float: none;clear:both;}
