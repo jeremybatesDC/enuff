@@ -197,6 +197,13 @@ form.login-form {
   background: transparent;
 }
 
+.flexgrid .row label.login-signup-tab-label {
+  display: inline-block;
+  width: 50%;
+  margin:0;
+  padding: 1rem;
+}
+
 /*not sure why this is needed -- must debug*/
 .flexgrid .row form.login-form label span {
   top: .66em;
