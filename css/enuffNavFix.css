@@ -37,8 +37,13 @@ h6{font-size: 1em;}
 p{}
 span{}
 
-.breadcrumb {margin: 4em 0 2em 7.5%;background: transparent;text-transform: uppercase; font-size: .9em;}
-.breadcrumb h1{display: inline-block;font-size: 1em;margin:0;padding:0;color: #000;font-weight: bold; letter-spacing: .0125em;}
+.breadcrumb {margin: 2rem 0 2rem 0;background: transparent;text-transform: uppercase; font-size: .9em; border-bottom: 1px solid #333;}
+.breadcrumb h1, .breadcrumb h2{display: inline-block;font-size: 1em;margin:0;padding:0;color: #000;font-weight: bold; letter-spacing: .0125em;}
+.breadcrumb h2:after{
+  content: " > ";
+}
+.breadcrumb h1 {opacity: 1;}
+.breadcrumb h2 {opacity: .5;}
 
 
 ol{}
@@ -184,6 +189,13 @@ header nav ul.navigation li.nav-menu-item label.avatar-label:first-of-type{paddi
 .form-save {margin-left:1.5em; padding-left: 1.5em; padding-right: 1.5em;float:right;}
 .form-cancel {float: right;}
 
+.save-cancel-button-set{float: right;}
+.save-cancel-button-set:after{display: table;float: none;clear:both;}
+.save-cancel-button-set button{color: #fff;}
+.button-danger{background: red;padding: .5rem;}
+.button-primary{background: rgba(33,99,200,.85);padding: .5rem 1rem; color: #fff;}
+.save-cancel-button-set .button-primary {margin-left:1.5rem;}
+
 /*VALIDATION*/
 /*overriding bootstrap*/
 .alert {padding: 1em;margin-bottom: 1.5em; border: 1px solid red;}
@@ -228,13 +240,18 @@ fieldset.radios.error, fieldset.checkboxes.error  {
 /*label.error input:focus, label.error input:focus {
 }*/
 
-
+.login-and-signup .backend-error-container {
+  margin: 0;
+  padding: .5rem;
+  text-align: center;
+}
 
 
 /*gotta fix these login styles*/
 form.login-form {
-  border: 1px solid #999;
+  /*border: 1px solid #999;*/
   padding: 2rem;
+  overflow: hidden;
 }
 
 .login-form label {
@@ -246,6 +263,27 @@ form.login-form {
   width: 50%;
   margin:0;
   padding: 1rem;
+}
+
+a.forgot-password {
+  display: inline-block;
+  font-size: .6rem;
+  color: rgba(0,0,175,.75);
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.login-signup-button{
+  float: right;
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+
+}
+
+.login-signup-button:after{
+  display: table;
+  float: none;
+  clear: both;
 }
 
 /*not sure why this is needed -- must debug*/
@@ -353,6 +391,8 @@ ul.navigation li input:checked ~ .reset-radios label {display: block;}
 
 
 
+
+
 /* more specific than the enuff accords*/
 
 /*header .navigation label {font-size: 1em;background: rgba(200,200,200,1)}
@@ -420,8 +460,10 @@ background: #f0f0f0;
 .modal-open,
 .modal-dialog,
 .modal-body {transition: all .5s ease;}
-
-.modal .btn-close {}
+.modal-header {display: inline-block;}
+.modal-header h3{display: inline-block;margin: .33rem 0 .33rem 0;}
+.modal-dialog label.close-modal {font-size: 2rem;float:right;}
+.modal-dialog label.close-modal:after{display: table;float: none;clear: both;}
 .modal .btn-close:hover {}
 .modal-wrap:before {
   content: "";
@@ -478,9 +520,13 @@ background: #f0f0f0;
 }
 
 .modal-body {
-  height: 15%;
-  height: 15em;
+  height: 12em;
   overflow: scroll;
+}
+
+.modal-footer {
+  min-height: 1rem;
+
 }
 
 .has-modal body {overflow: hidden;}
@@ -693,6 +739,7 @@ Putting these in REM should help keep things better encapsulated and more intuit
 } 
 
 
+
 /* save for table sorting*/
 /*.has-enuff-accordions input.show-all:checked ~ p {display: block;}*/
 
@@ -773,7 +820,7 @@ label span :focus {box-shadow: none;}
 
 
 /*top 100% by Amtt Boldt: http://www.mattboldt.com/css-100-percent-height/ -- this works because html and body above are set to 100% height*/
-.top-section{height:100%;border-bottom: 1px solid #000;}
+.top-section{height:100%;/*border-bottom: 1px solid #000;*/}
 .top-section figure.has-logo {text-align: center;padding-top: 10%;}
 /*.top-section img.logo {width: 100%; max-width: 36em;margin: 0 auto;}*/
 .top-section svg.enuff-logo {width: 100%; max-width: 36em;}

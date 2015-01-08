@@ -221,13 +221,14 @@
         <div id="modalA" class="modal-wrap" aria-hidden="true" role="dialog">
         <label class="modal-overlay" for="modalOne"></label>
         <div class="modal-dialog">
+        
           <div class="modal-header">
-            <h2>Modal in CSS?</h2>
-            <label id="closeModal" class="btn-close" for="modalOne" aria-hidden="true">×</label>
+            <h3>CSS Modal</h3>
           </div>
+          <label id="closeModal" class="close-modal" for="modalOne" aria-hidden="true">×</label>
           <div class="modal-body">
             <p>I wrote a line of JS here to prevent body from scrolling</p>
-            <p>The rest is pure CSS</p>
+            <p>The rest is pure CSS and is based on something from somewhere</p>
             <p>The markup should probably be moved to a js file</p>
             <p>The modal scrolls</p>
             <p>The modal scrolls</p>
@@ -241,12 +242,15 @@
             <p>The modal scrolls</p>
             <p>The modal scrolls</p>
             <p>The modal scrolls</p>
-            
-          </div>
+          </div><!--end modal body-->
           <div class="modal-footer">
-            <label class="btn btn-primary" for="modalOne">Nice!</label>
-          </div>
-        </div>
+            <!--<label class="btn btn-primary" for="modalOne">Nice!</label>-->
+            <div class="save-cancel-button-set">
+                <button class="button-danger">Danger</button>
+                <button class="button-primary">Primary</button>
+            </div><!--end button set-->
+          </div><!--end modal footer-->
+        </div><!--end modal dialog-->
         </div><!--end modal-->
 
 
@@ -330,7 +334,8 @@
 
     <main class="main-content" id="#">
     <div class="breadcrumb">
-        <h1>This is the page</h1>
+        <h2>Breadcrumb Category</h2>
+        <h1>Page</h1>
     </div>
     
     <article> <!--wraps flexgrid -->
@@ -844,14 +849,15 @@
                             <input type="radio" name="enuffTabsLogin" id="enuffTabLoginB" class="ghost">
                             <label for="enuffTabLoginA" class="login-signup-tab-label">Login</label><label for="enuffTabLoginB" class="login-signup-tab-label">Signup</label>
                             <form class="login-form enuff-tab-content">
+
                                 <label><span>Email</span>
                                     <input type="email"/>
                                 </label>
                                 <label><span>Password</span>
                                     <input type="password"/>
                                 </label>
-                                <a>Forgot Password?</a>
-                                <button>log in</button>
+                                <a class="forgot-password">Forgot Password?</a>
+                                <button class="login-signup-button">log in</button>
                             </form>
                             <form class="login-form enuff-tab-content">
                                 <label><span>Email</span>
@@ -863,7 +869,7 @@
                                 <label><span>Confirm Password</span>
                                     <input type="password"/>
                                 </label>
-                                <button>sign up</button>
+                                <button class="login-signup-button">sign up</button>
                             </form>
                         </div>
                         
@@ -878,14 +884,15 @@
                             <input type="radio" name="enuffTabsLoginError" id="enuffTabLogin2" class="ghost">
                             <label for="enuffTabLogin1" class="login-signup-tab-label">Login</label><label for="enuffTabLogin2" class="login-signup-tab-label">Signup</label>
                             <form class="login-form enuff-tab-content">
+                                <div class="backend-error-container">Incorrect email and/or password</div>
                                 <label><span>Email</span>
                                     <input type="email"/>
                                 </label>
                                 <label><span>Password</span>
                                     <input type="password"/>
                                 </label>
-                                <a>Forgot Password?</a>
-                                <button>log in</button>
+                                <a class="forgot-password">Forgot Password?</a>
+                                <button class="login-signup-button">log in</button>
                             </form>
                             <form class="login-form enuff-tab-content">
                                 <label><span>Email</span>
@@ -894,10 +901,10 @@
                                 <label><span>Password</span>
                                     <input type="password"/>
                                 </label>
-                                <label><span>Confirm Password</span>
+                                <label class="error"><span>Confirm Password</span>
                                     <input type="password"/>
                                 </label>
-                                <button>sign up</button>
+                                <button class="login-signup-button">sign up</button>
                             </form>
                         </div>
                     </div>
@@ -1048,7 +1055,7 @@
             <h3>Modal</h3>
             <section>
                 <div class="">
-                    <label id="modalButton" class="button button-modal" for="modalOne">Modal</label>
+                    <label id="modalButton" class="button button-primary" for="modalOne">Modal</label>
                 </div>
             </section>
         </article>
