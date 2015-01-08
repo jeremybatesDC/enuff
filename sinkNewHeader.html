@@ -845,23 +845,23 @@
                             <label for="enuffTabLoginA" class="login-signup-tab-label">Login</label><label for="enuffTabLoginB" class="login-signup-tab-label">Signup</label>
                             <form class="login-form enuff-tab-content">
                                 <label><span>Email</span>
-                                    <input class="mask-alpha"/>
+                                    <input type="email"/>
                                 </label>
                                 <label><span>Password</span>
-                                    <input class="mask-alpha"/>
+                                    <input type="password"/>
                                 </label>
                                 <a>Forgot Password?</a>
                                 <button>log in</button>
                             </form>
                             <form class="login-form enuff-tab-content">
                                 <label><span>Email</span>
-                                    <input class="mask-alpha"/>
+                                    <input type="email"/>
                                 </label>
                                 <label><span>Password</span>
-                                    <input class="mask-alpha"/>
+                                    <input type="password"/>
                                 </label>
                                 <label><span>Confirm Password</span>
-                                    <input class="mask-alpha"/>
+                                    <input type="password"/>
                                 </label>
                                 <button>sign up</button>
                             </form>
@@ -879,23 +879,23 @@
                             <label for="enuffTabLogin1" class="login-signup-tab-label">Login</label><label for="enuffTabLogin2" class="login-signup-tab-label">Signup</label>
                             <form class="login-form enuff-tab-content">
                                 <label><span>Email</span>
-                                    <input class="mask-alpha"/>
+                                    <input type="email"/>
                                 </label>
                                 <label><span>Password</span>
-                                    <input class="mask-alpha"/>
+                                    <input type="password"/>
                                 </label>
                                 <a>Forgot Password?</a>
                                 <button>log in</button>
                             </form>
                             <form class="login-form enuff-tab-content">
                                 <label><span>Email</span>
-                                    <input class="mask-alpha"/>
+                                    <input type="email"/>
                                 </label>
                                 <label><span>Password</span>
-                                    <input class="mask-alpha"/>
+                                    <input type="password"/>
                                 </label>
                                 <label><span>Confirm Password</span>
-                                    <input class="mask-alpha"/>
+                                    <input type="password"/>
                                 </label>
                                 <button>sign up</button>
                             </form>
@@ -1044,7 +1044,14 @@
         </article>
 
 
-
+        <article>
+            <h3>Modal</h3>
+            <section>
+                <div class="">
+                    <label id="modalButton" class="button button-modal" for="modalOne">Modal</label>
+                </div>
+            </section>
+        </article>
 
 
 
@@ -1103,14 +1110,7 @@
         </article>
 
 
-        <article>
-            <h3>Modal</h3>
-            <section>
-                <div class="">
-                    <label id="modalButton" class="button button-modal" for="modalOne">Modal</label>
-                </div>
-            </section>
-        </article>
+        
 
       
         <article>
@@ -1187,8 +1187,7 @@
 
         <article>
             <h3>Tables are correct for tabular data</h3>
-            <h6>firefox adds space as if inline element--might have to condense table (which might be fine since it should be populated from the backend anyway, which doesn't care if the table is human-readable in the markup</h6>
-            <h6>cannot use Chris Coyner's b/c labels are hard-coded in CSS</h6>
+            
             <section class="hasResponsive-table">
                 <table>
                     <caption>
@@ -1245,13 +1244,9 @@
         </article>
 
 
-<br>
-<br>
-<hr>
-<br>
-<br>
+
         <article>
-        <h3>pure css filterable responsive table</h3>
+        <h3>CSS filterable responsive table (checkbox hack)</h3>
         <section class="hasResponsive-table has-table-sort">
 
                 <input id="select-type-all-b" name="radio-set-1-b" type="radio" class="ff-selector-type-all" checked="checked" />
