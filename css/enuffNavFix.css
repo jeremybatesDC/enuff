@@ -182,7 +182,9 @@ data{}
 .avatar {height: 2em;}
 
 header nav ul.navigation li.nav-menu-item label.avatar-label:first-of-type{padding: 0;}
-
+header nav ul.navigation li.nav-menu-item label.avatar-label:after{
+  content: "";
+}
 /*action bar*/
 .save-cancel-bar {margin: 0 1em 1em 1em; padding: 1em 0; border-top: 1px solid #ccc;padding-top:1em;overflow: hidden;}
 .save-cancel-bar:after {float: none;clear:both;}
@@ -329,7 +331,12 @@ input:checked + header {left: 0;}
 
 
 header nav input {height: 0; display: none;}
-
+header nav input.search {
+  display: inline-block;
+  height: 1.5rem;
+  /*background: url(img/iconmonstr-magnifier-icon.svg); 
+  background-position: right;*/
+}
 
 header nav ul.navigation {margin: 0;padding:3em 0 0 0; background: transparent;}
 /* this is just a reset here -- i'll apply padding more specifically*/
@@ -825,6 +832,8 @@ label span :focus {box-shadow: none;}
 /*.top-section img.logo {width: 100%; max-width: 36em;margin: 0 auto;}*/
 .top-section svg.enuff-logo {width: 100%; max-width: 36em;}
 .more{display:block;position:absolute;bottom:20px;text-align:center;}
+.logo-small{height: 1.5rem;}
+
 
 /* padding & percentage height is based on width -- so i need some intrinsic ratio*/
 
